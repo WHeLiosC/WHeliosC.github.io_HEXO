@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>自下而上的语法分析</title>
-    <url>//Bottom-up-parsing.html</url>
+    <url>//Bottom-up-parsing</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -74,7 +74,7 @@
   </entry>
   <entry>
     <title>CSS-positioning</title>
-    <url>//CSS-positioning.html</url>
+    <url>//CSS-positioning</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -191,7 +191,7 @@
   </entry>
   <entry>
     <title>CSS-层叠样式表</title>
-    <url>//CSS-basic.html</url>
+    <url>//CSS-basic</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -242,7 +242,7 @@
   </entry>
   <entry>
     <title>L属性定义的计算</title>
-    <url>//Computation-of-L-attribute-definition.html</url>
+    <url>//Computation-of-L-attribute-definition</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -398,7 +398,7 @@
   </entry>
   <entry>
     <title>Depreciation</title>
-    <url>//depreciation.html</url>
+    <url>//depreciation</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -551,7 +551,7 @@
   </entry>
   <entry>
     <title>Economic Equivalence Computation</title>
-    <url>//economic-equivalence.html</url>
+    <url>//economic-equivalence</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -572,7 +572,7 @@
   </entry>
   <entry>
     <title>FISRT集和FOLLOW集</title>
-    <url>//first-set&amp;follow-set.html</url>
+    <url>//first-set&amp;follow-set</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -600,7 +600,7 @@
   </entry>
   <entry>
     <title>Gitee(码云)、Github同时配置ssh key</title>
-    <url>//github-gitee-ssh-key.html</url>
+    <url>//github-gitee-ssh-key</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -619,7 +619,7 @@
   </entry>
   <entry>
     <title>中间语言表示</title>
-    <url>//Intermediate-language-representation.html</url>
+    <url>//Intermediate-language-representation</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -703,7 +703,7 @@
   </entry>
   <entry>
     <title>Mysql 8.0.13+Navicat 12.1.11安装记录</title>
-    <url>//mysql-navicat-install-record.html</url>
+    <url>//mysql-navicat-install-record</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -742,7 +742,7 @@
   </entry>
   <entry>
     <title>由NFA转DFA以及DFA的化简</title>
-    <url>//NFA-transform-to-MinDFA.html</url>
+    <url>//NFA-transform-to-MinDFA</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -779,7 +779,7 @@
   </entry>
   <entry>
     <title>软件工程[1] 软件工程学概述</title>
-    <url>//software-engineering-outline.html</url>
+    <url>//software-engineering-outline</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1034,7 +1034,7 @@
   </entry>
   <entry>
     <title>软件工程[2] 可行性研究</title>
-    <url>//feasibility-study.html</url>
+    <url>//feasibility-study</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1158,7 +1158,7 @@
   </entry>
   <entry>
     <title>软件工程[3] 需求分析</title>
-    <url>//requirement-analysis.html</url>
+    <url>//requirement-analysis</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1204,7 +1204,7 @@
   </entry>
   <entry>
     <title>软件工程[4] 总体设计</title>
-    <url>//system-design.html</url>
+    <url>//system-design</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1284,7 +1284,7 @@
   </entry>
   <entry>
     <title>SpringBoot项目部署到服务器</title>
-    <url>//springboot-deploy.html</url>
+    <url>//springboot-deploy</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h4 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h4><p>在本地，使用Maven在命令行输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure>
@@ -1303,7 +1303,7 @@
   </entry>
   <entry>
     <title>语法制导的定义</title>
-    <url>//Syntax-Directed-Definition.html</url>
+    <url>//Syntax-Directed-Definition</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1336,7 +1336,7 @@
   </entry>
   <entry>
     <title>The Zen of Pyhton(Python之禅)</title>
-    <url>//the-zen-of-python.html</url>
+    <url>//the-zen-of-python</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1356,7 +1356,7 @@
   </entry>
   <entry>
     <title>自上而下的语法分析</title>
-    <url>//Top-down-parsing.html</url>
+    <url>//Top-down-parsing</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1388,7 +1388,7 @@
   </entry>
   <entry>
     <title>用例图中拓展(extend)和包含(include)的区别</title>
-    <url>//the-difference-between-include-and-extend-in-use-case-diagram.html</url>
+    <url>//the-difference-between-include-and-extend-in-use-case-diagram</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1411,7 +1411,7 @@
   </entry>
   <entry>
     <title>Ubuntu18.04安装tensorflow</title>
-    <url>//ubuntu-install-tensorflow.html</url>
+    <url>//ubuntu-install-tensorflow</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1441,7 +1441,7 @@
   </entry>
   <entry>
     <title>Cost of Capital</title>
-    <url>//cost-of-capital.html</url>
+    <url>//cost-of-capital</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1480,12 +1480,12 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>//hello-world.html</url>
+    <url>//hello-world</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>hexo问题记录(持续更新...)</title>
-    <url>//hexo.html</url>
+    <url>//hexo</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1497,7 +1497,7 @@
   </entry>
   <entry>
     <title>HTML基本标签</title>
-    <url>//basic-html-tags.html</url>
+    <url>//basic-html-tags</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1603,7 +1603,7 @@
   </entry>
   <entry>
     <title>Interest Rate</title>
-    <url>//interest-rate.html</url>
+    <url>//interest-rate</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1631,7 +1631,7 @@
   </entry>
   <entry>
     <title>数据库设计与Oracle存储结构</title>
-    <url>//oracle-design-and-store.html</url>
+    <url>//oracle-design-and-store</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1681,7 +1681,7 @@
   </entry>
   <entry>
     <title>SQL语言与Oracle数据库</title>
-    <url>//sql-oracle-database.html</url>
+    <url>//sql-oracle-database</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1798,7 +1798,7 @@
   </entry>
   <entry>
     <title>Payback period and AE analysis</title>
-    <url>//payback-period-and-others.html</url>
+    <url>//payback-period-and-others</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1819,7 +1819,7 @@
   </entry>
   <entry>
     <title>Python内置模块Collections</title>
-    <url>//python-collection.html</url>
+    <url>//python-collection</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h2 id="namedtuple"><a href="#namedtuple" class="headerlink" title="namedtuple()"></a>namedtuple()</h2><p>factory function for creating tuple subclasses with named fields<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># 练习使用namedtuple</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"><span class="comment"># namedtuple的三种声明方式</span></span><br><span class="line">Circle = namedtuple(<span class="string">&#x27;Circle&#x27;</span>, [<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;r&#x27;</span>]) </span><br><span class="line"><span class="comment"># Circle = namedtuple(&#x27;Circle&#x27;, &#x27;x y r&#x27;)</span></span><br><span class="line"><span class="comment"># Circle = namedtuple(&#x27;Circle&#x27;, &#x27;x, y, r&#x27;)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">judge</span>(<span class="params">c1, c2</span>):</span></span><br><span class="line">    dis_of_circle_center = sqrt((c1.x - c2.x) ** <span class="number">2</span> + (c1.y - c2.y) ** <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> dis_of_circle_center == <span class="number">0</span> <span class="keyword">and</span> c1.r == c2.r:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆重合，既是内切也是内含也是相交&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> dis_of_circle_center &lt; <span class="built_in">abs</span>(c1.r - c2[<span class="number">2</span>]):  <span class="comment"># c2.r和c2[2]是效果相同的两种索引方式</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;内含&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> dis_of_circle_center == <span class="built_in">abs</span>(c1.r - c2.r):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆内切&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">abs</span>(c1.r - c2.r) &lt; dis_of_circle_center &lt; c1.r + c2.r:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆相交&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> dis_of_circle_center == c1.r+c2.r:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆外切&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;外离&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    x1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆1的圆心坐标x：&#x27;</span>))</span><br><span class="line">    y1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆1的圆心坐标y：&#x27;</span>))</span><br><span class="line">    r1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆1的半径r：&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    x2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆2的圆心坐标x：&#x27;</span>))</span><br><span class="line">    y2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆2的圆心坐标y：&#x27;</span>))</span><br><span class="line">    r2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆2的半径r：&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    circle1 = Circle(x1, y1, r1)</span><br><span class="line">    circle2 = Circle(x2, y2, r2)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(circle1, circle2)  <span class="comment"># Circle(x=1.0, y=2.0, r=3.0) Circle(x=4.0, y=5.0, r=6.0)</span></span><br><span class="line"></span><br><span class="line">    judge(circle1, circle2)</span><br></pre></td></tr></table></figure></p>
 <h2 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h2><p>list-like container with fast appends and pops on either end. </p>
@@ -1860,7 +1860,7 @@
   </entry>
   <entry>
     <title>SpringBoot项目开发</title>
-    <url>//springboot.html</url>
+    <url>//springboot</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h3 id="使用IDEA创建一个SpringBoot项目"><a href="#使用IDEA创建一个SpringBoot项目" class="headerlink" title="使用IDEA创建一个SpringBoot项目"></a>使用IDEA创建一个SpringBoot项目</h3><ol>
 <li><p>File-&gt;New-&gt;Project<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/SpringBoot%E5%88%9B%E5%BB%BA1.png" alt=""></p>
@@ -1932,7 +1932,7 @@
   </entry>
   <entry>
     <title>Pyhton GUI编程之tkinter</title>
-    <url>//tkinter.html</url>
+    <url>//tkinter</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1962,7 +1962,7 @@
   </entry>
   <entry>
     <title>Vue项目部署到服务器上</title>
-    <url>//vue-nginx-deploy.html</url>
+    <url>//vue-nginx-deploy</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装nginx</span><br><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"># 启动nginx服务，此时访问服务器网址可以看到nginx的欢迎页</span><br><span class="line"># 如果是云服务器，需要打开http和https的端口</span><br><span class="line">service nginx restart</span><br><span class="line"></span><br><span class="line"># 查看当前nginx的版本</span><br><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
 <h4 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf </span><br></pre></td></tr></table></figure>
@@ -1985,7 +1985,7 @@
   </entry>
   <entry>
     <title>【java学习笔记1】数据类型&amp;函数篇</title>
-    <url>//java-learning-1.html</url>
+    <url>//java-learning-1</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <ol>
 <li>Java简单介绍</li>
@@ -2080,7 +2080,7 @@
   </entry>
   <entry>
     <title>【java学习笔记2】数组&amp;运算符&amp;权限篇</title>
-    <url>//java-learning-2.html</url>
+    <url>//java-learning-2</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <ol>
 <li>数组</li>
@@ -2121,7 +2121,7 @@
   </entry>
   <entry>
     <title>【java学习笔记3】继承&amp;多态篇</title>
-    <url>//java-learning-3.html</url>
+    <url>//java-learning-3</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ol>
 <li>关键字<code>extends</code>表示继承，继承是一个<code>is-a</code>关系，java中只有公有继承</li>
@@ -2171,7 +2171,7 @@
   </entry>
   <entry>
     <title>【java学习笔记】全系列内容提要篇</title>
-    <url>//java-learning-content.html</url>
+    <url>//java-learning-content</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h2 id="【java学习笔记1】"><a href="#【java学习笔记1】" class="headerlink" title="【java学习笔记1】"></a>【java学习笔记1】</h2><p>基本数据类型<br>对象和类<br>数据声明<br>函数声明<br>参数传递 </p>
 <h2 id="【java学习笔记2】"><a href="#【java学习笔记2】" class="headerlink" title="【java学习笔记2】"></a>【java学习笔记2】</h2><p>数组<br>运算符<br>包<br>访问权限<br>修饰符</p>
@@ -2193,7 +2193,7 @@
   </entry>
   <entry>
     <title>【Python learning 1】从Hello world!开始（print()函数解析）</title>
-    <url>//Python-hello-world.html</url>
+    <url>//Python-hello-world</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2225,7 +2225,7 @@
   </entry>
   <entry>
     <title>【Python learning】词法结构</title>
-    <url>//Pyhton-Lexical-Structure.html</url>
+    <url>//Pyhton-Lexical-Structure</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2246,7 +2246,7 @@
   </entry>
   <entry>
     <title>【Python学习笔记1】数据结构篇</title>
-    <url>//python-data-structure.html</url>
+    <url>//python-data-structure</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2345,7 +2345,7 @@
   </entry>
   <entry>
     <title>二倍角公式</title>
-    <url>//the-double-angle-formula.html</url>
+    <url>//the-double-angle-formula</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2368,7 +2368,7 @@
   </entry>
   <entry>
     <title>双系统卸载</title>
-    <url>//Dual-system-unloading.html</url>
+    <url>//Dual-system-unloading</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2384,7 +2384,7 @@
   </entry>
   <entry>
     <title>双系统安装Ubuntu18.04</title>
-    <url>//Dual-System-Installation.html</url>
+    <url>//Dual-System-Installation</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2425,7 +2425,7 @@
   </entry>
   <entry>
     <title>排序</title>
-    <url>//sort-methods.html</url>
+    <url>//sort-methods</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2465,7 +2465,7 @@
   </entry>
   <entry>
     <title>Oracle SQL练习题2</title>
-    <url>//oracle-database-prictise-2.html</url>
+    <url>//oracle-database-prictise-2</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2510,7 +2510,7 @@
   </entry>
   <entry>
     <title>Oracle SQL练习题3</title>
-    <url>//oracle-database-prictise-3.html</url>
+    <url>//oracle-database-prictise-3</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2522,7 +2522,7 @@
   </entry>
   <entry>
     <title>Oracle SQL练习题4</title>
-    <url>//oracle-database-prictise-4.html</url>
+    <url>//oracle-database-prictise-4</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2534,7 +2534,7 @@
   </entry>
   <entry>
     <title>Oracle SQL练习题1</title>
-    <url>//oracle-database-prictise-1.html</url>
+    <url>//oracle-database-prictise-1</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2563,7 +2563,7 @@
   </entry>
   <entry>
     <title>数据库设计范式</title>
-    <url>//database-design-paradigm.html</url>
+    <url>//database-design-paradigm</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2601,7 +2601,7 @@
   </entry>
   <entry>
     <title>词法分析器</title>
-    <url>//lexical-analysis.html</url>
+    <url>//lexical-analysis</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2626,7 +2626,7 @@
   </entry>
   <entry>
     <title>运行时存储空间的组织与管理</title>
-    <url>//Organization-and-Management-of-Runtime-Storage-Space.html</url>
+    <url>//Organization-and-Management-of-Runtime-Storage-Space</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2786,7 +2786,7 @@
   </entry>
   <entry>
     <title>软件测试与质量保证</title>
-    <url>//software-testing.html</url>
+    <url>//software-testing</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2983,7 +2983,7 @@
   </entry>
   <entry>
     <title>利用ZXing工具生成二维码以及解析二维码</title>
-    <url>//QRcode.html</url>
+    <url>//QRcode</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -3140,7 +3140,7 @@
   </entry>
   <entry>
     <title>数据库练习题(基础)</title>
-    <url>//database-prictise.html</url>
+    <url>//database-prictise</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -3524,7 +3524,7 @@
   </entry>
   <entry>
     <title>网络与信息安全复习</title>
-    <url>//Review-of-Network-Information-Security.html</url>
+    <url>//Review-of-Network-Information-Security</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p ></p>
 
 <span id="more"></span>
@@ -3737,7 +3737,7 @@
   </entry>
   <entry>
     <title>机器学习与数据挖掘</title>
-    <url>//mldm.html</url>
+    <url>//mldm</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h1 id="第一章-引言"><a href="#第一章-引言" class="headerlink" title="第一章 引言"></a>第一章 引言</h1><h2 id="0-什么是数据挖掘"><a href="#0-什么是数据挖掘" class="headerlink" title="0. 什么是数据挖掘"></a>0. 什么是数据挖掘</h2><p>数据挖掘是从大量数据中挖掘出有趣模式和知识的过程或方法，其中涉及机器学习、统计数据和数据库系统交叉处的方法。</p>
 <h2 id="1-数据中的知识发现包括哪几个步骤"><a href="#1-数据中的知识发现包括哪几个步骤" class="headerlink" title="1. 数据中的知识发现包括哪几个步骤"></a>1. 数据中的知识发现包括哪几个步骤</h2><ul>

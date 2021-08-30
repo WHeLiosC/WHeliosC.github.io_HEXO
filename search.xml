@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>自下而上的语法分析</title>
-    <url>//Bottom-up-parsing</url>
+    <url>/posts/10206.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -74,7 +74,7 @@
   </entry>
   <entry>
     <title>CSS-positioning</title>
-    <url>//CSS-positioning</url>
+    <url>/posts/60319.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -191,7 +191,7 @@
   </entry>
   <entry>
     <title>CSS-层叠样式表</title>
-    <url>//CSS-basic</url>
+    <url>/posts/39526.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -242,7 +242,7 @@
   </entry>
   <entry>
     <title>L属性定义的计算</title>
-    <url>//Computation-of-L-attribute-definition</url>
+    <url>/posts/17466.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -398,7 +398,7 @@
   </entry>
   <entry>
     <title>Depreciation</title>
-    <url>//depreciation</url>
+    <url>/posts/42023.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -551,7 +551,7 @@
   </entry>
   <entry>
     <title>Economic Equivalence Computation</title>
-    <url>//economic-equivalence</url>
+    <url>/posts/31968.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -572,7 +572,7 @@
   </entry>
   <entry>
     <title>FISRT集和FOLLOW集</title>
-    <url>//first-set&amp;follow-set</url>
+    <url>/posts/43607.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -600,7 +600,7 @@
   </entry>
   <entry>
     <title>Gitee(码云)、Github同时配置ssh key</title>
-    <url>//github-gitee-ssh-key</url>
+    <url>/posts/24204.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -619,7 +619,7 @@
   </entry>
   <entry>
     <title>中间语言表示</title>
-    <url>//Intermediate-language-representation</url>
+    <url>/posts/11028.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -641,7 +641,7 @@
   </entry>
   <entry>
     <title>LAMP</title>
-    <url>//LAMP</url>
+    <url>/posts/59507.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h2 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h2><h3 id="安装Apache-1"><a href="#安装Apache-1" class="headerlink" title="安装Apache"></a>安装Apache</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apache2</span><br></pre></td></tr></table></figure>
 <h3 id="设置全局Server-Name消除警告"><a href="#设置全局Server-Name消除警告" class="headerlink" title="设置全局Server Name消除警告"></a>设置全局Server Name消除警告</h3><p>使用下面的语句检查配置时会有警告信息：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apache2ctl configtest</span><br></pre></td></tr></table></figure></p>
@@ -703,7 +703,7 @@
   </entry>
   <entry>
     <title>Mysql 8.0.13+Navicat 12.1.11安装记录</title>
-    <url>//mysql-navicat-install-record</url>
+    <url>/posts/2573.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -742,7 +742,7 @@
   </entry>
   <entry>
     <title>由NFA转DFA以及DFA的化简</title>
-    <url>//NFA-transform-to-MinDFA</url>
+    <url>/posts/58753.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -779,7 +779,7 @@
   </entry>
   <entry>
     <title>软件工程[1] 软件工程学概述</title>
-    <url>//software-engineering-outline</url>
+    <url>/posts/18885.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1034,7 +1034,7 @@
   </entry>
   <entry>
     <title>软件工程[2] 可行性研究</title>
-    <url>//feasibility-study</url>
+    <url>/posts/55565.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1158,7 +1158,7 @@
   </entry>
   <entry>
     <title>软件工程[3] 需求分析</title>
-    <url>//requirement-analysis</url>
+    <url>/posts/51302.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1204,7 +1204,7 @@
   </entry>
   <entry>
     <title>软件工程[4] 总体设计</title>
-    <url>//system-design</url>
+    <url>/posts/52614.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1284,7 +1284,7 @@
   </entry>
   <entry>
     <title>SpringBoot项目部署到服务器</title>
-    <url>//springboot-deploy</url>
+    <url>/posts/5940.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h4 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h4><p>在本地，使用Maven在命令行输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure>
@@ -1303,7 +1303,7 @@
   </entry>
   <entry>
     <title>语法制导的定义</title>
-    <url>//Syntax-Directed-Definition</url>
+    <url>/posts/41250.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1336,7 +1336,7 @@
   </entry>
   <entry>
     <title>The Zen of Pyhton(Python之禅)</title>
-    <url>//the-zen-of-python</url>
+    <url>/posts/49787.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1356,7 +1356,7 @@
   </entry>
   <entry>
     <title>自上而下的语法分析</title>
-    <url>//Top-down-parsing</url>
+    <url>/posts/31695.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1388,7 +1388,7 @@
   </entry>
   <entry>
     <title>用例图中拓展(extend)和包含(include)的区别</title>
-    <url>//the-difference-between-include-and-extend-in-use-case-diagram</url>
+    <url>/posts/47357.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1411,7 +1411,7 @@
   </entry>
   <entry>
     <title>Ubuntu18.04安装tensorflow</title>
-    <url>//ubuntu-install-tensorflow</url>
+    <url>/posts/54729.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1441,7 +1441,7 @@
   </entry>
   <entry>
     <title>Cost of Capital</title>
-    <url>//cost-of-capital</url>
+    <url>/posts/44080.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1480,12 +1480,12 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>//hello-world</url>
+    <url>/posts/16107.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>hexo问题记录(持续更新...)</title>
-    <url>//hexo</url>
+    <url>/posts/13950.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1497,7 +1497,7 @@
   </entry>
   <entry>
     <title>HTML基本标签</title>
-    <url>//basic-html-tags</url>
+    <url>/posts/45265.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1603,7 +1603,7 @@
   </entry>
   <entry>
     <title>Interest Rate</title>
-    <url>//interest-rate</url>
+    <url>/posts/19955.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1631,7 +1631,7 @@
   </entry>
   <entry>
     <title>数据库设计与Oracle存储结构</title>
-    <url>//oracle-design-and-store</url>
+    <url>/posts/16277.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1681,7 +1681,7 @@
   </entry>
   <entry>
     <title>SQL语言与Oracle数据库</title>
-    <url>//sql-oracle-database</url>
+    <url>/posts/35515.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1798,7 +1798,7 @@
   </entry>
   <entry>
     <title>Payback period and AE analysis</title>
-    <url>//payback-period-and-others</url>
+    <url>/posts/18708.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1819,7 +1819,7 @@
   </entry>
   <entry>
     <title>Python内置模块Collections</title>
-    <url>//python-collection</url>
+    <url>/posts/60232.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h2 id="namedtuple"><a href="#namedtuple" class="headerlink" title="namedtuple()"></a>namedtuple()</h2><p>factory function for creating tuple subclasses with named fields<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># 练习使用namedtuple</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"><span class="comment"># namedtuple的三种声明方式</span></span><br><span class="line">Circle = namedtuple(<span class="string">&#x27;Circle&#x27;</span>, [<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;r&#x27;</span>]) </span><br><span class="line"><span class="comment"># Circle = namedtuple(&#x27;Circle&#x27;, &#x27;x y r&#x27;)</span></span><br><span class="line"><span class="comment"># Circle = namedtuple(&#x27;Circle&#x27;, &#x27;x, y, r&#x27;)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">judge</span>(<span class="params">c1, c2</span>):</span></span><br><span class="line">    dis_of_circle_center = sqrt((c1.x - c2.x) ** <span class="number">2</span> + (c1.y - c2.y) ** <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> dis_of_circle_center == <span class="number">0</span> <span class="keyword">and</span> c1.r == c2.r:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆重合，既是内切也是内含也是相交&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> dis_of_circle_center &lt; <span class="built_in">abs</span>(c1.r - c2[<span class="number">2</span>]):  <span class="comment"># c2.r和c2[2]是效果相同的两种索引方式</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;内含&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> dis_of_circle_center == <span class="built_in">abs</span>(c1.r - c2.r):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆内切&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">abs</span>(c1.r - c2.r) &lt; dis_of_circle_center &lt; c1.r + c2.r:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆相交&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> dis_of_circle_center == c1.r+c2.r:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;两圆外切&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;外离&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    x1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆1的圆心坐标x：&#x27;</span>))</span><br><span class="line">    y1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆1的圆心坐标y：&#x27;</span>))</span><br><span class="line">    r1 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆1的半径r：&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    x2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆2的圆心坐标x：&#x27;</span>))</span><br><span class="line">    y2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆2的圆心坐标y：&#x27;</span>))</span><br><span class="line">    r2 = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆2的半径r：&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    circle1 = Circle(x1, y1, r1)</span><br><span class="line">    circle2 = Circle(x2, y2, r2)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(circle1, circle2)  <span class="comment"># Circle(x=1.0, y=2.0, r=3.0) Circle(x=4.0, y=5.0, r=6.0)</span></span><br><span class="line"></span><br><span class="line">    judge(circle1, circle2)</span><br></pre></td></tr></table></figure></p>
 <h2 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h2><p>list-like container with fast appends and pops on either end. </p>
@@ -1860,7 +1860,7 @@
   </entry>
   <entry>
     <title>SpringBoot项目开发</title>
-    <url>//springboot</url>
+    <url>/posts/27636.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h3 id="使用IDEA创建一个SpringBoot项目"><a href="#使用IDEA创建一个SpringBoot项目" class="headerlink" title="使用IDEA创建一个SpringBoot项目"></a>使用IDEA创建一个SpringBoot项目</h3><ol>
 <li><p>File-&gt;New-&gt;Project<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/SpringBoot%E5%88%9B%E5%BB%BA1.png" alt=""></p>
@@ -1932,7 +1932,7 @@
   </entry>
   <entry>
     <title>Pyhton GUI编程之tkinter</title>
-    <url>//tkinter</url>
+    <url>/posts/44395.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -1962,7 +1962,7 @@
   </entry>
   <entry>
     <title>Vue项目部署到服务器上</title>
-    <url>//vue-nginx-deploy</url>
+    <url>/posts/4382.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装nginx</span><br><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"># 启动nginx服务，此时访问服务器网址可以看到nginx的欢迎页</span><br><span class="line"># 如果是云服务器，需要打开http和https的端口</span><br><span class="line">service nginx restart</span><br><span class="line"></span><br><span class="line"># 查看当前nginx的版本</span><br><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
 <h4 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf </span><br></pre></td></tr></table></figure>
@@ -1985,7 +1985,7 @@
   </entry>
   <entry>
     <title>【java学习笔记1】数据类型&amp;函数篇</title>
-    <url>//java-learning-1</url>
+    <url>/posts/22216.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <ol>
 <li>Java简单介绍</li>
@@ -2080,7 +2080,7 @@
   </entry>
   <entry>
     <title>【java学习笔记2】数组&amp;运算符&amp;权限篇</title>
-    <url>//java-learning-2</url>
+    <url>/posts/37164.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <ol>
 <li>数组</li>
@@ -2121,7 +2121,7 @@
   </entry>
   <entry>
     <title>【java学习笔记3】继承&amp;多态篇</title>
-    <url>//java-learning-3</url>
+    <url>/posts/12829.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ol>
 <li>关键字<code>extends</code>表示继承，继承是一个<code>is-a</code>关系，java中只有公有继承</li>
@@ -2171,7 +2171,7 @@
   </entry>
   <entry>
     <title>【java学习笔记】全系列内容提要篇</title>
-    <url>//java-learning-content</url>
+    <url>/posts/28654.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
 <h2 id="【java学习笔记1】"><a href="#【java学习笔记1】" class="headerlink" title="【java学习笔记1】"></a>【java学习笔记1】</h2><p>基本数据类型<br>对象和类<br>数据声明<br>函数声明<br>参数传递 </p>
 <h2 id="【java学习笔记2】"><a href="#【java学习笔记2】" class="headerlink" title="【java学习笔记2】"></a>【java学习笔记2】</h2><p>数组<br>运算符<br>包<br>访问权限<br>修饰符</p>
@@ -2193,7 +2193,7 @@
   </entry>
   <entry>
     <title>【Python learning 1】从Hello world!开始（print()函数解析）</title>
-    <url>//Python-hello-world</url>
+    <url>/posts/37700.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2225,7 +2225,7 @@
   </entry>
   <entry>
     <title>【Python learning】词法结构</title>
-    <url>//Pyhton-Lexical-Structure</url>
+    <url>/posts/20416.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2246,7 +2246,7 @@
   </entry>
   <entry>
     <title>【Python学习笔记1】数据结构篇</title>
-    <url>//python-data-structure</url>
+    <url>/posts/b4f90f6d.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2345,7 +2345,7 @@
   </entry>
   <entry>
     <title>二倍角公式</title>
-    <url>//the-double-angle-formula</url>
+    <url>/posts/25996.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2368,7 +2368,7 @@
   </entry>
   <entry>
     <title>双系统卸载</title>
-    <url>//Dual-system-unloading</url>
+    <url>/posts/60920.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2384,7 +2384,7 @@
   </entry>
   <entry>
     <title>双系统安装Ubuntu18.04</title>
-    <url>//Dual-System-Installation</url>
+    <url>/posts/58568.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2425,7 +2425,7 @@
   </entry>
   <entry>
     <title>排序</title>
-    <url>//sort-methods</url>
+    <url>/posts/37489.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2465,7 +2465,7 @@
   </entry>
   <entry>
     <title>Oracle SQL练习题2</title>
-    <url>//oracle-database-prictise-2</url>
+    <url>/posts/45615.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2509,20 +2509,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Oracle SQL练习题4</title>
-    <url>//oracle-database-prictise-4</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 1.列出至少有一个雇员的所有部门</span></span><br><span class="line"><span class="keyword">select</span> deptno, dname, loc </span><br><span class="line"><span class="keyword">from</span> dept</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> emp</span><br><span class="line">                  <span class="keyword">group</span> <span class="keyword">by</span> deptno);</span><br><span class="line">                  </span><br><span class="line"><span class="comment">-- 2.列出薪金比&quot;SMITH&quot;多的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> sal</span><br><span class="line">              <span class="keyword">from</span> emp</span><br><span class="line">              <span class="keyword">where</span> ename <span class="operator">=</span> <span class="string">&#x27;SMITH&#x27;</span>);</span><br><span class="line">              </span><br><span class="line"><span class="comment">-- 3.列出入职日期早于其直接上级的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e1.empno, e1.mgr, e1.hiredate, e2.hiredate mgrhiredate</span><br><span class="line"><span class="keyword">from</span> emp e1, emp e2</span><br><span class="line"><span class="keyword">where</span> e1.mgr <span class="operator">=</span> e2.empno <span class="keyword">and</span> e1.hiredate <span class="operator">&lt;</span> e2.hiredate;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 4.找员工姓名和直接上级的名字</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e2.ename mgrname</span><br><span class="line"><span class="keyword">from</span> emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2</span><br><span class="line"><span class="keyword">on</span> e1.mgr <span class="operator">=</span> e2.empno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 5.显示部门名称和人数</span></span><br><span class="line"><span class="comment">-- 不能count(*),因为40号部门没人但也会是一条记录</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">count</span>(emp.empno)</span><br><span class="line"><span class="keyword">from</span> dept <span class="keyword">left</span> <span class="keyword">join</span> emp <span class="keyword">on</span> emp.deptno <span class="operator">=</span> dept.deptno</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 6.显示每个部门的最高工资的员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 7.显示每个部门的工资前2名的员工</span></span><br><span class="line"><span class="keyword">select</span> deptno, ename, sal      </span><br><span class="line"><span class="keyword">from</span> emp e1     </span><br><span class="line"><span class="keyword">where</span>      </span><br><span class="line">   (  </span><br><span class="line">    <span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)     </span><br><span class="line">    <span class="keyword">from</span> emp e2     </span><br><span class="line">    <span class="keyword">where</span> e2.deptno<span class="operator">=</span>e1.deptno <span class="keyword">and</span> e2.sal<span class="operator">&gt;</span>e1.sal  </span><br><span class="line">   ) <span class="operator">&lt;</span><span class="number">2</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 8.显示出和员工号7369部门相同的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="operator">=</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> empno<span class="operator">=</span><span class="number">7369</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 9.显示出和姓名中包含&quot;W&quot;的员工相同部门的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;%W%&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 10.显示出工资大于平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 11.显示出工资大于本部门平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 12.显示员工&quot;KING&quot;所管理的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> mgr <span class="operator">=</span> (<span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> ename<span class="operator">=</span><span class="string">&#x27;KING&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 13.显示每位经理管理员工的最低工资，及最低工资者的姓名</span></span><br><span class="line"><span class="keyword">select</span> sal, ename, mgr</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">min</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> e2.mgr <span class="keyword">having</span> e1.mgr <span class="operator">=</span> e2.mgr);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 14.显示比工资最高的员工参加工作时间晚的员工姓名，参加工作时间</span></span><br><span class="line"><span class="keyword">select</span> ename, hiredate</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> hiredate <span class="operator">&gt;</span> (<span class="keyword">select</span> hiredate </span><br><span class="line">                   <span class="keyword">from</span> emp </span><br><span class="line">                   <span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp));</span><br><span class="line">                   </span><br><span class="line"><span class="comment">-- 15.显示出平均工资最高的的部门平均工资及部门名称</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal) maxavgsal</span><br><span class="line"><span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(avgsal)</span><br><span class="line">                    <span class="keyword">from</span> (<span class="keyword">select</span> <span class="built_in">max</span>(<span class="built_in">avg</span>(sal)) avgsal</span><br><span class="line">                          <span class="keyword">from</span> emp</span><br><span class="line">                          <span class="keyword">group</span> <span class="keyword">by</span> deptno));</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 16.创建序列，起始位1，自增为1，最小值为1，最大值为9999</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">1</span></span><br><span class="line">minvalue <span class="number">1</span></span><br><span class="line">maxvalue <span class="number">9999</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 17.创建序列，起始值为50，每次增加5</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence2</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">5</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 18.请分析按照以下要求都需要建立什么类型的字段?</span></span><br><span class="line"><span class="comment">–(1)最大2000个字节定长字符串                      -- char(2000)</span></span><br><span class="line"><span class="comment">–(2)如果输入‘张三’ 后添空格6个                   -- nchar</span></span><br><span class="line"><span class="comment">–(3)性别输入&#x27;男&#x27;或&#x27;女’                           -- char(2)e</span></span><br><span class="line"><span class="comment">–(4)最大4000个字节变长字符串                      -- varchar2(4000) 参数为字节数</span></span><br><span class="line"><span class="comment">–(5)如果在数据库中输入&#x27;张三&#x27;则显示数据&#x27;张三’      -- nvarchar2(10) unicode编码，参数为字符数</span></span><br><span class="line"><span class="comment">–(6)表示数字范围为- 10的125次方到10的126次方, 可</span></span><br><span class="line"><span class="comment">以表示小数也可以表示整数                            -- number</span></span><br><span class="line"><span class="comment">–(7)最大表示4位整数 -9999 到 9999                 -- number(4)</span></span><br><span class="line"><span class="comment">–(8)表示5位有效数字2位小数的一个小数-999.99</span></span><br><span class="line"><span class="comment">到999.99                                           -- number(5,2)</span></span><br><span class="line"><span class="comment">–(9)包含年月日和时分秒                             -- date</span></span><br><span class="line"><span class="comment">–(10)包含年月日和时分秒毫秒                       -- timestamp</span></span><br><span class="line"><span class="comment">–(11)二进制大对象图像/声音  */</span>                    <span class="comment">-- LONGRAW 或者 BLOB</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 19.请为工资大于10000的员工创建视图，要求显示员工的部门信息，职位信息，部门所在地.</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> highsal</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> deptno, dname, &quot;JOB&quot;, loc</span><br><span class="line">    <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">    <span class="keyword">where</span> emp.sal <span class="operator">&gt;</span> <span class="number">10000</span>);</span><br><span class="line">    </span><br><span class="line"><span class="comment">-- 20.现在按照工资的降序排序，分页显示，其中一页数据为25条，请显示第3页数据。</span></span><br><span class="line"><span class="keyword">select</span> sal, rn</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> sal, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">50</span> <span class="keyword">and</span> <span class="number">75</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 21.创建视图，要求包含字段：部门名，部门平均工资</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> deptview</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal)</span><br><span class="line">     <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">     <span class="keyword">group</span> <span class="keyword">by</span> dname);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 22.针对21题创建的视图，执行insert,update,delete,语句能否成功，为什么？</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">不能</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 23.显示出员工工资排在第五到第十名的员工信息</span></span><br><span class="line"><span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rn</span><br><span class="line"><span class="keyword">from</span>(<span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">5</span> <span class="keyword">and</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 24.在表copy_dept中插入记录，其中部门号采用17题中创建的序列生成</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept</span><br><span class="line"><span class="keyword">values</span>(mysequence2.nextval, <span class="string">&#x27;it&#x27;</span>, <span class="string">&#x27;Dalian&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>数据库</tag>
-        <tag>oracle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Oracle SQL练习题3</title>
-    <url>//oracle-database-prictise-3</url>
+    <url>/posts/29422.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2533,8 +2521,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Oracle SQL练习题4</title>
+    <url>/posts/45231.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 1.列出至少有一个雇员的所有部门</span></span><br><span class="line"><span class="keyword">select</span> deptno, dname, loc </span><br><span class="line"><span class="keyword">from</span> dept</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> emp</span><br><span class="line">                  <span class="keyword">group</span> <span class="keyword">by</span> deptno);</span><br><span class="line">                  </span><br><span class="line"><span class="comment">-- 2.列出薪金比&quot;SMITH&quot;多的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> sal</span><br><span class="line">              <span class="keyword">from</span> emp</span><br><span class="line">              <span class="keyword">where</span> ename <span class="operator">=</span> <span class="string">&#x27;SMITH&#x27;</span>);</span><br><span class="line">              </span><br><span class="line"><span class="comment">-- 3.列出入职日期早于其直接上级的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e1.empno, e1.mgr, e1.hiredate, e2.hiredate mgrhiredate</span><br><span class="line"><span class="keyword">from</span> emp e1, emp e2</span><br><span class="line"><span class="keyword">where</span> e1.mgr <span class="operator">=</span> e2.empno <span class="keyword">and</span> e1.hiredate <span class="operator">&lt;</span> e2.hiredate;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 4.找员工姓名和直接上级的名字</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e2.ename mgrname</span><br><span class="line"><span class="keyword">from</span> emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2</span><br><span class="line"><span class="keyword">on</span> e1.mgr <span class="operator">=</span> e2.empno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 5.显示部门名称和人数</span></span><br><span class="line"><span class="comment">-- 不能count(*),因为40号部门没人但也会是一条记录</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">count</span>(emp.empno)</span><br><span class="line"><span class="keyword">from</span> dept <span class="keyword">left</span> <span class="keyword">join</span> emp <span class="keyword">on</span> emp.deptno <span class="operator">=</span> dept.deptno</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 6.显示每个部门的最高工资的员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 7.显示每个部门的工资前2名的员工</span></span><br><span class="line"><span class="keyword">select</span> deptno, ename, sal      </span><br><span class="line"><span class="keyword">from</span> emp e1     </span><br><span class="line"><span class="keyword">where</span>      </span><br><span class="line">   (  </span><br><span class="line">    <span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)     </span><br><span class="line">    <span class="keyword">from</span> emp e2     </span><br><span class="line">    <span class="keyword">where</span> e2.deptno<span class="operator">=</span>e1.deptno <span class="keyword">and</span> e2.sal<span class="operator">&gt;</span>e1.sal  </span><br><span class="line">   ) <span class="operator">&lt;</span><span class="number">2</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 8.显示出和员工号7369部门相同的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="operator">=</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> empno<span class="operator">=</span><span class="number">7369</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 9.显示出和姓名中包含&quot;W&quot;的员工相同部门的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;%W%&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 10.显示出工资大于平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 11.显示出工资大于本部门平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 12.显示员工&quot;KING&quot;所管理的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> mgr <span class="operator">=</span> (<span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> ename<span class="operator">=</span><span class="string">&#x27;KING&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 13.显示每位经理管理员工的最低工资，及最低工资者的姓名</span></span><br><span class="line"><span class="keyword">select</span> sal, ename, mgr</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">min</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> e2.mgr <span class="keyword">having</span> e1.mgr <span class="operator">=</span> e2.mgr);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 14.显示比工资最高的员工参加工作时间晚的员工姓名，参加工作时间</span></span><br><span class="line"><span class="keyword">select</span> ename, hiredate</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> hiredate <span class="operator">&gt;</span> (<span class="keyword">select</span> hiredate </span><br><span class="line">                   <span class="keyword">from</span> emp </span><br><span class="line">                   <span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp));</span><br><span class="line">                   </span><br><span class="line"><span class="comment">-- 15.显示出平均工资最高的的部门平均工资及部门名称</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal) maxavgsal</span><br><span class="line"><span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(avgsal)</span><br><span class="line">                    <span class="keyword">from</span> (<span class="keyword">select</span> <span class="built_in">max</span>(<span class="built_in">avg</span>(sal)) avgsal</span><br><span class="line">                          <span class="keyword">from</span> emp</span><br><span class="line">                          <span class="keyword">group</span> <span class="keyword">by</span> deptno));</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 16.创建序列，起始位1，自增为1，最小值为1，最大值为9999</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">1</span></span><br><span class="line">minvalue <span class="number">1</span></span><br><span class="line">maxvalue <span class="number">9999</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 17.创建序列，起始值为50，每次增加5</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence2</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">5</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 18.请分析按照以下要求都需要建立什么类型的字段?</span></span><br><span class="line"><span class="comment">–(1)最大2000个字节定长字符串                      -- char(2000)</span></span><br><span class="line"><span class="comment">–(2)如果输入‘张三’ 后添空格6个                   -- nchar</span></span><br><span class="line"><span class="comment">–(3)性别输入&#x27;男&#x27;或&#x27;女’                           -- char(2)e</span></span><br><span class="line"><span class="comment">–(4)最大4000个字节变长字符串                      -- varchar2(4000) 参数为字节数</span></span><br><span class="line"><span class="comment">–(5)如果在数据库中输入&#x27;张三&#x27;则显示数据&#x27;张三’      -- nvarchar2(10) unicode编码，参数为字符数</span></span><br><span class="line"><span class="comment">–(6)表示数字范围为- 10的125次方到10的126次方, 可</span></span><br><span class="line"><span class="comment">以表示小数也可以表示整数                            -- number</span></span><br><span class="line"><span class="comment">–(7)最大表示4位整数 -9999 到 9999                 -- number(4)</span></span><br><span class="line"><span class="comment">–(8)表示5位有效数字2位小数的一个小数-999.99</span></span><br><span class="line"><span class="comment">到999.99                                           -- number(5,2)</span></span><br><span class="line"><span class="comment">–(9)包含年月日和时分秒                             -- date</span></span><br><span class="line"><span class="comment">–(10)包含年月日和时分秒毫秒                       -- timestamp</span></span><br><span class="line"><span class="comment">–(11)二进制大对象图像/声音  */</span>                    <span class="comment">-- LONGRAW 或者 BLOB</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 19.请为工资大于10000的员工创建视图，要求显示员工的部门信息，职位信息，部门所在地.</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> highsal</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> deptno, dname, &quot;JOB&quot;, loc</span><br><span class="line">    <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">    <span class="keyword">where</span> emp.sal <span class="operator">&gt;</span> <span class="number">10000</span>);</span><br><span class="line">    </span><br><span class="line"><span class="comment">-- 20.现在按照工资的降序排序，分页显示，其中一页数据为25条，请显示第3页数据。</span></span><br><span class="line"><span class="keyword">select</span> sal, rn</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> sal, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">50</span> <span class="keyword">and</span> <span class="number">75</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 21.创建视图，要求包含字段：部门名，部门平均工资</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> deptview</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal)</span><br><span class="line">     <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">     <span class="keyword">group</span> <span class="keyword">by</span> dname);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 22.针对21题创建的视图，执行insert,update,delete,语句能否成功，为什么？</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">不能</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 23.显示出员工工资排在第五到第十名的员工信息</span></span><br><span class="line"><span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rn</span><br><span class="line"><span class="keyword">from</span>(<span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">5</span> <span class="keyword">and</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 24.在表copy_dept中插入记录，其中部门号采用17题中创建的序列生成</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept</span><br><span class="line"><span class="keyword">values</span>(mysequence2.nextval, <span class="string">&#x27;it&#x27;</span>, <span class="string">&#x27;Dalian&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>数据库</tag>
+        <tag>oracle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Oracle SQL练习题1</title>
-    <url>//oracle-database-prictise-1</url>
+    <url>/posts/45935.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2563,7 +2563,7 @@
   </entry>
   <entry>
     <title>数据库设计范式</title>
-    <url>//database-design-paradigm</url>
+    <url>/posts/33482.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2601,7 +2601,7 @@
   </entry>
   <entry>
     <title>词法分析器</title>
-    <url>//lexical-analysis</url>
+    <url>/posts/10654.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2626,7 +2626,7 @@
   </entry>
   <entry>
     <title>运行时存储空间的组织与管理</title>
-    <url>//Organization-and-Management-of-Runtime-Storage-Space</url>
+    <url>/posts/49591.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2786,7 +2786,7 @@
   </entry>
   <entry>
     <title>软件测试与质量保证</title>
-    <url>//software-testing</url>
+    <url>/posts/53603.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -2983,7 +2983,7 @@
   </entry>
   <entry>
     <title>利用ZXing工具生成二维码以及解析二维码</title>
-    <url>//QRcode</url>
+    <url>/posts/52872.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -3140,7 +3140,7 @@
   </entry>
   <entry>
     <title>数据库练习题(基础)</title>
-    <url>//database-prictise</url>
+    <url>/posts/20912.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 
 <span id="more"></span>
@@ -3524,7 +3524,7 @@
   </entry>
   <entry>
     <title>网络与信息安全复习</title>
-    <url>//Review-of-Network-Information-Security</url>
+    <url>/posts/4060.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p ></p>
 
 <span id="more"></span>

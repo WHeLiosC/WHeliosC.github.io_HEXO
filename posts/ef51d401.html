@@ -171,18 +171,22 @@
 
 
 
-  <meta name="description" content="HTML的基本标签用法">
+  <meta name="description" content="三种稀疏矩阵，包括COO、CSC和CSR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML基本标签">
-<meta property="og:url" content="https://wheliosc.github.io/posts/45265.html">
+<meta property="og:title" content="稀疏矩阵">
+<meta property="og:url" content="https://wheliosc.github.io/posts/ef51d401.html">
 <meta property="og:site_name" content="Helios">
-<meta property="og:description" content="HTML的基本标签用法">
+<meta property="og:description" content="三种稀疏矩阵，包括COO、CSC和CSR">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-03-10T05:52:02.875Z">
-<meta property="article:modified_time" content="2021-08-30T12:32:47.117Z">
+<meta property="og:image" content="https://wheliosc.github.io/posts/coo.gif">
+<meta property="og:image" content="https://wheliosc.github.io/posts/csr.gif">
+<meta property="og:image" content="https://wheliosc.github.io/posts/csc.gif">
+<meta property="article:published_time" content="2021-09-03T09:31:35.562Z">
+<meta property="article:modified_time" content="2021-09-03T10:38:18.596Z">
 <meta property="article:author" content="lihui">
-<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wheliosc.github.io/posts/coo.gif">
 
 
 
@@ -191,7 +195,7 @@
 
 
 
-  <link rel="canonical" href="https://wheliosc.github.io/posts/45265.html"/>
+  <link rel="canonical" href="https://wheliosc.github.io/posts/ef51d401.html"/>
 
 
 
@@ -201,7 +205,7 @@
   };
 </script>
 
-  <title>HTML基本标签 | Helios</title>
+  <title>稀疏矩阵 | Helios</title>
   
 
 
@@ -409,7 +413,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wheliosc.github.io/posts/45265.html">
+    <link itemprop="mainEntityOfPage" href="https://wheliosc.github.io/posts/ef51d401.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lihui">
@@ -426,7 +430,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTML基本标签
+          <h1 class="post-title" itemprop="name headline">稀疏矩阵
               
             
           </h1>
@@ -451,24 +455,12 @@
                 
               
 
-              <time title="创建时间：2019-03-10 13:52:02" itemprop="dateCreated datePublished" datetime="2019-03-10T13:52:02+08:00">2019-03-10</time>
+              <time title="创建时间：2021-09-03 17:31:35 / 修改时间：18:38:18" itemprop="dateCreated datePublished" datetime="2021-09-03T17:31:35+08:00">2021-09-03</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2021-08-30 20:32:47" itemprop="dateModified" datetime="2021-08-30T20:32:47+08:00">2021-08-30</time>
               
             
           </span>
@@ -482,8 +474,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/posts/45265.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/posts/45265.html" itemprop="commentCount"></span>
+                <a href="/posts/ef51d401.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/posts/ef51d401.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -513,7 +505,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">16k</span>
+                <span title="本文字数">1.7k</span>
               
 
               
@@ -523,7 +515,7 @@
           
 
           
-              <div class="post-description">HTML的基本标签用法</div>
+              <div class="post-description">三种稀疏矩阵，包括COO、CSC和CSR</div>
           
 
         </div>
@@ -539,104 +531,48 @@
       
 
       
-        <p></p>
-
-<span id="more"></span>
-<h2 id="HTML是什么"><a href="#HTML是什么" class="headerlink" title="HTML是什么"></a>HTML是什么</h2><p>HTML 是用来描述网页的一种语言。</p>
+        <p><p></p><br><span id="more"></span></p>
+<hr>
+<h2 id="abbrlink-‘0’"><a href="#abbrlink-‘0’" class="headerlink" title="abbrlink: ‘0’"></a>abbrlink: ‘0’</h2><h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="coo.gif" alt="coo"></p>
+<p>最简单一种格式，每一个元素需要用一个三元组来表示，分别是（行号，列号，数值），这种方式简单，但是记录单信息多（行列），每个三元组自己可以定位，因此空间不是最优。</p>
+<p>优点：</p>
 <ul>
-<li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)</li>
-<li>HTML 不是一种编程语言，而是一种标记语言 (markup language)</li>
+<li><p>容易构造,比较容易转换成其他的稀疏矩阵存储格式（CSR等）</p>
+</li>
+<li><p>写程序可以将libsvm格式的数据转换成COO比较容易，应该是充当libsvm与其他稀疏矩阵存储格式转换的媒介。</p>
+</li>
+<li><p>支持相同的(row,col)坐标上存放多个值。</p>
+</li>
 </ul>
-<h2 id="HTML文档结构"><a href="#HTML文档结构" class="headerlink" title="HTML文档结构"></a>HTML文档结构</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>这是网站标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html; charset=utf-8&quot;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    网站的各种内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h2><h3 id="meta"><a href="#meta" class="headerlink" title="meta"></a>meta</h3><table>
-    <tbody>
-        <tr>
-            <th>属性</th>
-            <th>值</th>
-            <th>描述</th>
-        </tr>
-        <tr>
-            <td rowspan="4">http-equiv</td>
-            <td>Content-Type</td>
-            <td>描述文档类型和字符编码</td>
-        <tr>
-            <td>expires</td>
-            <td>浏览器缓存有效性的期限，在这个时间（GMT）之内相同的请求使用缓存，这个时间之外使用http请求。</td>
-        </tr>
-        <tr>
-            <td>Refresh</td>
-            <td>content="2; URL=https://liyzy.github.io" 指两秒后跳转到指定页面。</td>
-        </tr>        
-        <tr>
-            <td>Set-Cookie</td>
-            <td>Content="cookievalue=xxx; expires=Wednesday,21-Oct-98 16:14:21 GMT; path=/" 如果网页过期，那么存盘的cookie将被删除。</td>
-        </tr>        
-        <tr>   
-            <td rowspan="2">name</td>
-            <td>Keywords</td>
-            <td>说明网站的关键词是什么</td>
-        </tr>
-        <tr>
-            <td>description</td>
-            <td>介绍网站内容</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h3><p><table>
-    <tbody>
-        <tr>
-            <th>标签</th>
-            <th>用法</th>
-            <th>说明</th>
-        </tr>
-        <tr>
-            <td>标题标签</td>
-            <td>&lt;h1&gt;&lt;/h1&gt;</td>
-            <td>一共有6级，从h1到h6</td>
-        </tr>
-        <tr>
-            <td>段落标签</td>
-            <td>&lt;p&gt;&lt;/p&gt;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>水平线标签</td>
-            <td>&lt;hr/&gt;</td>
-            <td>单个闭合标签</td>
-        </tr>
-        <tr>
-            <td>div标签</td>
-            <td>&lt;div&gt;&lt;/div&gt;</td>
-            <td>把文档分割为独立的、不同的部分。</td>
-        </tr>
-        <tr>
-            <td>表单标签</td>
-            <td>&lt;form&gt;&lt;/form&gt;</td>
-            <td>为用户输入创建 HTML 表单。</td>
-        </tr>
-        <tr>
-            <td>换行标签</td>
-            <td>&lt;br/&gt;</td>
-            <td>插入一个简单的换行符</td>
-        </tr>
-        <tr>
-            <td>span标签</td>
-            <td>&lt;span&gt;&lt;/span&gt;</td>
-            <td>当对它应用样式时，它才会产生视觉上的变化。</td>
-        </tr>
-        <tr>
-            <td>图像标签</td>
-            <td>&lt;img src="图片路径" alt="提示文字" title="提示文字"/&gt;</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table><br>🔖后三个是行级标签，前五个是块级标签。</p>
-<h3 id="有序（无序）列表标签"><a href="#有序（无序）列表标签" class="headerlink" title="有序（无序）列表标签"></a>有序（无序）列表标签</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 有序列表标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>有效学习的步骤<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>课前主动预习<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>课上认真听讲<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>课后积极复习<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 无序列表标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>有效学习的要素<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>主动<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>认真<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>积极<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="定义描述标签"><a href="#定义描述标签" class="headerlink" title="定义描述标签"></a>定义描述标签</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;Miyazono Kaori.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;245&quot;</span> <span class="attr">height</span>=<span class="string">&quot;311&quot;</span> <span class="attr">title</span>=<span class="string">&quot;宫园 薰&quot;</span>/&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>宫园薰，日本动漫《四月是你的谎言》女主角。<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>幼时原本学习弹奏钢琴，后因有马公生影响成为小提琴手。<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>通过一封亲笔书信向公生传达了近10年的爱慕。<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 在当前窗口打开链接 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://liyzy.github.io&quot;</span>&gt;</span>我的博客网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 在新的浏览器窗口打开链接 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://liyzy.github.io&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>我的博客网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 图片链接 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://liyzy.github.io&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;avatar.png&quot;</span> <span class="attr">title</span>=<span class="string">&quot;跳转到博客&quot;</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 功能性链接 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:2469660964@qq.com?subject=Hello%20world&quot;</span>&gt;</span>个人信箱<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 页面内的锚链接 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#C4&quot;</span>&gt;</span>查看 Chapter 4。<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 1<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 3<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;C4&quot;</span>&gt;</span>Chapter 4<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Chapter 5<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This chapter explains ba bla bla<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 页面间的锚链接，假设当前是first.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;second.html#student&quot;</span>&gt;</span>跳转到另一个页面的student区<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- second.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">&quot;student&quot;</span>&gt;</span>Student<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><p>因为&lt;&gt;等符号在HTML中已使用，所以必须用其他符号来代替.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">&amp;lt;</span>    小于(&lt;)</span><br><span class="line"><span class="symbol">&amp;gt;</span>    大于(&gt;)</span><br><span class="line"><span class="symbol">&amp;nbsp;</span>  空格</span><br><span class="line"><span class="symbol">&amp;copy;</span>  版权号</span><br><span class="line"><span class="symbol">&amp;quot;</span>  引号</span><br></pre></td></tr></table></figure></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/h.asp">W3CSchool</a></p>
+<p>缺点：</p>
+<ul>
+<li><p>构建完成后不允许再插入或删除元素。不能进行常规矩阵运算。</p>
+</li>
+<li><p>不能直接进行科学计算和切片操作。</p>
+</li>
+</ul>
+<h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="csr.gif" alt="csr"></p>
+<p>比较标准，数值，列号，以及行偏移。 (相当于每行的首个元素在value中的index)<br>row offset的数值个数是row + 1, 表示某行第一个元素在values中的位置，如5是第三行第一个元素，它在values中的index是4。</p>
+<p>优点：</p>
+<ul>
+<li><p>高效地按行切片。</p>
+</li>
+<li><p>快速地计算矩阵与向量的内积。</p>
+</li>
+<li><p>高效地进行矩阵的算术运行，CSR + CSR、CSR * CSR等。</p>
+</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li><p>按列切片很慢（考虑CSC）</p>
+</li>
+<li><p>一旦构建完成后，再往里面添加或删除元素成本很高</p>
+</li>
+<li><p>CSR格式在存储稀疏矩阵时非零元素平均使用的字节数(Bytes per Nonzero Entry)最为稳定（float类型约为8.5，double类型约为12.5）。CSR格式常用于读入数据后进行稀疏矩阵计算。</p>
+</li>
+</ul>
+<h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="csc.gif" alt="csc"></p>
+<p>CSC是和CSR相对应的一种方式，即按列压缩的意思。</p>
 
       
     </div>
@@ -672,7 +608,7 @@
     <strong>本文作者： </strong>lihui</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://wheliosc.github.io/posts/45265.html" title="HTML基本标签">https://wheliosc.github.io/posts/45265.html</a>
+    <a href="https://wheliosc.github.io/posts/ef51d401.html" title="稀疏矩阵">https://wheliosc.github.io/posts/ef51d401.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -685,7 +621,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTML/" rel="tag"><i class="fa fa-tag"></i> HTML</a>
+            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
           
         </div>
       
@@ -698,18 +634,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/45935.html" rel="next" title="Oracle SQL练习题1">
-                <i class="fa fa-chevron-left"></i> Oracle SQL练习题1
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/25996.html" rel="prev" title="二倍角公式">
-                二倍角公式 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/59507.html" rel="prev" title="LAMP">
+                LAMP <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1005,7 +937,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">HTML是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">HTML文档结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML%E6%A0%87%E7%AD%BE"><span class="nav-number">3.</span> <span class="nav-text">HTML标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#meta"><span class="nav-number">3.1.</span> <span class="nav-text">meta</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="nav-number">3.2.</span> <span class="nav-text">基本标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%EF%BC%88%E6%97%A0%E5%BA%8F%EF%BC%89%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="nav-number">3.3.</span> <span class="nav-text">有序（无序）列表标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%8F%8F%E8%BF%B0%E6%A0%87%E7%AD%BE"><span class="nav-number">3.4.</span> <span class="nav-text">定义描述标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">3.5.</span> <span class="nav-text">超链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.</span> <span class="nav-text">特殊符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#abbrlink-%E2%80%980%E2%80%99"><span class="nav-number">1.</span> <span class="nav-text">abbrlink: ‘0’</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5"><span class="nav-number"></span> <span class="nav-text">稀疏矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#COO-Matrix"><span class="nav-number">1.</span> <span class="nav-text">COO Matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSR-Matrix"><span class="nav-number">2.</span> <span class="nav-text">CSR Matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSC-Matrix"><span class="nav-number">3.</span> <span class="nav-text">CSC Matrix</span></a></li></ol></div>
             
 
           </div>
@@ -1571,6 +1503,30 @@ show_date_time();
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

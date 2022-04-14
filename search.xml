@@ -550,6 +550,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Economic Equivalence Computation</title>
+    <url>/posts/31968.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h3 id="Single-Payment-Series"><a href="#Single-Payment-Series" class="headerlink" title="Single-Payment Series"></a>Single-Payment Series</h3><h4 id="Compound-Amount-Factor-复利系数"><a href="#Compound-Amount-Factor-复利系数" class="headerlink" title="Compound-Amount Factor(复利系数)"></a>Compound-Amount Factor(复利系数)</h4><p>$F = P ( 1 + i ) ^ { N } = P ( F / P , i , N )$</p>
+<h4 id="Present-Worth-Factor-现值系数"><a href="#Present-Worth-Factor-现值系数" class="headerlink" title="Present-Worth Factor(现值系数)"></a>Present-Worth Factor(现值系数)</h4><p>$P = F [1 / ( 1 + i )] ^ { N } = F ( P / F , i , N )$</p>
+<h3 id="Equal-Payment-Series"><a href="#Equal-Payment-Series" class="headerlink" title="Equal-Payment Series"></a>Equal-Payment Series</h3><h4 id="Compound-Amount-Factor-复利系数-1"><a href="#Compound-Amount-Factor-复利系数-1" class="headerlink" title="Compound-Amount Factor(复利系数)"></a>Compound-Amount Factor(复利系数)</h4><p>$F = A  (  F  /  A ,  i  ,  N  )$</p>
+<h4 id="Sinking-Fund-Factor-偿债基金系数"><a href="#Sinking-Fund-Factor-偿债基金系数" class="headerlink" title="Sinking-Fund Factor(偿债基金系数)"></a>Sinking-Fund Factor(偿债基金系数)</h4><p>$A = F  (  A  /  F ,  i  ,  N  )$</p>
+<h4 id="Capital-Recovery-Factor-投资回收系数"><a href="#Capital-Recovery-Factor-投资回收系数" class="headerlink" title="Capital-Recovery Factor(投资回收系数)"></a>Capital-Recovery Factor(投资回收系数)</h4><p>$A = P  (  A  /  P ,  i  ,  N  )$</p>
+<h4 id="Present-Worth-Factor-现值系数-1"><a href="#Present-Worth-Factor-现值系数-1" class="headerlink" title="Present-Worth Factor(现值系数)"></a>Present-Worth Factor(现值系数)</h4><p>$P = A  (  P  /  A ,  i  ,  N  )$</p>
+<h3 id="Gradient-Series-梯度序列"><a href="#Gradient-Series-梯度序列" class="headerlink" title="Gradient Series(梯度序列)"></a>Gradient Series(梯度序列)</h3><h4 id="Linear-Gradient-Series-线性梯度系列"><a href="#Linear-Gradient-Series-线性梯度系列" class="headerlink" title="Linear Gradient Series(线性梯度系列)"></a>Linear Gradient Series(线性梯度系列)</h4><p>$P = G  (  P  /  G ,  i  ,  N  )$<br><img src="https://ws1.sinaimg.cn/large/006xwwY9ly1g0uayapjz7j30vj0e60tw.jpg" alt="Linear Gradient"></p>
+<h4 id="Geometric-Gradient-Series-几何梯度系列"><a href="#Geometric-Gradient-Series-几何梯度系列" class="headerlink" title="Geometric Gradient Series(几何梯度系列)"></a>Geometric Gradient Series(几何梯度系列)</h4><p>$P = A_1  (  P  /  A_1 , g, i  ,  N  )$<br><img src="https://ws4.sinaimg.cn/large/006xwwY9ly1g0uayaj3ykj30b1071t8v.jpg" alt="Geometric Gradient"></p>
+<h3 id="Composite-cash-flow"><a href="#Composite-cash-flow" class="headerlink" title="Composite cash flow"></a>Composite cash flow</h3><p>Q1:<br><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0uau70fq8j30hd0fngm5.jpg" alt="image"><br><img src="https://ws1.sinaimg.cn/large/006xwwY9ly1g0uau6kcsvj30ml0im0un.jpg" alt="image"><br><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0uau6rekbj30pd0idmyf.jpg" alt="image"><br>Q2:<br><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0uau7x89gj30lc0a2my4.jpg" alt="image"><br><img src="https://wx2.sinaimg.cn/large/006xwwY9ly1g0uau7hsg7j30in09ywg0.jpg" alt="image"><br>Q3:<br><img src="https://ws2.sinaimg.cn/large/006xwwY9ly1g0uau8c9knj30h80a7mxv.jpg" alt="image"><br><img src="https://ws4.sinaimg.cn/large/006xwwY9ly1g0uau84evkj30kp09w3yt.jpg" alt="image"></p>
+<p><br/></p>
+]]></content>
+      <tags>
+        <tag>工程经济学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FISRT集和FOLLOW集</title>
     <url>/posts/43607.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -578,27 +599,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Economic Equivalence Computation</title>
-    <url>/posts/31968.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h3 id="Single-Payment-Series"><a href="#Single-Payment-Series" class="headerlink" title="Single-Payment Series"></a>Single-Payment Series</h3><h4 id="Compound-Amount-Factor-复利系数"><a href="#Compound-Amount-Factor-复利系数" class="headerlink" title="Compound-Amount Factor(复利系数)"></a>Compound-Amount Factor(复利系数)</h4><p>$F = P ( 1 + i ) ^ { N } = P ( F / P , i , N )$</p>
-<h4 id="Present-Worth-Factor-现值系数"><a href="#Present-Worth-Factor-现值系数" class="headerlink" title="Present-Worth Factor(现值系数)"></a>Present-Worth Factor(现值系数)</h4><p>$P = F [1 / ( 1 + i )] ^ { N } = F ( P / F , i , N )$</p>
-<h3 id="Equal-Payment-Series"><a href="#Equal-Payment-Series" class="headerlink" title="Equal-Payment Series"></a>Equal-Payment Series</h3><h4 id="Compound-Amount-Factor-复利系数-1"><a href="#Compound-Amount-Factor-复利系数-1" class="headerlink" title="Compound-Amount Factor(复利系数)"></a>Compound-Amount Factor(复利系数)</h4><p>$F = A  (  F  /  A ,  i  ,  N  )$</p>
-<h4 id="Sinking-Fund-Factor-偿债基金系数"><a href="#Sinking-Fund-Factor-偿债基金系数" class="headerlink" title="Sinking-Fund Factor(偿债基金系数)"></a>Sinking-Fund Factor(偿债基金系数)</h4><p>$A = F  (  A  /  F ,  i  ,  N  )$</p>
-<h4 id="Capital-Recovery-Factor-投资回收系数"><a href="#Capital-Recovery-Factor-投资回收系数" class="headerlink" title="Capital-Recovery Factor(投资回收系数)"></a>Capital-Recovery Factor(投资回收系数)</h4><p>$A = P  (  A  /  P ,  i  ,  N  )$</p>
-<h4 id="Present-Worth-Factor-现值系数-1"><a href="#Present-Worth-Factor-现值系数-1" class="headerlink" title="Present-Worth Factor(现值系数)"></a>Present-Worth Factor(现值系数)</h4><p>$P = A  (  P  /  A ,  i  ,  N  )$</p>
-<h3 id="Gradient-Series-梯度序列"><a href="#Gradient-Series-梯度序列" class="headerlink" title="Gradient Series(梯度序列)"></a>Gradient Series(梯度序列)</h3><h4 id="Linear-Gradient-Series-线性梯度系列"><a href="#Linear-Gradient-Series-线性梯度系列" class="headerlink" title="Linear Gradient Series(线性梯度系列)"></a>Linear Gradient Series(线性梯度系列)</h4><p>$P = G  (  P  /  G ,  i  ,  N  )$<br><img src="https://ws1.sinaimg.cn/large/006xwwY9ly1g0uayapjz7j30vj0e60tw.jpg" alt="Linear Gradient"></p>
-<h4 id="Geometric-Gradient-Series-几何梯度系列"><a href="#Geometric-Gradient-Series-几何梯度系列" class="headerlink" title="Geometric Gradient Series(几何梯度系列)"></a>Geometric Gradient Series(几何梯度系列)</h4><p>$P = A_1  (  P  /  A_1 , g, i  ,  N  )$<br><img src="https://ws4.sinaimg.cn/large/006xwwY9ly1g0uayaj3ykj30b1071t8v.jpg" alt="Geometric Gradient"></p>
-<h3 id="Composite-cash-flow"><a href="#Composite-cash-flow" class="headerlink" title="Composite cash flow"></a>Composite cash flow</h3><p>Q1:<br><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0uau70fq8j30hd0fngm5.jpg" alt="image"><br><img src="https://ws1.sinaimg.cn/large/006xwwY9ly1g0uau6kcsvj30ml0im0un.jpg" alt="image"><br><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0uau6rekbj30pd0idmyf.jpg" alt="image"><br>Q2:<br><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0uau7x89gj30lc0a2my4.jpg" alt="image"><br><img src="https://wx2.sinaimg.cn/large/006xwwY9ly1g0uau7hsg7j30in09ywg0.jpg" alt="image"><br>Q3:<br><img src="https://ws2.sinaimg.cn/large/006xwwY9ly1g0uau8c9knj30h80a7mxv.jpg" alt="image"><br><img src="https://ws4.sinaimg.cn/large/006xwwY9ly1g0uau84evkj30kp09w3yt.jpg" alt="image"></p>
-<p><br/></p>
-]]></content>
-      <tags>
-        <tag>工程经济学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Gitee(码云)、Github同时配置ssh key</title>
     <url>/posts/24204.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -615,6 +615,28 @@
 ]]></content>
       <tags>
         <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中间语言表示</title>
+    <url>/posts/11028.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h2 id="编译器构成"><a href="#编译器构成" class="headerlink" title="编译器构成"></a>编译器构成</h2><p>编译器分为前端和后端：<br>前端：依赖于源语言，独立于目标机器。包括词法分析器、语法分析器、语义分析器和中间代码生成器。<br>后端：依赖于目标机器，独立于源语言。包括代码优化器和代码生成器。</p>
+<h2 id="中间语言表示"><a href="#中间语言表示" class="headerlink" title="中间语言表示"></a>中间语言表示</h2><h3 id="后缀表示"><a href="#后缀表示" class="headerlink" title="后缀表示"></a>后缀表示</h3><ul>
+<li>如果$E$是变量或常数，那么$E$的后缀表示就是$E$本身。</li>
+<li>如果$E$是形式为$E_1 \ op \  E_2$的表达式，那么$E$的后缀表示是$E_1^{\prime}\  E_2^{\prime} \ op$，其中$E_1^{\prime}$和$E_2^{\prime}$分别是$E_1$和$E_2$的后缀表示。</li>
+<li>如果$E$是形式为$(E_1)$的表达式，那么$E_1$的后缀表示也是$E$的后缀表示。</li>
+<li>后缀表示不需要括号。</li>
+</ul>
+<p>🌰(8 - 4) + 2 的后缀表示是8 4 - 2 +</p>
+<h3 id="图形表示——语法树有向无环图DAG"><a href="#图形表示——语法树有向无环图DAG" class="headerlink" title="图形表示——语法树有向无环图DAG"></a>图形表示——语法树有向无环图DAG</h3><p><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g0uabt9morj30t90ccdhh.jpg" alt=""></p>
+<h3 id="三地址代码"><a href="#三地址代码" class="headerlink" title="三地址代码"></a>三地址代码</h3><p>三地址代码是语法树或DAG的一种线性表示。<br>一般形式：$x := y\ op\ z$，其中，如果x不是最终结果，那么x作为临时变量放在活动记录的临时变量区中。<br>🌰$a := (-b + c<em>d ) + c</em>d$的DAG的三地址代码<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">t1 = -b;</span><br><span class="line">t2 = c * d;</span><br><span class="line">t3 = t1 + t2;</span><br><span class="line">t4 = t2 + t3;</span><br><span class="line">a = t4;</span><br></pre></td></tr></table></figure></p>
+<p><br/></p>
+]]></content>
+      <tags>
+        <tag>编译原理</tag>
       </tags>
   </entry>
   <entry>
@@ -716,28 +738,6 @@
       <tags>
         <tag>数据库</tag>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>中间语言表示</title>
-    <url>/posts/11028.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h2 id="编译器构成"><a href="#编译器构成" class="headerlink" title="编译器构成"></a>编译器构成</h2><p>编译器分为前端和后端：<br>前端：依赖于源语言，独立于目标机器。包括词法分析器、语法分析器、语义分析器和中间代码生成器。<br>后端：依赖于目标机器，独立于源语言。包括代码优化器和代码生成器。</p>
-<h2 id="中间语言表示"><a href="#中间语言表示" class="headerlink" title="中间语言表示"></a>中间语言表示</h2><h3 id="后缀表示"><a href="#后缀表示" class="headerlink" title="后缀表示"></a>后缀表示</h3><ul>
-<li>如果$E$是变量或常数，那么$E$的后缀表示就是$E$本身。</li>
-<li>如果$E$是形式为$E_1 \ op \  E_2$的表达式，那么$E$的后缀表示是$E_1^{\prime}\  E_2^{\prime} \ op$，其中$E_1^{\prime}$和$E_2^{\prime}$分别是$E_1$和$E_2$的后缀表示。</li>
-<li>如果$E$是形式为$(E_1)$的表达式，那么$E_1$的后缀表示也是$E$的后缀表示。</li>
-<li>后缀表示不需要括号。</li>
-</ul>
-<p>🌰(8 - 4) + 2 的后缀表示是8 4 - 2 +</p>
-<h3 id="图形表示——语法树有向无环图DAG"><a href="#图形表示——语法树有向无环图DAG" class="headerlink" title="图形表示——语法树有向无环图DAG"></a>图形表示——语法树有向无环图DAG</h3><p><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g0uabt9morj30t90ccdhh.jpg" alt=""></p>
-<h3 id="三地址代码"><a href="#三地址代码" class="headerlink" title="三地址代码"></a>三地址代码</h3><p>三地址代码是语法树或DAG的一种线性表示。<br>一般形式：$x := y\ op\ z$，其中，如果x不是最终结果，那么x作为临时变量放在活动记录的临时变量区中。<br>🌰$a := (-b + c<em>d ) + c</em>d$的DAG的三地址代码<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">t1 = -b;</span><br><span class="line">t2 = c * d;</span><br><span class="line">t3 = t1 + t2;</span><br><span class="line">t4 = t2 + t3;</span><br><span class="line">a = t4;</span><br></pre></td></tr></table></figure></p>
-<p><br/></p>
-]]></content>
-      <tags>
-        <tag>编译原理</tag>
       </tags>
   </entry>
   <entry>
@@ -1033,52 +1033,6 @@
       </tags>
   </entry>
   <entry>
-    <title>软件工程[3] 需求分析</title>
-    <url>/posts/51302.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h3 id="需求分析的任务"><a href="#需求分析的任务" class="headerlink" title="需求分析的任务"></a>需求分析的任务</h3><ul>
-<li>确定对系统的综合要求</li>
-<li>分析系统的数据要求</li>
-<li>导出系统的逻辑模型</li>
-<li>修正系统开发计划</li>
-</ul>
-<p>🔖系统的综合要求包括：功能需求、性能需求、可靠性和可用性需求、出错处理需求、接口需求、约束、逆向需求和将来可能提出的要求。<br>🔖通常用数据流图、实体-联系图、状态转换图、数据字典和主要的处理算法描述系统的逻辑模型。</p>
-<h3 id="分析建模"><a href="#分析建模" class="headerlink" title="分析建模"></a>分析建模</h3><p>需求分析过程应建立三种模型：</p>
-<ul>
-<li>数据模型(使用实体-联系图，即E-R图)</li>
-<li>功能模型(使用数据流图)</li>
-<li>行为模型(使用状态转换图)</li>
-</ul>
-<h3 id="实体-联系图"><a href="#实体-联系图" class="headerlink" title="实体-联系图"></a>实体-联系图</h3><p>数据模型包含三种相互关联的信息：数据对象、数据对象的属性及数据对象彼此间相互连接的关系。</p>
-<h4 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h4><p>数据对象是对软件必须理解的复合信息的表示。所谓复合信息是指具有一系列不同性质或属性的事物，因此，仅有单个值的事物(例如长度，名称)不是数据对象。可以由一组属性来定义的<strong>实体</strong>都可以认为是数据对象。（联系或称关系也可能有一组属性，但它不是数据对象）<br>数据对象只封装了数据，没有包含作用于这些数据上的操作。</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>属性定义了数据对象的性质和特征。<br>为了唯一地标识数据对象的某一个实例，定义数据对象中的一个属性或几个属性为关键字，简称键 (key)。</p>
-<h4 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h4><p>数据对象彼此之间相互连接的方式称为联系(关系)。</p>
-<ul>
-<li>一对一联系(1∶1)<br>🌰一个班级有一位班长．一个班长只能在一个班级任职，班级和班长这两个实体的联系是一对一的。</li>
-<li>一对多联系(1∶N)<br>🌰一个班级有多个班干部，一个班干部只能在一个班级任职，班级和班干部这两个实体的联系是一对多的。</li>
-<li>多对多联系(M∶N)<br>🌰一个学生可以选修多门课，一门课可以有多个学生选修，学生和课程这两个实体之间的联系是多对多的。</li>
-</ul>
-<h4 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h4><p>通常用矩形框代表实体，用连接相关实体的菱形框表示关系。用椭圆形或圆角矩形表示实体(或关系)的属性。并用无向边把实体(或关系)与其属性连接起来。</p>
-<h3 id="状态转换图-STD"><a href="#状态转换图-STD" class="headerlink" title="状态转换图(STD)"></a>状态转换图(STD)</h3><p>状态转换图(State Transition Diagram, STD)通过描绘系统的状态及引起系统状态转换的事件，来表示系统的行为。</p>
-<h4 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h4><p>状态是任何可以被观察到的系统行为模式，一个状态代表系统的一种行为模式。<br>在STD中用圆形框或椭圆框表示状态，通常在框内标上状态名。状态规定了系统对事件的响应方式。<br>系统对事件的响应，既可以是做一个(或一系列)动作，也可以是仅仅改变系统本身的状态，还可以是既改变状态又做动作。<br>在状态图中定义的状态主要有：初态、终态和中间状态。在一个状态图中只能有一个初态，终态可以有零个或多个。</p>
-<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>事件是在某个特定时刻发生的事情，它是对引起系统从一个状态转换到另一个状态的外界事件的抽象。简而言之，事件就是引起系统状态转换的控制信息。<br>在状态图中，从一个状态到另一个状态的转换用箭头线表示，箭头表明转换方向，箭头线上标上事件名。必要时可在事件名后面加一个方括号，括号内写上状态转换的条件（守卫条件）。也就是说，仅当方括号内所列出的条件为真时，该事件的发生才引起箭头所示的状态转换。</p>
-<h4 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h4><ul>
-<li>初态用实心圆表示；终态用同心圆（内圆为实心圆）表示。</li>
-<li>中间状态用圆角矩形表示，用两条水平横线分为上中下三部分。上面为状态名，必须有的；中间为状态变量的名字和值（比如，timer=0），可选的；下面为活动表（语法格式为：事件名/动作表达式），可选的。<br>活动表🌰：do/开始录音；exit/播放音乐</li>
-<li>状态间转换用有向箭头，箭线上标明事件表达式。</li>
-</ul>
-<h3 id="其他图形工具"><a href="#其他图形工具" class="headerlink" title="其他图形工具"></a>其他图形工具</h3><h4 id="层次方框图"><a href="#层次方框图" class="headerlink" title="层次方框图"></a>层次方框图</h4><p>树形结构，树形结构的顶层是一个单独的矩形框，它代表完整的数据结构，下面各层的矩形框代表这个数据结构的子集，最底层的各个框代表组成这个数据的实际数据元素。</p>
-<h4 id="Wariner图"><a href="#Wariner图" class="headerlink" title="Wariner图"></a>Wariner图</h4><p>花括号内的信息条目构成顺序关系；花括号从左至右排列表示树型层次结构；符号“⊕”表示不可兼具的选择关系；“￣”表示“非”；圆括号内的数字表示重复次数，（1,n）表示重复结构，（1）或不标次数表示顺序结构，（0,1）表示选择结构。<br><img src="" alt="Wariner"></p>
-<h4 id="IPO图-Input-Process-Output-Diagram"><a href="#IPO图-Input-Process-Output-Diagram" class="headerlink" title="IPO图(Input Process Output Diagram)"></a>IPO图(Input Process Output Diagram)</h4><p>左边框中列出有关的输入，中间框中列出主要的处理，右边框中列出产生的输出。处理的顺序暗示了执行的顺序，箭头指出数据通信的情况。<br><img src="" alt="IPO"></p>
-<p><br/></p>
-]]></content>
-      <tags>
-        <tag>软件工程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软件工程[2] 可行性研究</title>
     <url>/posts/55565.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -1196,6 +1150,52 @@
 <li>投资回报率。衡量工程经济效益时最重要的参考依据。</li>
 </ul>
 <p>learn more: <a href="https://liyzy.github.io/tags/%E5%B7%A5%E7%A8%8B%E7%BB%8F%E6%B5%8E%E5%AD%A6/">工程经济学</a></p>
+<p><br/></p>
+]]></content>
+      <tags>
+        <tag>软件工程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件工程[3] 需求分析</title>
+    <url>/posts/51302.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h3 id="需求分析的任务"><a href="#需求分析的任务" class="headerlink" title="需求分析的任务"></a>需求分析的任务</h3><ul>
+<li>确定对系统的综合要求</li>
+<li>分析系统的数据要求</li>
+<li>导出系统的逻辑模型</li>
+<li>修正系统开发计划</li>
+</ul>
+<p>🔖系统的综合要求包括：功能需求、性能需求、可靠性和可用性需求、出错处理需求、接口需求、约束、逆向需求和将来可能提出的要求。<br>🔖通常用数据流图、实体-联系图、状态转换图、数据字典和主要的处理算法描述系统的逻辑模型。</p>
+<h3 id="分析建模"><a href="#分析建模" class="headerlink" title="分析建模"></a>分析建模</h3><p>需求分析过程应建立三种模型：</p>
+<ul>
+<li>数据模型(使用实体-联系图，即E-R图)</li>
+<li>功能模型(使用数据流图)</li>
+<li>行为模型(使用状态转换图)</li>
+</ul>
+<h3 id="实体-联系图"><a href="#实体-联系图" class="headerlink" title="实体-联系图"></a>实体-联系图</h3><p>数据模型包含三种相互关联的信息：数据对象、数据对象的属性及数据对象彼此间相互连接的关系。</p>
+<h4 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h4><p>数据对象是对软件必须理解的复合信息的表示。所谓复合信息是指具有一系列不同性质或属性的事物，因此，仅有单个值的事物(例如长度，名称)不是数据对象。可以由一组属性来定义的<strong>实体</strong>都可以认为是数据对象。（联系或称关系也可能有一组属性，但它不是数据对象）<br>数据对象只封装了数据，没有包含作用于这些数据上的操作。</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>属性定义了数据对象的性质和特征。<br>为了唯一地标识数据对象的某一个实例，定义数据对象中的一个属性或几个属性为关键字，简称键 (key)。</p>
+<h4 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h4><p>数据对象彼此之间相互连接的方式称为联系(关系)。</p>
+<ul>
+<li>一对一联系(1∶1)<br>🌰一个班级有一位班长．一个班长只能在一个班级任职，班级和班长这两个实体的联系是一对一的。</li>
+<li>一对多联系(1∶N)<br>🌰一个班级有多个班干部，一个班干部只能在一个班级任职，班级和班干部这两个实体的联系是一对多的。</li>
+<li>多对多联系(M∶N)<br>🌰一个学生可以选修多门课，一门课可以有多个学生选修，学生和课程这两个实体之间的联系是多对多的。</li>
+</ul>
+<h4 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h4><p>通常用矩形框代表实体，用连接相关实体的菱形框表示关系。用椭圆形或圆角矩形表示实体(或关系)的属性。并用无向边把实体(或关系)与其属性连接起来。</p>
+<h3 id="状态转换图-STD"><a href="#状态转换图-STD" class="headerlink" title="状态转换图(STD)"></a>状态转换图(STD)</h3><p>状态转换图(State Transition Diagram, STD)通过描绘系统的状态及引起系统状态转换的事件，来表示系统的行为。</p>
+<h4 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h4><p>状态是任何可以被观察到的系统行为模式，一个状态代表系统的一种行为模式。<br>在STD中用圆形框或椭圆框表示状态，通常在框内标上状态名。状态规定了系统对事件的响应方式。<br>系统对事件的响应，既可以是做一个(或一系列)动作，也可以是仅仅改变系统本身的状态，还可以是既改变状态又做动作。<br>在状态图中定义的状态主要有：初态、终态和中间状态。在一个状态图中只能有一个初态，终态可以有零个或多个。</p>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>事件是在某个特定时刻发生的事情，它是对引起系统从一个状态转换到另一个状态的外界事件的抽象。简而言之，事件就是引起系统状态转换的控制信息。<br>在状态图中，从一个状态到另一个状态的转换用箭头线表示，箭头表明转换方向，箭头线上标上事件名。必要时可在事件名后面加一个方括号，括号内写上状态转换的条件（守卫条件）。也就是说，仅当方括号内所列出的条件为真时，该事件的发生才引起箭头所示的状态转换。</p>
+<h4 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h4><ul>
+<li>初态用实心圆表示；终态用同心圆（内圆为实心圆）表示。</li>
+<li>中间状态用圆角矩形表示，用两条水平横线分为上中下三部分。上面为状态名，必须有的；中间为状态变量的名字和值（比如，timer=0），可选的；下面为活动表（语法格式为：事件名/动作表达式），可选的。<br>活动表🌰：do/开始录音；exit/播放音乐</li>
+<li>状态间转换用有向箭头，箭线上标明事件表达式。</li>
+</ul>
+<h3 id="其他图形工具"><a href="#其他图形工具" class="headerlink" title="其他图形工具"></a>其他图形工具</h3><h4 id="层次方框图"><a href="#层次方框图" class="headerlink" title="层次方框图"></a>层次方框图</h4><p>树形结构，树形结构的顶层是一个单独的矩形框，它代表完整的数据结构，下面各层的矩形框代表这个数据结构的子集，最底层的各个框代表组成这个数据的实际数据元素。</p>
+<h4 id="Wariner图"><a href="#Wariner图" class="headerlink" title="Wariner图"></a>Wariner图</h4><p>花括号内的信息条目构成顺序关系；花括号从左至右排列表示树型层次结构；符号“⊕”表示不可兼具的选择关系；“￣”表示“非”；圆括号内的数字表示重复次数，（1,n）表示重复结构，（1）或不标次数表示顺序结构，（0,1）表示选择结构。<br><img src="" alt="Wariner"></p>
+<h4 id="IPO图-Input-Process-Output-Diagram"><a href="#IPO图-Input-Process-Output-Diagram" class="headerlink" title="IPO图(Input Process Output Diagram)"></a>IPO图(Input Process Output Diagram)</h4><p>左边框中列出有关的输入，中间框中列出主要的处理，右边框中列出产生的输出。处理的顺序暗示了执行的顺序，箭头指出数据通信的情况。<br><img src="" alt="IPO"></p>
 <p><br/></p>
 ]]></content>
       <tags>
@@ -1335,6 +1335,26 @@
       </tags>
   </entry>
   <entry>
+    <title>The Zen of Pyhton(Python之禅)</title>
+    <url>/posts/49787.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<p>今天看Python的时候，发现原来在Python中有这样一个彩蛋：The Zen of Python</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; import this</span><br><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#x27;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br></pre></td></tr></table></figure>
+<p>这是Tim Peter写的Python编程和设计的指导原则，即Python之禅，this.py中对原文的内容用了凯撒密码加密，明文对应密文字母右移13位。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&quot;&quot;&quot;Gur Mra bs Clguba, ol Gvz Crgref</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Ornhgvshy vf orggre guna htyl.</span></span><br><span class="line"><span class="string">Rkcyvpvg vf orggre guna vzcyvpvg.</span></span><br><span class="line"><span class="string">Fvzcyr vf orggre guna pbzcyrk.</span></span><br><span class="line"><span class="string">Pbzcyrk vf orggre guna pbzcyvpngrq.</span></span><br><span class="line"><span class="string">Syng vf orggre guna arfgrq.</span></span><br><span class="line"><span class="string">Fcnefr vf orggre guna qrafr.</span></span><br><span class="line"><span class="string">Ernqnovyvgl pbhagf.</span></span><br><span class="line"><span class="string">Fcrpvny pnfrf nera&#x27;g fcrpvny rabhtu gb oernx gur ehyrf.</span></span><br><span class="line"><span class="string">Nygubhtu cenpgvpnyvgl orngf chevgl.</span></span><br><span class="line"><span class="string">Reebef fubhyq arire cnff fvyragyl.</span></span><br><span class="line"><span class="string">Hayrff rkcyvpvgyl fvyraprq.</span></span><br><span class="line"><span class="string">Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.</span></span><br><span class="line"><span class="string">Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.</span></span><br><span class="line"><span class="string">Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh&#x27;er Qhgpu.</span></span><br><span class="line"><span class="string">Abj vf orggre guna arire.</span></span><br><span class="line"><span class="string">Nygubhtu arire vf bsgra orggre guna *evtug* abj.</span></span><br><span class="line"><span class="string">Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg&#x27;f n onq vqrn.</span></span><br><span class="line"><span class="string">Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.</span></span><br><span class="line"><span class="string">Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg&#x27;f qb zber bs gubfr!&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">d = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> (<span class="number">65</span>, <span class="number">97</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">26</span>):</span><br><span class="line">        d[<span class="built_in">chr</span>(i+c)] = <span class="built_in">chr</span>((i+<span class="number">13</span>) % <span class="number">26</span> + c)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&quot;</span>.join([d.get(c, c) <span class="keyword">for</span> c <span class="keyword">in</span> s]))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>chr()</code>用一个范围在range(256)内的整数作参数，返回当前整数对应的ASCII字符</li>
+</ul>
+<p>输出的Python编程和设计的指导原则值得学习，中文翻译如下：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优美胜于丑陋（Python 以编写优美的代码为目标） </span><br><span class="line">明了胜于晦涩（优美的代码应当是明了的，命名规范，风格相似） </span><br><span class="line">简洁胜于复杂（优美的代码应当是简洁的，不要有复杂的内部实现） </span><br><span class="line">复杂胜于凌乱（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁） </span><br><span class="line">扁平胜于嵌套（优美的代码应当是扁平的，不能有太多的嵌套） </span><br><span class="line">间隔胜于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题） </span><br><span class="line">可读性很重要（优美的代码是可读的） </span><br><span class="line">即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上） </span><br><span class="line">不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass 风格的代码） </span><br><span class="line">当存在多种可能，不要尝试去猜测 </span><br><span class="line">而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法） </span><br><span class="line">虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ） </span><br><span class="line">做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量） </span><br><span class="line">如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准） </span><br><span class="line">命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）</span><br><span class="line"></span><br><span class="line">cv: douban 萝卜特(vzever)</span><br></pre></td></tr></table></figure></p>
+<p><br/></p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自上而下的语法分析</title>
     <url>/posts/31695.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -1364,26 +1384,6 @@
       <tags>
         <tag>编译原理</tag>
         <tag>语法分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Zen of Pyhton(Python之禅)</title>
-    <url>/posts/49787.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<p>今天看Python的时候，发现原来在Python中有这样一个彩蛋：The Zen of Python</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; import this</span><br><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line"></span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#x27;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#x27;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#x27;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#x27;s do more of those!</span><br></pre></td></tr></table></figure>
-<p>这是Tim Peter写的Python编程和设计的指导原则，即Python之禅，this.py中对原文的内容用了凯撒密码加密，明文对应密文字母右移13位。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&quot;&quot;&quot;Gur Mra bs Clguba, ol Gvz Crgref</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Ornhgvshy vf orggre guna htyl.</span></span><br><span class="line"><span class="string">Rkcyvpvg vf orggre guna vzcyvpvg.</span></span><br><span class="line"><span class="string">Fvzcyr vf orggre guna pbzcyrk.</span></span><br><span class="line"><span class="string">Pbzcyrk vf orggre guna pbzcyvpngrq.</span></span><br><span class="line"><span class="string">Syng vf orggre guna arfgrq.</span></span><br><span class="line"><span class="string">Fcnefr vf orggre guna qrafr.</span></span><br><span class="line"><span class="string">Ernqnovyvgl pbhagf.</span></span><br><span class="line"><span class="string">Fcrpvny pnfrf nera&#x27;g fcrpvny rabhtu gb oernx gur ehyrf.</span></span><br><span class="line"><span class="string">Nygubhtu cenpgvpnyvgl orngf chevgl.</span></span><br><span class="line"><span class="string">Reebef fubhyq arire cnff fvyragyl.</span></span><br><span class="line"><span class="string">Hayrff rkcyvpvgyl fvyraprq.</span></span><br><span class="line"><span class="string">Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.</span></span><br><span class="line"><span class="string">Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.</span></span><br><span class="line"><span class="string">Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh&#x27;er Qhgpu.</span></span><br><span class="line"><span class="string">Abj vf orggre guna arire.</span></span><br><span class="line"><span class="string">Nygubhtu arire vf bsgra orggre guna *evtug* abj.</span></span><br><span class="line"><span class="string">Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg&#x27;f n onq vqrn.</span></span><br><span class="line"><span class="string">Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.</span></span><br><span class="line"><span class="string">Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg&#x27;f qb zber bs gubfr!&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">d = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> (<span class="number">65</span>, <span class="number">97</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">26</span>):</span><br><span class="line">        d[<span class="built_in">chr</span>(i+c)] = <span class="built_in">chr</span>((i+<span class="number">13</span>) % <span class="number">26</span> + c)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&quot;</span>.join([d.get(c, c) <span class="keyword">for</span> c <span class="keyword">in</span> s]))</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>chr()</code>用一个范围在range(256)内的整数作参数，返回当前整数对应的ASCII字符</li>
-</ul>
-<p>输出的Python编程和设计的指导原则值得学习，中文翻译如下：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优美胜于丑陋（Python 以编写优美的代码为目标） </span><br><span class="line">明了胜于晦涩（优美的代码应当是明了的，命名规范，风格相似） </span><br><span class="line">简洁胜于复杂（优美的代码应当是简洁的，不要有复杂的内部实现） </span><br><span class="line">复杂胜于凌乱（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁） </span><br><span class="line">扁平胜于嵌套（优美的代码应当是扁平的，不能有太多的嵌套） </span><br><span class="line">间隔胜于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题） </span><br><span class="line">可读性很重要（优美的代码是可读的） </span><br><span class="line">即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上） </span><br><span class="line">不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass 风格的代码） </span><br><span class="line">当存在多种可能，不要尝试去猜测 </span><br><span class="line">而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法） </span><br><span class="line">虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ） </span><br><span class="line">做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量） </span><br><span class="line">如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准） </span><br><span class="line">命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）</span><br><span class="line"></span><br><span class="line">cv: douban 萝卜特(vzever)</span><br></pre></td></tr></table></figure></p>
-<p><br/></p>
-]]></content>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1479,6 +1479,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/16107.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>hexo问题记录(持续更新...)</title>
     <url>/posts/13950.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -1489,11 +1494,6 @@
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/16107.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>HTML基本标签</title>
@@ -1674,7 +1674,57 @@
 <p><a href="https://javaguide.cn/java/basis/java-basic-questions-01.html#hashcode-%E4%B8%8E-equals">hashCode与equals</a></p>
 ]]></content>
       <tags>
-        <tag>Java</tag>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库设计与Oracle存储结构</title>
+    <url>/posts/16277.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h2 id="数据库的设计过程"><a href="#数据库的设计过程" class="headerlink" title="数据库的设计过程"></a>数据库的设计过程</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>需求分析的重点是调查、收集与分析用户在数据管理中的<strong>信息要求、处理要求、安全性与完整性要求</strong>。<br>分析和表达用户的需求的常用方法：自顶向下的结构化分析方法（Structured Analysis，简称SA方法）。SA方法从最上层的系统组织机构入手，采用逐层分解的方式分析系统，并用<strong>数据流图</strong>和<strong>数据字典</strong>描述系统。</p>
+<h3 id="概念结构设计"><a href="#概念结构设计" class="headerlink" title="概念结构设计"></a>概念结构设计</h3><p>将需求分析得到的用户需求抽象为信息结构即概念模型的过程就是概念结构设计。概念结构是各种数据模型的共同基础，它比数据模型更独立于机器、更抽象，从而更加稳定。概念结构设计是整个数据库设计的关键。<br>设计概念结构的四类方法：</p>
+<ul>
+<li>自顶向下</li>
+<li>自底向上</li>
+<li>逐步扩张</li>
+<li>混合策略（自顶向下和自底向上）</li>
+</ul>
+<h3 id="逻辑结构设计"><a href="#逻辑结构设计" class="headerlink" title="逻辑结构设计"></a>逻辑结构设计</h3><p>逻辑结构设计的步骤：</p>
+<ul>
+<li>将概念结构转化为一般的关系、网状、层次模型</li>
+<li>将转化来的关系、网状、层次模型向特定DBMS支持下的数据模型转换</li>
+<li>对数据模型进行优化</li>
+<li>设计用户子模式</li>
+</ul>
+<h3 id="物理设计"><a href="#物理设计" class="headerlink" title="物理设计"></a>物理设计</h3><p>数据库物理设计的步骤：</p>
+<ul>
+<li>确定数据库的物理结构</li>
+<li>对物理结构进行评价，评价的重点是时间和空间效率</li>
+<li>如果评价结果满足原设计要求则可进入到物理实施阶段，否则，就需要重新设计或修改物理结构，有时甚至要返回逻辑设计阶段修改数据模型。</li>
+</ul>
+<h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>数据库实施的工作内容</p>
+<ul>
+<li>用DDL定义数据库结构</li>
+<li>组织数据入库</li>
+<li>编制与调试应用程序</li>
+<li>数据库试运行</li>
+</ul>
+<h3 id="运行与维护"><a href="#运行与维护" class="headerlink" title="运行与维护"></a>运行与维护</h3><p>数据库试运行结果符合设计目标后，数据库就可以真正投入运行了。数据库投入运行标志着开发任务的基本完成和维护工作的开始。对数据库设计进行评价、调整、修改等维护工作是一个长期的任务，也是设计工作的继续和提高。</p>
+<h2 id="Oracle存储结构"><a href="#Oracle存储结构" class="headerlink" title="Oracle存储结构"></a>Oracle存储结构</h2><h3 id="逻辑存储结构"><a href="#逻辑存储结构" class="headerlink" title="逻辑存储结构"></a>逻辑存储结构</h3><p>数据库（Database）由多个表空间（Tablespace）组成，表空间由段（Segment）组成,段由多个区（Extent）组成，区是磁盘上连续块（Block）的组。</p>
+<ul>
+<li>表空间（Tablespace），最高级的逻辑存储结构，数据库是由多个表空间组成的。</li>
+<li>段（Segment），由多个区组成，这些区可以是连续的，也可以是不连续的。包括数据段、索引段、临时段和回滚段。</li>
+<li>区（Extend），由连续的块组成，它是oracle在进行存储空间的分配和回收的最小单位。</li>
+<li>块（Block），Oracle用来管理存储的最小单元，是数据库使用的最小I/O单元，也是最小的逻辑存储结构。<br><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g2a9786eptj30hj09lglu.jpg" alt="database-design-and-store"></li>
+</ul>
+<h3 id="物理存储结构"><a href="#物理存储结构" class="headerlink" title="物理存储结构"></a>物理存储结构</h3><p>Oracle数据库逻辑上由一个或多个表空间组成，每个表空间在物理上由一个或多个<strong>数据文件</strong>组成。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blogs.oracle.com/database4cn/oracle-v6">ORACLE数据库存储结构简介</a></p>
+]]></content>
+      <tags>
+        <tag>数据库</tag>
+        <tag>oracle</tag>
       </tags>
   </entry>
   <entry>
@@ -1790,8 +1840,29 @@
 ]]></content>
       <tags>
         <tag>数据库</tag>
-        <tag>SQL</tag>
         <tag>oracle</tag>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Payback period and AE analysis</title>
+    <url>/posts/18708.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h2 id="Payback-period"><a href="#Payback-period" class="headerlink" title="Payback period"></a>Payback period</h2><h3 id="Conventional-Payback-Period-静态回收期"><a href="#Conventional-Payback-Period-静态回收期" class="headerlink" title="Conventional Payback Period(静态回收期)"></a>Conventional Payback Period(静态回收期)</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><p>静态回收期=累计净现金流量开始出现正值的年份数 - 1 + [上年累计净现金流量的绝对值/当年净现金流量]</p>
+<h4 id="Weakness"><a href="#Weakness" class="headerlink" title="Weakness"></a>Weakness</h4><p>Does not consider the time value of money.</p>
+<h3 id="Discounted-Payback-Period-动态回收期"><a href="#Discounted-Payback-Period-动态回收期" class="headerlink" title="Discounted Payback Period(动态回收期)"></a>Discounted Payback Period(动态回收期)</h3><h4 id="Formula-1"><a href="#Formula-1" class="headerlink" title="Formula"></a>Formula</h4><p>动态回收期=累计净现金流量<strong>折现值</strong>开始出现正值的年份数 - 1 + [上年累计净现金流量<strong>折现值</strong>的绝对值/当年净现金流量<strong>折现值</strong>]</p>
+<h4 id="Weakness-1"><a href="#Weakness-1" class="headerlink" title="Weakness"></a>Weakness</h4><p>Cash flows occurring after discounted payback period(DPP) are ignored.</p>
+<h4 id="Calculate"><a href="#Calculate" class="headerlink" title="Calculate"></a>Calculate</h4><p>Method1:<br><img src="https://wx3.sinaimg.cn/large/006xwwY9ly1g0ub4r4pv8j30fp082gm2.jpg" alt="Method1"><br>Method2:<br><img src="https://ws2.sinaimg.cn/large/006xwwY9ly1g0ub4rpbwtj30zd05jaah.jpg" alt="Method2"></p>
+<h2 id="Capitalized-Equivalent-Worth-等值资本化"><a href="#Capitalized-Equivalent-Worth-等值资本化" class="headerlink" title="Capitalized Equivalent Worth(等值资本化)"></a>Capitalized Equivalent Worth(等值资本化)</h2><p>A special case of the PW criterion is useful when the life of a proposed project is perpetual or the service life is extremely long.<br>The capitalized cost represents the amount of money that must be invested <strong>today</strong> in order to yield a certain return A at the end of each and every period forever.<br>一次性投入以在以后的每个阶段(例如每年、每月等)产生一个确定的回报A。</p>
+<h3 id="Formula-2"><a href="#Formula-2" class="headerlink" title="Formula"></a>Formula</h3><p>$C E ( i ) = P W ( i ) = A ( P / A , i , N ) = A / i \ (n\rightarrow \infty)$</p>
+<h2 id="Annual-equivalent-worth-年金等值分析"><a href="#Annual-equivalent-worth-年金等值分析" class="headerlink" title="Annual equivalent worth(年金等值分析)"></a>Annual equivalent worth(年金等值分析)</h2><p>在评估项目时，如果使用现值分析(PW)应当保证两个项目的分析期(项目存活周期)相同。如果不同，可以采用最小公倍数法统一分析期，但这种方法很麻烦。这种情况下，可以使用年金等值分析，计算每一年的平均花费，然后进行比较。二者的关系是$\mathrm { AE } ( \mathrm { i } ) = \mathrm { PW } ( \mathrm { i } ) ( \mathrm { A } / \mathrm { P } , \mathrm { i } , \mathrm { N } )$。</p>
+<h2 id="Capital–Recovery-Cost-资本重置费用"><a href="#Capital–Recovery-Cost-资本重置费用" class="headerlink" title="Capital–Recovery Cost(资本重置费用)"></a>Capital–Recovery Cost(资本重置费用)</h2><p>$\begin{aligned} \mathrm { CR } ( i ) &amp; = I ( A / P , i , N ) - S ( A / F , i , N ) \\ &amp; = ( I - S ) ( A / P , i , N ) + i S \end{aligned}$<br>$I$为一开始购进设备的花费，$S$为设备的残值。</p>
+<p><br/></p>
+]]></content>
+      <tags>
+        <tag>工程经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -1833,77 +1904,6 @@
 ]]></content>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库设计与Oracle存储结构</title>
-    <url>/posts/16277.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h2 id="数据库的设计过程"><a href="#数据库的设计过程" class="headerlink" title="数据库的设计过程"></a>数据库的设计过程</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>需求分析的重点是调查、收集与分析用户在数据管理中的<strong>信息要求、处理要求、安全性与完整性要求</strong>。<br>分析和表达用户的需求的常用方法：自顶向下的结构化分析方法（Structured Analysis，简称SA方法）。SA方法从最上层的系统组织机构入手，采用逐层分解的方式分析系统，并用<strong>数据流图</strong>和<strong>数据字典</strong>描述系统。</p>
-<h3 id="概念结构设计"><a href="#概念结构设计" class="headerlink" title="概念结构设计"></a>概念结构设计</h3><p>将需求分析得到的用户需求抽象为信息结构即概念模型的过程就是概念结构设计。概念结构是各种数据模型的共同基础，它比数据模型更独立于机器、更抽象，从而更加稳定。概念结构设计是整个数据库设计的关键。<br>设计概念结构的四类方法：</p>
-<ul>
-<li>自顶向下</li>
-<li>自底向上</li>
-<li>逐步扩张</li>
-<li>混合策略（自顶向下和自底向上）</li>
-</ul>
-<h3 id="逻辑结构设计"><a href="#逻辑结构设计" class="headerlink" title="逻辑结构设计"></a>逻辑结构设计</h3><p>逻辑结构设计的步骤：</p>
-<ul>
-<li>将概念结构转化为一般的关系、网状、层次模型</li>
-<li>将转化来的关系、网状、层次模型向特定DBMS支持下的数据模型转换</li>
-<li>对数据模型进行优化</li>
-<li>设计用户子模式</li>
-</ul>
-<h3 id="物理设计"><a href="#物理设计" class="headerlink" title="物理设计"></a>物理设计</h3><p>数据库物理设计的步骤：</p>
-<ul>
-<li>确定数据库的物理结构</li>
-<li>对物理结构进行评价，评价的重点是时间和空间效率</li>
-<li>如果评价结果满足原设计要求则可进入到物理实施阶段，否则，就需要重新设计或修改物理结构，有时甚至要返回逻辑设计阶段修改数据模型。</li>
-</ul>
-<h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>数据库实施的工作内容</p>
-<ul>
-<li>用DDL定义数据库结构</li>
-<li>组织数据入库</li>
-<li>编制与调试应用程序</li>
-<li>数据库试运行</li>
-</ul>
-<h3 id="运行与维护"><a href="#运行与维护" class="headerlink" title="运行与维护"></a>运行与维护</h3><p>数据库试运行结果符合设计目标后，数据库就可以真正投入运行了。数据库投入运行标志着开发任务的基本完成和维护工作的开始。对数据库设计进行评价、调整、修改等维护工作是一个长期的任务，也是设计工作的继续和提高。</p>
-<h2 id="Oracle存储结构"><a href="#Oracle存储结构" class="headerlink" title="Oracle存储结构"></a>Oracle存储结构</h2><h3 id="逻辑存储结构"><a href="#逻辑存储结构" class="headerlink" title="逻辑存储结构"></a>逻辑存储结构</h3><p>数据库（Database）由多个表空间（Tablespace）组成，表空间由段（Segment）组成,段由多个区（Extent）组成，区是磁盘上连续块（Block）的组。</p>
-<ul>
-<li>表空间（Tablespace），最高级的逻辑存储结构，数据库是由多个表空间组成的。</li>
-<li>段（Segment），由多个区组成，这些区可以是连续的，也可以是不连续的。包括数据段、索引段、临时段和回滚段。</li>
-<li>区（Extend），由连续的块组成，它是oracle在进行存储空间的分配和回收的最小单位。</li>
-<li>块（Block），Oracle用来管理存储的最小单元，是数据库使用的最小I/O单元，也是最小的逻辑存储结构。<br><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g2a9786eptj30hj09lglu.jpg" alt="database-design-and-store"></li>
-</ul>
-<h3 id="物理存储结构"><a href="#物理存储结构" class="headerlink" title="物理存储结构"></a>物理存储结构</h3><p>Oracle数据库逻辑上由一个或多个表空间组成，每个表空间在物理上由一个或多个<strong>数据文件</strong>组成。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blogs.oracle.com/database4cn/oracle-v6">ORACLE数据库存储结构简介</a></p>
-]]></content>
-      <tags>
-        <tag>数据库</tag>
-        <tag>oracle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Payback period and AE analysis</title>
-    <url>/posts/18708.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h2 id="Payback-period"><a href="#Payback-period" class="headerlink" title="Payback period"></a>Payback period</h2><h3 id="Conventional-Payback-Period-静态回收期"><a href="#Conventional-Payback-Period-静态回收期" class="headerlink" title="Conventional Payback Period(静态回收期)"></a>Conventional Payback Period(静态回收期)</h3><h4 id="Formula"><a href="#Formula" class="headerlink" title="Formula"></a>Formula</h4><p>静态回收期=累计净现金流量开始出现正值的年份数 - 1 + [上年累计净现金流量的绝对值/当年净现金流量]</p>
-<h4 id="Weakness"><a href="#Weakness" class="headerlink" title="Weakness"></a>Weakness</h4><p>Does not consider the time value of money.</p>
-<h3 id="Discounted-Payback-Period-动态回收期"><a href="#Discounted-Payback-Period-动态回收期" class="headerlink" title="Discounted Payback Period(动态回收期)"></a>Discounted Payback Period(动态回收期)</h3><h4 id="Formula-1"><a href="#Formula-1" class="headerlink" title="Formula"></a>Formula</h4><p>动态回收期=累计净现金流量<strong>折现值</strong>开始出现正值的年份数 - 1 + [上年累计净现金流量<strong>折现值</strong>的绝对值/当年净现金流量<strong>折现值</strong>]</p>
-<h4 id="Weakness-1"><a href="#Weakness-1" class="headerlink" title="Weakness"></a>Weakness</h4><p>Cash flows occurring after discounted payback period(DPP) are ignored.</p>
-<h4 id="Calculate"><a href="#Calculate" class="headerlink" title="Calculate"></a>Calculate</h4><p>Method1:<br><img src="https://wx3.sinaimg.cn/large/006xwwY9ly1g0ub4r4pv8j30fp082gm2.jpg" alt="Method1"><br>Method2:<br><img src="https://ws2.sinaimg.cn/large/006xwwY9ly1g0ub4rpbwtj30zd05jaah.jpg" alt="Method2"></p>
-<h2 id="Capitalized-Equivalent-Worth-等值资本化"><a href="#Capitalized-Equivalent-Worth-等值资本化" class="headerlink" title="Capitalized Equivalent Worth(等值资本化)"></a>Capitalized Equivalent Worth(等值资本化)</h2><p>A special case of the PW criterion is useful when the life of a proposed project is perpetual or the service life is extremely long.<br>The capitalized cost represents the amount of money that must be invested <strong>today</strong> in order to yield a certain return A at the end of each and every period forever.<br>一次性投入以在以后的每个阶段(例如每年、每月等)产生一个确定的回报A。</p>
-<h3 id="Formula-2"><a href="#Formula-2" class="headerlink" title="Formula"></a>Formula</h3><p>$C E ( i ) = P W ( i ) = A ( P / A , i , N ) = A / i \ (n\rightarrow \infty)$</p>
-<h2 id="Annual-equivalent-worth-年金等值分析"><a href="#Annual-equivalent-worth-年金等值分析" class="headerlink" title="Annual equivalent worth(年金等值分析)"></a>Annual equivalent worth(年金等值分析)</h2><p>在评估项目时，如果使用现值分析(PW)应当保证两个项目的分析期(项目存活周期)相同。如果不同，可以采用最小公倍数法统一分析期，但这种方法很麻烦。这种情况下，可以使用年金等值分析，计算每一年的平均花费，然后进行比较。二者的关系是$\mathrm { AE } ( \mathrm { i } ) = \mathrm { PW } ( \mathrm { i } ) ( \mathrm { A } / \mathrm { P } , \mathrm { i } , \mathrm { N } )$。</p>
-<h2 id="Capital–Recovery-Cost-资本重置费用"><a href="#Capital–Recovery-Cost-资本重置费用" class="headerlink" title="Capital–Recovery Cost(资本重置费用)"></a>Capital–Recovery Cost(资本重置费用)</h2><p>$\begin{aligned} \mathrm { CR } ( i ) &amp; = I ( A / P , i , N ) - S ( A / F , i , N ) \\ &amp; = ( I - S ) ( A / P , i , N ) + i S \end{aligned}$<br>$I$为一开始购进设备的花费，$S$为设备的残值。</p>
-<p><br/></p>
-]]></content>
-      <tags>
-        <tag>工程经济学</tag>
       </tags>
   </entry>
   <entry>
@@ -2009,6 +2009,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue项目部署到服务器上</title>
+    <url>/posts/4382.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
+<h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装nginx</span><br><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"># 启动nginx服务，此时访问服务器网址可以看到nginx的欢迎页</span><br><span class="line"># 如果是云服务器，需要打开http和https的端口</span><br><span class="line">service nginx restart</span><br><span class="line"></span><br><span class="line"># 查看当前nginx的版本</span><br><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
+<h4 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf </span><br></pre></td></tr></table></figure>
+<p>在 <code>http&#123;&#125;</code> 中配置一个<code>server&#123;&#125;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8080;                                  # 项目跑在哪个端口</span><br><span class="line">    server_name 118.178.187.5;                    # 当前服务器ip</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /home/dist/;                       # dist文件的位置(这是直接放在home目录下) </span><br><span class="line">         try_files $uri $uri/ /index.html;        # 重定向,内部文件的指向(照写)</span><br><span class="line">    &#125;</span><br><span class="line">    location /api &#123;                               # 当请求跨域时配置端口转发</span><br><span class="line">        proxy_pass http://118.178.187.5:8848/api; # 转发地址，意思是当访问8080端口时，会转发到8848端口</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试配置文件<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure></p>
+<p>重新加载<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<h4 id="Vue项目打包"><a href="#Vue项目打包" class="headerlink" title="Vue项目打包"></a>Vue项目打包</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 在项目文件夹中会生成dist文件夹</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>使用scp</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 上传文件</span><br><span class="line">scp local_file remote_username@remote_ip:remote_folder  # 上传到指定文件夹，文件名不变</span><br><span class="line">scp local_file remote_username@remote_ip:remote_file    # 指定了文件名</span><br><span class="line"></span><br><span class="line"># 上传文件夹</span><br><span class="line">scp -r local_folder remote_username@remote_ip:remote_folder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>具体实例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp -r dist root@118.178.187.5:/home/dist</span><br></pre></td></tr></table></figure>
+<p>也可以使用xftp软件。</p>
+<h4 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
+<p>访问<code>ip:port</code>，应该成功访问页面。</p>
+]]></content>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【java学习笔记1】数据类型&amp;函数篇</title>
     <url>/posts/22216.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
@@ -2101,29 +2124,6 @@
 ]]></content>
       <tags>
         <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue项目部署到服务器上</title>
-    <url>/posts/4382.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><p></p><br><span id="more"></span></p>
-<h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 安装nginx</span><br><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"># 启动nginx服务，此时访问服务器网址可以看到nginx的欢迎页</span><br><span class="line"># 如果是云服务器，需要打开http和https的端口</span><br><span class="line">service nginx restart</span><br><span class="line"></span><br><span class="line"># 查看当前nginx的版本</span><br><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
-<h4 id="修改Nginx配置文件"><a href="#修改Nginx配置文件" class="headerlink" title="修改Nginx配置文件"></a>修改Nginx配置文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf </span><br></pre></td></tr></table></figure>
-<p>在 <code>http&#123;&#125;</code> 中配置一个<code>server&#123;&#125;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8080;                                  # 项目跑在哪个端口</span><br><span class="line">    server_name 118.178.187.5;                    # 当前服务器ip</span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /home/dist/;                       # dist文件的位置(这是直接放在home目录下) </span><br><span class="line">         try_files $uri $uri/ /index.html;        # 重定向,内部文件的指向(照写)</span><br><span class="line">    &#125;</span><br><span class="line">    location /api &#123;                               # 当请求跨域时配置端口转发</span><br><span class="line">        proxy_pass http://118.178.187.5:8848/api; # 转发地址，意思是当访问8080端口时，会转发到8848端口</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>测试配置文件<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure></p>
-<p>重新加载<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
-<h4 id="Vue项目打包"><a href="#Vue项目打包" class="headerlink" title="Vue项目打包"></a>Vue项目打包</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 在项目文件夹中会生成dist文件夹</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>使用scp</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 上传文件</span><br><span class="line">scp local_file remote_username@remote_ip:remote_folder  # 上传到指定文件夹，文件名不变</span><br><span class="line">scp local_file remote_username@remote_ip:remote_file    # 指定了文件名</span><br><span class="line"></span><br><span class="line"># 上传文件夹</span><br><span class="line">scp -r local_folder remote_username@remote_ip:remote_folder</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>具体实例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scp -r dist root@118.178.187.5:/home/dist</span><br></pre></td></tr></table></figure>
-<p>也可以使用xftp软件。</p>
-<h4 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
-<p>访问<code>ip:port</code>，应该成功访问页面。</p>
-]]></content>
-      <tags>
-        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -2240,27 +2240,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【Python learning】词法结构</title>
-    <url>/posts/20416.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>通常，Python的源代码必须完全由ASCII码组成。若想在程序中的注释和字符串常量中使用非ASCII字符，需在源代码的第一行添加注释<code># -*- coding: &lt;encoding-name&gt; -*-</code></p>
-<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>通常Python的风格是类名称以大写字母开始，其他的标识符都是小写字母。以单个下划线开始的标识符是私有的，以两个下划线开始的标识符是非常强的私有标识符；如果标识符还以两个下划线结尾，则表示该标志符是Python语言定义的特殊名称。</p>
-<h3 id="关键字-3-7-1版本"><a href="#关键字-3-7-1版本" class="headerlink" title="关键字(3.7.1版本)"></a>关键字(3.7.1版本)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">False      await      else       import     pass</span><br><span class="line">None       break      except     in         raise</span><br><span class="line">True       class      finally    is         return</span><br><span class="line">and        continue   for        lambda     try</span><br><span class="line">as         def        from       nonlocal   while</span><br><span class="line">assert     del        global     not        with</span><br><span class="line">async      elif       if         or         yield</span><br></pre></td></tr></table></figure>
-<h3 id="逻辑行与物理行"><a href="#逻辑行与物理行" class="headerlink" title="逻辑行与物理行"></a>逻辑行与物理行</h3><p>逻辑行由一个或多个物理行组成。</p>
-<ul>
-<li>当某一物理行以backslash(\)结束，并且后面没有注释，就会连接到下一个物理行作为一个逻辑行。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">1900</span> &lt; year &lt; <span class="number">2100</span> <span class="keyword">and</span> <span class="number">1</span> &lt;= month &lt;= <span class="number">12</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">1</span> &lt;= day &lt;= <span class="number">31</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= hour &lt; <span class="number">24</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">0</span> &lt;= minute &lt; <span class="number">60</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= second &lt; <span class="number">60</span>:  <span class="comment"># Looks like a valid date</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;It&#x27;s a valid date.&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li>如果一个左边的圆括号、方括号、花括号还没有对应的右括号，则Python会自动把多个物理行连接成一个逻辑行。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">month_names = [<span class="string">&#x27;January&#x27;</span>, <span class="string">&#x27;February&#x27;</span>, <span class="string">&#x27;March&#x27;</span>,      <span class="comment"># These are the</span></span><br><span class="line">               <span class="string">&#x27;April&#x27;</span>,   <span class="string">&#x27;May&#x27;</span>,      <span class="string">&#x27;June&#x27;</span>,       <span class="comment"># Dutch names</span></span><br><span class="line">               <span class="string">&#x27;July&#x27;</span>,    <span class="string">&#x27;August&#x27;</span>, <span class="string">&#x27;September&#x27;</span>,  <span class="comment"># for the months</span></span><br><span class="line">               <span class="string">&#x27;October&#x27;</span>, <span class="string">&#x27;November&#x27;</span>, <span class="string">&#x27;December&#x27;</span>]   <span class="comment"># of the year</span></span><br></pre></td></tr></table></figure>
-<p><br/></p>
-]]></content>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Python learning 1】从Hello world!开始（print()函数解析）</title>
     <url>/posts/37700.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -2286,6 +2265,27 @@
 </li>
 </ul>
 <p>🔖在Python2中，如果不想换行则在输出语句的末尾加一个逗号，Python3中写成print(“hhh”,end=’’)就好了。</p>
+<p><br/></p>
+]]></content>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Python learning】词法结构</title>
+    <url>/posts/20416.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>通常，Python的源代码必须完全由ASCII码组成。若想在程序中的注释和字符串常量中使用非ASCII字符，需在源代码的第一行添加注释<code># -*- coding: &lt;encoding-name&gt; -*-</code></p>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>通常Python的风格是类名称以大写字母开始，其他的标识符都是小写字母。以单个下划线开始的标识符是私有的，以两个下划线开始的标识符是非常强的私有标识符；如果标识符还以两个下划线结尾，则表示该标志符是Python语言定义的特殊名称。</p>
+<h3 id="关键字-3-7-1版本"><a href="#关键字-3-7-1版本" class="headerlink" title="关键字(3.7.1版本)"></a>关键字(3.7.1版本)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">False      await      else       import     pass</span><br><span class="line">None       break      except     in         raise</span><br><span class="line">True       class      finally    is         return</span><br><span class="line">and        continue   for        lambda     try</span><br><span class="line">as         def        from       nonlocal   while</span><br><span class="line">assert     del        global     not        with</span><br><span class="line">async      elif       if         or         yield</span><br></pre></td></tr></table></figure>
+<h3 id="逻辑行与物理行"><a href="#逻辑行与物理行" class="headerlink" title="逻辑行与物理行"></a>逻辑行与物理行</h3><p>逻辑行由一个或多个物理行组成。</p>
+<ul>
+<li>当某一物理行以backslash(\)结束，并且后面没有注释，就会连接到下一个物理行作为一个逻辑行。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">1900</span> &lt; year &lt; <span class="number">2100</span> <span class="keyword">and</span> <span class="number">1</span> &lt;= month &lt;= <span class="number">12</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">1</span> &lt;= day &lt;= <span class="number">31</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= hour &lt; <span class="number">24</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">0</span> &lt;= minute &lt; <span class="number">60</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= second &lt; <span class="number">60</span>:  <span class="comment"># Looks like a valid date</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;It&#x27;s a valid date.&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>如果一个左边的圆括号、方括号、花括号还没有对应的右括号，则Python会自动把多个物理行连接成一个逻辑行。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">month_names = [<span class="string">&#x27;January&#x27;</span>, <span class="string">&#x27;February&#x27;</span>, <span class="string">&#x27;March&#x27;</span>,      <span class="comment"># These are the</span></span><br><span class="line">               <span class="string">&#x27;April&#x27;</span>,   <span class="string">&#x27;May&#x27;</span>,      <span class="string">&#x27;June&#x27;</span>,       <span class="comment"># Dutch names</span></span><br><span class="line">               <span class="string">&#x27;July&#x27;</span>,    <span class="string">&#x27;August&#x27;</span>, <span class="string">&#x27;September&#x27;</span>,  <span class="comment"># for the months</span></span><br><span class="line">               <span class="string">&#x27;October&#x27;</span>, <span class="string">&#x27;November&#x27;</span>, <span class="string">&#x27;December&#x27;</span>]   <span class="comment"># of the year</span></span><br></pre></td></tr></table></figure>
 <p><br/></p>
 ]]></content>
       <tags>
@@ -2431,46 +2431,6 @@
       </tags>
   </entry>
   <entry>
-    <title>排序</title>
-    <url>/posts/37489.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<h2 id="排序的稳定性"><a href="#排序的稳定性" class="headerlink" title="排序的稳定性"></a>排序的稳定性</h2><p>存在多个具有相同排序码的记录，排序后这些记录的相对次序不变则称排序是稳定的。<br>🌰 待排序列： <font color="red">37</font> 12 98 <font color="blue">37</font> 69<br>若经过排序后，序列为 12 <font color="red">37</font> <font color="blue">37</font> 69 98，则该排序是稳定的；若序列为 12 <font color="blue">37</font> <font color="red">37</font> 69 98，则排序是不稳定的。</p>
-<h2 id="排序算法的衡量标准"><a href="#排序算法的衡量标准" class="headerlink" title="排序算法的衡量标准"></a>排序算法的衡量标准</h2><ul>
-<li>时间代价（记录的比较和移动次数）</li>
-<li>空间代价</li>
-<li>算法本身的复杂程度</li>
-</ul>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h3><p>思想：将一个记录插入到已排好序的有序表中，从而得到一个新的有序表。<br>步骤：假设待排序列为data。data[0]已经是有序的了；将data[1]插入到有序序列{data[0]}中；第p+1次排序时，将data[p+1]插入到有序序列{data[0],data[1],…,data[p]}中，先用临时变量temp存储data[p+1]的值，然后将data[p]和temp进行比较，如果后者比较小，则将data[p]移动到data[p+1]的位置，继续将data[p-1]与temp比较，如果后者小，则将data[p-1]移动到data[p]的位置，重复以上比较过程，直到找到temp的插入位置。“<strong>从后向前，边比边移。</strong>”<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;class T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">(T data[], <span class="keyword">int</span> n)</span> </span>&#123;  <span class="comment">//不减序排列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span> (j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; data[j] &gt; temp; j--) &#123;</span><br><span class="line">            data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">        &#125;</span><br><span class="line">        data[j + <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>稳定</li>
-<li>空间代价$O(1)$</li>
-<li>时间代价$O(n^2)$</li>
-</ul>
-<p>直接插入排序的两个性质：</p>
-<ul>
-<li>在最好情况（序列本身已是有序的）下时间代价为$O(n)$</li>
-<li>对于短序列，直接插入排序比较有效</li>
-</ul>
-<h3 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h3><p>思想：在插入第i个记录时，前面的记录已经是有序的了，可以用二分法查找第i个记录的正确位置。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;class T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BinaryInsertionSort</span><span class="params">(T data[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left, right, mid;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        left = <span class="number">0</span>, right = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (data[mid] &gt; temp)</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= left; j--)</span><br><span class="line">            data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">        data[left] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>折半插入排序的时间复杂度仍为$O(n^2)$</li>
-<li>折半插入算法与直接插入算法的元素移动一样是顺序的，因此该方法也是<strong>稳定</strong>的。</li>
-</ul>
-<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>直接插入排序只允许相邻的元素交换,希尔排序将原序列根据不同的步长(“间隙”)划分成许多小的序列,然后每一个小序列内进行直接插入排序,这样就允许了原序列的远程元素间的交换。逐步缩小步长,让其最终为1,最终序列有序。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;class T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShellSort</span><span class="params">(T data[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">// 直接插入排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = gap; i &lt; n; i++) &#123;</span><br><span class="line">            T temp = data[i];</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span> (j = i; j &gt;= gap &amp;&amp; data[j - gap] &gt; temp; j -= gap) &#123;</span><br><span class="line">                data[j] = data[j - gap];</span><br><span class="line">            &#125;</span><br><span class="line">            data[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>希尔排序空间复杂度为$O(1)$</p>
-<p>希尔排序时间复杂度与增量序列有关:</p>
-<ul>
-<li>当增量序列为$K=2^x$时,时间复杂度为$O(n^2)$</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>双系统安装Ubuntu18.04</title>
     <url>/posts/58568.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -2509,6 +2469,46 @@
 ]]></content>
       <tags>
         <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序</title>
+    <url>/posts/37489.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<h2 id="排序的稳定性"><a href="#排序的稳定性" class="headerlink" title="排序的稳定性"></a>排序的稳定性</h2><p>存在多个具有相同排序码的记录，排序后这些记录的相对次序不变则称排序是稳定的。<br>🌰 待排序列： <font color="red">37</font> 12 98 <font color="blue">37</font> 69<br>若经过排序后，序列为 12 <font color="red">37</font> <font color="blue">37</font> 69 98，则该排序是稳定的；若序列为 12 <font color="blue">37</font> <font color="red">37</font> 69 98，则排序是不稳定的。</p>
+<h2 id="排序算法的衡量标准"><a href="#排序算法的衡量标准" class="headerlink" title="排序算法的衡量标准"></a>排序算法的衡量标准</h2><ul>
+<li>时间代价（记录的比较和移动次数）</li>
+<li>空间代价</li>
+<li>算法本身的复杂程度</li>
+</ul>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h3><p>思想：将一个记录插入到已排好序的有序表中，从而得到一个新的有序表。<br>步骤：假设待排序列为data。data[0]已经是有序的了；将data[1]插入到有序序列{data[0]}中；第p+1次排序时，将data[p+1]插入到有序序列{data[0],data[1],…,data[p]}中，先用临时变量temp存储data[p+1]的值，然后将data[p]和temp进行比较，如果后者比较小，则将data[p]移动到data[p+1]的位置，继续将data[p-1]与temp比较，如果后者小，则将data[p-1]移动到data[p]的位置，重复以上比较过程，直到找到temp的插入位置。“<strong>从后向前，边比边移。</strong>”<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;class T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">(T data[], <span class="keyword">int</span> n)</span> </span>&#123;  <span class="comment">//不减序排列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span> (j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; data[j] &gt; temp; j--) &#123;</span><br><span class="line">            data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">        &#125;</span><br><span class="line">        data[j + <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>稳定</li>
+<li>空间代价$O(1)$</li>
+<li>时间代价$O(n^2)$</li>
+</ul>
+<p>直接插入排序的两个性质：</p>
+<ul>
+<li>在最好情况（序列本身已是有序的）下时间代价为$O(n)$</li>
+<li>对于短序列，直接插入排序比较有效</li>
+</ul>
+<h3 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h3><p>思想：在插入第i个记录时，前面的记录已经是有序的了，可以用二分法查找第i个记录的正确位置。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;class T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BinaryInsertionSort</span><span class="params">(T data[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left, right, mid;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        T temp = data[i];</span><br><span class="line">        left = <span class="number">0</span>, right = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (data[mid] &gt; temp)</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= left; j--)</span><br><span class="line">            data[j + <span class="number">1</span>] = data[j];</span><br><span class="line">        data[left] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>折半插入排序的时间复杂度仍为$O(n^2)$</li>
+<li>折半插入算法与直接插入算法的元素移动一样是顺序的，因此该方法也是<strong>稳定</strong>的。</li>
+</ul>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>直接插入排序只允许相邻的元素交换,希尔排序将原序列根据不同的步长(“间隙”)划分成许多小的序列,然后每一个小序列内进行直接插入排序,这样就允许了原序列的远程元素间的交换。逐步缩小步长,让其最终为1,最终序列有序。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;class T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShellSort</span><span class="params">(T data[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> gap = n / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">// 直接插入排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = gap; i &lt; n; i++) &#123;</span><br><span class="line">            T temp = data[i];</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span> (j = i; j &gt;= gap &amp;&amp; data[j - gap] &gt; temp; j -= gap) &#123;</span><br><span class="line">                data[j] = data[j - gap];</span><br><span class="line">            &#125;</span><br><span class="line">            data[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>希尔排序空间复杂度为$O(1)$</p>
+<p>希尔排序时间复杂度与增量序列有关:</p>
+<ul>
+<li>当增量序列为$K=2^x$时,时间复杂度为$O(n^2)$</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2569,6 +2569,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Oracle SQL练习题4</title>
+    <url>/posts/45231.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 1.列出至少有一个雇员的所有部门</span></span><br><span class="line"><span class="keyword">select</span> deptno, dname, loc </span><br><span class="line"><span class="keyword">from</span> dept</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> emp</span><br><span class="line">                  <span class="keyword">group</span> <span class="keyword">by</span> deptno);</span><br><span class="line">                  </span><br><span class="line"><span class="comment">-- 2.列出薪金比&quot;SMITH&quot;多的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> sal</span><br><span class="line">              <span class="keyword">from</span> emp</span><br><span class="line">              <span class="keyword">where</span> ename <span class="operator">=</span> <span class="string">&#x27;SMITH&#x27;</span>);</span><br><span class="line">              </span><br><span class="line"><span class="comment">-- 3.列出入职日期早于其直接上级的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e1.empno, e1.mgr, e1.hiredate, e2.hiredate mgrhiredate</span><br><span class="line"><span class="keyword">from</span> emp e1, emp e2</span><br><span class="line"><span class="keyword">where</span> e1.mgr <span class="operator">=</span> e2.empno <span class="keyword">and</span> e1.hiredate <span class="operator">&lt;</span> e2.hiredate;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 4.找员工姓名和直接上级的名字</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e2.ename mgrname</span><br><span class="line"><span class="keyword">from</span> emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2</span><br><span class="line"><span class="keyword">on</span> e1.mgr <span class="operator">=</span> e2.empno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 5.显示部门名称和人数</span></span><br><span class="line"><span class="comment">-- 不能count(*),因为40号部门没人但也会是一条记录</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">count</span>(emp.empno)</span><br><span class="line"><span class="keyword">from</span> dept <span class="keyword">left</span> <span class="keyword">join</span> emp <span class="keyword">on</span> emp.deptno <span class="operator">=</span> dept.deptno</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 6.显示每个部门的最高工资的员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 7.显示每个部门的工资前2名的员工</span></span><br><span class="line"><span class="keyword">select</span> deptno, ename, sal      </span><br><span class="line"><span class="keyword">from</span> emp e1     </span><br><span class="line"><span class="keyword">where</span>      </span><br><span class="line">   (  </span><br><span class="line">    <span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)     </span><br><span class="line">    <span class="keyword">from</span> emp e2     </span><br><span class="line">    <span class="keyword">where</span> e2.deptno<span class="operator">=</span>e1.deptno <span class="keyword">and</span> e2.sal<span class="operator">&gt;</span>e1.sal  </span><br><span class="line">   ) <span class="operator">&lt;</span><span class="number">2</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 8.显示出和员工号7369部门相同的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="operator">=</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> empno<span class="operator">=</span><span class="number">7369</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 9.显示出和姓名中包含&quot;W&quot;的员工相同部门的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;%W%&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 10.显示出工资大于平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 11.显示出工资大于本部门平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 12.显示员工&quot;KING&quot;所管理的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> mgr <span class="operator">=</span> (<span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> ename<span class="operator">=</span><span class="string">&#x27;KING&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 13.显示每位经理管理员工的最低工资，及最低工资者的姓名</span></span><br><span class="line"><span class="keyword">select</span> sal, ename, mgr</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">min</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> e2.mgr <span class="keyword">having</span> e1.mgr <span class="operator">=</span> e2.mgr);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 14.显示比工资最高的员工参加工作时间晚的员工姓名，参加工作时间</span></span><br><span class="line"><span class="keyword">select</span> ename, hiredate</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> hiredate <span class="operator">&gt;</span> (<span class="keyword">select</span> hiredate </span><br><span class="line">                   <span class="keyword">from</span> emp </span><br><span class="line">                   <span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp));</span><br><span class="line">                   </span><br><span class="line"><span class="comment">-- 15.显示出平均工资最高的的部门平均工资及部门名称</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal) maxavgsal</span><br><span class="line"><span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(avgsal)</span><br><span class="line">                    <span class="keyword">from</span> (<span class="keyword">select</span> <span class="built_in">max</span>(<span class="built_in">avg</span>(sal)) avgsal</span><br><span class="line">                          <span class="keyword">from</span> emp</span><br><span class="line">                          <span class="keyword">group</span> <span class="keyword">by</span> deptno));</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 16.创建序列，起始位1，自增为1，最小值为1，最大值为9999</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">1</span></span><br><span class="line">minvalue <span class="number">1</span></span><br><span class="line">maxvalue <span class="number">9999</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 17.创建序列，起始值为50，每次增加5</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence2</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">5</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 18.请分析按照以下要求都需要建立什么类型的字段?</span></span><br><span class="line"><span class="comment">–(1)最大2000个字节定长字符串                      -- char(2000)</span></span><br><span class="line"><span class="comment">–(2)如果输入‘张三’ 后添空格6个                   -- nchar</span></span><br><span class="line"><span class="comment">–(3)性别输入&#x27;男&#x27;或&#x27;女’                           -- char(2)e</span></span><br><span class="line"><span class="comment">–(4)最大4000个字节变长字符串                      -- varchar2(4000) 参数为字节数</span></span><br><span class="line"><span class="comment">–(5)如果在数据库中输入&#x27;张三&#x27;则显示数据&#x27;张三’      -- nvarchar2(10) unicode编码，参数为字符数</span></span><br><span class="line"><span class="comment">–(6)表示数字范围为- 10的125次方到10的126次方, 可</span></span><br><span class="line"><span class="comment">以表示小数也可以表示整数                            -- number</span></span><br><span class="line"><span class="comment">–(7)最大表示4位整数 -9999 到 9999                 -- number(4)</span></span><br><span class="line"><span class="comment">–(8)表示5位有效数字2位小数的一个小数-999.99</span></span><br><span class="line"><span class="comment">到999.99                                           -- number(5,2)</span></span><br><span class="line"><span class="comment">–(9)包含年月日和时分秒                             -- date</span></span><br><span class="line"><span class="comment">–(10)包含年月日和时分秒毫秒                       -- timestamp</span></span><br><span class="line"><span class="comment">–(11)二进制大对象图像/声音  */</span>                    <span class="comment">-- LONGRAW 或者 BLOB</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 19.请为工资大于10000的员工创建视图，要求显示员工的部门信息，职位信息，部门所在地.</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> highsal</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> deptno, dname, &quot;JOB&quot;, loc</span><br><span class="line">    <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">    <span class="keyword">where</span> emp.sal <span class="operator">&gt;</span> <span class="number">10000</span>);</span><br><span class="line">    </span><br><span class="line"><span class="comment">-- 20.现在按照工资的降序排序，分页显示，其中一页数据为25条，请显示第3页数据。</span></span><br><span class="line"><span class="keyword">select</span> sal, rn</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> sal, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">50</span> <span class="keyword">and</span> <span class="number">75</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 21.创建视图，要求包含字段：部门名，部门平均工资</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> deptview</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal)</span><br><span class="line">     <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">     <span class="keyword">group</span> <span class="keyword">by</span> dname);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 22.针对21题创建的视图，执行insert,update,delete,语句能否成功，为什么？</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">不能</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 23.显示出员工工资排在第五到第十名的员工信息</span></span><br><span class="line"><span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rn</span><br><span class="line"><span class="keyword">from</span>(<span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">5</span> <span class="keyword">and</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 24.在表copy_dept中插入记录，其中部门号采用17题中创建的序列生成</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept</span><br><span class="line"><span class="keyword">values</span>(mysequence2.nextval, <span class="string">&#x27;it&#x27;</span>, <span class="string">&#x27;Dalian&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>数据库</tag>
+        <tag>oracle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Oracle SQL练习题1</title>
     <url>/posts/45935.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -2592,18 +2604,6 @@
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 添加数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> STUDENT <span class="keyword">values</span>(<span class="string">&#x27;101&#x27;</span>,<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;男&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> STUDENT <span class="keyword">values</span>(<span class="string">&#x27;102&#x27;</span>,<span class="string">&#x27;李云&#x27;</span>,<span class="string">&#x27;女&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> STUDENT <span class="keyword">values</span>(<span class="string">&#x27;103&#x27;</span>,<span class="string">&#x27;小明&#x27;</span>,<span class="string">&#x27;男&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> STUDENT <span class="keyword">values</span>(<span class="string">&#x27;104&#x27;</span>,<span class="string">&#x27;李四&#x27;</span>,<span class="string">&#x27;男&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> SUBJECT <span class="keyword">values</span>(<span class="string">&#x27;A01&#x27;</span>,<span class="string">&#x27;C++&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> SUBJECT <span class="keyword">values</span>(<span class="string">&#x27;A02&#x27;</span>,<span class="string">&#x27;ASP&#x27;</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> SUBJECT <span class="keyword">values</span>(<span class="string">&#x27;A03&#x27;</span>,<span class="string">&#x27;JAVA&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> GRADETABLE <span class="keyword">values</span>(<span class="string">&#x27;101&#x27;</span>,<span class="string">&#x27;A01&#x27;</span>,<span class="number">59</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> GRADETABLE <span class="keyword">values</span>(<span class="string">&#x27;101&#x27;</span>,<span class="string">&#x27;A02&#x27;</span>,<span class="number">72</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> GRADETABLE <span class="keyword">values</span>(<span class="string">&#x27;101&#x27;</span>,<span class="string">&#x27;A03&#x27;</span>,<span class="number">90</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> GRADETABLE <span class="keyword">values</span>(<span class="string">&#x27;102&#x27;</span>,<span class="string">&#x27;A01&#x27;</span>,<span class="number">75</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> GRADETABLE <span class="keyword">values</span>(<span class="string">&#x27;102&#x27;</span>,<span class="string">&#x27;A02&#x27;</span>,<span class="number">91</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> GRADETABLE <span class="keyword">values</span>(<span class="string">&#x27;103&#x27;</span>,<span class="string">&#x27;A01&#x27;</span>,<span class="number">71</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 学号 学生姓名 课程名称 成绩 （要全部学生信息）</span></span><br><span class="line"><span class="keyword">select</span> st.studentid, st.studentname, su.subjectname, gr.grade</span><br><span class="line"><span class="keyword">from</span> STUDENT st <span class="keyword">left</span> <span class="keyword">join</span> GRADETABLE gr <span class="keyword">on</span> gr.studentid <span class="operator">=</span> st.studentid </span><br><span class="line">    <span class="keyword">left</span> <span class="keyword">join</span> subject su <span class="keyword">on</span> gr.subjectid <span class="operator">=</span> su.subjectid;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 学号 学生姓名 课程名称 成绩（只显示每科最高分）</span></span><br><span class="line"><span class="keyword">select</span> st.studentid, st.studentname, su.subjectname, tab.grade</span><br><span class="line"><span class="keyword">from</span> student st, subject su, (<span class="keyword">select</span> studentid, subjectid, grade</span><br><span class="line">                                <span class="keyword">from</span> gradetable</span><br><span class="line">                                <span class="keyword">where</span> (subjectid,grade) <span class="keyword">in</span> (<span class="keyword">select</span> subjectid, <span class="built_in">max</span>(grade)</span><br><span class="line">                                <span class="keyword">from</span> gradetable</span><br><span class="line">                                <span class="keyword">group</span> <span class="keyword">by</span> subjectid)) tab</span><br><span class="line"><span class="keyword">where</span> st.studentid <span class="operator">=</span> tab.studentid <span class="keyword">and</span> su.subjectid <span class="operator">=</span> tab.subjectid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 学号 学生姓名 课程名称 成绩 （成绩大于60时的显示及格，小于60时的显示不及格）</span></span><br><span class="line"><span class="keyword">select</span> st.studentid, st.studentname, su.subjectname, </span><br><span class="line">        decode(sign(gr.grade<span class="number">-60</span>), <span class="number">-1</span>, <span class="string">&#x27;不及格&#x27;</span>,<span class="string">&#x27;及格&#x27;</span>) 是否及格</span><br><span class="line"><span class="keyword">from</span> GRADETABLE gr,STUDENT st, subject su</span><br><span class="line"><span class="keyword">where</span> gr.studentid <span class="operator">=</span> st.studentid <span class="keyword">and</span> gr.subjectid <span class="operator">=</span> su.subjectid;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 学号 学生姓名 （查询出选课超过1门以上学生的信息）</span></span><br><span class="line"><span class="keyword">select</span> st.studentid, st.studentname</span><br><span class="line"><span class="keyword">from</span> gradetable gr <span class="keyword">left</span> <span class="keyword">join</span> student st <span class="keyword">on</span> st.STUDENTID <span class="operator">=</span> gr.STUDENTID</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> st.STUDENTID,st.studentname</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="operator">&gt;</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询成绩大于90分为优秀的人数</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)</span><br><span class="line"><span class="keyword">from</span> gradetable</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> studentid</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">max</span>(grade) <span class="operator">&gt;</span> <span class="number">90</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 求男生里面分数最高的那个同学的姓名，课程名，成绩</span></span><br><span class="line"><span class="keyword">select</span> st.studentname, su.subjectname, gr.grade</span><br><span class="line"><span class="keyword">from</span> student st, subject su, gradetable gr</span><br><span class="line"><span class="keyword">where</span> st.studentid <span class="operator">=</span> gr.studentid <span class="keyword">and</span> su.subjectid <span class="operator">=</span> gr.subjectid</span><br><span class="line">        <span class="keyword">and</span> st.studentsex <span class="operator">=</span> <span class="string">&#x27;男&#x27;</span> </span><br><span class="line">        <span class="keyword">and</span> gr.grade <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(grade) <span class="keyword">from</span> (<span class="keyword">select</span> studentid <span class="keyword">from</span> student <span class="keyword">where</span> studentsex <span class="operator">=</span> <span class="string">&#x27;男&#x27;</span>) <span class="keyword">natural</span> <span class="keyword">join</span> gradetable);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 求没有成绩的学生姓名</span></span><br><span class="line"><span class="keyword">select</span> s.studentname</span><br><span class="line"><span class="keyword">from</span> student s</span><br><span class="line"><span class="keyword">where</span> s.studentid <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> gr.studentid</span><br><span class="line">                          <span class="keyword">from</span> gradetable gr);</span><br></pre></td></tr></table></figure>
 <p><br/></p>
 ]]></content>
-      <tags>
-        <tag>数据库</tag>
-        <tag>oracle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Oracle SQL练习题4</title>
-    <url>/posts/45231.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 1.列出至少有一个雇员的所有部门</span></span><br><span class="line"><span class="keyword">select</span> deptno, dname, loc </span><br><span class="line"><span class="keyword">from</span> dept</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> emp</span><br><span class="line">                  <span class="keyword">group</span> <span class="keyword">by</span> deptno);</span><br><span class="line">                  </span><br><span class="line"><span class="comment">-- 2.列出薪金比&quot;SMITH&quot;多的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> sal</span><br><span class="line">              <span class="keyword">from</span> emp</span><br><span class="line">              <span class="keyword">where</span> ename <span class="operator">=</span> <span class="string">&#x27;SMITH&#x27;</span>);</span><br><span class="line">              </span><br><span class="line"><span class="comment">-- 3.列出入职日期早于其直接上级的所有雇员</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e1.empno, e1.mgr, e1.hiredate, e2.hiredate mgrhiredate</span><br><span class="line"><span class="keyword">from</span> emp e1, emp e2</span><br><span class="line"><span class="keyword">where</span> e1.mgr <span class="operator">=</span> e2.empno <span class="keyword">and</span> e1.hiredate <span class="operator">&lt;</span> e2.hiredate;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 4.找员工姓名和直接上级的名字</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e2.ename mgrname</span><br><span class="line"><span class="keyword">from</span> emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2</span><br><span class="line"><span class="keyword">on</span> e1.mgr <span class="operator">=</span> e2.empno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 5.显示部门名称和人数</span></span><br><span class="line"><span class="comment">-- 不能count(*),因为40号部门没人但也会是一条记录</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">count</span>(emp.empno)</span><br><span class="line"><span class="keyword">from</span> dept <span class="keyword">left</span> <span class="keyword">join</span> emp <span class="keyword">on</span> emp.deptno <span class="operator">=</span> dept.deptno</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 6.显示每个部门的最高工资的员工</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span></span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 7.显示每个部门的工资前2名的员工</span></span><br><span class="line"><span class="keyword">select</span> deptno, ename, sal      </span><br><span class="line"><span class="keyword">from</span> emp e1     </span><br><span class="line"><span class="keyword">where</span>      </span><br><span class="line">   (  </span><br><span class="line">    <span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>)     </span><br><span class="line">    <span class="keyword">from</span> emp e2     </span><br><span class="line">    <span class="keyword">where</span> e2.deptno<span class="operator">=</span>e1.deptno <span class="keyword">and</span> e2.sal<span class="operator">&gt;</span>e1.sal  </span><br><span class="line">   ) <span class="operator">&lt;</span><span class="number">2</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 8.显示出和员工号7369部门相同的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="operator">=</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> empno<span class="operator">=</span><span class="number">7369</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 9.显示出和姓名中包含&quot;W&quot;的员工相同部门的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;%W%&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 10.显示出工资大于平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 11.显示出工资大于本部门平均工资的员工姓名，工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> e1.deptno <span class="operator">=</span> e2.deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 12.显示员工&quot;KING&quot;所管理的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> mgr <span class="operator">=</span> (<span class="keyword">select</span> empno <span class="keyword">from</span> emp <span class="keyword">where</span> ename<span class="operator">=</span><span class="string">&#x27;KING&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 13.显示每位经理管理员工的最低工资，及最低工资者的姓名</span></span><br><span class="line"><span class="keyword">select</span> sal, ename, mgr</span><br><span class="line"><span class="keyword">from</span> emp e1</span><br><span class="line"><span class="keyword">where</span> e1.sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">min</span>(sal) <span class="keyword">from</span> emp e2 <span class="keyword">group</span> <span class="keyword">by</span> e2.mgr <span class="keyword">having</span> e1.mgr <span class="operator">=</span> e2.mgr);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 14.显示比工资最高的员工参加工作时间晚的员工姓名，参加工作时间</span></span><br><span class="line"><span class="keyword">select</span> ename, hiredate</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> hiredate <span class="operator">&gt;</span> (<span class="keyword">select</span> hiredate </span><br><span class="line">                   <span class="keyword">from</span> emp </span><br><span class="line">                   <span class="keyword">where</span> sal <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(sal) <span class="keyword">from</span> emp));</span><br><span class="line">                   </span><br><span class="line"><span class="comment">-- 15.显示出平均工资最高的的部门平均工资及部门名称</span></span><br><span class="line"><span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal) maxavgsal</span><br><span class="line"><span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> dname</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">=</span> (<span class="keyword">select</span> <span class="built_in">max</span>(avgsal)</span><br><span class="line">                    <span class="keyword">from</span> (<span class="keyword">select</span> <span class="built_in">max</span>(<span class="built_in">avg</span>(sal)) avgsal</span><br><span class="line">                          <span class="keyword">from</span> emp</span><br><span class="line">                          <span class="keyword">group</span> <span class="keyword">by</span> deptno));</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 16.创建序列，起始位1，自增为1，最小值为1，最大值为9999</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">1</span></span><br><span class="line">minvalue <span class="number">1</span></span><br><span class="line">maxvalue <span class="number">9999</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 17.创建序列，起始值为50，每次增加5</span></span><br><span class="line"><span class="keyword">create</span> sequence mysequence2</span><br><span class="line">increment <span class="keyword">by</span> <span class="number">5</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">with</span> <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 18.请分析按照以下要求都需要建立什么类型的字段?</span></span><br><span class="line"><span class="comment">–(1)最大2000个字节定长字符串                      -- char(2000)</span></span><br><span class="line"><span class="comment">–(2)如果输入‘张三’ 后添空格6个                   -- nchar</span></span><br><span class="line"><span class="comment">–(3)性别输入&#x27;男&#x27;或&#x27;女’                           -- char(2)e</span></span><br><span class="line"><span class="comment">–(4)最大4000个字节变长字符串                      -- varchar2(4000) 参数为字节数</span></span><br><span class="line"><span class="comment">–(5)如果在数据库中输入&#x27;张三&#x27;则显示数据&#x27;张三’      -- nvarchar2(10) unicode编码，参数为字符数</span></span><br><span class="line"><span class="comment">–(6)表示数字范围为- 10的125次方到10的126次方, 可</span></span><br><span class="line"><span class="comment">以表示小数也可以表示整数                            -- number</span></span><br><span class="line"><span class="comment">–(7)最大表示4位整数 -9999 到 9999                 -- number(4)</span></span><br><span class="line"><span class="comment">–(8)表示5位有效数字2位小数的一个小数-999.99</span></span><br><span class="line"><span class="comment">到999.99                                           -- number(5,2)</span></span><br><span class="line"><span class="comment">–(9)包含年月日和时分秒                             -- date</span></span><br><span class="line"><span class="comment">–(10)包含年月日和时分秒毫秒                       -- timestamp</span></span><br><span class="line"><span class="comment">–(11)二进制大对象图像/声音  */</span>                    <span class="comment">-- LONGRAW 或者 BLOB</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 19.请为工资大于10000的员工创建视图，要求显示员工的部门信息，职位信息，部门所在地.</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> highsal</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> deptno, dname, &quot;JOB&quot;, loc</span><br><span class="line">    <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">    <span class="keyword">where</span> emp.sal <span class="operator">&gt;</span> <span class="number">10000</span>);</span><br><span class="line">    </span><br><span class="line"><span class="comment">-- 20.现在按照工资的降序排序，分页显示，其中一页数据为25条，请显示第3页数据。</span></span><br><span class="line"><span class="keyword">select</span> sal, rn</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> sal, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal <span class="keyword">desc</span>)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">50</span> <span class="keyword">and</span> <span class="number">75</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 21.创建视图，要求包含字段：部门名，部门平均工资</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> deptview</span><br><span class="line"><span class="keyword">as</span> (<span class="keyword">select</span> dname, <span class="built_in">avg</span>(sal)</span><br><span class="line">     <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept</span><br><span class="line">     <span class="keyword">group</span> <span class="keyword">by</span> dname);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 22.针对21题创建的视图，执行insert,update,delete,语句能否成功，为什么？</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">不能</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 23.显示出员工工资排在第五到第十名的员工信息</span></span><br><span class="line"><span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rn</span><br><span class="line"><span class="keyword">from</span>(<span class="keyword">select</span> empno, ename, &quot;JOB&quot;, mgr, hiredate, sal, comm, deptno, rownum rn</span><br><span class="line">      <span class="keyword">from</span> emp </span><br><span class="line">      <span class="keyword">order</span> <span class="keyword">by</span> sal)</span><br><span class="line"><span class="keyword">where</span> rn <span class="keyword">between</span> <span class="number">5</span> <span class="keyword">and</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 24.在表copy_dept中插入记录，其中部门号采用17题中创建的序列生成</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept</span><br><span class="line"><span class="keyword">values</span>(mysequence2.nextval, <span class="string">&#x27;it&#x27;</span>, <span class="string">&#x27;Dalian&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>数据库</tag>
         <tag>oracle</tag>

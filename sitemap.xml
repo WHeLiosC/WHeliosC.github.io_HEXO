@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wheliosc.github.io/java-string.html</loc>
-    
-    <lastmod>2022-04-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://wheliosc.github.io/posts/ef51d401.html</loc>
     
     <lastmod>2021-09-03</lastmod>
@@ -585,13 +578,6 @@
   </url>
   
   <url>
-    <loc>https://wheliosc.github.io/tags/JAVA/</loc>
-    <lastmod>2022-04-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wheliosc.github.io/tags/oracle/</loc>
     <lastmod>2022-04-14</lastmod>
     <changefreq>daily</changefreq>
@@ -614,6 +600,13 @@
   
   <url>
     <loc>https://wheliosc.github.io/tags/Vue/</loc>
+    <lastmod>2022-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wheliosc.github.io/tags/JAVA/</loc>
     <lastmod>2022-04-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

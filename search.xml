@@ -73,6 +73,86 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS-层叠样式表</title>
+    <url>/posts/39526.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+
+<h2 id="CSS是什么"><a href="#CSS是什么" class="headerlink" title="CSS是什么"></a>CSS是什么</h2><p>CSS指层叠样式表(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)，样式定义如何显示HTML元素，样式通常存储在样式表中。</p>
+<h2 id="插入样式表的方法"><a href="#插入样式表的方法" class="headerlink" title="插入样式表的方法"></a>插入样式表的方法</h2><h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><p>在相关的标签内使用样式（style）属性。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red; font-size: 20px&quot;</span>&gt;</span>This is a paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当样式仅需要在一个元素上应用一次时。</p>
+<h3 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h3><p>使用 <code>&lt;style&gt;</code> 标签在文档头部定义内部样式表</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">  hr &#123;<span class="attribute">color</span>: sienna;&#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">p</span> &#123;<span class="attribute">margin-left</span>: <span class="number">20px</span>;&#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;images/back40.gif&quot;</span>);&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当单个文档需要特殊的样式时，就应该使用内部样式表。</p>
+<h3 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当样式需要应用于很多页面时。</p>
+<p>📌 不要在属性值与单位之间留有空格。使用 “margin-left: 20px” 而不是 “margin-left: 20 px”。</p>
+<h3 id="多重样式的优先级"><a href="#多重样式的优先级" class="headerlink" title="多重样式的优先级"></a>多重样式的优先级</h3><p><strong>内联样式 &gt; 内部样式表 &gt; 外部样式表 &gt; 浏览器缺省配置</strong><br>🌰 外部样式表拥有针对 h3 选择器的三个属性：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">8px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>而内部样式表拥有针对 h3 选择器的两个属性：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: right; </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>假如拥有内部样式表的这个页面同时与外部样式表链接，那么 h3 得到的样式是：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">color</span>: red; </span><br><span class="line"><span class="attribute">text-align</span>: right; </span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="选择器的分类"><a href="#选择器的分类" class="headerlink" title="选择器的分类"></a>选择器的分类</h2><h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><p>用于修饰同类HTML标签的共性风格。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 所有的<span class="selector-tag">li</span>标签通用</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ul>
+<li>id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。</li>
+<li>id 选择器以 “#” 来定义。<br>📌 HTML页面，不能出现相同的id，哪怕他们不是一个类型。比如页面上有一个id为pp的p，一个id为pp的div，是非法的！<br>📌 id区分大小写。<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">  <span class="selector-id">#para</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">color</span>:red;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">  &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;para&quot;</span>&gt;</span>this is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>在CSS中，类选择器以一个点号(.)表示。<br>多个标签可以公用一个类；同一个标签可以使用多个类选择器，用空格隔开。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-class">.center</span> &#123;<span class="attribute">text-align</span>: center;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.important</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>; <span class="attribute">color</span>:red;&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">This heading will be center-aligned</span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">This paragraph will also be center-aligned.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;center important&quot;</span>&gt;</span>this is an important part.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 错误写法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;center&quot;</span> <span class="attr">class</span>=<span class="string">&quot;important&quot;</span>&gt;</span>this is an important part.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>类选择器结合标签选择器来使用，例如，p.important解释为：“其class属性值为important的所有段落。“</p>
+<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>后代选择器可以选择作为某元素后代的元素。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-class">.classone</span> &#123;<span class="attribute">color</span>: blue;&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-id">#image1</span> &#123;<span class="attribute">width</span>: <span class="number">200px</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面这个规则会把作为h1元素后代的em元素的文本变为红色。其他em文本（如段落或块引用中的em）则不会被这个规则选中：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">em</span>&gt;</span>important<span class="tag">&lt;/<span class="name">em</span>&gt;</span> heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">em</span>&gt;</span>important<span class="tag">&lt;/<span class="name">em</span>&gt;</span> paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>📌 空格表示的只是一种后代关系，并不一定指紧跟其后的元素(儿子)。比如上例中，h1中的所有em标签都会应用该样式，不论嵌套深度是多少。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">b</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">em</span>&gt;</span>important<span class="tag">&lt;/<span class="name">em</span>&gt;</span> heading<span class="tag">&lt;<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h3><p>如果不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，使用子元素选择器。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &gt; <span class="selector-tag">strong</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br><span class="line">// 可以结合使用后代选择器和子元素选择器</span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">b</span> &gt; <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// <span class="selector-tag">h2</span><span class="selector-class">.important</span> 和 <span class="selector-tag">h2</span> <span class="selector-class">.important</span> 不是一回事</span><br><span class="line"><span class="selector-tag">h2</span><span class="selector-class">.important</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-id">#normaltext</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>:black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>选择的元素要求同时满足两个条件：必须是h2标签，然后必须是important类。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- h2.important作用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;important&quot;</span>&gt;</span> Important content! <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>逗号隔开选择器，三种基本选择器都可以放进来。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*定义了一个并集选择器，带有p,h1,id=&quot;mytitle&quot;,class=&quot;one&quot;的标签都内容会显示红色*/</span></span><br><span class="line"><span class="selector-tag">p</span>,<span class="selector-tag">h1</span>,<span class="selector-id">#mytitle</span>,<span class="selector-class">.one</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="选择器优先级"><a href="#选择器优先级" class="headerlink" title="选择器优先级"></a>选择器优先级</h3><p>!important &gt; 行内样式&gt;ID选择器 &gt; 类选择器 &gt; 标签 &gt; 通配符 &gt; 继承 &gt; 浏览器默认属性</p>
+<h2 id="超链接的样式"><a href="#超链接的样式" class="headerlink" title="超链接的样式"></a>超链接的样式</h2><p>链接的四种状态：</p>
+<ul>
+<li>a:link  普通的、未被访问的链接</li>
+<li>a:visited  用户已访问的链接</li>
+<li>a:hover  鼠标指针位于链接的上方</li>
+<li>a:active  链接被点击的时刻</li>
+</ul>
+<p>当为链接的不同状态设置样式时，按照以下次序规则：</p>
+<ul>
+<li>a:hover 必须位于 a:link 和 a:visited 之后</li>
+<li>a:active 必须位于 a:hover 之后</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-class">.one</span><span class="selector-pseudo">:link</span> &#123;<span class="attribute">color</span>:<span class="number">#ff0000</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-class">.one</span><span class="selector-pseudo">:visited</span> &#123;<span class="attribute">color</span>:<span class="number">#0000ff</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-class">.one</span><span class="selector-pseudo">:hover</span> &#123;<span class="attribute">color</span>:<span class="number">#ffcc00</span>;&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/index.html&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>这个链接改变颜色<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/DYD850804/article/details/80997251">CSS的四种基本选择器和四种高级选择器</a><br><a href="http://www.w3school.com.cn/css/index.asp">W3CSchool</a><br><a href="https://www.cnblogs.com/zxjwlh/p/6213239.html">CSS选择器优先级总结</a></p>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS-positioning</title>
     <url>/posts/60319.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -189,86 +269,6 @@
 <li>absolute 与 fixed 的表现类似，但是它不是相对于视窗而是相对于最近的“positioned”祖先元素。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动。</li>
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.w3school.com.cn/css/css_positioning.asp">W3CSchool-css-positioning</a><br><a href="http://zh.learnlayout.com/position.html">学习CSS布局</a></p>
-]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS-层叠样式表</title>
-    <url>/posts/39526.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-
-<h2 id="CSS是什么"><a href="#CSS是什么" class="headerlink" title="CSS是什么"></a>CSS是什么</h2><p>CSS指层叠样式表(<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)，样式定义如何显示HTML元素，样式通常存储在样式表中。</p>
-<h2 id="插入样式表的方法"><a href="#插入样式表的方法" class="headerlink" title="插入样式表的方法"></a>插入样式表的方法</h2><h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><p>在相关的标签内使用样式（style）属性。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red; font-size: 20px&quot;</span>&gt;</span>This is a paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>当样式仅需要在一个元素上应用一次时。</p>
-<h3 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h3><p>使用 <code>&lt;style&gt;</code> 标签在文档头部定义内部样式表</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">  hr &#123;<span class="attribute">color</span>: sienna;&#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">p</span> &#123;<span class="attribute">margin-left</span>: <span class="number">20px</span>;&#125;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;images/back40.gif&quot;</span>);&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>当单个文档需要特殊的样式时，就应该使用内部样式表。</p>
-<h3 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>当样式需要应用于很多页面时。</p>
-<p>📌 不要在属性值与单位之间留有空格。使用 “margin-left: 20px” 而不是 “margin-left: 20 px”。</p>
-<h3 id="多重样式的优先级"><a href="#多重样式的优先级" class="headerlink" title="多重样式的优先级"></a>多重样式的优先级</h3><p><strong>内联样式 &gt; 内部样式表 &gt; 外部样式表 &gt; 浏览器缺省配置</strong><br>🌰 外部样式表拥有针对 h3 选择器的三个属性：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">8px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>而内部样式表拥有针对 h3 选择器的两个属性：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h3</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: right; </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>假如拥有内部样式表的这个页面同时与外部样式表链接，那么 h3 得到的样式是：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">color</span>: red; </span><br><span class="line"><span class="attribute">text-align</span>: right; </span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="选择器的分类"><a href="#选择器的分类" class="headerlink" title="选择器的分类"></a>选择器的分类</h2><h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><p>用于修饰同类HTML标签的共性风格。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 所有的<span class="selector-tag">li</span>标签通用</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ul>
-<li>id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。</li>
-<li>id 选择器以 “#” 来定义。<br>📌 HTML页面，不能出现相同的id，哪怕他们不是一个类型。比如页面上有一个id为pp的p，一个id为pp的div，是非法的！<br>📌 id区分大小写。<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">  <span class="selector-id">#para</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">color</span>:red;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">  &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;para&quot;</span>&gt;</span>this is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>在CSS中，类选择器以一个点号(.)表示。<br>多个标签可以公用一个类；同一个标签可以使用多个类选择器，用空格隔开。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-class">.center</span> &#123;<span class="attribute">text-align</span>: center;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.important</span> &#123;<span class="attribute">font-size</span>: <span class="number">20px</span>; <span class="attribute">color</span>:red;&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">This heading will be center-aligned</span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">This paragraph will also be center-aligned.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;center important&quot;</span>&gt;</span>this is an important part.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 错误写法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;center&quot;</span> <span class="attr">class</span>=<span class="string">&quot;important&quot;</span>&gt;</span>this is an important part.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>类选择器结合标签选择器来使用，例如，p.important解释为：“其class属性值为important的所有段落。“</p>
-<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>后代选择器可以选择作为某元素后代的元素。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-class">.classone</span> &#123;<span class="attribute">color</span>: blue;&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-id">#image1</span> &#123;<span class="attribute">width</span>: <span class="number">200px</span>;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面这个规则会把作为h1元素后代的em元素的文本变为红色。其他em文本（如段落或块引用中的em）则不会被这个规则选中：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">em</span>&gt;</span>important<span class="tag">&lt;/<span class="name">em</span>&gt;</span> heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">em</span>&gt;</span>important<span class="tag">&lt;/<span class="name">em</span>&gt;</span> paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>📌 空格表示的只是一种后代关系，并不一定指紧跟其后的元素(儿子)。比如上例中，h1中的所有em标签都会应用该样式，不论嵌套深度是多少。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">b</span>&gt;</span>This is a <span class="tag">&lt;<span class="name">em</span>&gt;</span>important<span class="tag">&lt;/<span class="name">em</span>&gt;</span> heading<span class="tag">&lt;<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h3><p>如果不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，使用子元素选择器。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &gt; <span class="selector-tag">strong</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br><span class="line">// 可以结合使用后代选择器和子元素选择器</span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-tag">b</span> &gt; <span class="selector-tag">em</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// <span class="selector-tag">h2</span><span class="selector-class">.important</span> 和 <span class="selector-tag">h2</span> <span class="selector-class">.important</span> 不是一回事</span><br><span class="line"><span class="selector-tag">h2</span><span class="selector-class">.important</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">  <span class="attribute">font-size</span>:<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-id">#normaltext</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>:black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>选择的元素要求同时满足两个条件：必须是h2标签，然后必须是important类。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- h2.important作用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;important&quot;</span>&gt;</span> Important content! <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>逗号隔开选择器，三种基本选择器都可以放进来。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*定义了一个并集选择器，带有p,h1,id=&quot;mytitle&quot;,class=&quot;one&quot;的标签都内容会显示红色*/</span></span><br><span class="line"><span class="selector-tag">p</span>,<span class="selector-tag">h1</span>,<span class="selector-id">#mytitle</span>,<span class="selector-class">.one</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="选择器优先级"><a href="#选择器优先级" class="headerlink" title="选择器优先级"></a>选择器优先级</h3><p>!important &gt; 行内样式&gt;ID选择器 &gt; 类选择器 &gt; 标签 &gt; 通配符 &gt; 继承 &gt; 浏览器默认属性</p>
-<h2 id="超链接的样式"><a href="#超链接的样式" class="headerlink" title="超链接的样式"></a>超链接的样式</h2><p>链接的四种状态：</p>
-<ul>
-<li>a:link  普通的、未被访问的链接</li>
-<li>a:visited  用户已访问的链接</li>
-<li>a:hover  鼠标指针位于链接的上方</li>
-<li>a:active  链接被点击的时刻</li>
-</ul>
-<p>当为链接的不同状态设置样式时，按照以下次序规则：</p>
-<ul>
-<li>a:hover 必须位于 a:link 和 a:visited 之后</li>
-<li>a:active 必须位于 a:hover 之后</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-class">.one</span><span class="selector-pseudo">:link</span> &#123;<span class="attribute">color</span>:<span class="number">#ff0000</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-class">.one</span><span class="selector-pseudo">:visited</span> &#123;<span class="attribute">color</span>:<span class="number">#0000ff</span>;&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-class">.one</span><span class="selector-pseudo">:hover</span> &#123;<span class="attribute">color</span>:<span class="number">#ffcc00</span>;&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/index.html&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>这个链接改变颜色<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/DYD850804/article/details/80997251">CSS的四种基本选择器和四种高级选择器</a><br><a href="http://www.w3school.com.cn/css/index.asp">W3CSchool</a><br><a href="https://www.cnblogs.com/zxjwlh/p/6213239.html">CSS选择器优先级总结</a></p>
 ]]></content>
       <tags>
         <tag>CSS</tag>
@@ -739,6 +739,44 @@
       </tags>
   </entry>
   <entry>
+    <title>由NFA转DFA以及DFA的化简</title>
+    <url>/posts/58753.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+
+<h3 id="NFA-Non-deterministic-Finite-Automata"><a href="#NFA-Non-deterministic-Finite-Automata" class="headerlink" title="NFA(Non-deterministic Finite Automata)"></a>NFA(Non-deterministic Finite Automata)</h3><p>不确定有限自动机<br>构造NFA分成两步：画出每一个小单元的NFA；将每一个小单元的NFA组合。</p>
+<h4 id="小单元的NFA"><a href="#小单元的NFA" class="headerlink" title="小单元的NFA"></a>小单元的NFA</h4><ul>
+<li>单个输入符号a<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-1.png" alt="nfa 1"></li>
+<li>连接运算ab<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-2.png" alt="nfa 2"></li>
+<li>选择运算a|b<br>添加两个状态（选择运算开始状态和结束状态），在开始状态引两个路径通过$\varepsilon$分别到两个单输入符号的NFA，同时两个NFA都通过$\varepsilon$到结束状态。<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-3.png" alt="nfa 3"></li>
+<li>闭包运算<br>添加两个状态（闭包运算开始状态和结束状态），四条线：闭包运算开始状态到单元开始状态；单元结束状态到闭包运算结束状态；闭包运算开始状态到闭包运算结束状态；单元结束状态到单元开始状态。<br>(a|b)*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-4.jpg" alt="nfa 4"><br>(ab)*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-5.png" alt="nfa 5"><br>a*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-6.png" alt="nfa 6"></li>
+</ul>
+<h4 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h4><p>在组合时，每一个小单元的NFA的开始状态不变，结束状态和下一个单元的开始状态合并。<br>(a|b)*ab<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-7.png" alt="nfa 7"></p>
+<h3 id="NFA转DFA-Deterministic-Finite-Automata"><a href="#NFA转DFA-Deterministic-Finite-Automata" class="headerlink" title="NFA转DFA(Deterministic Finite Automata)"></a>NFA转DFA(Deterministic Finite Automata)</h3><h4 id="两个概念"><a href="#两个概念" class="headerlink" title="两个概念"></a>两个概念</h4><p>$\varepsilon$-$closure({1,2,…,n})$：状态集{1,2,…,n}的$\varepsilon$闭包。<br>上式的含义为求1，2，…，n状态仅通过<strong>零个或多个</strong>$\varepsilon$可以到达的所有状态组成的集合。<br>$move(A,a)$：状态转换集。<br>A中的所有状态通过a可以到达的所有状态组成的集合。</p>
+<h4 id="以-a-b-ab-为例"><a href="#以-a-b-ab-为例" class="headerlink" title="以$(a|b)*ab$为例"></a>以$(a|b)*ab$为例</h4><ul>
+<li>标记A集合<br>A集合为开始状态（即0状态）的$\varepsilon$闭包。<br>如img-7中，0状态通过$\varepsilon$可以到达1状态，7状态；1状态通过$\varepsilon$又可以到达2状态和4状态；再加上本身：故A&#x3D;{0, 1, 2, 4, 7}。</li>
+<li>找出所有的输入字母<br>如$(a|b)*ab$中，所有的输入字母为{a, b}</li>
+<li>根据输入字母寻找A集合的$\varepsilon$闭包<br>如img-7中，A集合中遇到a能发生状态转变的只有2和7，转换到状态3和8，所以$move(A,a)$&#x3D;{3,8}；<br>然后求$\varepsilon$-$closure(move(A,a))$，即$\varepsilon$-$closure({3,8})$，可以得到结果为{3, 8, 6, 1, 2, 4, 7}&#x3D;B。<br>$move(A,b)$&#x3D;{5},然后求$\varepsilon$-$closure({5})$&#x3D;{5, 6, 1, 2, 4, 7}&#x3D;C。</li>
+<li>根据输入字母寻找所有新产生的集合的$\varepsilon$闭包<br>$\varepsilon$-$closure(move(B,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(B,a))$&#x3D;{1,2,4,5,6,7,9}&#x3D;D<br>$\varepsilon$-$closure(move(C,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(C,a))$&#x3D;{1,2,4,5,6,7}&#x3D;C<br>$\varepsilon$-$closure(move(D,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(D,a))$&#x3D;{1,2,4,5,6,7}&#x3D;C<br>包含NFA结束状态的集合为DFA结束状态，在例子中D状态为结束状态；A状态为开始状态。</li>
+<li>根据以上的计算结果画出DFA<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-8.PNG" alt="img 8"></li>
+</ul>
+<h3 id="DFA的化简"><a href="#DFA的化简" class="headerlink" title="DFA的化简"></a>DFA的化简</h3><ul>
+<li>加入死状态<br>如果一个DFA的转换函数不是全函数，那么<strong>必须</strong>加入一个死状态$S_d$，死状态只有输入而没有输出。例如一个状态S对a没有转换，即move(S,a)&#x3D;$\varnothing$，则$\varepsilon$-$closure(move(S,a))$&#x3D;$S_d$。</li>
+<li>把状态集分为接受状态集和非接受状态集<br>接受状态集指包含NFA结束状态的集合；非接受状态集指不包含NFA结束状态的状态集。<br>例如，在例子中，可以把状态机划分为{A,B,C}和{D}。</li>
+<li>合并不可区分状态<br>对上一个步骤中的每一个集合的进行划分。如果集合中只有一个元素，那就不必再划分，如{D}；如果集合中有多个元素，则寻找哪几个元素经过所有输入字母的转换后可以产生非本集合的元素，则将其分离成一个新的集合，如果两个状态通过所有的输入字母都转换到该集合的相同元素，那么它们不必再分。</li>
+<li>对于上一个步骤中产生的新划分，重复上一步骤，直至不可再分。</li>
+<li>如果结果中有死状态，则去除死状态，把所有到死状态的转换都改为无定义。</li>
+</ul>
+<h4 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h4><p><strong>其实可以把划分的过程看成是一个集合内部排异的过程。</strong><br>栗子🌰：<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-9.png" alt="img 9"><br>首先根据接受和非接受划分为集合{A,B,C}和{D,E,F,G,H,I}<br>对于集合{A,B,C}，A说我可以到B和C，C说我可以到B和C，B说我可以到B和D。A和C听了就不高兴了，我们两个不论怎么变都是到我们这个小集体里，你咋还跑出去了呢，我俩不和你好了。于是就分成了{A,C}和{B}。A和C又开始继续交流，但是他俩通过变换都跑到了{A,C}的外边，一起叛变，<strong>而且对于每一个输入符号，两人都是到同一个元素</strong>，只有这样，两人还是朋友，嗯，{A,C}成为一个集合。<br>对于集合{D,E,F,G,H,I}，兄弟六人怎么变都还是在这兄弟六人内部，于是六个人是一个团结的集体。<br>所以，原来的9个状态，经过划分之后，就变成了3个状态。<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-10.png" alt="img 10"><br>栗子🌰🌰：<br>再给一个栗子自己体会吧<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-11.png" alt="img 11"><br>化简之后：<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-12.png" alt="img 12"></p>
+<h3 id="安利"><a href="#安利" class="headerlink" title="安利"></a>安利</h3><p>安利一个求NFA,DFA,Min-DFA的工具：<a href="https://cyberzhg.github.io/toolbox/">Toolbox</a></p>
+<hr>]]></content>
+      <tags>
+        <tag>编译原理</tag>
+        <tag>词法分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mysql 8.0.13+Navicat 12.1.11安装记录</title>
     <url>/posts/2573.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -781,44 +819,6 @@
       <tags>
         <tag>数据库</tag>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>由NFA转DFA以及DFA的化简</title>
-    <url>/posts/58753.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-
-<h3 id="NFA-Non-deterministic-Finite-Automata"><a href="#NFA-Non-deterministic-Finite-Automata" class="headerlink" title="NFA(Non-deterministic Finite Automata)"></a>NFA(Non-deterministic Finite Automata)</h3><p>不确定有限自动机<br>构造NFA分成两步：画出每一个小单元的NFA；将每一个小单元的NFA组合。</p>
-<h4 id="小单元的NFA"><a href="#小单元的NFA" class="headerlink" title="小单元的NFA"></a>小单元的NFA</h4><ul>
-<li>单个输入符号a<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-1.png" alt="nfa 1"></li>
-<li>连接运算ab<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-2.png" alt="nfa 2"></li>
-<li>选择运算a|b<br>添加两个状态（选择运算开始状态和结束状态），在开始状态引两个路径通过$\varepsilon$分别到两个单输入符号的NFA，同时两个NFA都通过$\varepsilon$到结束状态。<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-3.png" alt="nfa 3"></li>
-<li>闭包运算<br>添加两个状态（闭包运算开始状态和结束状态），四条线：闭包运算开始状态到单元开始状态；单元结束状态到闭包运算结束状态；闭包运算开始状态到闭包运算结束状态；单元结束状态到单元开始状态。<br>(a|b)*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-4.jpg" alt="nfa 4"><br>(ab)*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-5.png" alt="nfa 5"><br>a*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-6.png" alt="nfa 6"></li>
-</ul>
-<h4 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h4><p>在组合时，每一个小单元的NFA的开始状态不变，结束状态和下一个单元的开始状态合并。<br>(a|b)*ab<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-7.png" alt="nfa 7"></p>
-<h3 id="NFA转DFA-Deterministic-Finite-Automata"><a href="#NFA转DFA-Deterministic-Finite-Automata" class="headerlink" title="NFA转DFA(Deterministic Finite Automata)"></a>NFA转DFA(Deterministic Finite Automata)</h3><h4 id="两个概念"><a href="#两个概念" class="headerlink" title="两个概念"></a>两个概念</h4><p>$\varepsilon$-$closure({1,2,…,n})$：状态集{1,2,…,n}的$\varepsilon$闭包。<br>上式的含义为求1，2，…，n状态仅通过<strong>零个或多个</strong>$\varepsilon$可以到达的所有状态组成的集合。<br>$move(A,a)$：状态转换集。<br>A中的所有状态通过a可以到达的所有状态组成的集合。</p>
-<h4 id="以-a-b-ab-为例"><a href="#以-a-b-ab-为例" class="headerlink" title="以$(a|b)*ab$为例"></a>以$(a|b)*ab$为例</h4><ul>
-<li>标记A集合<br>A集合为开始状态（即0状态）的$\varepsilon$闭包。<br>如img-7中，0状态通过$\varepsilon$可以到达1状态，7状态；1状态通过$\varepsilon$又可以到达2状态和4状态；再加上本身：故A&#x3D;{0, 1, 2, 4, 7}。</li>
-<li>找出所有的输入字母<br>如$(a|b)*ab$中，所有的输入字母为{a, b}</li>
-<li>根据输入字母寻找A集合的$\varepsilon$闭包<br>如img-7中，A集合中遇到a能发生状态转变的只有2和7，转换到状态3和8，所以$move(A,a)$&#x3D;{3,8}；<br>然后求$\varepsilon$-$closure(move(A,a))$，即$\varepsilon$-$closure({3,8})$，可以得到结果为{3, 8, 6, 1, 2, 4, 7}&#x3D;B。<br>$move(A,b)$&#x3D;{5},然后求$\varepsilon$-$closure({5})$&#x3D;{5, 6, 1, 2, 4, 7}&#x3D;C。</li>
-<li>根据输入字母寻找所有新产生的集合的$\varepsilon$闭包<br>$\varepsilon$-$closure(move(B,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(B,a))$&#x3D;{1,2,4,5,6,7,9}&#x3D;D<br>$\varepsilon$-$closure(move(C,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(C,a))$&#x3D;{1,2,4,5,6,7}&#x3D;C<br>$\varepsilon$-$closure(move(D,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(D,a))$&#x3D;{1,2,4,5,6,7}&#x3D;C<br>包含NFA结束状态的集合为DFA结束状态，在例子中D状态为结束状态；A状态为开始状态。</li>
-<li>根据以上的计算结果画出DFA<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-8.PNG" alt="img 8"></li>
-</ul>
-<h3 id="DFA的化简"><a href="#DFA的化简" class="headerlink" title="DFA的化简"></a>DFA的化简</h3><ul>
-<li>加入死状态<br>如果一个DFA的转换函数不是全函数，那么<strong>必须</strong>加入一个死状态$S_d$，死状态只有输入而没有输出。例如一个状态S对a没有转换，即move(S,a)&#x3D;$\varnothing$，则$\varepsilon$-$closure(move(S,a))$&#x3D;$S_d$。</li>
-<li>把状态集分为接受状态集和非接受状态集<br>接受状态集指包含NFA结束状态的集合；非接受状态集指不包含NFA结束状态的状态集。<br>例如，在例子中，可以把状态机划分为{A,B,C}和{D}。</li>
-<li>合并不可区分状态<br>对上一个步骤中的每一个集合的进行划分。如果集合中只有一个元素，那就不必再划分，如{D}；如果集合中有多个元素，则寻找哪几个元素经过所有输入字母的转换后可以产生非本集合的元素，则将其分离成一个新的集合，如果两个状态通过所有的输入字母都转换到该集合的相同元素，那么它们不必再分。</li>
-<li>对于上一个步骤中产生的新划分，重复上一步骤，直至不可再分。</li>
-<li>如果结果中有死状态，则去除死状态，把所有到死状态的转换都改为无定义。</li>
-</ul>
-<h4 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h4><p><strong>其实可以把划分的过程看成是一个集合内部排异的过程。</strong><br>栗子🌰：<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-9.png" alt="img 9"><br>首先根据接受和非接受划分为集合{A,B,C}和{D,E,F,G,H,I}<br>对于集合{A,B,C}，A说我可以到B和C，C说我可以到B和C，B说我可以到B和D。A和C听了就不高兴了，我们两个不论怎么变都是到我们这个小集体里，你咋还跑出去了呢，我俩不和你好了。于是就分成了{A,C}和{B}。A和C又开始继续交流，但是他俩通过变换都跑到了{A,C}的外边，一起叛变，<strong>而且对于每一个输入符号，两人都是到同一个元素</strong>，只有这样，两人还是朋友，嗯，{A,C}成为一个集合。<br>对于集合{D,E,F,G,H,I}，兄弟六人怎么变都还是在这兄弟六人内部，于是六个人是一个团结的集体。<br>所以，原来的9个状态，经过划分之后，就变成了3个状态。<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-10.png" alt="img 10"><br>栗子🌰🌰：<br>再给一个栗子自己体会吧<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-11.png" alt="img 11"><br>化简之后：<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-12.png" alt="img 12"></p>
-<h3 id="安利"><a href="#安利" class="headerlink" title="安利"></a>安利</h3><p>安利一个求NFA,DFA,Min-DFA的工具：<a href="https://cyberzhg.github.io/toolbox/">Toolbox</a></p>
-<hr>]]></content>
-      <tags>
-        <tag>编译原理</tag>
-        <tag>词法分析</tag>
       </tags>
   </entry>
   <entry>
@@ -1127,7 +1127,7 @@
 <li>中间层数据流图。对其上层父图的细化，其每一加工可能继续细化，形成子图。</li>
 <li>底层数据流图。加工不需再做分解（基本加工）的数据流图。</li>
 </ul>
-<p><img src="/" alt="DFD"></p>
+<p><img src="/posts/55565/" alt="DFD"></p>
 <h3 id="数据字典"><a href="#数据字典" class="headerlink" title="数据字典"></a>数据字典</h3><p>数据字典是描述数据的信息的集合，是对系统中使用的所有数据元素的定义的集合。系统的逻辑模型由DFD和数据字典共同构成，缺一不可。</p>
 <h4 id="数据字典的内容"><a href="#数据字典的内容" class="headerlink" title="数据字典的内容"></a>数据字典的内容</h4><ul>
 <li>一般信息。名字，别名，描述等。</li>
@@ -1210,8 +1210,8 @@
 <li>状态间转换用有向箭头，箭线上标明事件表达式。</li>
 </ul>
 <h3 id="其他图形工具"><a href="#其他图形工具" class="headerlink" title="其他图形工具"></a>其他图形工具</h3><h4 id="层次方框图"><a href="#层次方框图" class="headerlink" title="层次方框图"></a>层次方框图</h4><p>树形结构，树形结构的顶层是一个单独的矩形框，它代表完整的数据结构，下面各层的矩形框代表这个数据结构的子集，最底层的各个框代表组成这个数据的实际数据元素。</p>
-<h4 id="Wariner图"><a href="#Wariner图" class="headerlink" title="Wariner图"></a>Wariner图</h4><p>花括号内的信息条目构成顺序关系；花括号从左至右排列表示树型层次结构；符号“⊕”表示不可兼具的选择关系；“￣”表示“非”；圆括号内的数字表示重复次数，（1,n）表示重复结构，（1）或不标次数表示顺序结构，（0,1）表示选择结构。<br><img src="/" alt="Wariner"></p>
-<h4 id="IPO图-Input-Process-Output-Diagram"><a href="#IPO图-Input-Process-Output-Diagram" class="headerlink" title="IPO图(Input Process Output Diagram)"></a>IPO图(Input Process Output Diagram)</h4><p>左边框中列出有关的输入，中间框中列出主要的处理，右边框中列出产生的输出。处理的顺序暗示了执行的顺序，箭头指出数据通信的情况。<br><img src="/" alt="IPO"></p>
+<h4 id="Wariner图"><a href="#Wariner图" class="headerlink" title="Wariner图"></a>Wariner图</h4><p>花括号内的信息条目构成顺序关系；花括号从左至右排列表示树型层次结构；符号“⊕”表示不可兼具的选择关系；“￣”表示“非”；圆括号内的数字表示重复次数，（1,n）表示重复结构，（1）或不标次数表示顺序结构，（0,1）表示选择结构。<br><img src="/posts/51302/" alt="Wariner"></p>
+<h4 id="IPO图-Input-Process-Output-Diagram"><a href="#IPO图-Input-Process-Output-Diagram" class="headerlink" title="IPO图(Input Process Output Diagram)"></a>IPO图(Input Process Output Diagram)</h4><p>左边框中列出有关的输入，中间框中列出主要的处理，右边框中列出产生的输出。处理的顺序暗示了执行的顺序，箭头指出数据通信的情况。<br><img src="/posts/51302/" alt="IPO"></p>
 <br>
 ]]></content>
       <tags>
@@ -1467,6 +1467,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/16107.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>Cost of Capital</title>
     <url>/posts/44080.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -1504,11 +1509,6 @@
       <tags>
         <tag>工程经济学</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/16107.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>hexo问题记录(持续更新...)</title>
@@ -1667,57 +1667,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据库设计与Oracle存储结构</title>
-    <url>/posts/16277.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
-
-<span id="more"></span>
-
-<h2 id="数据库的设计过程"><a href="#数据库的设计过程" class="headerlink" title="数据库的设计过程"></a>数据库的设计过程</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>需求分析的重点是调查、收集与分析用户在数据管理中的<strong>信息要求、处理要求、安全性与完整性要求</strong>。<br>分析和表达用户的需求的常用方法：自顶向下的结构化分析方法（Structured Analysis，简称SA方法）。SA方法从最上层的系统组织机构入手，采用逐层分解的方式分析系统，并用<strong>数据流图</strong>和<strong>数据字典</strong>描述系统。</p>
-<h3 id="概念结构设计"><a href="#概念结构设计" class="headerlink" title="概念结构设计"></a>概念结构设计</h3><p>将需求分析得到的用户需求抽象为信息结构即概念模型的过程就是概念结构设计。概念结构是各种数据模型的共同基础，它比数据模型更独立于机器、更抽象，从而更加稳定。概念结构设计是整个数据库设计的关键。<br>设计概念结构的四类方法：</p>
-<ul>
-<li>自顶向下</li>
-<li>自底向上</li>
-<li>逐步扩张</li>
-<li>混合策略（自顶向下和自底向上）</li>
-</ul>
-<h3 id="逻辑结构设计"><a href="#逻辑结构设计" class="headerlink" title="逻辑结构设计"></a>逻辑结构设计</h3><p>逻辑结构设计的步骤：</p>
-<ul>
-<li>将概念结构转化为一般的关系、网状、层次模型</li>
-<li>将转化来的关系、网状、层次模型向特定DBMS支持下的数据模型转换</li>
-<li>对数据模型进行优化</li>
-<li>设计用户子模式</li>
-</ul>
-<h3 id="物理设计"><a href="#物理设计" class="headerlink" title="物理设计"></a>物理设计</h3><p>数据库物理设计的步骤：</p>
-<ul>
-<li>确定数据库的物理结构</li>
-<li>对物理结构进行评价，评价的重点是时间和空间效率</li>
-<li>如果评价结果满足原设计要求则可进入到物理实施阶段，否则，就需要重新设计或修改物理结构，有时甚至要返回逻辑设计阶段修改数据模型。</li>
-</ul>
-<h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>数据库实施的工作内容</p>
-<ul>
-<li>用DDL定义数据库结构</li>
-<li>组织数据入库</li>
-<li>编制与调试应用程序</li>
-<li>数据库试运行</li>
-</ul>
-<h3 id="运行与维护"><a href="#运行与维护" class="headerlink" title="运行与维护"></a>运行与维护</h3><p>数据库试运行结果符合设计目标后，数据库就可以真正投入运行了。数据库投入运行标志着开发任务的基本完成和维护工作的开始。对数据库设计进行评价、调整、修改等维护工作是一个长期的任务，也是设计工作的继续和提高。</p>
-<h2 id="Oracle存储结构"><a href="#Oracle存储结构" class="headerlink" title="Oracle存储结构"></a>Oracle存储结构</h2><h3 id="逻辑存储结构"><a href="#逻辑存储结构" class="headerlink" title="逻辑存储结构"></a>逻辑存储结构</h3><p>数据库（Database）由多个表空间（Tablespace）组成，表空间由段（Segment）组成,段由多个区（Extent）组成，区是磁盘上连续块（Block）的组。</p>
-<ul>
-<li>表空间（Tablespace），最高级的逻辑存储结构，数据库是由多个表空间组成的。</li>
-<li>段（Segment），由多个区组成，这些区可以是连续的，也可以是不连续的。包括数据段、索引段、临时段和回滚段。</li>
-<li>区（Extend），由连续的块组成，它是oracle在进行存储空间的分配和回收的最小单位。</li>
-<li>块（Block），Oracle用来管理存储的最小单元，是数据库使用的最小I&#x2F;O单元，也是最小的逻辑存储结构。<br><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g2a9786eptj30hj09lglu.jpg" alt="database-design-and-store"></li>
-</ul>
-<h3 id="物理存储结构"><a href="#物理存储结构" class="headerlink" title="物理存储结构"></a>物理存储结构</h3><p>Oracle数据库逻辑上由一个或多个表空间组成，每个表空间在物理上由一个或多个<strong>数据文件</strong>组成。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blogs.oracle.com/database4cn/oracle-v6">ORACLE数据库存储结构简介</a></p>
-]]></content>
-      <tags>
-        <tag>数据库</tag>
-        <tag>oracle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL语言与Oracle数据库</title>
     <url>/posts/35515.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -1838,8 +1787,59 @@
 ]]></content>
       <tags>
         <tag>数据库</tag>
-        <tag>oracle</tag>
         <tag>SQL</tag>
+        <tag>oracle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库设计与Oracle存储结构</title>
+    <url>/posts/16277.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+
+<span id="more"></span>
+
+<h2 id="数据库的设计过程"><a href="#数据库的设计过程" class="headerlink" title="数据库的设计过程"></a>数据库的设计过程</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>需求分析的重点是调查、收集与分析用户在数据管理中的<strong>信息要求、处理要求、安全性与完整性要求</strong>。<br>分析和表达用户的需求的常用方法：自顶向下的结构化分析方法（Structured Analysis，简称SA方法）。SA方法从最上层的系统组织机构入手，采用逐层分解的方式分析系统，并用<strong>数据流图</strong>和<strong>数据字典</strong>描述系统。</p>
+<h3 id="概念结构设计"><a href="#概念结构设计" class="headerlink" title="概念结构设计"></a>概念结构设计</h3><p>将需求分析得到的用户需求抽象为信息结构即概念模型的过程就是概念结构设计。概念结构是各种数据模型的共同基础，它比数据模型更独立于机器、更抽象，从而更加稳定。概念结构设计是整个数据库设计的关键。<br>设计概念结构的四类方法：</p>
+<ul>
+<li>自顶向下</li>
+<li>自底向上</li>
+<li>逐步扩张</li>
+<li>混合策略（自顶向下和自底向上）</li>
+</ul>
+<h3 id="逻辑结构设计"><a href="#逻辑结构设计" class="headerlink" title="逻辑结构设计"></a>逻辑结构设计</h3><p>逻辑结构设计的步骤：</p>
+<ul>
+<li>将概念结构转化为一般的关系、网状、层次模型</li>
+<li>将转化来的关系、网状、层次模型向特定DBMS支持下的数据模型转换</li>
+<li>对数据模型进行优化</li>
+<li>设计用户子模式</li>
+</ul>
+<h3 id="物理设计"><a href="#物理设计" class="headerlink" title="物理设计"></a>物理设计</h3><p>数据库物理设计的步骤：</p>
+<ul>
+<li>确定数据库的物理结构</li>
+<li>对物理结构进行评价，评价的重点是时间和空间效率</li>
+<li>如果评价结果满足原设计要求则可进入到物理实施阶段，否则，就需要重新设计或修改物理结构，有时甚至要返回逻辑设计阶段修改数据模型。</li>
+</ul>
+<h3 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h3><p>数据库实施的工作内容</p>
+<ul>
+<li>用DDL定义数据库结构</li>
+<li>组织数据入库</li>
+<li>编制与调试应用程序</li>
+<li>数据库试运行</li>
+</ul>
+<h3 id="运行与维护"><a href="#运行与维护" class="headerlink" title="运行与维护"></a>运行与维护</h3><p>数据库试运行结果符合设计目标后，数据库就可以真正投入运行了。数据库投入运行标志着开发任务的基本完成和维护工作的开始。对数据库设计进行评价、调整、修改等维护工作是一个长期的任务，也是设计工作的继续和提高。</p>
+<h2 id="Oracle存储结构"><a href="#Oracle存储结构" class="headerlink" title="Oracle存储结构"></a>Oracle存储结构</h2><h3 id="逻辑存储结构"><a href="#逻辑存储结构" class="headerlink" title="逻辑存储结构"></a>逻辑存储结构</h3><p>数据库（Database）由多个表空间（Tablespace）组成，表空间由段（Segment）组成,段由多个区（Extent）组成，区是磁盘上连续块（Block）的组。</p>
+<ul>
+<li>表空间（Tablespace），最高级的逻辑存储结构，数据库是由多个表空间组成的。</li>
+<li>段（Segment），由多个区组成，这些区可以是连续的，也可以是不连续的。包括数据段、索引段、临时段和回滚段。</li>
+<li>区（Extend），由连续的块组成，它是oracle在进行存储空间的分配和回收的最小单位。</li>
+<li>块（Block），Oracle用来管理存储的最小单元，是数据库使用的最小I&#x2F;O单元，也是最小的逻辑存储结构。<br><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g2a9786eptj30hj09lglu.jpg" alt="database-design-and-store"></li>
+</ul>
+<h3 id="物理存储结构"><a href="#物理存储结构" class="headerlink" title="物理存储结构"></a>物理存储结构</h3><p>Oracle数据库逻辑上由一个或多个表空间组成，每个表空间在物理上由一个或多个<strong>数据文件</strong>组成。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blogs.oracle.com/database4cn/oracle-v6">ORACLE数据库存储结构简介</a></p>
+]]></content>
+      <tags>
+        <tag>数据库</tag>
+        <tag>oracle</tag>
       </tags>
   </entry>
   <entry>
@@ -2466,15 +2466,6 @@
       </tags>
   </entry>
   <entry>
-    <title>僕が死のうと思ったのは</title>
-    <url>/posts/55212.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://pg60us30v.bkt.clouddn.com//vedio/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
-      <tags>
-        <tag>music</tag>
-        <tag>video</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>双系统卸载</title>
     <url>/posts/60920.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
@@ -2927,12 +2918,21 @@
       </tags>
   </entry>
   <entry>
+    <title>僕が死のうと思ったのは</title>
+    <url>/posts/55212.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"http://pg60us30v.bkt.clouddn.com//vedio/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.mp4","pic":"http://pg60us30v.bkt.clouddn.com//image/image-video/%E5%83%95%E3%81%8C%E6%AD%BB%E3%81%AE%E3%81%86%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%AF.jpg"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
+      <tags>
+        <tag>music</tag>
+        <tag>video</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>稀疏矩阵</title>
     <url>/posts/ef51d401.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 <span id="more"></span>
 
-<h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/coo.gif" alt="coo"></p>
+<h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/posts/ef51d401/coo.gif" alt="coo"></p>
 <p>最简单一种格式，每一个元素需要用一个三元组来表示，分别是（行号，列号，数值），这种方式简单，但是记录单信息多（行列），每个三元组自己可以定位，因此空间不是最优。</p>
 <p>优点：</p>
 <ul>
@@ -2950,7 +2950,7 @@
 <li><p>不能直接进行科学计算和切片操作。</p>
 </li>
 </ul>
-<h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="/csr.gif" alt="csr"></p>
+<h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="/posts/ef51d401/csr.gif" alt="csr"></p>
 <p>比较标准，数值，列号，以及行偏移。 (相当于每行的首个元素在value中的index)<br>row offset的数值个数是row + 1, 表示某行第一个元素在values中的位置，如5是第三行第一个元素，它在values中的index是4。</p>
 <p>优点：</p>
 <ul>
@@ -2970,7 +2970,7 @@
 <li><p>CSR格式在存储稀疏矩阵时非零元素平均使用的字节数(Bytes per Nonzero Entry)最为稳定（float类型约为8.5，double类型约为12.5）。CSR格式常用于读入数据后进行稀疏矩阵计算。</p>
 </li>
 </ul>
-<h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="/csc.gif" alt="csc"></p>
+<h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="/posts/ef51d401/csc.gif" alt="csc"></p>
 <p>CSC是和CSR相对应的一种方式，即按列压缩的意思。</p>
 ]]></content>
       <tags>

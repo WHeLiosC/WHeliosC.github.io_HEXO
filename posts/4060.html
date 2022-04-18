@@ -560,7 +560,7 @@
       
 
       
-        <p ></p>
+        <p></p>
 
 <span id="more"></span>
 
@@ -683,7 +683,7 @@
 <li>通信方在任何时刻可以用新的密钥替代当前的密钥。</li>
 </ul>
 <p>目录定期更新。<br>目录可通过电子方式访问。<br>安全问题：一旦攻击者获得目录管理员私钥，则可传递伪造的公钥，可以假冒任何通信方以窃取消息，或者修改已有的记录。</p>
-<h4 id="公钥授权"><a href="#公钥授权" class="headerlink" title="公钥授权"></a>公钥授权</h4><p><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g0ucx46rkmj30k60f8gnz.jpg"><br>(1) A发送带有时间戳的消息给公钥管理员, 请求B的当前公钥。<br>(2) 管理员给A发送用其私钥$KR_{auth}$加密的消息, A用管理员的公钥解密，可以确信该消息来自管理员。<br><font color="red" ><br>B的公钥$KU_b$，用来加密；<br>原始请求$Request$，A可以验证其请求未被修改；<br>原始时间戳$Time_1$, A可以确定收到的不是来自管理员的旧消息。<br></font><br>(3) A保存B的公钥, 并用它对包含A的标识$ID_A$和$N_1$的消息加密, 然后发送给B。<br>(45) B以同样方式从管理员处得到A的公钥。<br>(6) B用$KUa$对A的$N_1$和B的$N_2$加密, 发送给A。<br>(7) A用B的公钥对$N_2$加密并发送给B, 使B相信其通信伙伴是A。</p>
+<h4 id="公钥授权"><a href="#公钥授权" class="headerlink" title="公钥授权"></a>公钥授权</h4><p><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g0ucx46rkmj30k60f8gnz.jpg"><br>(1) A发送带有时间戳的消息给公钥管理员, 请求B的当前公钥。<br>(2) 管理员给A发送用其私钥$KR_{auth}$加密的消息, A用管理员的公钥解密，可以确信该消息来自管理员。<br><font color="red"><br>B的公钥$KU_b$，用来加密；<br>原始请求$Request$，A可以验证其请求未被修改；<br>原始时间戳$Time_1$, A可以确定收到的不是来自管理员的旧消息。<br></font><br>(3) A保存B的公钥, 并用它对包含A的标识$ID_A$和$N_1$的消息加密, 然后发送给B。<br>(45) B以同样方式从管理员处得到A的公钥。<br>(6) B用$KUa$对A的$N_1$和B的$N_2$加密, 发送给A。<br>(7) A用B的公钥对$N_2$加密并发送给B, 使B相信其通信伙伴是A。</p>
 <h4 id="公钥证书"><a href="#公钥证书" class="headerlink" title="公钥证书"></a>公钥证书</h4><p><img src="https://wx4.sinaimg.cn/large/006xwwY9ly1g0ucxidxihj30kz0eqac4.jpg"><br>有了公钥证书使得不通过实时访问公钥授权部门而实现公钥交换成为可能。<br>公钥证书将一个通信方的身份与他的公开密钥绑定在一起，通常还包括有效期和使用方法等。<br>证书的所有内容必须经由可信公钥授权方或者证书授权方签名后方可生效。<br>知道公钥授权当局公开密钥的任何人都可以验证一个用户的公开密钥证书的有效性。</p>
 <p>对于申请者A，管理员提供的证书为：<br>$C_A &#x3D; E_{KR_{auth}} [Time_1, ID_A, KU_a]$<br>其他人读取并验证：<br>$D_{KU_{auth}}[C_A]&#x3D;D_{KU_{auth}} [E_{KR_{auth}} [Time_1, ID_A, KU_a]]&#x3D;(Time_1, ID_A, KU_a)$</p>
 <h3 id="公钥密码分配传统密码体制密码"><a href="#公钥密码分配传统密码体制密码" class="headerlink" title="公钥密码分配传统密码体制密码"></a>公钥密码分配传统密码体制密码</h3><p>公钥密码算法速度较慢，因此更适合作为传统密码中实现秘密密钥分配的一种手段。<br>下图是一个利用公钥密码体制分配（传输）对称式密码（会话密钥$K_s$）的例子：<br><img src="https://ws3.sinaimg.cn/large/006xwwY9ly1g0ucy1xa1xj30nb0bodhn.jpg" alt="传统密钥分配"><br>(1) A用$KU_b$加密消息$N_1$和$ID_A$发送给B。<br>(2) 只有B拥有B的私钥，即$N_1$只有B可见，B产生随机值$N_2$，和$N_1$一起加密后发送给A，A看到$N_1$后即可确定消息是B发来的。<br>(3) 同理，$N_2$只有A可见，B可以确定消息是A发来的。<br>(4) A产生本次会话的密钥，先用自己的私钥加密再用B的公钥加密发送给B。<br>上述过程中存在的安全问题：消息(4)可以进行重放攻击。在下次会话时上次的会话密钥可能已经泄露，攻击者可以重放上次的消息(4)进行攻击。解决方案是将消息(3)和消息(4)合并发送，即(3)$E_{KU_b}[N_2 || E_{KR_a}[K_s]]$。</p>
@@ -752,7 +752,7 @@
 <h4 id="数字签名与消息认证的区别"><a href="#数字签名与消息认证的区别" class="headerlink" title="数字签名与消息认证的区别"></a>数字签名与消息认证的区别</h4><p>消息认证使收方能验证消息发送者及所发消息内容是否被窜改过。当收发者之间没有利害冲突时，这对于防止第三者的破坏来说是足够了。但当收者和发者之间有利害冲突时，就无法解决他们之间的纠纷，此时须借助满足前述要求的数字签名技术。</p>
 <h3 id="直接数字签名"><a href="#直接数字签名" class="headerlink" title="直接数字签名"></a>直接数字签名</h3><p>用共享的密钥（对称密钥）对明文及签名一起加密。注意先进行签名，然后执行外层的加密，这样在发生争执时，第三方可以查看消息及其签名。若先加密再签名，则第三方必须知道解密密钥才能查看消息。先签名再加密，接收方可以保留消息及其签名留作争执时使用。<br>直接数字签名的有效性依赖于发送方私钥的安全性。发送方如果想要否认一条消息，他可以声称自己的私钥丢失或被盗用。可以使用加入时间戳的方式减少这种威胁。另一种威胁是，攻击者在T时刻盗用了发送方的私钥，并发送了一条签名的消息加盖T时刻之前的时间戳。解决上述问题的方法是使用数字证书的证书管理中心。</p>
 <h3 id="ELGamal数字签名方案"><a href="#ELGamal数字签名方案" class="headerlink" title="ELGamal数字签名方案"></a>ELGamal数字签名方案</h3><p>首先，基本元素是素数p和原根α<br>A用户生成随机整数$X_A\in (1,p-1)$，计算$Y_A&#x3D;α^{X_A}\ mod\ p$<br>计算消息的Hash码，m&#x3D;H(M)<br><strong>产生签名</strong><br>选择整数$K\in [1,p-1]$，并且K与p-1互素<br>计算$S_1 &#x3D; \alpha ^K\ mod\ p$<br>计算K模p-1的逆，即$K^{-1}\ mod\ (p-1)$<br>计算$S_2&#x3D;K^{-1}(m-X_AS_1)\ mod\ (p-1)$<br>签名即为$(S_1,S_2)$<br><strong>验证签名</strong><br>计算$V_1&#x3D;\alpha ^m\ mod\ p$<br>计算$V_2&#x3D;(Y_A)^{S_1}(S_1)^{S_2}\ mod\ p$<br>如果$V_1&#x3D;V_2$，那么签名合法。</p>
-<hr />
+<hr>
       
     </div>
 
@@ -1803,7 +1803,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>

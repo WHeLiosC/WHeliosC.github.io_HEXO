@@ -679,7 +679,7 @@
 <h3 id="换名调用"><a href="#换名调用" class="headerlink" title="换名调用"></a>换名调用</h3><p>用实参表达式对形参进行正文替换。</p>
 <figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">program</span> main(input,output);</span><br><span class="line">    <span class="keyword">var</span> a,b: integer;</span><br><span class="line">    <span class="function"><span class="keyword">procedure</span> <span class="title">p</span><span class="params">(x,y,z: integer)</span>;</span></span><br><span class="line">        <span class="keyword">begin</span></span><br><span class="line">        y:＝y+<span class="number">1</span>;</span><br><span class="line">        z:＝z+x;</span><br><span class="line">        <span class="keyword">end</span>;</span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        a:＝<span class="number">2</span>;</span><br><span class="line">        b:＝<span class="number">3</span>;</span><br><span class="line">        p(a+b, a, a);</span><br><span class="line">        print a;</span><br><span class="line">    <span class="keyword">end</span>．</span><br><span class="line"><span class="comment">&#123;值调用结果为2，不改变实参值&#125;</span></span><br><span class="line"><span class="comment">&#123;引用调用结果为8，a+b的结果5放在临时变量中，传参时将临时变量地址传过去&#125;</span></span><br><span class="line"><span class="comment">&#123;换名调用可以看作是执行a=a+1;a=a+(a+b);注意在第二条语句中右边的每一个a都等于3&#125;</span></span><br></pre></td></tr></table></figure>
 
-<br/>
+<br>
 
       
     </div>
@@ -1771,7 +1771,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>

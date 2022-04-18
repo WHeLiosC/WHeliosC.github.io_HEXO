@@ -513,7 +513,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">33k</span>
+                <span title="本文字数">34k</span>
               
 
               
@@ -539,7 +539,10 @@
       
 
       
-        <p><p></p><br><span id="more"></span></p>
+        <p></p>
+<span id="more"></span>
+
+
 <h1 id="第一章-引言"><a href="#第一章-引言" class="headerlink" title="第一章 引言"></a>第一章 引言</h1><h2 id="0-什么是数据挖掘"><a href="#0-什么是数据挖掘" class="headerlink" title="0. 什么是数据挖掘"></a>0. 什么是数据挖掘</h2><p>数据挖掘是从大量数据中挖掘出有趣模式和知识的过程或方法，其中涉及机器学习、统计数据和数据库系统交叉处的方法。</p>
 <h2 id="1-数据中的知识发现包括哪几个步骤"><a href="#1-数据中的知识发现包括哪几个步骤" class="headerlink" title="1. 数据中的知识发现包括哪几个步骤"></a>1. 数据中的知识发现包括哪几个步骤</h2><ul>
 <li>business understanding（业务理解）</li>
@@ -553,8 +556,7 @@
 <h1 id="第二章-学习的可行性"><a href="#第二章-学习的可行性" class="headerlink" title="第二章 学习的可行性"></a>第二章 学习的可行性</h1><h2 id="1-Hoeffding’s-Inequality（霍夫汀不等式）"><a href="#1-Hoeffding’s-Inequality（霍夫汀不等式）" class="headerlink" title="1. Hoeffding’s Inequality（霍夫汀不等式）"></a>1. Hoeffding’s Inequality（霍夫汀不等式）</h2><p>$P(| v- \mu | &gt; \epsilon) \leq 2 e^{-2 \epsilon^2 N}$</p>
 <p>霍夫丁不等式说明，抽样比例$v$与总体比例$\mu$的差距大于某个边距值$\epsilon$的概率，小于等于一个由$\epsilon$和样本大小$N$得到的关系式的值。</p>
 <h2 id="2-用霍夫汀不等式说明学习的可行性"><a href="#2-用霍夫汀不等式说明学习的可行性" class="headerlink" title="2. 用霍夫汀不等式说明学习的可行性"></a>2. 用霍夫汀不等式说明学习的可行性</h2><p>在统计学中我们通过霍夫丁不等式来限定抽样集与总体集中的频率与概率关系。通过将其推广到机器学习中，可以得到类似的单个hypothesis的$E_{in}$与$E_{out}$差距限定不等式。然而当考虑到一组hypothesis数量多的假设集时，即使对单个hypothesis遇到bad data使其$E_{in}$与$E_{out}$差别比较大的概率十分低，但总体而言其中有一个或几个hypothesis遇到bad data使其$E_{in}$与$E_{out}$差别较大。我们将假设集中假设的数量$M$通过union bound引入不等式中，最终得到$P_D(BAD D) \leq 2M e^{-2 \epsilon^2 N}$。在<strong>有限的</strong>假设数量时，只要样本数量$N$足够，我们依然能让这组data保证取到的hypothesis的$E_{in}$与$E_{out}$差距不大，从而可以挑选$E_{in}$最小的hypothesis，也即$E_{out}$最小的hypothesis，作为结果。</p>
-<h1 id="第三章-数据和数据预处理"><a href="#第三章-数据和数据预处理" class="headerlink" title="第三章 数据和数据预处理"></a>第三章 数据和数据预处理</h1><h2 id="1-属性类型和可进行的操作"><a href="#1-属性类型和可进行的操作" class="headerlink" title="1. 属性类型和可进行的操作"></a>1. 属性类型和可进行的操作</h2><div class="table-container">
-<table>
+<h1 id="第三章-数据和数据预处理"><a href="#第三章-数据和数据预处理" class="headerlink" title="第三章 数据和数据预处理"></a>第三章 数据和数据预处理</h1><h2 id="1-属性类型和可进行的操作"><a href="#1-属性类型和可进行的操作" class="headerlink" title="1. 属性类型和可进行的操作"></a>1. 属性类型和可进行的操作</h2><table>
 <thead>
 <tr>
 <th>属性类型</th>
@@ -563,10 +565,9 @@
 <th>举例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>标称属性（nominal）</td>
-<td>仅仅是不同的名字，用于区分属性（$=, \neq$）</td>
+<td>仅仅是不同的名字，用于区分属性（$&#x3D;, \neq$）</td>
 <td>众数，熵，列联相关，$\chi^2$检验</td>
 <td>邮政编码，员工ID，性别</td>
 </tr>
@@ -588,46 +589,38 @@
 <td>几何平均，调和平均，百分比变差</td>
 <td>质量，长度，绝对温度</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p>标称属性和序数属性统称为分类的或定性的属性，区间属性和比率属性统称为定量的或数值属性。</p>
 <h2 id="2-非对称属性"><a href="#2-非对称属性" class="headerlink" title="2. 非对称属性"></a>2. 非对称属性</h2><p>属性只有两个类别或状态，用0和1编码。如果他的两种状态具有同等的价值并且有相同的权重，则称为对称的二元属性，比如男女性别。如果其状态的结果不是同样重要的，其中更关注1编码的结果（通常是稀疏的），称其为非对称的二元属性，比如covid-19核酸检测的阴阳性结果。</p>
 <h2 id="3-相似性和相异性度量"><a href="#3-相似性和相异性度量" class="headerlink" title="3. 相似性和相异性度量"></a>3. 相似性和相异性度量</h2><h3 id="3-1-数据对象之间的相异度"><a href="#3-1-数据对象之间的相异度" class="headerlink" title="3.1 数据对象之间的相异度"></a>3.1 数据对象之间的相异度</h3><ul>
-<li>欧几里得距离$d=\sqrt {\Sigma_{k=1}^{n}(p_k-q_k)^2}$。</li>
-</ul>
-<ul>
-<li>闵可夫斯基距离$d=\lgroup \Sigma_{k=1}^{n}|(p_k-q_k)|^r\rgroup^{\frac{1}{r}}$是欧氏距离的推广。当$r=1$时，称为曼哈顿距离（$L_1$范数）；当$r=2$时，称为欧几里得距离（$L_2$范数）；当$r=\infty$时，称为切比雪夫距离（上确界距离，$L_{max}$范数，$L_\infty$范数），它是对象属性间的最大距离。</li>
-</ul>
-<ul>
-<li>马氏距离$d_m(x) = \sqrt{(x-\mu) \Sigma^{-1} (x-\mu)^T}$，其中$x$是一个均值为$\mu$的协方差矩阵为$\Sigma$的多变量矢量。对两个服从统一分布并且协方差矩阵为$\Sigma$的变量（样本）$p$和$q$来说，其差异程度可以由马氏距离表示为$d_m(p,q)= \sqrt{(p-q) \Sigma^{-1} (p-q)^T}$。马氏距离排除了变量之间的相关性的干扰，且尺度无关（不受量纲影响）。</li>
+<li><p>欧几里得距离$d&#x3D;\sqrt {\Sigma_{k&#x3D;1}^{n}(p_k-q_k)^2}$。</p>
+</li>
+<li><p>闵可夫斯基距离$d&#x3D;\lgroup \Sigma_{k&#x3D;1}^{n}|(p_k-q_k)|^r\rgroup^{\frac{1}{r}}$是欧氏距离的推广。当$r&#x3D;1$时，称为曼哈顿距离（$L_1$范数）；当$r&#x3D;2$时，称为欧几里得距离（$L_2$范数）；当$r&#x3D;\infty$时，称为切比雪夫距离（上确界距离，$L_{max}$范数，$L_\infty$范数），它是对象属性间的最大距离。</p>
+</li>
+<li><p>马氏距离$d_m(x) &#x3D; \sqrt{(x-\mu) \Sigma^{-1} (x-\mu)^T}$，其中$x$是一个均值为$\mu$的协方差矩阵为$\Sigma$的多变量矢量。对两个服从统一分布并且协方差矩阵为$\Sigma$的变量（样本）$p$和$q$来说，其差异程度可以由马氏距离表示为$d_m(p,q)&#x3D; \sqrt{(p-q) \Sigma^{-1} (p-q)^T}$。马氏距离排除了变量之间的相关性的干扰，且尺度无关（不受量纲影响）。</p>
+</li>
 </ul>
 <h3 id="3-2-二元数据的相似性度量"><a href="#3-2-二元数据的相似性度量" class="headerlink" title="3.2 二元数据的相似性度量"></a>3.2 二元数据的相似性度量</h3><ul>
-<li>简单匹配系数（SMC）：$SMC = \frac{f_{11}+f_{00}}{f_{00}+f_{10}+f_{01}+f_{11}}$</li>
-</ul>
-<ul>
-<li>Jaccard系数：$J = \frac{f_{11}}{f_{10}+f_{01}+f_{11}}$</li>
-</ul>
-<ul>
-<li>广义Jaccard系数（Tinamoto系数）：$EJ(p,q) = \frac{p \cdot q}{\parallel p \parallel ^2 + \parallel q \parallel ^2 - p \cdot q}$</li>
-</ul>
-<ul>
-<li>余弦相似度：$cos(x,y) = \frac{x \cdot y}{\parallel p \parallel \times \parallel q \parallel}$</li>
-</ul>
-<ul>
-<li>相关系数：$r(X, Y)=\frac{\operatorname{Cov}(X, Y)}{\sqrt{\operatorname{Var}[X] \operatorname{Var}[Y]}}$或$r(X, Y)=\frac{\operatorname{Cov}(X, Y)}{\sigma_X \sigma_Y}$。</li>
+<li><p>简单匹配系数（SMC）：$SMC &#x3D; \frac{f_{11}+f_{00}}{f_{00}+f_{10}+f_{01}+f_{11}}$</p>
+</li>
+<li><p>Jaccard系数：$J &#x3D; \frac{f_{11}}{f_{10}+f_{01}+f_{11}}$</p>
+</li>
+<li><p>广义Jaccard系数（Tinamoto系数）：$EJ(p,q) &#x3D; \frac{p \cdot q}{\parallel p \parallel ^2 + \parallel q \parallel ^2 - p \cdot q}$</p>
+</li>
+<li><p>余弦相似度：$cos(x,y) &#x3D; \frac{x \cdot y}{\parallel p \parallel \times \parallel q \parallel}$</p>
+</li>
+<li><p>相关系数：$r(X, Y)&#x3D;\frac{\operatorname{Cov}(X, Y)}{\sqrt{\operatorname{Var}[X] \operatorname{Var}[Y]}}$或$r(X, Y)&#x3D;\frac{\operatorname{Cov}(X, Y)}{\sigma_X \sigma_Y}$。</p>
+</li>
 </ul>
 <h3 id="3-3-组合异种属性的相似度"><a href="#3-3-组合异种属性的相似度" class="headerlink" title="3.3 组合异种属性的相似度"></a>3.3 组合异种属性的相似度</h3><ul>
-<li>在第$k$个属性上，计算相似度$s_k(p,q)$，在区间$[0,1]$中。</li>
-</ul>
-<ul>
-<li>对于第$k$个属性，定义一个指示变量$\delta_k$，如果第$k$个属性是非对称属性，并且两个对象在该属性的值都是0，或者如果有一个对象的第$k$个属性具有缺失值，则$\delta_k = 0$，否则$\delta_k = 1$。</li>
-</ul>
-<ul>
-<li>总相似度为$similarity(p,q) = \frac{\Sigma_{k=1}^{n}\delta_k s_k (p,q)}{\Sigma_{k=1}^{n}\delta_k}$。</li>
-</ul>
-<ul>
-<li>当某些属性更重要时，可以使用不同权值对不同属性的相似度进行加权，则上式变为$similarity(p,q) = \frac{\Sigma_{k=1}^{n} w_k \delta_k s_k (p,q)}{\Sigma_{k=1}^{n}\delta_k}$。</li>
+<li><p>在第$k$个属性上，计算相似度$s_k(p,q)$，在区间$[0,1]$中。</p>
+</li>
+<li><p>对于第$k$个属性，定义一个指示变量$\delta_k$，如果第$k$个属性是非对称属性，并且两个对象在该属性的值都是0，或者如果有一个对象的第$k$个属性具有缺失值，则$\delta_k &#x3D; 0$，否则$\delta_k &#x3D; 1$。</p>
+</li>
+<li><p>总相似度为$similarity(p,q) &#x3D; \frac{\Sigma_{k&#x3D;1}^{n}\delta_k s_k (p,q)}{\Sigma_{k&#x3D;1}^{n}\delta_k}$。</p>
+</li>
+<li><p>当某些属性更重要时，可以使用不同权值对不同属性的相似度进行加权，则上式变为$similarity(p,q) &#x3D; \frac{\Sigma_{k&#x3D;1}^{n} w_k \delta_k s_k (p,q)}{\Sigma_{k&#x3D;1}^{n}\delta_k}$。</p>
+</li>
 </ul>
 <h2 id="4-数据预处理"><a href="#4-数据预处理" class="headerlink" title="4. 数据预处理"></a>4. 数据预处理</h2><p>主要任务：数据清理（data cleaning）、数据集成（data integration）、数据规约（data reduction）、数据变换（data transformation）、数据离散化（data discretization）。</p>
 <h3 id="4-1-数据清理"><a href="#4-1-数据清理" class="headerlink" title="4.1 数据清理"></a>4.1 数据清理</h3><h4 id="4-1-1-填充缺失值（missing-data）"><a href="#4-1-1-填充缺失值（missing-data）" class="headerlink" title="4.1.1 填充缺失值（missing data）"></a>4.1.1 填充缺失值（missing data）</h4><ul>
@@ -660,7 +653,8 @@
 </li>
 <li><p>曲线拟合</p>
 </li>
-<li>给定模型上的假设检验</li>
+<li><p>给定模型上的假设检验</p>
+</li>
 </ul>
 <h4 id="4-1-4-纠正数据中的不一致"><a href="#4-1-4-纠正数据中的不一致" class="headerlink" title="4.1.4 纠正数据中的不一致"></a>4.1.4 纠正数据中的不一致</h4><h3 id="4-2-数据集成"><a href="#4-2-数据集成" class="headerlink" title="4.2 数据集成"></a>4.2 数据集成</h3><p>数据集成将多个数据源的数据合并，存放在一个一致的数据存储中，如数据仓库中。</p>
 <h4 id="4-2-1-实体识别问题"><a href="#4-2-1-实体识别问题" class="headerlink" title="4.2.1 实体识别问题"></a>4.2.1 实体识别问题</h4><p>数据分析者或计算机如何才能确信一个数据库中的某个属性与另一个数据库中的某个属性指的是相同的属性。</p>
@@ -669,22 +663,22 @@
 <li><p>$\chi ^2检验$</p>
 <ul>
 <li>假设对两个属性$A$和$B$，$A$有$c$个不同的值，$B$有$r$个不同的值，可以得到一个$c \times r$的列联表。令$(A_i,B_j)$表示属性$A$取值$a_i$、属性$B$取值$b_j$的联合事件，$\chi ^2$值可以通过公式计算</li>
-<li>$\chi ^2 = \Sigma_{i=1}^{c} \Sigma_{j=1}^{r} \frac{(o_{ij} - e_{ij})^2}{e_{ij}}$。其中，$o_{ij}$是联合事件$(A_i,B_j)$的观测频度（即实际计数），$e_{ij}$是$(A_i,B_j)$的期望频度。</li>
-<li>$e_{ij}$的计算公式为$e_{ij} = \frac{count(A=a_i) \times count(B=b_j)}{n}$。其中，$n$是元组的个数，$count(A=a_i)$是$A$上具有值$a_i$的元组个数，$count(B=b_j)$是$B$上具有值$b_i$的元组个数。</li>
+<li>$\chi ^2 &#x3D; \Sigma_{i&#x3D;1}^{c} \Sigma_{j&#x3D;1}^{r} \frac{(o_{ij} - e_{ij})^2}{e_{ij}}$。其中，$o_{ij}$是联合事件$(A_i,B_j)$的观测频度（即实际计数），$e_{ij}$是$(A_i,B_j)$的期望频度。</li>
+<li>$e_{ij}$的计算公式为$e_{ij} &#x3D; \frac{count(A&#x3D;a_i) \times count(B&#x3D;b_j)}{n}$。其中，$n$是元组的个数，$count(A&#x3D;a_i)$是$A$上具有值$a_i$的元组个数，$count(B&#x3D;b_j)$是$B$上具有值$b_i$的元组个数。</li>
 <li>对卡方值贡献最大的单元是实际计数和期望计数很不相同的单元。</li>
 <li>卡方检验假设$A$和$B$是独立的，检测基于显著水平，具有自由度$(c-1) \times (r-1)$。</li>
 </ul>
 </li>
 <li><p>协方差</p>
 <ul>
-<li>$cov(A,B) = E((A-\overline{A})(B-\overline{B})) = \frac{\Sigma_{i=1}^{n} (a_i - \overline{A}) ((b_i - \overline{B})}{n} = E(A \cdot B) - \overline{A} \overline{B}$</li>
+<li>$cov(A,B) &#x3D; E((A-\overline{A})(B-\overline{B})) &#x3D; \frac{\Sigma_{i&#x3D;1}^{n} (a_i - \overline{A}) ((b_i - \overline{B})}{n} &#x3D; E(A \cdot B) - \overline{A} \overline{B}$</li>
 </ul>
 </li>
 <li><p>相关系数（皮尔森相关系数）</p>
 <ul>
-<li>公式为$r_{A,B} = \frac{\Sigma_{i=1}^{n} (a_i - \overline{A}) ((b_i - \overline{B})}{n \sigma_A \sigma_B}=\frac{\Sigma_{i=1}^{n} (a_i b_i) - n \overline{A} \overline{B}}{n \sigma_A \sigma_B}$</li>
-<li>通过协方差的定义，相关系数公式还可以写为$r_{A,B}=\frac{\operatorname{Cov}(A, B)}{\sigma_A \sigma_B}$</li>
-<li>$r_{A,B} \in [-1,+1]$。如果$r_{A,B}&gt;0$，则$A$和$B$是正相关的，该值越大，相关性越强。如果$r_{A,B}=0$，则$A$和$B$是不相关的。</li>
+<li>公式为$r_{A,B} &#x3D; \frac{\Sigma_{i&#x3D;1}^{n} (a_i - \overline{A}) ((b_i - \overline{B})}{n \sigma_A \sigma_B}&#x3D;\frac{\Sigma_{i&#x3D;1}^{n} (a_i b_i) - n \overline{A} \overline{B}}{n \sigma_A \sigma_B}$</li>
+<li>通过协方差的定义，相关系数公式还可以写为$r_{A,B}&#x3D;\frac{\operatorname{Cov}(A, B)}{\sigma_A \sigma_B}$</li>
+<li>$r_{A,B} \in [-1,+1]$。如果$r_{A,B}&gt;0$，则$A$和$B$是正相关的，该值越大，相关性越强。如果$r_{A,B}&#x3D;0$，则$A$和$B$是不相关的。</li>
 <li>独立可推出不相关，但不相关并不能推出独立。不相关是指两个随机变量没有近似的线性关系，而独立是指两个变量没有任何关系。</li>
 </ul>
 </li>
@@ -700,17 +694,17 @@
 <li><p>最小-最大规范化</p>
 <ul>
 <li>假设$min_A$和$max_A$是属性$A$的最小值和最大值，要将属性$A$规范化到区间$[ new _ min_A, new _ max_A]$中，$a_i$的规范后结果为</li>
-<li>$a_i \prime = \frac{a_i - min_A}{max_A - min_A} \times (new _ max_A - new _ min_A) + new _ min_A$</li>
+<li>$a_i \prime &#x3D; \frac{a_i - min_A}{max_A - min_A} \times (new _ max_A - new _ min_A) + new _ min_A$</li>
 </ul>
 </li>
 <li><p>$z-score$规范化</p>
 <ul>
-<li>$a_i \prime = \frac{a_i - \overline{A}}{\sigma_A}$</li>
+<li>$a_i \prime &#x3D; \frac{a_i - \overline{A}}{\sigma_A}$</li>
 </ul>
 </li>
 <li><p>小数定标规范化</p>
 <ul>
-<li>$a_i \prime = \frac{a_i}{10^j}$，其中$j$是使得$max(|a_i \prime |)&lt;1$的最小整数。</li>
+<li>$a_i \prime &#x3D; \frac{a_i}{10^j}$，其中$j$是使得$max(|a_i \prime |)&lt;1$的最小整数。</li>
 </ul>
 </li>
 </ul>
@@ -733,8 +727,8 @@
 <ul>
 <li><p>基尼指数</p>
 <ul>
-<li>一个节点的基尼指数定义为$Gini(node) = 1 - \Sigma_{i=1}^{n} p_i^2$，其中$p_i$是$node$中元组属于$Class_i$类的概率。</li>
-<li>如果将一个节点$D$分裂成了$k$个部分（子节点），对这个划分来说，$D$的基尼指数为$Gini_{split}(D) = \Sigma_{i=1}^{k} \frac{n_i}{n}Gini(i)$，其中$n_i$是属于某一个子节点的元组的个数，$n$是属于节点$D$的元组数。</li>
+<li>一个节点的基尼指数定义为$Gini(node) &#x3D; 1 - \Sigma_{i&#x3D;1}^{n} p_i^2$，其中$p_i$是$node$中元组属于$Class_i$类的概率。</li>
+<li>如果将一个节点$D$分裂成了$k$个部分（子节点），对这个划分来说，$D$的基尼指数为$Gini_{split}(D) &#x3D; \Sigma_{i&#x3D;1}^{k} \frac{n_i}{n}Gini(i)$，其中$n_i$是属于某一个子节点的元组的个数，$n$是属于节点$D$的元组数。</li>
 <li>对于离散属性来说，选择分裂后的基尼指数小于未分裂的基尼指数且基尼指数最小的划分。</li>
 <li>对于连续属性来说，对属性的可能取值进行排序，然后将每对相邻值的中点作为可能的分裂点，如果是二元划分，则选择产生最小基尼指数的点作为该属性的分裂点。对于分裂点$split _ point$来说，它产生的两个数据子集是$\leq split _ point$和$&gt; split _ point$。</li>
 <li>基尼指数应用于CART（Classification and Regression Trees）算法中。</li>
@@ -742,15 +736,15 @@
 </li>
 <li><p>熵</p>
 <ul>
-<li>$Entropy(node) = - \Sigma_{i=1}^{n} p_i log_2(p_i)$，其中$p_i$是$node$中元组属于$Class_i$类的概率。</li>
+<li>$Entropy(node) &#x3D; - \Sigma_{i&#x3D;1}^{n} p_i log_2(p_i)$，其中$p_i$是$node$中元组属于$Class_i$类的概率。</li>
 <li>熵越大表示区分类别需要的信息越多，则节点内的纯度越低。</li>
-<li>信息增益：$Gain_{split}(A) = Entropy(node) - (\Sigma_{i=1}^k \frac{n_i}{n} Entropy(i))$，表示将一个节点按属性$A$分为$k$个部分后得到的信息增益，选择具有最大信息增益的属性进行划分。信息增益应用于ID3算法中。（倾向于产生大量的分区，使每一个值有一个分区，这样每一个分区都是纯的，但这种划分没用。）</li>
-<li>信息增益率：$GainRate(A) = \frac{Gain(A)}{SplitInfo_A(D)}$，其中$SplitInfo_A(D) = -\Sigma_{i=1}^k \frac{n_i}{n} log_2(\frac{n_i}{n})$。信息增益率应用于C4.5算法中。</li>
+<li>信息增益：$Gain_{split}(A) &#x3D; Entropy(node) - (\Sigma_{i&#x3D;1}^k \frac{n_i}{n} Entropy(i))$，表示将一个节点按属性$A$分为$k$个部分后得到的信息增益，选择具有最大信息增益的属性进行划分。信息增益应用于ID3算法中。（倾向于产生大量的分区，使每一个值有一个分区，这样每一个分区都是纯的，但这种划分没用。）</li>
+<li>信息增益率：$GainRate(A) &#x3D; \frac{Gain(A)}{SplitInfo_A(D)}$，其中$SplitInfo_A(D) &#x3D; -\Sigma_{i&#x3D;1}^k \frac{n_i}{n} log_2(\frac{n_i}{n})$。信息增益率应用于C4.5算法中。</li>
 </ul>
 </li>
 <li><p>分类错误率</p>
 <ul>
-<li>$Error = 1 - max(p_i)$，其中$p_i$是$node$中元组属于$Class_i$类的概率。</li>
+<li>$Error &#x3D; 1 - max(p_i)$，其中$p_i$是$node$中元组属于$Class_i$类的概率。</li>
 </ul>
 </li>
 </ul>
@@ -775,15 +769,15 @@
 </ul>
 <h2 id="5-混淆矩阵（confusion-matrix）"><a href="#5-混淆矩阵（confusion-matrix）" class="headerlink" title="5. 混淆矩阵（confusion matrix）"></a>5. 混淆矩阵（confusion matrix）</h2><p>简记Actual Class为AC，Predicted Class为PC</p>
 <ul>
-<li>TP: (true positive)  AC=yes, PC=yes</li>
-<li>FN: (false negative) AC=yes, PC=no</li>
-<li>FP: (fasle positive) AC=no, PC=yes</li>
-<li>TN: (true negative)  AC=no, PC=no</li>
+<li>TP: (true positive)  AC&#x3D;yes, PC&#x3D;yes</li>
+<li>FN: (false negative) AC&#x3D;yes, PC&#x3D;no</li>
+<li>FP: (fasle positive) AC&#x3D;no, PC&#x3D;yes</li>
+<li>TN: (true negative)  AC&#x3D;no, PC&#x3D;no</li>
 </ul>
-<p>准确率：$Accuracy = \frac{TP+TN}{TP+FN+FP+TN}$</p>
-<p>精确率：$Precision = \frac{TP}{TP+FP}$</p>
-<p>召回率：$Recall = \frac{TP}{TP+FN}$</p>
-<p>$F_1$分数：$F_1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$</p>
+<p>准确率：$Accuracy &#x3D; \frac{TP+TN}{TP+FN+FP+TN}$</p>
+<p>精确率：$Precision &#x3D; \frac{TP}{TP+FP}$</p>
+<p>召回率：$Recall &#x3D; \frac{TP}{TP+FN}$</p>
+<p>$F_1$分数：$F_1 &#x3D; 2 \times \frac{Precision \times Recall}{Precision + Recall}$</p>
 <h2 id="6-评估分类器性能的方法"><a href="#6-评估分类器性能的方法" class="headerlink" title="6. 评估分类器性能的方法"></a>6. 评估分类器性能的方法</h2><ul>
 <li>保持方法（holdout），将数据集按比例划分为不相交的训练集和验证集</li>
 <li>随机二次抽样（random subsampling），多次重复保持方法</li>
@@ -796,7 +790,7 @@
 <li>分层抽样（stratified sampling）</li>
 <li>自助法（bootstrap）</li>
 </ul>
-<p>ROC曲线，横坐标为假阳率$FPR = \frac{FP}{N}$，纵坐标为真阳率$TPR = \frac{TP}{P}$。AUC面积是ROC曲线下的面积，ROC曲线一般位于$y=x$之上，所以AUC取值一般在$0.5 \sim 1$之间，值越大说明模型的性能越好。</p>
+<p>ROC曲线，横坐标为假阳率$FPR &#x3D; \frac{FP}{N}$，纵坐标为真阳率$TPR &#x3D; \frac{TP}{P}$。AUC面积是ROC曲线下的面积，ROC曲线一般位于$y&#x3D;x$之上，所以AUC取值一般在$0.5 \sim 1$之间，值越大说明模型的性能越好。</p>
 <h1 id="第五章-神经网络"><a href="#第五章-神经网络" class="headerlink" title="第五章 神经网络"></a>第五章 神经网络</h1><h2 id="1-神经网络如何学习"><a href="#1-神经网络如何学习" class="headerlink" title="1. 神经网络如何学习"></a>1. 神经网络如何学习</h2><p>神经网络通过调整权值进行学习，从而能够正确的对训练数据进行分类，然后在测试阶段对未知数据进行分类。</p>
 <p>特点：</p>
 <ul>
@@ -822,7 +816,7 @@
 <p>批量梯度下降（BGD）：在每一次迭代时计算完所有的样本后进行梯度的更新。</p>
 <p>随机梯度下降（SGD）：在每一次迭代时每计算完一个样本后都进行梯度的更新。</p>
 <h2 id="3-反向传播算法（BP算法）"><a href="#3-反向传播算法（BP算法）" class="headerlink" title="3. 反向传播算法（BP算法）"></a>3. 反向传播算法（BP算法）</h2><p>逐层求出目标函数对各神经元权值的偏导数，构成目标函数对权值向量的梯度，作为修改权值的依据，网络的学习在权值修改过程中完成。误差达到所期望值时，网络学习结束。</p>
-<h1 id="第六章-贝叶斯分类方法"><a href="#第六章-贝叶斯分类方法" class="headerlink" title="第六章 贝叶斯分类方法"></a>第六章 贝叶斯分类方法</h1><h2 id="1-根据贝叶斯理论，如何计算一个假设h成立的后验概率？"><a href="#1-根据贝叶斯理论，如何计算一个假设h成立的后验概率？" class="headerlink" title="1. 根据贝叶斯理论，如何计算一个假设h成立的后验概率？"></a>1. 根据贝叶斯理论，如何计算一个假设h成立的后验概率？</h2><p>$P(h|D) = \frac{P(D|h)P(h)}{P(D)}$</p>
+<h1 id="第六章-贝叶斯分类方法"><a href="#第六章-贝叶斯分类方法" class="headerlink" title="第六章 贝叶斯分类方法"></a>第六章 贝叶斯分类方法</h1><h2 id="1-根据贝叶斯理论，如何计算一个假设h成立的后验概率？"><a href="#1-根据贝叶斯理论，如何计算一个假设h成立的后验概率？" class="headerlink" title="1. 根据贝叶斯理论，如何计算一个假设h成立的后验概率？"></a>1. 根据贝叶斯理论，如何计算一个假设h成立的后验概率？</h2><p>$P(h|D) &#x3D; \frac{P(D|h)P(h)}{P(D)}$</p>
 <ul>
 <li>$P(h)$和$P(D)$是先验概率， $P(h)$表示假设 $h$是一个正确假设的概率，$P(D)$表示在没有确定某一假设成立时$D$的概率。</li>
 <li>$P(D|h)表示假设$h$成立的情况下，观察到数据$D$的概率。</li>
@@ -831,46 +825,46 @@
 <h2 id="2-极大后验假设和极大似然假设"><a href="#2-极大后验假设和极大似然假设" class="headerlink" title="2. 极大后验假设和极大似然假设"></a>2. 极大后验假设和极大似然假设</h2><ul>
 <li><p>极大后验假设（MAP）</p>
 <ul>
-<li>在假设集$H$中寻找给定数据集$D$时，最可能的假设$h$，这样具有最大可能性的假设称为极大后验假设，$h_{MAP} = \underset{h \in H}{\arg \max } P(D \mid h) P(h)$。</li>
+<li>在假设集$H$中寻找给定数据集$D$时，最可能的假设$h$，这样具有最大可能性的假设称为极大后验假设，$h_{MAP} &#x3D; \underset{h \in H}{\arg \max } P(D \mid h) P(h)$。</li>
 </ul>
 </li>
 <li><p>极大似然假设（ML）</p>
 <ul>
-<li>假定$H$中每个假设具有相同的先验概率，使$P(D \mid h)$最大的假设称为极大似然假设，$h_{ML} = \underset{h \in H}{\arg \max } P(D \mid h)$。</li>
+<li>假定$H$中每个假设具有相同的先验概率，使$P(D \mid h)$最大的假设称为极大似然假设，$h_{ML} &#x3D; \underset{h \in H}{\arg \max } P(D \mid h)$。</li>
 </ul>
 </li>
 </ul>
-<h2 id="3-最小描述长度的基本思想"><a href="#3-最小描述长度的基本思想" class="headerlink" title="3. 最小描述长度的基本思想"></a>3. 最小描述长度的基本思想</h2><p>为随机传送的消息设计一个编码，其中遇到消息$i$的概率为$p_i$，为了传输随机消息所需的传送位数最小，需要为可能性较大的消息赋予较短的编码。用最小描述长度解释极大后验假设就是使假设描述长度和给定假设下数据描述长度之和最小化的假设。$h_{max} = \underset{h \in H}{\arg \min } L_{C_H}(h) L_{C_{D \mid h}}(h)$，其中$C_H$和$C_{D \mid h}$是$H$的最优编码和给定$h$时$D$的最优编码。</p>
-<h2 id="4-贝叶斯最优分类器"><a href="#4-贝叶斯最优分类器" class="headerlink" title="4. 贝叶斯最优分类器"></a>4. 贝叶斯最优分类器</h2><p>新实例的最可能分类可通过合并所有假设的预测得到，用后验概率加权。如果新实例的可能分类可取集合$V$中的任一值$v_j$，那么概率$P(v_j \mid D)$表示新实例的正确分类为$v_j$的概率：$P(v_j \mid D) = \Sigma_{h_i \in H} P(v_j \mid h_i)P(h_i \mid D)$。新实例的最优分类为使$P(v_j \mid D)$最大的$v_j$值，即$\underset{v_j \in V}{\arg \max } \Sigma_{h_i \in H} P(v_j \mid h_i)P(h_i \mid D)$。</p>
+<h2 id="3-最小描述长度的基本思想"><a href="#3-最小描述长度的基本思想" class="headerlink" title="3. 最小描述长度的基本思想"></a>3. 最小描述长度的基本思想</h2><p>为随机传送的消息设计一个编码，其中遇到消息$i$的概率为$p_i$，为了传输随机消息所需的传送位数最小，需要为可能性较大的消息赋予较短的编码。用最小描述长度解释极大后验假设就是使假设描述长度和给定假设下数据描述长度之和最小化的假设。$h_{max} &#x3D; \underset{h \in H}{\arg \min } L_{C_H}(h) L_{C_{D \mid h}}(h)$，其中$C_H$和$C_{D \mid h}$是$H$的最优编码和给定$h$时$D$的最优编码。</p>
+<h2 id="4-贝叶斯最优分类器"><a href="#4-贝叶斯最优分类器" class="headerlink" title="4. 贝叶斯最优分类器"></a>4. 贝叶斯最优分类器</h2><p>新实例的最可能分类可通过合并所有假设的预测得到，用后验概率加权。如果新实例的可能分类可取集合$V$中的任一值$v_j$，那么概率$P(v_j \mid D)$表示新实例的正确分类为$v_j$的概率：$P(v_j \mid D) &#x3D; \Sigma_{h_i \in H} P(v_j \mid h_i)P(h_i \mid D)$。新实例的最优分类为使$P(v_j \mid D)$最大的$v_j$值，即$\underset{v_j \in V}{\arg \max } \Sigma_{h_i \in H} P(v_j \mid h_i)P(h_i \mid D)$。</p>
 <p>贝叶斯最优分类器开销很大，需要计算每个假设的后验概率，一个可替代的、非最优的方法是Gibbs算法：按照当前的后验概率分布使用一随机抽取的假设。Gibbs算法的误分类率的期望值最多为贝叶斯最优分类器的两倍。</p>
-<h2 id="5-朴素贝叶斯分类器"><a href="#5-朴素贝叶斯分类器" class="headerlink" title="5. 朴素贝叶斯分类器"></a>5. 朴素贝叶斯分类器</h2><p>贝叶斯方法的新实例的分类目标是在给定描述实例的属性值$<a_1,a_2,...,a_n>$下，得到最可能的目标值$v_{MAP} = \underset{v_j \in V}{\arg \max } P(v_j \mid a_1,a_2,…,a_n)$，利用贝叶斯公式可以重写为$v_{MAP} = \underset{v_j \in V}{\arg \max } \frac{P(a_1,a_2,…,a_n \mid v_j)P(v_j)}{P(a_1,a_2,…,a_n)}=\underset{v_j \in V}{\arg \max } P(a_1,a_2,…,a_n \mid v_j)P(v_j)$。</p>
-<p>朴素贝叶斯方法就是假设给定目标值时属性值之间相互条件独立，即$P(a_1,a_2,…,a_n \mid v_j) = \prod_{i=1}^n P(a_i \mid v_j)$。朴素贝叶斯使用的方法即为$v_{NB} = \underset{v_j \in V}{\arg \max } \prod_{i=1}^n P(a_i \mid v_j) P(v_j)$。</p>
+<h2 id="5-朴素贝叶斯分类器"><a href="#5-朴素贝叶斯分类器" class="headerlink" title="5. 朴素贝叶斯分类器"></a>5. 朴素贝叶斯分类器</h2><p>贝叶斯方法的新实例的分类目标是在给定描述实例的属性值$&lt;a_1,a_2,…,a_n&gt;$下，得到最可能的目标值$v_{MAP} &#x3D; \underset{v_j \in V}{\arg \max } P(v_j \mid a_1,a_2,…,a_n)$，利用贝叶斯公式可以重写为$v_{MAP} &#x3D; \underset{v_j \in V}{\arg \max } \frac{P(a_1,a_2,…,a_n \mid v_j)P(v_j)}{P(a_1,a_2,…,a_n)}&#x3D;\underset{v_j \in V}{\arg \max } P(a_1,a_2,…,a_n \mid v_j)P(v_j)$。</p>
+<p>朴素贝叶斯方法就是假设给定目标值时属性值之间相互条件独立，即$P(a_1,a_2,…,a_n \mid v_j) &#x3D; \prod_{i&#x3D;1}^n P(a_i \mid v_j)$。朴素贝叶斯使用的方法即为$v_{NB} &#x3D; \underset{v_j \in V}{\arg \max } \prod_{i&#x3D;1}^n P(a_i \mid v_j) P(v_j)$。</p>
 <h2 id="6-贝叶斯信念网络的预测与诊断"><a href="#6-贝叶斯信念网络的预测与诊断" class="headerlink" title="6. 贝叶斯信念网络的预测与诊断"></a>6. 贝叶斯信念网络的预测与诊断</h2><h2 id="7-偏差-方差分析"><a href="#7-偏差-方差分析" class="headerlink" title="7. 偏差-方差分析"></a>7. 偏差-方差分析</h2><h1 id="第七章-基于实例的学习"><a href="#第七章-基于实例的学习" class="headerlink" title="第七章 基于实例的学习"></a>第七章 基于实例的学习</h1><h2 id="1-k近邻学习算法"><a href="#1-k近邻学习算法" class="headerlink" title="1. k近邻学习算法"></a>1. k近邻学习算法</h2><p>假定所有的实例对应于n维空间$R^n$中的点，一个实例的最近邻是根据标准欧式距离定义的。在最近邻学习中，目标函数值可以是离散值也可以是实值。</p>
 <hr>
 <p>训练算法：</p>
 <ul>
-<li>对于每个训练样例$<x,f(x)>$，把这个样例加入列表$training _ examples$</li>
+<li>对于每个训练样例$&lt;x,f(x)&gt;$，把这个样例加入列表$training _ examples$</li>
 </ul>
 <p>分类算法：</p>
 <ul>
 <li>给定一个要分类的查询实例$x_q$<ul>
 <li>在$training _ examples$中选出最靠近$x_q$的$k$个实例，并用$x_1,x_2,…,x_k$表示</li>
-<li>返回$\hat{f}(x_q) \leftarrow \underset{v \in V}{\arg \max } \Sigma_{i=1}^{k} \delta(v,f(x_i))$</li>
+<li>返回$\hat{f}(x_q) \leftarrow \underset{v \in V}{\arg \max } \Sigma_{i&#x3D;1}^{k} \delta(v,f(x_i))$</li>
 </ul>
 </li>
 </ul>
-<p>其中，如果a=b，那么$\delta(a,b) = 1$，否则$\delta(a,b) = 0$。在实值目标函数中将公式变为$\hat{f}(x_q) \leftarrow \frac{\Sigma_{i=1}^{k} f(x_i)}{k}$。</p>
+<p>其中，如果a&#x3D;b，那么$\delta(a,b) &#x3D; 1$，否则$\delta(a,b) &#x3D; 0$。在实值目标函数中将公式变为$\hat{f}(x_q) \leftarrow \frac{\Sigma_{i&#x3D;1}^{k} f(x_i)}{k}$。</p>
 <hr>
 <p>距离加权最近邻算法：将较大的权值赋给较近的近邻。</p>
 <ul>
-<li>$\hat{f}(x_q) \leftarrow \underset{v \in V}{\arg \max } \Sigma_{i=1}^{k} w_i \delta(v,f(x_i))$</li>
-<li>$\hat{f}(x_q) \leftarrow \frac{\Sigma_{i=1}^{k} w_i f(x_i)}{\Sigma_{i=1}^{k} w_i}$</li>
+<li>$\hat{f}(x_q) \leftarrow \underset{v \in V}{\arg \max } \Sigma_{i&#x3D;1}^{k} w_i \delta(v,f(x_i))$</li>
+<li>$\hat{f}(x_q) \leftarrow \frac{\Sigma_{i&#x3D;1}^{k} w_i f(x_i)}{\Sigma_{i&#x3D;1}^{k} w_i}$</li>
 </ul>
 <h2 id="2-k近邻学习时为什么距离要归一化"><a href="#2-k近邻学习时为什么距离要归一化" class="headerlink" title="2. k近邻学习时为什么距离要归一化"></a>2. k近邻学习时为什么距离要归一化</h2><p>如果各个维度的量纲差距很大，那么在计算距离时模长大的维度会支配模长小的维度，造成距离失去意义。</p>
 <h2 id="3-局部加权线性回归"><a href="#3-局部加权线性回归" class="headerlink" title="3. 局部加权线性回归"></a>3. 局部加权线性回归</h2><p>给定一个新的查询实例$x_q$，局部加权回归的一般做法是建立一个逼近$\hat{f}$，使$\hat{f}$拟合环绕$x_q$的邻域内的训练样例。然后用这个逼近来计算$\hat{f} (x_q)$的值，也就是为查询实例估计的目标值输出。</p>
 <ul>
-<li>误差函数为$E(x_{q}) = \frac{1}{2} \sum (f(x)-\hat{f}(x))^{2} K(d(x_{q}, x))$，其中$x$是$x_q$的$k$个近邻，$K(d(x_{q}, x))$是权值，是关于相距$x_q$距离的某个递减函数$K$。</li>
-<li>训练法则为$\Delta w_{i}=\eta \sum K(d(x_{q}, x))(f(x)-\hat{f}(x)) a_{j}(x)$，其中$x$是$x_q$的$k$个近邻，$a_j(x)$是$x$的第$j$个属性。</li>
+<li>误差函数为$E(x_{q}) &#x3D; \frac{1}{2} \sum (f(x)-\hat{f}(x))^{2} K(d(x_{q}, x))$，其中$x$是$x_q$的$k$个近邻，$K(d(x_{q}, x))$是权值，是关于相距$x_q$距离的某个递减函数$K$。</li>
+<li>训练法则为$\Delta w_{i}&#x3D;\eta \sum K(d(x_{q}, x))(f(x)-\hat{f}(x)) a_{j}(x)$，其中$x$是$x_q$的$k$个近邻，$a_j(x)$是$x$的第$j$个属性。</li>
 </ul>
 <h2 id="4-基于案例的推理（CBR）与k-NN的异同"><a href="#4-基于案例的推理（CBR）与k-NN的异同" class="headerlink" title="4. 基于案例的推理（CBR）与k-NN的异同"></a>4. 基于案例的推理（CBR）与k-NN的异同</h2><p>同：</p>
 <ul>
@@ -905,33 +899,33 @@
 <p>伪代码</p>
 <hr>
 <p><strong>Input:</strong></p>
-<p>DataSet $D = {(x_1,y_1),(x_2,y_2),…,(x_m,y_m)}$</p>
+<p>DataSet $D &#x3D; {(x_1,y_1),(x_2,y_2),…,(x_m,y_m)}$</p>
 <p>First-level learning algorithm $L_1, L_2,…,L_T$</p>
 <p>second-level learning algorithm $L$</p>
 <p><strong>Process:</strong></p>
-<p>for $t = 1,…,T$:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$h_t = L_t(D)$ &nbsp;&nbsp;%在数据集D上使用不同的学习算法训练第一层的分类器</p>
+<p>for $t &#x3D; 1,…,T$:</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$h_t &#x3D; L_t(D)$ &amp;nbsp;&amp;nbsp;%在数据集D上使用不同的学习算法训练第一层的分类器</p>
 <p>end;</p>
-<p>$D \prime = \emptyset$&nbsp;&nbsp;%创建一个新的数据集用来训练元分类器</p>
-<p>for $i=1,…,m$:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;for $t = 1,…,T$:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$z_{it}=h_t(x_i)$&nbsp;&nbsp;%用$h_t$对实例$x_i$进行分类</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;end;</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$D \prime = D \prime \bigcup \lbrace ((z_{i1},z_{i2},…,z_{it}),y_i) \rbrace$</p>
+<p>$D \prime &#x3D; \emptyset$&amp;nbsp;&amp;nbsp;%创建一个新的数据集用来训练元分类器</p>
+<p>for $i&#x3D;1,…,m$:</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for $t &#x3D; 1,…,T$:</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$z_{it}&#x3D;h_t(x_i)$&amp;nbsp;&amp;nbsp;%用$h_t$对实例$x_i$进行分类</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;end;</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$D \prime &#x3D; D \prime \bigcup \lbrace ((z_{i1},z_{i2},…,z_{it}),y_i) \rbrace$</p>
 <p>end;</p>
-<p>$h \prime = L(D \prime)$ &nbsp;&nbsp;%在数据集$D \prime$上使用算法$L$训练元分类器$h \prime$</p>
+<p>$h \prime &#x3D; L(D \prime)$ &amp;nbsp;&amp;nbsp;%在数据集$D \prime$上使用算法$L$训练元分类器$h \prime$</p>
 <p><strong>Output:</strong></p>
-<p>$H(x) = h \prime (h_1(x), h_2(x), …, h_T(x))$</p>
+<p>$H(x) &#x3D; h \prime (h_1(x), h_2(x), …, h_T(x))$</p>
 <hr>
 <h2 id="4-Bagging基本思想和伪代码"><a href="#4-Bagging基本思想和伪代码" class="headerlink" title="4. Bagging基本思想和伪代码"></a>4. Bagging基本思想和伪代码</h2><p>对训练样本随机抽样，让基学习器在不同的训练集进行训练而得到不同的弱分类器，最后通过投票的方式或平均的方式进行集成。（同质集成）</p>
 <p>伪代码</p>
 <hr>
 <p>Getting $L$ samples by bootstrap sampling</p>
 <p>From whice we derive:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$L$ classifiers $\in \lbrace -1, 1 \rbrace:c^1,c^2,…,c^L$ or </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$L$ Estimated probabilites $\in \lbrack -1, 1 \rbrack:p^1,p^2,…,p^L$</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$L$ classifiers $\in \lbrace -1, 1 \rbrace:c^1,c^2,…,c^L$ or </p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$L$ Estimated probabilites $\in \lbrack -1, 1 \rbrack:p^1,p^2,…,p^L$</p>
 <p>The aggregate classifier becomes</p>
-<p>$c_{bag} = sign(\frac{1}{L} \Sigma_{b=1}^L c^b(x))$ or $c_{bag} = \frac{1}{L} \Sigma_{b=1}^L p^b(x)$</p>
+<p>$c_{bag} &#x3D; sign(\frac{1}{L} \Sigma_{b&#x3D;1}^L c^b(x))$ or $c_{bag} &#x3D; \frac{1}{L} \Sigma_{b&#x3D;1}^L p^b(x)$</p>
 <hr>
 <h2 id="5-Boosting基本思想和伪代码"><a href="#5-Boosting基本思想和伪代码" class="headerlink" title="5. Boosting基本思想和伪代码"></a>5. Boosting基本思想和伪代码</h2><p>首先从训练集用初始权重训练出一个弱学习器1，根据弱学习的学习误差率表现来更新训练样本的权重，使得之前弱学习器1学习误差率高的训练样本点的权重变高，使得这些误差率高的点在后面的弱学习器2中得到更多的重视。然后基于调整权重后的训练集来训练弱学习器2，如此重复进行，直到弱学习器数达到事先指定的数目T。对于训练好的弱分类器，如果是分类任务按照权重进行投票，而对于回归任务进行加权，得到最终的强学习器。（同质集成）</p>
 <p>伪代码</p>
@@ -941,14 +935,14 @@
 <p>Base learning algorithm $L$</p>
 <p>Number of learning round $T$</p>
 <p><strong>Process:</strong></p>
-<p>$D_1 = D$ &nbsp;&nbsp;%初始化分布</p>
-<p>for $t=1,2,…,T$</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$h_t=L(D_t)$  &nbsp;&nbsp;%在分布$D_t$上训练弱分类器$h_t$</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$\epsilon_{t}=\operatorname{Pr}_{x \sim D_{t}, y} I\left[h_{t}(x) \neq y\right]$ &nbsp;&nbsp;%计算$h_t$的错误</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;$D_{t+1}=Adjust _ Distribution\left(D_{t}, \epsilon_{t}\right)$ &nbsp;&nbsp;%调整分布，对分类错误的数据加大权重</p>
+<p>$D_1 &#x3D; D$ &amp;nbsp;&amp;nbsp;%初始化分布</p>
+<p>for $t&#x3D;1,2,…,T$</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$h_t&#x3D;L(D_t)$  &amp;nbsp;&amp;nbsp;%在分布$D_t$上训练弱分类器$h_t$</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$\epsilon_{t}&#x3D;\operatorname{Pr}<em>{x \sim D</em>{t}, y} I\left[h_{t}(x) \neq y\right]$ &amp;nbsp;&amp;nbsp;%计算$h_t$的错误</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$D_{t+1}&#x3D;Adjust _ Distribution\left(D_{t}, \epsilon_{t}\right)$ &amp;nbsp;&amp;nbsp;%调整分布，对分类错误的数据加大权重</p>
 <p>end;</p>
 <p><strong>Output:</strong></p>
-<p>$H(x)= Combine _ Outputs \left(\left\{h_{t}(x)\right\}\right)$</p>
+<p>$H(x)&#x3D; Combine _ Outputs \left(\left{h_{t}(x)\right}\right)$</p>
 <hr>
 <h2 id="6-为什么集成学习有效"><a href="#6-为什么集成学习有效" class="headerlink" title="6. 为什么集成学习有效"></a>6. 为什么集成学习有效</h2><ul>
 <li><p>统计上：当假设空间对于可用数据量来说太大时，数据上有许多相同精度的假设，学习算法只能够选择其中一个，这样有可能导致所选假设在未见数据上的准确性很差，把多个可能假设集合起来可以降低这种风险。</p>
@@ -960,8 +954,8 @@
 </ul>
 <h1 id="第九章-分类技术"><a href="#第九章-分类技术" class="headerlink" title="第九章 分类技术"></a>第九章 分类技术</h1><h2 id="1-基于规则的分类器"><a href="#1-基于规则的分类器" class="headerlink" title="1. 基于规则的分类器"></a>1. 基于规则的分类器</h2><p>基于规则的分类器是使用一组“if…then…”规则来对记录进行分类的技术。规则的左边称为规则前件或前提，规则右边称为规则后件。一般用覆盖率（coverage）和准确率（accuracy）度量规则的质量。</p>
 <h3 id="1-1-规则质量评估"><a href="#1-1-规则质量评估" class="headerlink" title="1.1 规则质量评估"></a>1.1 规则质量评估</h3><ul>
-<li>覆盖率：$coverage = \frac{|A|}{|D|}$，即满足规则前件的记录所占的比例。</li>
-<li>准确率：$accuracy = \frac{|A \bigcap y|}{|A|}$，即同时满足规则前件和后件的记录在满足规则前件的记录中所占的比例。</li>
+<li>覆盖率：$coverage &#x3D; \frac{|A|}{|D|}$，即满足规则前件的记录所占的比例。</li>
+<li>准确率：$accuracy &#x3D; \frac{|A \bigcap y|}{|A|}$，即同时满足规则前件和后件的记录在满足规则前件的记录中所占的比例。</li>
 </ul>
 <h3 id="1-2-优点"><a href="#1-2-优点" class="headerlink" title="1.2 优点"></a>1.2 优点</h3><p>像决策树一样具有高度的表达能力；易于解释，易于生成；可以快速分类新实例，性能可与决策树相媲美。</p>
 <h3 id="1-3-需要解决的问题"><a href="#1-3-需要解决的问题" class="headerlink" title="1.3 需要解决的问题"></a>1.3 需要解决的问题</h3><ul>
@@ -1014,20 +1008,18 @@
 <li>分裂的：从包含所有点的某个簇开始，每一步分裂一个簇，直到只剩下单点簇。需要确定每一步分裂哪个簇，以及如何分裂。</li>
 </ul>
 <h3 id="4-2-定义簇之间的邻近性"><a href="#4-2-定义簇之间的邻近性" class="headerlink" title="4.2 定义簇之间的邻近性"></a>4.2 定义簇之间的邻近性</h3><ul>
-<li>单链（MIN）：两个簇的邻近度定义为两个不同簇中任意两点之间的最短距离（最大相似度）。</li>
-</ul>
-<ul>
-<li>全链（MAX）：两个簇的邻近度定义为两个不同簇中任意两点之间的最长距离（最小相似度）。</li>
-</ul>
-<ul>
+<li><p>单链（MIN）：两个簇的邻近度定义为两个不同簇中任意两点之间的最短距离（最大相似度）。</p>
+</li>
+<li><p>全链（MAX）：两个簇的邻近度定义为两个不同簇中任意两点之间的最长距离（最小相似度）。</p>
+</li>
 <li><p>组平均：两个簇的邻近度定义为不同簇的所有点对邻近度的平均值。</p>
 <ul>
-<li>$proximity(C_i,C_j)=\frac{\Sigma_{x \in C_i y \in C_j} proximity(x,y)}{m_i \times m_j}$</li>
+<li>$proximity(C_i,C_j)&#x3D;\frac{\Sigma_{x \in C_i y \in C_j} proximity(x,y)}{m_i \times m_j}$</li>
 </ul>
 </li>
 <li><p>Ward方法：两个簇合并时导致的平方误差的增量。</p>
 <ul>
-<li>$\Delta(A, B)=\sum_{i \in A \cup B}\left|\vec{x}_{i}-\vec{m}_{A \cup B}\right|^{2}-\sum_{i \in A}\left|\vec{x}_{i}-\vec{m}_{A}\right|^{2}-\sum_{i \in B}\left|\vec{x}_{i}-\vec{m}_{B}\right|^{2}$ $=\frac{n_{A} n_{B}}{n_{A}+n_{B}}\left|\vec{m}_{A}-\vec{m}_{B}\right|^{2}$</li>
+<li>$\Delta(A, B)&#x3D;\sum_{i \in A \cup B}\left|\vec{x}<em>{i}-\vec{m}</em>{A \cup B}\right|^{2}-\sum_{i \in A}\left|\vec{x}<em>{i}-\vec{m}</em>{A}\right|^{2}-\sum_{i \in B}\left|\vec{x}<em>{i}-\vec{m}</em>{B}\right|^{2}$ $&#x3D;\frac{n_{A} n_{B}}{n_{A}+n_{B}}\left|\vec{m}<em>{A}-\vec{m}</em>{B}\right|^{2}$</li>
 </ul>
 </li>
 </ul>
@@ -1046,12 +1038,12 @@
 <hr>
 <p>选择k个点作为初始质心</p>
 <p><strong>repeat</strong></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;将每个点指派到最近的质心，形成k个簇</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;重新计算每个簇的质心</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;将每个点指派到最近的质心，形成k个簇</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;重新计算每个簇的质心</p>
 <p><strong>until</strong></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;质心不再发生变化</p>
+<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;质心不再发生变化</p>
 <hr>
-<p>考虑邻近度度量为欧几里得距离的数据，使用误差的平方和（SSE）作为度量聚类质量的目标函数。假设簇划分为$C_1,C_2,…,C_k$，则目标函数为$SSE=\sum_{i=1}^{k} \sum_{x \in C_{i}} d i s t^{2}\left(c_{i}, x\right)$，其中$c_i$表示第$i$个簇的质心（均值），计算公式为$c_i=\frac{1}{m_i} \sum_{x \in C_i} x$，例如3个二维点$(1,1),(2,3),(6,2)$的质心是$((1+2+6)/3, (1+3+2)/3)=(3,2)$。公式中$x$是一个点，$C_i$是第$i$个簇，$c_i$是簇$C_i$的质心，$m_i$是第$i$个簇中点的个数。</p>
+<p>考虑邻近度度量为欧几里得距离的数据，使用误差的平方和（SSE）作为度量聚类质量的目标函数。假设簇划分为$C_1,C_2,…,C_k$，则目标函数为$SSE&#x3D;\sum_{i&#x3D;1}^{k} \sum_{x \in C_{i}} d i s t^{2}\left(c_{i}, x\right)$，其中$c_i$表示第$i$个簇的质心（均值），计算公式为$c_i&#x3D;\frac{1}{m_i} \sum_{x \in C_i} x$，例如3个二维点$(1,1),(2,3),(6,2)$的质心是$((1+2+6)&#x2F;3, (1+3+2)&#x2F;3)&#x3D;(3,2)$。公式中$x$是一个点，$C_i$是第$i$个簇，$c_i$是簇$C_i$的质心，$m_i$是第$i$个簇中点的个数。</p>
 <p>k-means算法的结果依赖于初始簇中心的随机选择，实践中为了得到好的结果，通常以不同的初始簇中心多次运行k-means算法，然后选取具有最小SSE的簇集。</p>
 <p>用后处理降低SSE：</p>
 <p>总SSE只不过是每个簇SSE的和，通过在簇上进行诸如分裂和合并的操作，可以改变总SSE。</p>
@@ -1088,7 +1080,7 @@
 <hr>
 <p><strong>repeat:</strong></p>
 <p>从数据库中抽出一个未处理的点；</p>
-<p>IF 抽出的点是核心点 THEN 找出所有从该点 _密度可达_ 的对象，形成一个簇；</p>
+<p>IF 抽出的点是核心点 THEN 找出所有从该点 <em>密度可达</em> 的对象，形成一个簇；</p>
 <p>ELSE 抽出的点是边缘点(非核心对象)，跳出本次循环，寻找下一个点；</p>
 <p>UNTIL 所有的点都被处理。</p>
 <hr>
@@ -1106,14 +1098,14 @@
 <ul>
 <li>非监督的。聚类结构的优良性度量，不考虑外部信息。例如，SSE。簇的有效性的非监督度量常常可以进一步分成两类: 簇的凝聚性（cluster cohesion）度量，确定簇中对象如何密切相关；簇的分离性（cluster separation）度量确定某个簇不同于其他簇的地方。非监督度量通常称为内部指标（internal index)，因为它们仅使用出现在数据集中的信息。</li>
 </ul>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="1-协方差矩阵的计算"><a href="#1-协方差矩阵的计算" class="headerlink" title="1. 协方差矩阵的计算"></a>1. 协方差矩阵的计算</h2><p>对于一组数据，比如$x_1(1,2), x_2(2,6), x_3(4,2), x_4(5,2)$，因为数据是二维的（即两列），所以协方差矩阵是一个$2 \times 2$的矩阵。协方差矩阵的元素$(i,j)=$（第$i$维的所有元素-第$i$维的均值） $\cdot$ （第$j$维的所有元素-第$j$维的均值）$/$ 行数$-1$（即样本数$-1$）。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="1-协方差矩阵的计算"><a href="#1-协方差矩阵的计算" class="headerlink" title="1. 协方差矩阵的计算"></a>1. 协方差矩阵的计算</h2><p>对于一组数据，比如$x_1(1,2), x_2(2,6), x_3(4,2), x_4(5,2)$，因为数据是二维的（即两列），所以协方差矩阵是一个$2 \times 2$的矩阵。协方差矩阵的元素$(i,j)&#x3D;$（第$i$维的所有元素-第$i$维的均值） $\cdot$ （第$j$维的所有元素-第$j$维的均值）$&#x2F;$ 行数$-1$（即样本数$-1$）。</p>
 <ul>
 <li>协方差矩阵是一个对称矩阵</li>
 <li>对角线元素$(i,i)$为第$i$维数据的方差</li>
 <li>非对角线元素$(i,j)$为第$i$维和第$j$维的协方差</li>
 </ul>
-<h2 id="2-标准差"><a href="#2-标准差" class="headerlink" title="2. 标准差"></a>2. 标准差</h2><p>总体标准差：$\sigma = \sqrt{\frac{\Sigma_{i=1}^{n}(x_i-\overline{x})^2}{n}}$</p>
-<p>样本标准差：$\sigma = \sqrt{\frac{\Sigma_{i=1}^{n}(x_i-\overline{x})^2}{n-1}}$</p>
+<h2 id="2-标准差"><a href="#2-标准差" class="headerlink" title="2. 标准差"></a>2. 标准差</h2><p>总体标准差：$\sigma &#x3D; \sqrt{\frac{\Sigma_{i&#x3D;1}^{n}(x_i-\overline{x})^2}{n}}$</p>
+<p>样本标准差：$\sigma &#x3D; \sqrt{\frac{\Sigma_{i&#x3D;1}^{n}(x_i-\overline{x})^2}{n-1}}$</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/inabaraku/article/details/51862151?utm_source=blogxgwz4">由霍夫丁不等式论证机器学习的可行性</a></p>
 
       
@@ -1522,7 +1514,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -2166,7 +2158,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

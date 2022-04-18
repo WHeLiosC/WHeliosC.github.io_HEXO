@@ -513,7 +513,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">13k</span>
+                <span title="本文字数">12k</span>
               
 
               
@@ -539,7 +539,9 @@
       
 
       
-        <p><p></p><br><span id="more"></span></p>
+        <p></p>
+<span id="more"></span>
+
 <ol>
 <li>Java简单介绍</li>
 <li>第一个程序Hello World</li>
@@ -554,79 +556,33 @@
 <li>Java的优点：简单、可移植性</li>
 <li>JDK (Java Development Kit)  Java开发工具包</li>
 <li>JRE (Java Runtime Environment) Java运行环境<br> 只要具有JRE，就可以运行Java代码，而与操作系统的类别无关</li>
-<li>安装完JDK后，在电脑“编辑系统环境变量”—-“环境变量”选项下，系统变量新建 变量名 JAVA_HONE 变量值 D:\Program Files\java\jdk-10.0.1(这是我的JDK位置)      系统变量找到Path变量，编辑新建D:\Program Files\java\jdk-10.0.1\bin<br>之后在cmd 中测试命令 Java 和 Javac ，有东西输出之后就可以用Javac在cmd里编译Java程序了(生成.class文件)，用Java [option] [主类名]就可以运行程序了(java HelloWorld  而不是 java HelloWorld.class)。</li>
+<li>安装完JDK后，在电脑“编辑系统环境变量”—“环境变量”选项下，系统变量新建 变量名 JAVA_HONE 变量值 D:\Program Files\java\jdk-10.0.1(这是我的JDK位置)      系统变量找到Path变量，编辑新建D:\Program Files\java\jdk-10.0.1\bin<br>之后在cmd 中测试命令 Java 和 Javac ，有东西输出之后就可以用Javac在cmd里编译Java程序了(生成.class文件)，用Java [option] [主类名]就可以运行程序了(java HelloWorld  而不是 java HelloWorld.class)。</li>
 </ol>
 <h3 id="第一个程序-Hello-World"><a href="#第一个程序-Hello-World" class="headerlink" title="第一个程序 Hello World"></a>第一个程序 Hello World</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意Java区分大小写，参数中的String的S必须大写。</p>
 <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>char<br>boolean<br>byte, short, int, long, float, double</p>
 <h4 id="char-字符型"><a href="#char-字符型" class="headerlink" title="char(字符型)"></a>char(字符型)</h4><blockquote>
-<p>首先补充编码的知识<br><strong><em>ASCII码</em></strong>(美国信息交换标准代码，7-bits ASCII码) 七位码，共128个字符，它主要用于显示现代英语和其他西欧语言。<br><strong><em>GB2312</em></strong>，是中国国家标准的简体中文字符集，双字节字符集。<br><strong><em>GBK</em></strong>，GBK字符集主要扩展了繁体中文字的支持，双字节字符集。<br><strong><em>GB18030</em></strong>,GB 18030标准采用单字节、双字节和四字节三种方式对字符编码。<br>单字节部分使用0×00至0×7F码(对应于ASCII码的相应码)。<br>双字节部分，首字节码从0×81至0×FE，尾字节码位分别是0×40至0×7E和0×80至0×FE。<br>四字节部分采用GB/T 11383未采用的0×30到0×39作为对双字节编码扩充的后缀，这样扩充的四字节编码，其范围为0×81308130到0×FE39FE39。其中第一、三个字节编码码位均为0×81至0×FE，第二、四个字节编码码位均为0×30至0×39。<br>按照程序员的称呼，GB2312、GBK到GB18030都属于双字节字符集(DBCS)。<br><strong><em>Unicode</em></strong>(万国码、统一码、单一码)，16位，也就是两个字节代表一个字符。<br><strong><em>UTF-8</em></strong>是一种8位的unicode字符集，编码长度是可变的，并且是ASCII字符集的严格超集，也就是说ASCII中每个字符的编码在UTF-8中是完全一样的。UTF-8字符集中，一个字符可能是1个字节，2个字节，3个字节或者4个字节长。一般来说，欧洲的字母字符长度为1到2个字节，而亚洲的大部分字符则是3个字节，附加字符为4个字节长。<br>更多关于编码参考文章<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_4b4409c30100vw9t.html">http://blog.sina.com.cn/s/blog_4b4409c30100vw9t.html</a></p>
+<p>首先补充编码的知识<br><em><strong>ASCII码</strong></em>(美国信息交换标准代码，7-bits ASCII码) 七位码，共128个字符，它主要用于显示现代英语和其他西欧语言。<br><em><strong>GB2312</strong></em>，是中国国家标准的简体中文字符集，双字节字符集。<br><em><strong>GBK</strong></em>，GBK字符集主要扩展了繁体中文字的支持，双字节字符集。<br><em><strong>GB18030</strong></em>,GB 18030标准采用单字节、双字节和四字节三种方式对字符编码。<br>单字节部分使用0×00至0×7F码(对应于ASCII码的相应码)。<br>双字节部分，首字节码从0×81至0×FE，尾字节码位分别是0×40至0×7E和0×80至0×FE。<br>四字节部分采用GB&#x2F;T 11383未采用的0×30到0×39作为对双字节编码扩充的后缀，这样扩充的四字节编码，其范围为0×81308130到0×FE39FE39。其中第一、三个字节编码码位均为0×81至0×FE，第二、四个字节编码码位均为0×30至0×39。<br>按照程序员的称呼，GB2312、GBK到GB18030都属于双字节字符集(DBCS)。<br><em><strong>Unicode</strong></em>(万国码、统一码、单一码)，16位，也就是两个字节代表一个字符。<br><em><strong>UTF-8</strong></em>是一种8位的unicode字符集，编码长度是可变的，并且是ASCII字符集的严格超集，也就是说ASCII中每个字符的编码在UTF-8中是完全一样的。UTF-8字符集中，一个字符可能是1个字节，2个字节，3个字节或者4个字节长。一般来说，欧洲的字母字符长度为1到2个字节，而亚洲的大部分字符则是3个字节，附加字符为4个字节长。<br>更多关于编码参考文章<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_4b4409c30100vw9t.html">http://blog.sina.com.cn/s/blog_4b4409c30100vw9t.html</a></p>
 </blockquote>
 <p>在Java中采用Unicode编码，所以<br><code>char a = &#39;a&#39;;</code> 和 <code>char b = &#39;中&#39;</code>一样都占两个字节(区别于C和C++)<br><code>char c = &#39;\u21fa&#39;</code>表示转义字符，格式为\u加上4位16进制数</p>
 <h4 id="boolean-布尔型"><a href="#boolean-布尔型" class="headerlink" title="boolean(布尔型)"></a>boolean(布尔型)</h4><p>只有true 和 false 两个值，区别于C和C++。<br>在C和C++中，bool类型可以用数字赋值，非零即为真，零为假。但在Java中只有<code>boolean flag = true;</code> 和 <code>boolean flag = false;</code></p>
-<h4 id="byte-short-int-long-float-double-数值型"><a href="#byte-short-int-long-float-double-数值型" class="headerlink" title="byte, short, int, long, float, double(数值型)"></a>byte, short, int, long, float, double(数值型)</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类型</th>
-<th style="text-align:left">存储要求</th>
-<th style="text-align:left">取值范围</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">byte</td>
-<td style="text-align:left">1字节</td>
-<td style="text-align:left">-128~127</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left">short</td>
-<td style="text-align:left">2字节</td>
-<td style="text-align:left">-32768~32767</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left">int</td>
-<td style="text-align:left">4字节</td>
-<td style="text-align:left">超过21亿</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left">long</td>
-<td style="text-align:left">8字节</td>
-<td style="text-align:left">很大很大</td>
-<td>需要在数值后加后缀L</td>
-</tr>
-<tr>
-<td style="text-align:left">float</td>
-<td style="text-align:left">4字节</td>
-<td style="text-align:left">大约为±3.402E+38</td>
-<td>需要在数值后加后缀F，有效位6~7位</td>
-</tr>
-<tr>
-<td style="text-align:left">double</td>
-<td style="text-align:left">8字节</td>
-<td style="text-align:left">大约为±1.797E+308</td>
-<td>需要在数值后加后缀D，有效位15位</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>float和double类型表示的的数值是离散的，可能有一些小数就是无法表示，只能为近似值。不加F后缀的浮点数值默认为double类型。<br>float和double不能做移位运算。整形移位运算相当于除或乘2的移的位数的次幂。-1在计算机中存储形式为全一，无论移多少位都不变。</p>
+<h4 id="byte-short-int-long-float-double-数值型"><a href="#byte-short-int-long-float-double-数值型" class="headerlink" title="byte, short, int, long, float, double(数值型)"></a>byte, short, int, long, float, double(数值型)</h4><p>|类型|存储要求|取值范围|备注|<br>|:-|:-|:-|<br>|byte|1字节|-128<del>127||<br>|short|2字节|-32768</del>32767||<br>|int|4字节|超过21亿||<br>|long|8字节|很大很大|需要在数值后加后缀L|<br>|float|4字节|大约为±3.402E+38|需要在数值后加后缀F，有效位6~7位|<br>|double|8字节|大约为±1.797E+308|需要在数值后加后缀D，有效位15位|<br>float和double类型表示的的数值是离散的，可能有一些小数就是无法表示，只能为近似值。不加F后缀的浮点数值默认为double类型。<br>float和double不能做移位运算。整形移位运算相当于除或乘2的移的位数的次幂。-1在计算机中存储形式为全一，无论移多少位都不变。</p>
 <h3 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a>对象和类</h3><p>对象(哎)是现实世界中的一个实体。<br>类是具有相同特征的对象的属性的集合。</p>
 <h4 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[修饰符<span class="number">1</span>][修饰符<span class="number">2</span>][修饰符...]<span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i; <span class="comment">//类内的变量可以不用定义时赋值，数值变量系统默认赋值为零；逻辑变量boolean默认为false</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">float</span>[] f)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		...</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>; <span class="comment">//函数内的变量随手赋值是个好习惯，不赋值的话，在内存中是暂时没有这个变量的</span></span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h4 id="类实例化为对象"><a href="#类实例化为对象" class="headerlink" title="类实例化为对象"></a>类实例化为对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Student s1 = <span class="keyword">new</span> Student();</span><br><span class="line">Student s2;</span><br><span class="line">s2 = s1;</span><br><span class="line"><span class="comment">//一个对象变量没有实际包含一个对象，而仅仅是引用一个对象。</span></span><br><span class="line"><span class="comment">//new操作符返回的也是一个引用，即这个对象的存储地址。</span></span><br><span class="line"><span class="comment">//上面代码中的s2 = s1;仅仅是把s1保存的引用复制一份给s2，并没有复制这个对象</span></span><br><span class="line"><span class="comment">//可以将一个对象变量赋值为null，表明这个对象变量目前没有引用任何的对象</span></span><br><span class="line"><span class="comment">//如果一个对象没有任何的对象变量引用它，那么这个对象就成为垃圾对象，会被系统自动清理</span></span><br><span class="line"><span class="comment">//例如上面代码，如果添加s1 = null;那么这个对象不是垃圾对象，因为还有s2引用(指向)它。</span></span><br></pre></td></tr></table></figure>
-<h3 id="数据声明"><a href="#数据声明" class="headerlink" title="数据声明"></a>数据声明</h3><p>没什么好说的。<code>[变量类型] [变量名] = [初始值];</code><br>说一些命名的规则和习惯吧(提高代码可读性)。    </p>
+
+<h3 id="数据声明"><a href="#数据声明" class="headerlink" title="数据声明"></a>数据声明</h3><p>没什么好说的。<code>[变量类型] [变量名] = [初始值];</code><br>说一些命名的规则和习惯吧(提高代码可读性)。	</p>
 <blockquote>
 <p>a. 必须是字母开头的由字母、数字、下划线组成的序列，区分大小写。虽然在命名可以使用$，但是不要使用。<br> b. 类名使用 UpperCamelCase(大驼峰) 风格，即每个单词首字母都要大写。<br> c. 方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase(小驼峰) 风格，即从第二个单词开始首字母大写。如：studentName<br> d. 常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。<br> e. 杜绝完全不规范的缩写， 避免望文不知义。<br> …</p>
 </blockquote>
 <h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[修饰符<span class="number">1</span>][修饰符<span class="number">2</span>][修饰符..] [函数返回值] [函数名](参数<span class="number">1</span>，参数<span class="number">2</span>，参数..) &#123;函数体&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><p><strong><em>Java的函数参数传递只有一种方法：传值(call by value)</em></strong><br>java 成员变量(成员变量就是方法外部，类的内部定义的变量)存储在堆中的对象里面;局部变量就是方法或语句块内部定义的变量,局部变量必须初始化,局部变量的数据存在于栈内存中,栈内存中的局部变量随着方法的结束而出栈。</p>
-<p>例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Card</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> rank;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap1</span><span class="params">(Card c1,Card c2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		Card temp = c1;</span><br><span class="line">		c1 = c2;</span><br><span class="line">		c2 = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap2</span><span class="params">(Card c1,Card c2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> temp = c1.rank;</span><br><span class="line">		c1.rank = c2.rank;</span><br><span class="line">		c2.rank = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">	    Card c1 = <span class="keyword">new</span> Card();</span><br><span class="line">	    c1.rank = <span class="number">5</span>;</span><br><span class="line">	    Card c2 = <span class="keyword">new</span> Card();</span><br><span class="line">	    c2.rank = <span class="number">6</span>;</span><br><span class="line">	    swap1(c1,c2);</span><br><span class="line">	    swap2(c1,c2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>结果是swap1并没有实现数值交换；swap2实现了数值的变换。<br>分析：在main函数中，首先生成两个对象存储在堆中，并有引用变量c1,c2分别指向两个对象。在调用swap1，main函数的栈空间里<strong><em>复制</em></strong>c1,c2传递给函数，在函数中一波操作猛如虎，两个复制品的指向对象互换，然后函数结束，两个复制品出栈，然而原c1和c2的指向并没有改变。在swap2里，改的直接是存储在堆里的对象的变量，指向没有变化，但是内部的数值已经交换了。</p>
-<p><br/></p>
 
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><p><em><strong>Java的函数参数传递只有一种方法：传值(call by value)</strong></em><br>java 成员变量(成员变量就是方法外部，类的内部定义的变量)存储在堆中的对象里面;局部变量就是方法或语句块内部定义的变量,局部变量必须初始化,局部变量的数据存在于栈内存中,栈内存中的局部变量随着方法的结束而出栈。</p>
+<p>例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Card</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> rank;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap1</span><span class="params">(Card c1,Card c2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		Card temp = c1;</span><br><span class="line">		c1 = c2;</span><br><span class="line">		c2 = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap2</span><span class="params">(Card c1,Card c2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> temp = c1.rank;</span><br><span class="line">		c1.rank = c2.rank;</span><br><span class="line">		c2.rank = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">	    Card c1 = <span class="keyword">new</span> Card();</span><br><span class="line">	    c1.rank = <span class="number">5</span>;</span><br><span class="line">	    Card c2 = <span class="keyword">new</span> Card();</span><br><span class="line">	    c2.rank = <span class="number">6</span>;</span><br><span class="line">	    swap1(c1,c2);</span><br><span class="line">	    swap2(c1,c2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果是swap1并没有实现数值交换；swap2实现了数值的变换。<br>分析：在main函数中，首先生成两个对象存储在堆中，并有引用变量c1,c2分别指向两个对象。在调用swap1，main函数的栈空间里<em><strong>复制</strong></em>c1,c2传递给函数，在函数中一波操作猛如虎，两个复制品的指向对象互换，然后函数结束，两个复制品出栈，然而原c1和c2的指向并没有改变。在swap2里，改的直接是存储在堆里的对象的变量，指向没有变化，但是内部的数值已经交换了。</p>
+<br/>
       
     </div>
 
@@ -1073,7 +1029,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1693,7 +1649,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

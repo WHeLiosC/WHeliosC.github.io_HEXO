@@ -527,7 +527,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.8k</span>
+                <span title="本文字数">4.9k</span>
               
 
               
@@ -556,24 +556,25 @@
         <p></p>
 
 <span id="more"></span>
+
 <h3 id="NFA-Non-deterministic-Finite-Automata"><a href="#NFA-Non-deterministic-Finite-Automata" class="headerlink" title="NFA(Non-deterministic Finite Automata)"></a>NFA(Non-deterministic Finite Automata)</h3><p>不确定有限自动机<br>构造NFA分成两步：画出每一个小单元的NFA；将每一个小单元的NFA组合。</p>
 <h4 id="小单元的NFA"><a href="#小单元的NFA" class="headerlink" title="小单元的NFA"></a>小单元的NFA</h4><ul>
 <li>单个输入符号a<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-1.png" alt="nfa 1"></li>
 <li>连接运算ab<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-2.png" alt="nfa 2"></li>
 <li>选择运算a|b<br>添加两个状态（选择运算开始状态和结束状态），在开始状态引两个路径通过$\varepsilon$分别到两个单输入符号的NFA，同时两个NFA都通过$\varepsilon$到结束状态。<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-3.png" alt="nfa 3"></li>
-<li>闭包运算<br>添加两个状态（闭包运算开始状态和结束状态），四条线：闭包运算开始状态到单元开始状态；单元结束状态到闭包运算结束状态；闭包运算开始状态到闭包运算结束状态；单元结束状态到单元开始状态。<br>(a|b)<em><br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-4.jpg" alt="nfa 4"><br>(ab)</em><br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-5.png" alt="nfa 5"><br>a*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-6.png" alt="nfa 6"></li>
+<li>闭包运算<br>添加两个状态（闭包运算开始状态和结束状态），四条线：闭包运算开始状态到单元开始状态；单元结束状态到闭包运算结束状态；闭包运算开始状态到闭包运算结束状态；单元结束状态到单元开始状态。<br>(a|b)*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-4.jpg" alt="nfa 4"><br>(ab)*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-5.png" alt="nfa 5"><br>a*<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-6.png" alt="nfa 6"></li>
 </ul>
 <h4 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h4><p>在组合时，每一个小单元的NFA的开始状态不变，结束状态和下一个单元的开始状态合并。<br>(a|b)*ab<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/nfa-7.png" alt="nfa 7"></p>
-<h3 id="NFA转DFA-Deterministic-Finite-Automata"><a href="#NFA转DFA-Deterministic-Finite-Automata" class="headerlink" title="NFA转DFA(Deterministic Finite Automata)"></a>NFA转DFA(Deterministic Finite Automata)</h3><h4 id="两个概念"><a href="#两个概念" class="headerlink" title="两个概念"></a>两个概念</h4><p>$\varepsilon$-$closure(\{1,2,…,n\})$：状态集{1,2,…,n}的$\varepsilon$闭包。<br>上式的含义为求1，2，…，n状态仅通过<strong>零个或多个</strong>$\varepsilon$可以到达的所有状态组成的集合。<br>$move(A,a)$：状态转换集。<br>A中的所有状态通过a可以到达的所有状态组成的集合。</p>
+<h3 id="NFA转DFA-Deterministic-Finite-Automata"><a href="#NFA转DFA-Deterministic-Finite-Automata" class="headerlink" title="NFA转DFA(Deterministic Finite Automata)"></a>NFA转DFA(Deterministic Finite Automata)</h3><h4 id="两个概念"><a href="#两个概念" class="headerlink" title="两个概念"></a>两个概念</h4><p>$\varepsilon$-$closure({1,2,…,n})$：状态集{1,2,…,n}的$\varepsilon$闭包。<br>上式的含义为求1，2，…，n状态仅通过<strong>零个或多个</strong>$\varepsilon$可以到达的所有状态组成的集合。<br>$move(A,a)$：状态转换集。<br>A中的所有状态通过a可以到达的所有状态组成的集合。</p>
 <h4 id="以-a-b-ab-为例"><a href="#以-a-b-ab-为例" class="headerlink" title="以$(a|b)*ab$为例"></a>以$(a|b)*ab$为例</h4><ul>
-<li>标记A集合<br>A集合为开始状态（即0状态）的$\varepsilon$闭包。<br>如img-7中，0状态通过$\varepsilon$可以到达1状态，7状态；1状态通过$\varepsilon$又可以到达2状态和4状态；再加上本身：故A={0, 1, 2, 4, 7}。</li>
+<li>标记A集合<br>A集合为开始状态（即0状态）的$\varepsilon$闭包。<br>如img-7中，0状态通过$\varepsilon$可以到达1状态，7状态；1状态通过$\varepsilon$又可以到达2状态和4状态；再加上本身：故A&#x3D;{0, 1, 2, 4, 7}。</li>
 <li>找出所有的输入字母<br>如$(a|b)*ab$中，所有的输入字母为{a, b}</li>
-<li>根据输入字母寻找A集合的$\varepsilon$闭包<br>如img-7中，A集合中遇到a能发生状态转变的只有2和7，转换到状态3和8，所以$move(A,a)$={3,8}；<br>然后求$\varepsilon$-$closure(move(A,a))$，即$\varepsilon$-$closure(\{3,8\})$，可以得到结果为{3, 8, 6, 1, 2, 4, 7}=B。<br>$move(A,b)$={5},然后求$\varepsilon$-$closure(\{5\})$={5, 6, 1, 2, 4, 7}=C。</li>
-<li>根据输入字母寻找所有新产生的集合的$\varepsilon$闭包<br>$\varepsilon$-$closure(move(B,a))$={1,2,3,4,6,7,8}=B<br>$\varepsilon$-$closure(move(B,a))$={1,2,4,5,6,7,9}=D<br>$\varepsilon$-$closure(move(C,a))$={1,2,3,4,6,7,8}=B<br>$\varepsilon$-$closure(move(C,a))$={1,2,4,5,6,7}=C<br>$\varepsilon$-$closure(move(D,a))$={1,2,3,4,6,7,8}=B<br>$\varepsilon$-$closure(move(D,a))$={1,2,4,5,6,7}=C<br>包含NFA结束状态的集合为DFA结束状态，在例子中D状态为结束状态；A状态为开始状态。</li>
+<li>根据输入字母寻找A集合的$\varepsilon$闭包<br>如img-7中，A集合中遇到a能发生状态转变的只有2和7，转换到状态3和8，所以$move(A,a)$&#x3D;{3,8}；<br>然后求$\varepsilon$-$closure(move(A,a))$，即$\varepsilon$-$closure({3,8})$，可以得到结果为{3, 8, 6, 1, 2, 4, 7}&#x3D;B。<br>$move(A,b)$&#x3D;{5},然后求$\varepsilon$-$closure({5})$&#x3D;{5, 6, 1, 2, 4, 7}&#x3D;C。</li>
+<li>根据输入字母寻找所有新产生的集合的$\varepsilon$闭包<br>$\varepsilon$-$closure(move(B,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(B,a))$&#x3D;{1,2,4,5,6,7,9}&#x3D;D<br>$\varepsilon$-$closure(move(C,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(C,a))$&#x3D;{1,2,4,5,6,7}&#x3D;C<br>$\varepsilon$-$closure(move(D,a))$&#x3D;{1,2,3,4,6,7,8}&#x3D;B<br>$\varepsilon$-$closure(move(D,a))$&#x3D;{1,2,4,5,6,7}&#x3D;C<br>包含NFA结束状态的集合为DFA结束状态，在例子中D状态为结束状态；A状态为开始状态。</li>
 <li>根据以上的计算结果画出DFA<br><img src="https://liyzy.oss-cn-hangzhou.aliyuncs.com/image/img-8.PNG" alt="img 8"></li>
 </ul>
 <h3 id="DFA的化简"><a href="#DFA的化简" class="headerlink" title="DFA的化简"></a>DFA的化简</h3><ul>
-<li>加入死状态<br>如果一个DFA的转换函数不是全函数，那么<strong>必须</strong>加入一个死状态$S_d$，死状态只有输入而没有输出。例如一个状态S对a没有转换，即move(S,a)=$\varnothing$，则$\varepsilon$-$closure(move(S,a))$=$S_d$。</li>
+<li>加入死状态<br>如果一个DFA的转换函数不是全函数，那么<strong>必须</strong>加入一个死状态$S_d$，死状态只有输入而没有输出。例如一个状态S对a没有转换，即move(S,a)&#x3D;$\varnothing$，则$\varepsilon$-$closure(move(S,a))$&#x3D;$S_d$。</li>
 <li>把状态集分为接受状态集和非接受状态集<br>接受状态集指包含NFA结束状态的集合；非接受状态集指不包含NFA结束状态的状态集。<br>例如，在例子中，可以把状态机划分为{A,B,C}和{D}。</li>
 <li>合并不可区分状态<br>对上一个步骤中的每一个集合的进行划分。如果集合中只有一个元素，那就不必再划分，如{D}；如果集合中有多个元素，则寻找哪几个元素经过所有输入字母的转换后可以产生非本集合的元素，则将其分离成一个新的集合，如果两个状态通过所有的输入字母都转换到该集合的相同元素，那么它们不必再分。</li>
 <li>对于上一个步骤中产生的新划分，重复上一步骤，直至不可再分。</li>
@@ -1030,7 +1031,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1674,7 +1675,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

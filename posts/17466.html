@@ -513,7 +513,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">6.8k</span>
+                <span title="本文字数">6.6k</span>
               
 
               
@@ -542,6 +542,7 @@
         <p></p>
 
 <span id="more"></span>
+
 <h3 id="L属性定义的自上而下计算"><a href="#L属性定义的自上而下计算" class="headerlink" title="L属性定义的自上而下计算"></a>L属性定义的自上而下计算</h3><h4 id="L属性定义"><a href="#L属性定义" class="headerlink" title="L属性定义"></a>L属性定义</h4><p>如果每个产生式$A \rightarrow X _ { 1 } X _ { 2 } \cdots X _ { n }$的每条语义规则计算的属性是A的综合属性；或者是$X_j$的继承属性，$1 \leq j \leq n$, 但它仅依赖：</p>
 <ul>
 <li>该产生式中$X_j$左边符号$X _ { 1 } , X _ { 2 } , \dots , X _ { j - 1 }$的属性</li>
@@ -556,7 +557,7 @@
 <li>左部非终结符的<strong>综合属性</strong>只能在它所引用的所有属性都计算完后才能计算。计算该属性的动作通常放在产生式右端的末尾。</li>
 </ul>
 <p>总的来说就是要保证动作在引用属性时其值已经可用，也就是要保证动作不会引用还没有计算出值的属性。</p>
-<p>🌰对于文法<br>$S \rightarrow A _ { 1 } A _ { 2 } \quad \left\{ A _ { 1 } .in : = 1 ; A _ { 2 } .in : = 2 \right\}$<br>$A \rightarrow a \quad \{ p r i n t ( A.in ) \}$<br>不符合条件一。在分析$A_1$时，要把它推导成$a$然后输出$A_1.in$，然而，这个时候还不知道$A_1.in$的值，因为赋值动作在整个产生式的末尾。如果把第一条产生式改为$S \rightarrow\{ A _ { 1 } .in : = 1 ; A _ { 2 } .in : = 2\}A _ { 1 } A _ { 2 }$，则是合理的翻译方案。</p>
+<p>🌰对于文法<br>$S \rightarrow A _ { 1 } A _ { 2 } \quad \left{ A _ { 1 } .in : &#x3D; 1 ; A _ { 2 } .in : &#x3D; 2 \right}$<br>$A \rightarrow a \quad { p r i n t ( A.in ) }$<br>不符合条件一。在分析$A_1$时，要把它推导成$a$然后输出$A_1.in$，然而，这个时候还不知道$A_1.in$的值，因为赋值动作在整个产生式的末尾。如果把第一条产生式改为$S \rightarrow{ A _ { 1 } .in : &#x3D; 1 ; A _ { 2 } .in : &#x3D; 2}A _ { 1 } A _ { 2 }$，则是合理的翻译方案。</p>
 <h4 id="预测分析器的设计"><a href="#预测分析器的设计" class="headerlink" title="预测分析器的设计"></a>预测分析器的设计</h4><p>构造预测分析器时，必须要消除左递归，而消除左递归可能会引起继承属性的出现。原因是翻译分案的属性信息（语法树结点指针）的流动方向和归约的方向不一致。</p>
 <h5 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h5><p>(1) 函数的形参、返回值和局部变量</p>
 <ul>
@@ -567,15 +568,14 @@
 <p>(2) 非终结符A对应的函数过程中，根据当前的输入符号决定使用哪个产生式候选。<br>(3) 每个产生式对应的程序代码中，按照从左到右的次序，对于单词符号（终结符）、非终结符和语义动作分别作以下工作：</p>
 <ul>
 <li>对于带有综合属性x的<strong>终结符</strong>X，把x的值存入为X.x设置的变量中。然后产生一个匹配X的调用，并继续读入一个输入符号。</li>
-<li>对于每个<strong>非终结符</strong>B，产生赋值语句$c = B \left( b _ { 1 } , b _ { 2 } , \cdots , b _ { k } \right)$其中，$b _ { 1 } , b _ { 2 } , \cdots , b _ { k }$是为B的<strong>继承属性</strong>设置的变量，c是为B的<strong>综合属性</strong>设置的变量。</li>
+<li>对于每个<strong>非终结符</strong>B，产生赋值语句$c &#x3D; B \left( b _ { 1 } , b _ { 2 } , \cdots , b _ { k } \right)$其中，$b _ { 1 } , b _ { 2 } , \cdots , b _ { k }$是为B的<strong>继承属性</strong>设置的变量，c是为B的<strong>综合属性</strong>设置的变量。</li>
 <li>对于<strong>语义动作</strong>，把动作的代码抄进分析器中，用代表属性的变量来代替对属性的每一次引用。</li>
 </ul>
 <h4 id="用综合属性代替继承属性"><a href="#用综合属性代替继承属性" class="headerlink" title="用综合属性代替继承属性"></a>用综合属性代替继承属性</h4><h3 id="L属性定义的自下而上计算"><a href="#L属性定义的自下而上计算" class="headerlink" title="L属性定义的自下而上计算"></a>L属性定义的自下而上计算</h3><p>它能实现任何基于LL(1)文法的L属性定义，也能实现许多（但不是所有的）基于LR(1)的L属性定义。</p>
-<h4 id="L属性自下而上计算需要解决的问题"><a href="#L属性自下而上计算需要解决的问题" class="headerlink" title="L属性自下而上计算需要解决的问题"></a>L属性自下而上计算需要解决的问题</h4><p>自下而上的分析中，语义动作的执行是在使用产生式对句柄进行归约的时候。但是，L属性定义的继承属性的计算需要嵌在产生式右部不同的地方。<br>🌰对于文法$A \rightarrow X Y \{ Z . i = X . x \} Z$<br>在$Z$还没有开始处理前，继承属性$Z.i$在栈中就没有对应的$val$条目供其使用。</p>
+<h4 id="L属性自下而上计算需要解决的问题"><a href="#L属性自下而上计算需要解决的问题" class="headerlink" title="L属性自下而上计算需要解决的问题"></a>L属性自下而上计算需要解决的问题</h4><p>自下而上的分析中，语义动作的执行是在使用产生式对句柄进行归约的时候。但是，L属性定义的继承属性的计算需要嵌在产生式右部不同的地方。<br>🌰对于文法$A \rightarrow X Y { Z . i &#x3D; X . x } Z$<br>在$Z$还没有开始处理前，继承属性$Z.i$在栈中就没有对应的$val$条目供其使用。</p>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>通过改写文法，使得所有嵌入在产生式中间的动作变换成只在产生式的最右端出现。分以下三种情况讨论：</p>
-<h5 id="删除翻译方案中嵌入的动作"><a href="#删除翻译方案中嵌入的动作" class="headerlink" title="删除翻译方案中嵌入的动作"></a>删除翻译方案中嵌入的动作</h5><p>在文法中加入推出空串的标记<strong>非终结符</strong>，让每个嵌入动作由不同的标记非终结符M代表，并把该动作放在产生式$M \rightarrow \varepsilon$的右端。<br>🌰<br>$E \rightarrow T R$<br>$R \rightarrow + T \left\{ p r i n t \left( ^ { \prime } + ^ { \prime } \right) \right\} R _ { 1 } | - T \left\{ p r i n t \left(^ { \prime } - ^ { \prime } \right) \right\} R _ { 1 } | \varepsilon$<br>$T \rightarrow n u m \{p r i n t (n u m. v a l) \}$<br>删除嵌入动作后：<br>$E \rightarrow T R$<br>$R \rightarrow + T M R _ { 1 } \left| - T N R _ { 1 } \right| \varepsilon$<br>$M \rightarrow \varepsilon \{ print ( ^ { \prime } + ^ { \prime } )\}$<br>$N \rightarrow \varepsilon \{ print ( ^ { \prime } - ^ { \prime } )\}$<br>$T \rightarrow n u m \{p r i n t (n u m. v a l) \}$</p>
-<h5 id="分析栈上的继承属性"><a href="#分析栈上的继承属性" class="headerlink" title="分析栈上的继承属性"></a>分析栈上的继承属性</h5><p><strong>第一种情况：所依赖的属性在分析栈上的位置能静态确定</strong><br>对于产生式$A\rightarrow XY$，因为$Y$以下的任何子树在规约前，$X.s$的值已经在栈中，所以它的值可以被$Y$继承。如果$Y$的继承属性由复写规则$Y.i=X.s$定义，$X.s$是综合属性，那么在需要使用$Y.i$的地方，都可以使用$X.s$代替，如果能静态的确定$X.s$在栈中的位置。<br><strong>第二种情况：所依赖的属性在分析栈上的位置不能静态确定</strong><br>🌰</p>
-<div class="table-container">
+<h5 id="删除翻译方案中嵌入的动作"><a href="#删除翻译方案中嵌入的动作" class="headerlink" title="删除翻译方案中嵌入的动作"></a>删除翻译方案中嵌入的动作</h5><p>在文法中加入推出空串的标记<strong>非终结符</strong>，让每个嵌入动作由不同的标记非终结符M代表，并把该动作放在产生式$M \rightarrow \varepsilon$的右端。<br>🌰<br>$E \rightarrow T R$<br>$R \rightarrow + T \left{ p r i n t \left( ^ { \prime } + ^ { \prime } \right) \right} R _ { 1 } | - T \left{ p r i n t \left(^ { \prime } - ^ { \prime } \right) \right} R _ { 1 } | \varepsilon$<br>$T \rightarrow n u m {p r i n t (n u m. v a l) }$<br>删除嵌入动作后：<br>$E \rightarrow T R$<br>$R \rightarrow + T M R _ { 1 } \left| - T N R _ { 1 } \right| \varepsilon$<br>$M \rightarrow \varepsilon { print ( ^ { \prime } + ^ { \prime } )}$<br>$N \rightarrow \varepsilon { print ( ^ { \prime } - ^ { \prime } )}$<br>$T \rightarrow n u m {p r i n t (n u m. v a l) }$</p>
+<h5 id="分析栈上的继承属性"><a href="#分析栈上的继承属性" class="headerlink" title="分析栈上的继承属性"></a>分析栈上的继承属性</h5><p><strong>第一种情况：所依赖的属性在分析栈上的位置能静态确定</strong><br>对于产生式$A\rightarrow XY$，因为$Y$以下的任何子树在规约前，$X.s$的值已经在栈中，所以它的值可以被$Y$继承。如果$Y$的继承属性由复写规则$Y.i&#x3D;X.s$定义，$X.s$是综合属性，那么在需要使用$Y.i$的地方，都可以使用$X.s$代替，如果能静态的确定$X.s$在栈中的位置。<br><strong>第二种情况：所依赖的属性在分析栈上的位置不能静态确定</strong><br>🌰</p>
 <table>
 <thead>
 <tr>
@@ -583,27 +583,20 @@
 <th>语义规则</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> $S\rightarrow aAC$</td>
-<td>$C.i=A.s$</td>
-<td></td>
+<tbody><tr>
+<td>$S\rightarrow aAC$</td>
+<td>$C.i&#x3D;A.s$</td>
 </tr>
 <tr>
-<td> $S\rightarrow bABC$</td>
-<td>$C.i=A.s$</td>
-<td></td>
+<td>$S\rightarrow bABC$</td>
+<td>$C.i&#x3D;A.s$</td>
 </tr>
 <tr>
-<td> $C\rightarrow c$</td>
-<td>$C.s=g(C.i)$</td>
-<td></td>
+<td>$C\rightarrow c$</td>
+<td>$C.s&#x3D;g(C.i)$</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p>由于B可能在、也可能不在A和C之间，因此在使用$C\rightarrow c$规约时$C.i$的值（也就是$A.s$的值）在$stack[top-2].val$或者在$stack[top-1].val$。<br>可以添加一个标志非终结符M，使$M.i$继承A的综合属性值，然后第二个产生式中的C继承M的综合属性值，这样，无论是用第一个产生式还是第二个产生式，$C.i$的值都可以在$stack[top-1].val$中得到。</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -611,32 +604,24 @@
 <th>语义规则</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> $S\rightarrow aAC$</td>
-<td>$C.i=A.s$</td>
-<td></td>
+<tbody><tr>
+<td>$S\rightarrow aAC$</td>
+<td>$C.i&#x3D;A.s$</td>
 </tr>
 <tr>
-<td> $S\rightarrow bABMC$</td>
-<td>$M.i=A.s;\ C.i=M.s$</td>
-<td></td>
+<td>$S\rightarrow bABMC$</td>
+<td>$M.i&#x3D;A.s;\ C.i&#x3D;M.s$</td>
 </tr>
 <tr>
-<td> $C\rightarrow c$</td>
-<td>$C.s=g(C.i)$</td>
-<td></td>
+<td>$C\rightarrow c$</td>
+<td>$C.s&#x3D;g(C.i)$</td>
 </tr>
 <tr>
-<td> $M\rightarrow \varepsilon$</td>
-<td>$M.s=M.i$</td>
-<td></td>
+<td>$M\rightarrow \varepsilon$</td>
+<td>$M.s&#x3D;M.i$</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h5 id="模拟继承属性的计算"><a href="#模拟继承属性的计算" class="headerlink" title="模拟继承属性的计算"></a>模拟继承属性的计算</h5><p>如果继承属性并不直接等于某个综合属性，而是它的一个函数，可以使用标记非终结符来模拟继承属性的计算。<br>🌰</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -644,21 +629,15 @@
 <th>语义规则</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> $S \rightarrow a A C$</td>
-<td>$C.i =f(A.s)$</td>
-<td></td>
+<tbody><tr>
+<td>$S \rightarrow a A C$</td>
+<td>$C.i &#x3D;f(A.s)$</td>
 </tr>
 <tr>
-<td> $C \rightarrow c$</td>
-<td>$C.s=g(C.i)$</td>
-<td></td>
+<td>$C \rightarrow c$</td>
+<td>$C.s&#x3D;g(C.i)$</td>
 </tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -666,28 +645,21 @@
 <th>语义规则</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> $S \rightarrow a A N C$</td>
-<td>$N . i = A . s; \ C.i = N.s$</td>
-<td></td>
+<tbody><tr>
+<td>$S \rightarrow a A N C$</td>
+<td>$N . i &#x3D; A . s; \ C.i &#x3D; N.s$</td>
 </tr>
 <tr>
-<td> $N \rightarrow \varepsilon$</td>
-<td>$N.s=f(A.s)$</td>
-<td></td>
+<td>$N \rightarrow \varepsilon$</td>
+<td>$N.s&#x3D;f(A.s)$</td>
 </tr>
 <tr>
-<td> $C \rightarrow c$</td>
-<td>$C.s=g(C.i)$</td>
-<td></td>
+<td>$C \rightarrow c$</td>
+<td>$C.s&#x3D;g(C.i)$</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h4 id="引进标记非终结符号对基础文法的影响"><a href="#引进标记非终结符号对基础文法的影响" class="headerlink" title="引进标记非终结符号对基础文法的影响"></a>引进标记非终结符号对基础文法的影响</h4><p><strong>基础文法是LL(1)文法</strong><br>没有影响，修改后的文法仍将保持LL(1)文法。因为每个标记非终结符号是唯一的，而且只有唯一一个的$\varepsilon$产生式。任何一个LL(1)文法一定是LR(1)文法，因此加标记非终结符不会引起LR分析动作的冲突。<br><strong>基础文法是LR(1)文法</strong><br>可能使修改后的文法变成非LR(1)文法。</p>
-<p><br/></p>
-
+<br/>
       
     </div>
 
@@ -1134,7 +1106,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1778,7 +1750,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -542,85 +542,78 @@
         <p></p>
 
 <span id="more"></span>
+
 <h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><p>过程：是一个声明，最简单的形式是将一个名字和一个语句联系起来。名字是过程名，语句是程序体。<br>过程的活动：过程的一次执行被称为过程的一次活动。<br>活动记录：过程的每次活动所需信息的存储空间。<br>生存期：从过程体开始执行到执行结束的时间，包括消耗在其调用过程和调用过程中调用其它过程所花费的时间。</p>
 <h2 id="局部存储分配"><a href="#局部存储分配" class="headerlink" title="局部存储分配"></a>局部存储分配</h2><h3 id="名字的作用域"><a href="#名字的作用域" class="headerlink" title="名字的作用域"></a>名字的作用域</h3><p>作用域：一个声明起作用的程序部分。<br>即使一个名字在程序中只声明一次，该名字在程序运行时也可能表示不同的数据对象。比如对函数的一个形参，每次赋不同的值，形参的名字只声明了一次，但可以表示不同的保存值的存储单元。</p>
-<h3 id="名字到存储单元的绑定"><a href="#名字到存储单元的绑定" class="headerlink" title="名字到存储单元的绑定"></a>名字到存储单元的绑定</h3><p>环境把名字映射到左值（存储单元），而状态把左值映射到右值（值）。<br>赋值改变状态，但不改变环境。<br>如果环境将名字x映射到存储单元s，就说x被绑定到s。</p>
-<font color="red">名字</font> -- <font color="gold">环境</font> --> <font color="red">存储单元</font> -- <font color="gold">状态</font> --> <font color="red">值</font>
-
+<h3 id="名字到存储单元的绑定"><a href="#名字到存储单元的绑定" class="headerlink" title="名字到存储单元的绑定"></a>名字到存储单元的绑定</h3><p>环境把名字映射到左值（存储单元），而状态把左值映射到右值（值）。<br>赋值改变状态，但不改变环境。<br>如果环境将名字x映射到存储单元s，就说x被绑定到s。<br><font color="red">名字</font> – <font color="gold">环境</font> –&gt; <font color="red">存储单元</font> – <font color="gold">状态</font> –&gt; <font color="red">值</font></p>
 <h3 id="活动记录"><a href="#活动记录" class="headerlink" title="活动记录"></a>活动记录</h3><p>一般的活动记录包括以下内容：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>域</th>
-<th>用途 </th>
+<th>用途</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> 临时数据</td>
+<tbody><tr>
+<td>临时数据</td>
 <td>保存临时值，比如寄存器不足时，将计算的中间结果存放在这</td>
 </tr>
 <tr>
-<td> 局部数据</td>
+<td>局部数据</td>
 <td>保存本过程内部定义的局部变量</td>
 </tr>
 <tr>
-<td> 保存的机器状态</td>
+<td>保存的机器状态</td>
 <td>用于保存本过程调用前的机器状态</td>
 </tr>
 <tr>
-<td> 访问链</td>
+<td>访问链</td>
 <td>通过访问链访问非局部数据</td>
 </tr>
 <tr>
-<td> 控制链</td>
+<td>控制链</td>
 <td>指向调用者的活动记录</td>
 </tr>
 <tr>
-<td> 返回值</td>
+<td>返回值</td>
 <td>存放本过程返回给调用过程的值</td>
 </tr>
 <tr>
-<td> 参数</td>
+<td>参数</td>
 <td>存放调用过程提供的实在参数</td>
 </tr>
-</tbody>
-</table>
-</div>
-<h3 id="局部数据的布局"><a href="#局部数据的布局" class="headerlink" title="局部数据的布局"></a>局部数据的布局</h3><p>字节是可编址内存的最小单位。<br>一个过程所声明的局部变量，按这些变量声明时出现的次序，在活动记录的局部数据区中依次分配空间。<br>局部数据的地址可以用相对于某个位置（本过程对应的活动记录的起始位置）的偏移来表示。<br>数据对象的存储安排深受目标机器寻址方式的影响，存在对齐问题。例如，要求整数（int，long）的相对地址可以被4整除。<br>由于对齐而引起的无用空间称为衬垫空白区。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对于以下两个结构体，因为衬垫区的存在，其size不同</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">s1</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span>   c1;</span><br><span class="line">    <span class="keyword">char</span>   c2;</span><br><span class="line">    <span class="keyword">int</span>    i1;</span><br><span class="line">    <span class="keyword">double</span> d1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">s2</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span>   c1;</span><br><span class="line">    <span class="keyword">int</span>    i1;</span><br><span class="line">    <span class="keyword">double</span> d1;</span><br><span class="line">    <span class="keyword">char</span>   c2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h2 id="全局栈式存储分配"><a href="#全局栈式存储分配" class="headerlink" title="全局栈式存储分配"></a>全局栈式存储分配</h2><h3 id="运行时内存空间的划分"><a href="#运行时内存空间的划分" class="headerlink" title="运行时内存空间的划分"></a>运行时内存空间的划分</h3><div class="table-container">
-<table>
+</tbody></table>
+<h3 id="局部数据的布局"><a href="#局部数据的布局" class="headerlink" title="局部数据的布局"></a>局部数据的布局</h3><p>字节是可编址内存的最小单位。<br>一个过程所声明的局部变量，按这些变量声明时出现的次序，在活动记录的局部数据区中依次分配空间。<br>局部数据的地址可以用相对于某个位置（本过程对应的活动记录的起始位置）的偏移来表示。<br>数据对象的存储安排深受目标机器寻址方式的影响，存在对齐问题。例如，要求整数（int，long）的相对地址可以被4整除。<br>由于对齐而引起的无用空间称为衬垫空白区。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对于以下两个结构体，因为衬垫区的存在，其size不同</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">s1</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span>   c1;</span><br><span class="line">    <span class="keyword">char</span>   c2;</span><br><span class="line">    <span class="keyword">int</span>    i1;</span><br><span class="line">    <span class="keyword">double</span> d1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">s2</span>&#123;</span></span><br><span class="line">    <span class="keyword">char</span>   c1;</span><br><span class="line">    <span class="keyword">int</span>    i1;</span><br><span class="line">    <span class="keyword">double</span> d1;</span><br><span class="line">    <span class="keyword">char</span>   c2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="全局栈式存储分配"><a href="#全局栈式存储分配" class="headerlink" title="全局栈式存储分配"></a>全局栈式存储分配</h2><h3 id="运行时内存空间的划分"><a href="#运行时内存空间的划分" class="headerlink" title="运行时内存空间的划分"></a>运行时内存空间的划分</h3><table>
 <thead>
 <tr>
 <th>区</th>
-<th>用途 </th>
+<th>用途</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> 代码</td>
-<td>存放目标代码（.exe） </td>
+<tbody><tr>
+<td>代码</td>
+<td>存放目标代码（.exe）</td>
 </tr>
 <tr>
-<td> 静态区</td>
+<td>静态区</td>
 <td>全局变量，静态变量等</td>
 </tr>
 <tr>
-<td> 堆</td>
-<td>动态分配的内存 </td>
+<td>堆</td>
+<td>动态分配的内存</td>
 </tr>
 <tr>
-<td> 空闲内存</td>
-<td>为堆和栈提供动态支持 </td>
+<td>空闲内存</td>
+<td>为堆和栈提供动态支持</td>
 </tr>
 <tr>
-<td> 栈</td>
-<td>活动记录 </td>
+<td>栈</td>
+<td>活动记录</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p>堆和栈是动态的，在它们占用的存储空间不断变化时，相向增长。在实际机器中，堆向高地址增长，栈向低地址增长。</p>
 <h3 id="内存分配策略"><a href="#内存分配策略" class="headerlink" title="内存分配策略"></a>内存分配策略</h3><h4 id="静态分配策略"><a href="#静态分配策略" class="headerlink" title="静态分配策略"></a>静态分配策略</h4><p>名字在程序被<strong>编译时绑定</strong>到存储单元，不需要运行时的任何支持。<br>绑定的生存期是程序的<strong>整个运行时间</strong>。<br>控制再次进入该过程时，局部变量的值和控制上一次<strong>离开时的一样</strong>。<br>每个活动记录的大小是固定的。<br>过程调用时保存信息的地址在编译时也是已知的。</p>
 <h4 id="栈式分配策略——活动树和运行栈"><a href="#栈式分配策略——活动树和运行栈" class="headerlink" title="栈式分配策略——活动树和运行栈"></a>栈式分配策略——活动树和运行栈</h4><p>栈式分配主要用于管理过程的活动记录。<br>局部变量的生存期是<strong>过程活动的时间</strong>。<br>控制进入该过程时，局部变量绑定到存储单元，过程活动结束后，<strong>局部变量的空间释放</strong>。</p>
@@ -633,10 +626,11 @@
 <p>活动的执行顺序（程序的控制流）对应活动树的后根遍历（深度优先）。</p>
 <h5 id="运行栈"><a href="#运行栈" class="headerlink" title="运行栈"></a>运行栈</h5><p>把控制栈中的信息拓广到包括过程活动所需的所有<strong>局部信息</strong>（即活动记录）。不要把静态的数据画在运行栈里。</p>
 <h5 id="栈上可变长数据"><a href="#栈上可变长数据" class="headerlink" title="栈上可变长数据"></a>栈上可变长数据</h5><p>活动记录的长度在编译时不能确定的情况。🌰局部数组的大小要等到过程激活时才能确定。<br>解决方案：<br>编译时，在活动记录中为这样的数组分配存放数组指针的单元。<br>运行时，这些指针指向分配在栈顶的数组存储空间。<br>运行时，对数组的访问都要通过相应指针来间接访问。</p>
-<h5 id="悬空引用"><a href="#悬空引用" class="headerlink" title="悬空引用"></a>悬空引用</h5><p>引用某个已被释放的存储单元<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">dangle</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;i;  <span class="comment">// return之后，i的存储单元被释放掉了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* p;</span><br><span class="line">    p = dangle();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="悬空引用"><a href="#悬空引用" class="headerlink" title="悬空引用"></a>悬空引用</h5><p>引用某个已被释放的存储单元</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">dangle</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">return</span> &amp;i;  <span class="comment">// return之后，i的存储单元被释放掉了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* p;</span><br><span class="line">    p = dangle();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h4 id="堆式分配策略"><a href="#堆式分配策略" class="headerlink" title="堆式分配策略"></a>堆式分配策略</h4><p>内存分配与释放按照任意次序进行。<br>堆中可能包含交错的正在使用的和已经释放的区域。</p>
-<h4 id="三种分配策略的比较"><a href="#三种分配策略的比较" class="headerlink" title="三种分配策略的比较"></a>三种分配策略的比较</h4><div class="table-container">
-<table>
+<h4 id="三种分配策略的比较"><a href="#三种分配策略的比较" class="headerlink" title="三种分配策略的比较"></a>三种分配策略的比较</h4><table>
 <thead>
 <tr>
 <th>\</th>
@@ -645,52 +639,47 @@
 <th>堆式分配</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> 使用范围</td>
+<tbody><tr>
+<td>使用范围</td>
 <td>外部变量、静态局部变量、常量</td>
 <td>局部变量、形参</td>
 <td>动态变量</td>
 </tr>
 <tr>
-<td> 分配时间</td>
+<td>分配时间</td>
 <td>程序开始前</td>
 <td>进入过程前</td>
 <td>用户决定</td>
 </tr>
 <tr>
-<td> 释放时间</td>
+<td>释放时间</td>
 <td>程序结束后</td>
 <td>过程结束</td>
 <td>用户决定</td>
 </tr>
 <tr>
-<td> 地址计算时间</td>
+<td>地址计算时间</td>
 <td>编译时</td>
 <td>运行时</td>
 <td>运行时</td>
 </tr>
 <tr>
-<td> 存取速度</td>
+<td>存取速度</td>
 <td>快</td>
 <td>慢</td>
 <td>慢</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="非局部名字的访问"><a href="#非局部名字的访问" class="headerlink" title="非局部名字的访问"></a>非局部名字的访问</h2><h3 id="静态作用域"><a href="#静态作用域" class="headerlink" title="静态作用域"></a>静态作用域</h3><h4 id="无过程嵌套的静态作用域"><a href="#无过程嵌套的静态作用域" class="headerlink" title="无过程嵌套的静态作用域"></a>无过程嵌套的静态作用域</h4><p>由于没有过程嵌套，声明在过程外的所有变量都可以分配在静态区。过程体中的非局部引用可以直接使用静态确定的地址（非局部数据此时就是全局数据）。</p>
 <h4 id="有过程嵌套的静态作用域"><a href="#有过程嵌套的静态作用域" class="headerlink" title="有过程嵌套的静态作用域"></a>有过程嵌套的静态作用域</h4><h5 id="过程嵌套深度"><a href="#过程嵌套深度" class="headerlink" title="过程嵌套深度"></a>过程嵌套深度</h5><p>设主程序的嵌套深度为1，从一个过程进入一个被包围的过程时，嵌套深度加1。<br>变量的嵌套深度：它的声明所在过程的嵌套深度作为该名字的嵌套深度。</p>
 <h5 id="访问链（静态链）"><a href="#访问链（静态链）" class="headerlink" title="访问链（静态链）"></a>访问链（静态链）</h5><p>如果过程p直接嵌在过程q中，那么过程p的活动记录的访问链直接指向<strong>最靠近的</strong>属于过程q的活动记录的访问链。<br>假定过程p的嵌套深度为$n_p$，它调用嵌套深度为$n_x$的过程x:<br>(1) $n_p &lt; n_x$。表明被调用过程比p嵌的更深，而且过程x肯定嵌在过程p里，否则无法调用。这种情况下需要追踪访问链$n_x-n_p$次。<br>(1) $n_p \geq n_x$。追踪访问链$n _ { p } - n _ { x } + 1$次到达了静态包围x和p的且离它们最近的那个过程的最新活动记录。所到达的访问链就是x的活动记录中的访问链应该指向的那个访问链。</p>
 <h3 id="动态作用域"><a href="#动态作用域" class="headerlink" title="动态作用域"></a>动态作用域</h3><p>被调用过程的非局部名字a和它在调用过程中引用的是<strong>同样的</strong>存储单元。<br>新的绑定仅为被调用过程的局部名字建立，这些名字在被调用过程的活动记录中<strong>占用</strong>存储单元。<br>总结的说，动态作用域就是<strong>谁调用的找谁</strong>。</p>
-<h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2><h3 id="值调用"><a href="#值调用" class="headerlink" title="值调用"></a>值调用</h3><p>实参的右值传给被调用过程。把形参当作所在过程的局部名看待，形参的存储单元在该过程的活动记录中。调用过程计算实参，并把右值放入形参的存储单元中。</p>
-<font color="red">对形参的任何操作不会影响调用者实参的值。</font>
+<h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2><h3 id="值调用"><a href="#值调用" class="headerlink" title="值调用"></a>值调用</h3><p>实参的右值传给被调用过程。把形参当作所在过程的局部名看待，形参的存储单元在该过程的活动记录中。调用过程计算实参，并把右值放入形参的存储单元中。<br><font color="red">对形参的任何操作不会影响调用者实参的值。</font></p>
+<h3 id="引用调用"><a href="#引用调用" class="headerlink" title="引用调用"></a>引用调用</h3><p>实参的左值传给被调用过程。把实参的左值放入形参的存储单元。在被调用过程的目标代码中，任何对形参的引用都是通过传给该过程的指针来间接引用实参的。<br><font color="red">对形参的任何赋值都会影响调用者实参的值。</font></p>
+<h3 id="换名调用"><a href="#换名调用" class="headerlink" title="换名调用"></a>换名调用</h3><p>用实参表达式对形参进行正文替换。</p>
+<figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">program</span> main(input,output);</span><br><span class="line">    <span class="keyword">var</span> a,b: integer;</span><br><span class="line">    <span class="function"><span class="keyword">procedure</span> <span class="title">p</span><span class="params">(x,y,z: integer)</span>;</span></span><br><span class="line">        <span class="keyword">begin</span></span><br><span class="line">        y:＝y+<span class="number">1</span>;</span><br><span class="line">        z:＝z+x;</span><br><span class="line">        <span class="keyword">end</span>;</span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        a:＝<span class="number">2</span>;</span><br><span class="line">        b:＝<span class="number">3</span>;</span><br><span class="line">        p(a+b, a, a);</span><br><span class="line">        print a;</span><br><span class="line">    <span class="keyword">end</span>．</span><br><span class="line"><span class="comment">&#123;值调用结果为2，不改变实参值&#125;</span></span><br><span class="line"><span class="comment">&#123;引用调用结果为8，a+b的结果5放在临时变量中，传参时将临时变量地址传过去&#125;</span></span><br><span class="line"><span class="comment">&#123;换名调用可以看作是执行a=a+1;a=a+(a+b);注意在第二条语句中右边的每一个a都等于3&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="引用调用"><a href="#引用调用" class="headerlink" title="引用调用"></a>引用调用</h3><p>实参的左值传给被调用过程。把实参的左值放入形参的存储单元。在被调用过程的目标代码中，任何对形参的引用都是通过传给该过程的指针来间接引用实参的。</p>
-<font color="red">对形参的任何赋值都会影响调用者实参的值。</font>
-
-<h3 id="换名调用"><a href="#换名调用" class="headerlink" title="换名调用"></a>换名调用</h3><p>用实参表达式对形参进行正文替换。<br><figure class="highlight pascal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">program</span> main(input,output);</span><br><span class="line">    <span class="keyword">var</span> a,b: integer;</span><br><span class="line">    <span class="function"><span class="keyword">procedure</span> <span class="title">p</span><span class="params">(x,y,z: integer)</span>;</span></span><br><span class="line">        <span class="keyword">begin</span></span><br><span class="line">        y:＝y+<span class="number">1</span>;</span><br><span class="line">        z:＝z+x;</span><br><span class="line">        <span class="keyword">end</span>;</span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        a:＝<span class="number">2</span>;</span><br><span class="line">        b:＝<span class="number">3</span>;</span><br><span class="line">        p(a+b, a, a);</span><br><span class="line">        print a;</span><br><span class="line">    <span class="keyword">end</span>．</span><br><span class="line"><span class="comment">&#123;值调用结果为2，不改变实参值&#125;</span></span><br><span class="line"><span class="comment">&#123;引用调用结果为8，a+b的结果5放在临时变量中，传参时将临时变量地址传过去&#125;</span></span><br><span class="line"><span class="comment">&#123;换名调用可以看作是执行a=a+1;a=a+(a+b);注意在第二条语句中右边的每一个a都等于3&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p><br/></p>
+<br/>
 
       
     </div>
@@ -1138,7 +1127,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1782,7 +1771,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

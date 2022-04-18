@@ -542,17 +542,19 @@
         <p></p>
 
 <span id="more"></span>
+
 <h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>通常，Python的源代码必须完全由ASCII码组成。若想在程序中的注释和字符串常量中使用非ASCII字符，需在源代码的第一行添加注释<code># -*- coding: &lt;encoding-name&gt; -*-</code></p>
 <h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>通常Python的风格是类名称以大写字母开始，其他的标识符都是小写字母。以单个下划线开始的标识符是私有的，以两个下划线开始的标识符是非常强的私有标识符；如果标识符还以两个下划线结尾，则表示该标志符是Python语言定义的特殊名称。</p>
 <h3 id="关键字-3-7-1版本"><a href="#关键字-3-7-1版本" class="headerlink" title="关键字(3.7.1版本)"></a>关键字(3.7.1版本)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">False      await      else       import     pass</span><br><span class="line">None       break      except     in         raise</span><br><span class="line">True       class      finally    is         return</span><br><span class="line">and        continue   for        lambda     try</span><br><span class="line">as         def        from       nonlocal   while</span><br><span class="line">assert     del        global     not        with</span><br><span class="line">async      elif       if         or         yield</span><br></pre></td></tr></table></figure>
+
 <h3 id="逻辑行与物理行"><a href="#逻辑行与物理行" class="headerlink" title="逻辑行与物理行"></a>逻辑行与物理行</h3><p>逻辑行由一个或多个物理行组成。</p>
 <ul>
 <li>当某一物理行以backslash(\)结束，并且后面没有注释，就会连接到下一个物理行作为一个逻辑行。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">1900</span> &lt; year &lt; <span class="number">2100</span> <span class="keyword">and</span> <span class="number">1</span> &lt;= month &lt;= <span class="number">12</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">1</span> &lt;= day &lt;= <span class="number">31</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= hour &lt; <span class="number">24</span> \</span><br><span class="line">        <span class="keyword">and</span> <span class="number">0</span> &lt;= minute &lt; <span class="number">60</span> <span class="keyword">and</span> <span class="number">0</span> &lt;= second &lt; <span class="number">60</span>:  <span class="comment"># Looks like a valid date</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;It&#x27;s a valid date.&quot;</span>)</span><br></pre></td></tr></table></figure></li>
 <li>如果一个左边的圆括号、方括号、花括号还没有对应的右括号，则Python会自动把多个物理行连接成一个逻辑行。</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">month_names = [<span class="string">&#x27;January&#x27;</span>, <span class="string">&#x27;February&#x27;</span>, <span class="string">&#x27;March&#x27;</span>,      <span class="comment"># These are the</span></span><br><span class="line">               <span class="string">&#x27;April&#x27;</span>,   <span class="string">&#x27;May&#x27;</span>,      <span class="string">&#x27;June&#x27;</span>,       <span class="comment"># Dutch names</span></span><br><span class="line">               <span class="string">&#x27;July&#x27;</span>,    <span class="string">&#x27;August&#x27;</span>, <span class="string">&#x27;September&#x27;</span>,  <span class="comment"># for the months</span></span><br><span class="line">               <span class="string">&#x27;October&#x27;</span>, <span class="string">&#x27;November&#x27;</span>, <span class="string">&#x27;December&#x27;</span>]   <span class="comment"># of the year</span></span><br></pre></td></tr></table></figure>
-<p><br/></p>
 
+<br/>
       
     </div>
 
@@ -999,7 +1001,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1619,7 +1621,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

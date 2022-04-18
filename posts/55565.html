@@ -178,11 +178,13 @@
 <meta property="og:site_name" content="Helios">
 <meta property="og:description" content="主要内容有可行性研究的任务和方法，成本&#x2F;效益分析，重点数据流图数据字典">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wheliosc.github.io/">
 <meta property="article:published_time" content="2018-12-25T09:29:59.236Z">
 <meta property="article:modified_time" content="2021-08-30T12:32:47.117Z">
 <meta property="article:author" content="lihui">
 <meta property="article:tag" content="软件工程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wheliosc.github.io/">
 
 
 
@@ -513,7 +515,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.5k</span>
+                <span title="本文字数">3.4k</span>
               
 
               
@@ -542,6 +544,7 @@
         <p></p>
 
 <span id="more"></span>
+
 <h3 id="可行性研究的任务"><a href="#可行性研究的任务" class="headerlink" title="可行性研究的任务"></a>可行性研究的任务</h3><p>不是解决问题，而是确定问题是否值得去解决。<br>分析可能解法的利弊；判定系统规模和目标是否能够实现；效益是否可观。<br>进一步分析和澄清问题定义；之后导出系统的逻辑模型；从逻辑模型出发，探索主要解法（实现方案）；对每种解法从以下方面研究可行性：</p>
 <ul>
 <li>技术可行性 现有技术能否实现目标系统？</li>
@@ -555,46 +558,42 @@
 <li>导出系统的高层逻辑模型（数据流图、数据字典）</li>
 <li>进一步定义问题（分析员与用户复查问题定义、工程规模和目标）</li>
 <li>导出和评价供选择的解法（从技术等方面研究可行性）</li>
-<li>推荐行动方针（是否继续进行该项目，若是则选择最佳解法，并进行成本/效益分析）</li>
+<li>推荐行动方针（是否继续进行该项目，若是则选择最佳解法，并进行成本&#x2F;效益分析）</li>
 <li>草拟开发计划</li>
 <li>书写文档提交审查</li>
 </ul>
 <h3 id="系统流程图"><a href="#系统流程图" class="headerlink" title="系统流程图"></a>系统流程图</h3><p>系统流程图是概括地描绘物理系统的传统工具。系统流程图表达的是数据在系统各部件之间流动的情况，而不是对数据进行加工处理的控制过程（程序流程图）。<br>程序流程图是描述<strong>过程设计</strong>的工具。</p>
 <h3 id="数据流图-DFD"><a href="#数据流图-DFD" class="headerlink" title="数据流图(DFD)"></a>数据流图(DFD)</h3><p>在数据流图中没有任何具体的物理部件，只是描绘<strong>数据</strong>在软件中流动和被处理的逻辑过程。</p>
-<h4 id="基本符号"><a href="#基本符号" class="headerlink" title="基本符号"></a>基本符号</h4><div class="table-container">
-<table>
+<h4 id="基本符号"><a href="#基本符号" class="headerlink" title="基本符号"></a>基本符号</h4><table>
 <thead>
 <tr>
 <th>符号</th>
-<th>含义 </th>
+<th>含义</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> 正方形或立方体</td>
+<tbody><tr>
+<td>正方形或立方体</td>
 <td>数据源点或终点</td>
 </tr>
 <tr>
-<td> 圆角矩形或圆形</td>
+<td>圆角矩形或圆形</td>
 <td>变换数据的处理</td>
 </tr>
 <tr>
-<td> 开口矩形或两条平行线</td>
+<td>开口矩形或两条平行线</td>
 <td>数据存储</td>
 </tr>
 <tr>
-<td> 箭头</td>
+<td>箭头</td>
 <td>特定数据流动方向</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h4 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h4><ul>
 <li>顶层（0层）数据流图。仅包含一个加工，它代表被开发系统。</li>
 <li>中间层数据流图。对其上层父图的细化，其每一加工可能继续细化，形成子图。</li>
 <li>底层数据流图。加工不需再做分解（基本加工）的数据流图。</li>
 </ul>
-<p><img src="" alt="DFD"></p>
+<p><img src="/" alt="DFD"></p>
 <h3 id="数据字典"><a href="#数据字典" class="headerlink" title="数据字典"></a>数据字典</h3><p>数据字典是描述数据的信息的集合，是对系统中使用的所有数据元素的定义的集合。系统的逻辑模型由DFD和数据字典共同构成，缺一不可。</p>
 <h4 id="数据字典的内容"><a href="#数据字典的内容" class="headerlink" title="数据字典的内容"></a>数据字典的内容</h4><ul>
 <li>一般信息。名字，别名，描述等。</li>
@@ -603,8 +602,7 @@
 <li>控制信息。来源，用户，使用它的程序，改变权，使用权等。</li>
 <li>分组信息。父结构，从属结构，物理位置（记录、文件和数据库）等。</li>
 </ul>
-<h4 id="定义数据的方法"><a href="#定义数据的方法" class="headerlink" title="定义数据的方法"></a>定义数据的方法</h4><div class="table-container">
-<table>
+<h4 id="定义数据的方法"><a href="#定义数据的方法" class="headerlink" title="定义数据的方法"></a>定义数据的方法</h4><table>
 <thead>
 <tr>
 <th>符号</th>
@@ -612,50 +610,29 @@
 <th>栗子</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td> =</td>
+<tbody><tr>
+<td>&#x3D;</td>
 <td>定义为</td>
 <td></td>
 </tr>
-<tr>
-<td> +</td>
-<td>和</td>
-<td>x=a＋b，表示x由a和b组成</td>
-</tr>
-<tr>
-<td> [..$\mid$..]</td>
-<td>或</td>
-<td>x=[a$\mid$b]，表示x由a或由b组成</td>
-</tr>
-<tr>
-<td> {}</td>
-<td>重复</td>
-<td>x=3{a}8，表示x中至少出现3次a, 至多出现8次a，也可以用上下标的形式表示次数限制</td>
-</tr>
-<tr>
-<td> ()</td>
-<td>可选</td>
-<td>x=(a)，表示a可在x中出现,也可不出现</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>🌰发票 = 单位名称 + 1{商品名+数量+单价+金额}5 + 总金额 + 日期 + (营业员)</p>
-<h3 id="成本-效益分析"><a href="#成本-效益分析" class="headerlink" title="成本/效益分析"></a>成本/效益分析</h3><h4 id="成本估计"><a href="#成本估计" class="headerlink" title="成本估计"></a>成本估计</h4><ul>
-<li>代码行技术。人力成本=每行代码成本*代码行数。</li>
+</tbody></table>
+<ul>
+<li>| 和 | x&#x3D;a＋b，表示x由a和b组成<br> [..$\mid$..] | 或 | x&#x3D;[a$\mid$b]，表示x由a或由b组成<br> {} | 重复 | x&#x3D;3{a}8，表示x中至少出现3次a, 至多出现8次a，也可以用上下标的形式表示次数限制<br> () | 可选 | x&#x3D;(a)，表示a可在x中出现,也可不出现</li>
+</ul>
+<p>🌰发票 &#x3D; 单位名称 + 1{商品名+数量+单价+金额}5 + 总金额 + 日期 + (营业员)</p>
+<h3 id="成本-x2F-效益分析"><a href="#成本-x2F-效益分析" class="headerlink" title="成本&#x2F;效益分析"></a>成本&#x2F;效益分析</h3><h4 id="成本估计"><a href="#成本估计" class="headerlink" title="成本估计"></a>成本估计</h4><ul>
+<li>代码行技术。人力成本&#x3D;每行代码成本*代码行数。</li>
 <li>任务分解技术。对于每个任务，估计人力成本（人月为单位）。</li>
 <li>自动估计成本技术。采用相关软件自动估算。</li>
 </ul>
-<h4 id="成本-效益分析的方法"><a href="#成本-效益分析的方法" class="headerlink" title="成本/效益分析的方法"></a>成本/效益分析的方法</h4><ul>
+<h4 id="成本-x2F-效益分析的方法"><a href="#成本-x2F-效益分析的方法" class="headerlink" title="成本&#x2F;效益分析的方法"></a>成本&#x2F;效益分析的方法</h4><ul>
 <li>货币的时间价值。工程经济学P和F的关系。</li>
 <li>投资回收期。越短越好。</li>
 <li>纯收入。越多越好。</li>
 <li>投资回报率。衡量工程经济效益时最重要的参考依据。</li>
 </ul>
 <p>learn more: <a target="_blank" rel="noopener" href="https://liyzy.github.io/tags/%E5%B7%A5%E7%A8%8B%E7%BB%8F%E6%B5%8E%E5%AD%A6/">工程经济学</a></p>
-<p><br/></p>
-
+<br/>
       
     </div>
 
@@ -1056,7 +1033,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.</span> <span class="nav-text">可行性研究的任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">可行性研究的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">系统流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE-DFD"><span class="nav-number">4.</span> <span class="nav-text">数据流图(DFD)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.1.</span> <span class="nav-text">基本符号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E5%B1%82"><span class="nav-number">4.2.</span> <span class="nav-text">分层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8"><span class="nav-number">5.</span> <span class="nav-text">数据字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">5.1.</span> <span class="nav-text">数据字典的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">定义数据的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E6%9C%AC-%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90"><span class="nav-number">6.</span> <span class="nav-text">成本&#x2F;效益分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E6%9C%AC%E4%BC%B0%E8%AE%A1"><span class="nav-number">6.1.</span> <span class="nav-text">成本估计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E6%9C%AC-%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">成本&#x2F;效益分析的方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.</span> <span class="nav-text">可行性研究的任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">可行性研究的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">3.</span> <span class="nav-text">系统流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE-DFD"><span class="nav-number">4.</span> <span class="nav-text">数据流图(DFD)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AC%A6%E5%8F%B7"><span class="nav-number">4.1.</span> <span class="nav-text">基本符号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E5%B1%82"><span class="nav-number">4.2.</span> <span class="nav-text">分层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8"><span class="nav-number">5.</span> <span class="nav-text">数据字典</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">5.1.</span> <span class="nav-text">数据字典的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">定义数据的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E6%9C%AC-x2F-%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90"><span class="nav-number">6.</span> <span class="nav-text">成本&#x2F;效益分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E6%9C%AC%E4%BC%B0%E8%AE%A1"><span class="nav-number">6.1.</span> <span class="nav-text">成本估计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E6%9C%AC-x2F-%E6%95%88%E7%9B%8A%E5%88%86%E6%9E%90%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">成本&#x2F;效益分析的方法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1095,7 +1072,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1739,7 +1716,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

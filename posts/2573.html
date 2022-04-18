@@ -546,34 +546,40 @@
         <p></p>
 
 <span id="more"></span>
+
 <h2 id="安装Mysql-8-0-13"><a href="#安装Mysql-8-0-13" class="headerlink" title="安装Mysql 8.0.13"></a>安装Mysql 8.0.13</h2><ul>
 <li>下载<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">MySQL Community Edition(GPL)</a><br>选择不带Debug和Test的版本（自定）。<br><img src="https://ws1.sinaimg.cn/large/006xwwY9ly1g13ivuwor6j310w06i0tj.jpg" alt="mysql"></li>
 <li>解压到自选路径</li>
 <li>添加配置文件</li>
 </ul>
-<p>解压后这个版本是没有my-default.ini的，在根目录下(eg. D:\Program Files\mysql-8.0.13-winx64)新建文本文档my.ini，内容如下：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"></span><br><span class="line"># 设置mysql客户端默认字符集</span><br><span class="line"></span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line">#设置3306端口</span><br><span class="line"></span><br><span class="line">port = 3306 </span><br><span class="line"></span><br><span class="line"># 设置mysql的安装目录</span><br><span class="line"></span><br><span class="line">basedir=D:\Program Files\mysql-8.0.13-winx64</span><br><span class="line"></span><br><span class="line"># 设置mysql数据库的数据的存放目录</span><br><span class="line"></span><br><span class="line">datadir=D:\Program Files\mysql-8.0.13-winx64\data</span><br><span class="line"></span><br><span class="line"># 允许最大连接数</span><br><span class="line"></span><br><span class="line">max_connections=200</span><br><span class="line"></span><br><span class="line"># 服务端使用的字符集默认为8比特编码的latin1字符集</span><br><span class="line"></span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line"></span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line"></span><br><span class="line">default-storage-engine=INNODB </span><br><span class="line"></span><br><span class="line"># 默认主机地址（解决navicat连接数据库出现2003...(10061)错误）</span><br><span class="line"></span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure></p>
+<p>解压后这个版本是没有my-default.ini的，在根目录下(eg. D:\Program Files\mysql-8.0.13-winx64)新建文本文档my.ini，内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line"></span><br><span class="line"># 设置mysql客户端默认字符集</span><br><span class="line"></span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line">#设置3306端口</span><br><span class="line"></span><br><span class="line">port = 3306 </span><br><span class="line"></span><br><span class="line"># 设置mysql的安装目录</span><br><span class="line"></span><br><span class="line">basedir=D:\Program Files\mysql-8.0.13-winx64</span><br><span class="line"></span><br><span class="line"># 设置mysql数据库的数据的存放目录</span><br><span class="line"></span><br><span class="line">datadir=D:\Program Files\mysql-8.0.13-winx64\data</span><br><span class="line"></span><br><span class="line"># 允许最大连接数</span><br><span class="line"></span><br><span class="line">max_connections=200</span><br><span class="line"></span><br><span class="line"># 服务端使用的字符集默认为8比特编码的latin1字符集</span><br><span class="line"></span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line"></span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line"></span><br><span class="line">default-storage-engine=INNODB </span><br><span class="line"></span><br><span class="line"># 默认主机地址（解决navicat连接数据库出现2003...(10061)错误）</span><br><span class="line"></span><br><span class="line">bind-address = 0.0.0.0</span><br></pre></td></tr></table></figure>
+
 <p>默认字符集推荐UTF-8MB4，UTF-8在后面初始化时会出警告(虽然程序员从不看警告\doge)。<br>端口可以自己设置，不一定要3306，但不要端口冲突了就行。<br>安装目录和数据存放目录<strong>改成自己的</strong>！！！</p>
 <ul>
-<li><p>安装mysql服务</p>
+<li>安装mysql服务<ul>
+<li><p>以管理员身份运行cmd或者PowerShell，否则安装时会报错。（下面是PowerShell操作）</p>
+</li>
+<li><p>cd到bin目录，比如：<code>cd d:\Program Files\mysql-8.0.13-winx64\bin\</code></p>
+</li>
+<li><p>初始化<code>mysqld --initialize --console</code>(如果没有为mysql添加环境变量，就是<code>.\mysqld --initialize --console</code>)，等待一段时间，在根目录下的data文件夹里，就会生成一堆文件。<img src="https://wx2.sinaimg.cn/large/006xwwY9ly1g13ivv3fr2j30ki0lamz8.jpg"><br>控制台里会给一些提示，其中<code>A temporary password is generated for root@localhost: </code>后面跟的是随机生成的初始登录密码，复制备用。</p>
+</li>
+<li><p>安装服务</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>mysqld -install</code>，成功或者已经存在都会有提示。移除是<code>mysqld -remove</code></p>
 <ul>
-<li>以管理员身份运行cmd或者PowerShell，否则安装时会报错。（下面是PowerShell操作）</li>
-<li>cd到bin目录，比如：<code>cd d:\Program Files\mysql-8.0.13-winx64\bin\</code></li>
-<li><p>初始化<code>mysqld --initialize --console</code>(如果没有为mysql添加环境变量，就是<code>.\mysqld --initialize --console</code>)，等待一段时间，在根目录下的data文件夹里，就会生成一堆文件。<img src="https://wx2.sinaimg.cn/large/006xwwY9ly1g13ivv3fr2j30ki0lamz8.jpg" alt=""><br>控制台里会给一些提示，其中<code>A temporary password is generated for root@localhost:</code>后面跟的是随机生成的初始登录密码，复制备用。</p>
-</li>
-<li><p>安装服务<br><code>mysqld -install</code>，成功或者已经存在都会有提示。移除是<code>mysqld -remove</code></p>
-</li>
 <li>启动服务<br><code>net start mysql</code>，没有初始化的话，这里会出现(3534)错误。停止服务是<code>net stop mysql</code></li>
 <li>登录<br><code>mysql -u root -p</code>，之后回车输入初始密码，然后就登录成功了。可以测试<code>show databases;</code>退出键入<code>quit</code></li>
 <li>修改密码<br><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;xxxxxxx&#39;;</code><br>xxxxxxx是要设的密码。</li>
-</ul>
-</li>
 </ul>
 <h2 id="安装Navicat-12-1-11"><a href="#安装Navicat-12-1-11" class="headerlink" title="安装Navicat 12.1.11"></a>安装Navicat 12.1.11</h2><ul>
 <li>下载<a target="_blank" rel="noopener" href="https://www.navicat.com.cn/products/navicat-premium">Navicat premium 12.1.11</a><br>这个都会，关键肯定是在于How to use it for free？😏</li>
 <li><a target="_blank" rel="noopener" href="https://github.com/JohnHubcr/navicat-keygen">Use it for free.</a></li>
 </ul>
-<p><br/></p>
-
+<br/>
       
     </div>
 
@@ -600,7 +606,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\posts\45615.html" rel="bookmark">Oracle SQL练习题2</a></div>
+      <div class="popular-posts-title"><a href="\posts\45231.html" rel="bookmark">Oracle SQL练习题4</a></div>
       
     </li>
   
@@ -614,7 +620,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\posts\45231.html" rel="bookmark">Oracle SQL练习题4</a></div>
+      <div class="popular-posts-title"><a href="\posts\45615.html" rel="bookmark">Oracle SQL练习题2</a></div>
       
     </li>
   
@@ -1022,7 +1028,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1642,7 +1648,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -543,6 +543,7 @@
         <p></p>
 
 <span id="more"></span>
+
 <p>操作scott账户下的emp、dept、salgrade表，完成如下操作：</p>
 <ol>
 <li>列出所有雇员的姓名及其直接上级的姓名</li>
@@ -554,27 +555,57 @@
 <li>显示员工名，参加工作时间，经理名，参加工作时间：参加工作时间比他的经理早</li>
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 1.	列出所有雇员的姓名及其直接上级的姓名</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e2.ename superiorname</span><br><span class="line"><span class="keyword">from</span> emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2 </span><br><span class="line"><span class="keyword">on</span> e1.mgr <span class="operator">=</span> e2.empno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 2.	列出部门名称和这些部门的雇员,同时列出那些没有雇员的部门</span></span><br><span class="line"><span class="keyword">select</span> dept.dname, emp.ename</span><br><span class="line"><span class="keyword">from</span> emp <span class="keyword">right</span> <span class="keyword">join</span> dept</span><br><span class="line"><span class="keyword">on</span> emp.deptno <span class="operator">=</span> dept.deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 3.	显示所有部门在&quot;NEW YORK&quot;(dept表 loc字段)的员工姓名</span></span><br><span class="line"><span class="keyword">select</span> emp.ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> dept</span><br><span class="line">                  <span class="keyword">where</span> loc <span class="operator">=</span> <span class="string">&#x27;NEW YORK&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 4.	显示员工&quot;SMITH&quot;的姓名，部门名称</span></span><br><span class="line"><span class="keyword">select</span> emp.ename, dept.dname</span><br><span class="line"><span class="keyword">from</span> emp, dept</span><br><span class="line"><span class="keyword">where</span> <span class="built_in">lower</span>(emp.ename) <span class="operator">=</span> <span class="string">&#x27;smith&#x27;</span> <span class="keyword">and</span> emp.deptno <span class="operator">=</span> dept.deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 5.	显示员工姓名，部门名称，工资，工资级别(salgrade表 grade字段),要求工资级别大于4级</span></span><br><span class="line"><span class="keyword">select</span> emp.ename, dept.dname, emp.sal, salgrade.grade</span><br><span class="line"><span class="keyword">from</span> emp <span class="keyword">left</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.deptno <span class="operator">=</span> dept.deptno, salgrade</span><br><span class="line"><span class="keyword">where</span> emp.sal <span class="keyword">between</span> salgrade.losal <span class="keyword">and</span> salgrade.hisal <span class="keyword">and</span> salgrade.grade<span class="operator">&gt;</span><span class="number">4</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 6.	显示员工&quot;KING&quot;和&quot;FORD&quot;管理的员工姓名及其经理姓名</span></span><br><span class="line"><span class="keyword">select</span> e1.ename &quot;NAME&quot;, e2.ename substaffname, emp.ename managername</span><br><span class="line"><span class="keyword">from</span> (emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2 <span class="keyword">on</span> e1.empno <span class="operator">=</span> e2.mgr) <span class="keyword">left</span> <span class="keyword">join</span> emp <span class="keyword">on</span> e1.mgr <span class="operator">=</span> emp.empno</span><br><span class="line"><span class="keyword">where</span> <span class="built_in">lower</span>(e1.ename) <span class="operator">=</span> <span class="string">&#x27;king&#x27;</span> <span class="keyword">or</span> <span class="built_in">lower</span>(e1.ename) <span class="operator">=</span> <span class="string">&#x27;ford&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 7.	显示员工名，参加工作时间，经理名，参加工作时间：参加工作时间比他的经理早</span></span><br><span class="line"><span class="keyword">select</span> e1.ename, e1.hiredate, e2.ename managername, e2.hiredate managerhiredate</span><br><span class="line"><span class="keyword">from</span> emp e1 <span class="keyword">left</span> <span class="keyword">join</span> emp e2 <span class="keyword">on</span> e1.mgr <span class="operator">=</span> e2.empno</span><br><span class="line"><span class="keyword">where</span> e1.hiredate <span class="operator">&lt;</span> e2.hiredate;</span><br></pre></td></tr></table></figure>
-<ol>
+
+<ol start="8">
 <li>显示平均工资为&gt;2000的职位</li>
 <li>计算工资在2000以上，各种职位的平均工资大于3000的职位及平均工资</li>
 <li>找每个部门的最高和最低的工资</li>
-<li>找每个部门中每种职位的最高和最低的工资</li>
-<li>显示出工作名称(job)中包含”MAN”的员工平均工资，最高工资，最低工资及工资的和</li>
-<li>显示出20号部门的员工人数</li>
-<li>显示出平均工资大于2000的部门名称及平均工资</li>
-<li>显示每个部门每种工作平均工资大于2500的部门及工作</li>
-<li>显示出工作名称中包含”MAN”，并且平均工资大于1000的工作名称及平均工资</li>
-<li>显示出平均工资最高的的部门平均工资</li>
-<li>列出最低工资大于1500的各种工作</li>
-<li>列出各部门的员工数量及平均工作年限</li>
+<li><pre><code>找每个部门中每种职位的最高和最低的工资
+</code></pre>
+</li>
+<li><pre><code>显示出工作名称(job)中包含&quot;MAN&quot;的员工平均工资，最高工资，最低工资及工资的和
+</code></pre>
+</li>
+<li><pre><code>显示出20号部门的员工人数
+</code></pre>
+</li>
+<li><pre><code>显示出平均工资大于2000的部门名称及平均工资
+</code></pre>
+</li>
+<li><pre><code>显示每个部门每种工作平均工资大于2500的部门及工作
+</code></pre>
+</li>
+<li><pre><code>显示出工作名称中包含&quot;MAN&quot;，并且平均工资大于1000的工作名称及平均工资
+</code></pre>
+</li>
+<li><pre><code>显示出平均工资最高的的部门平均工资
+</code></pre>
+</li>
+<li><pre><code>列出最低工资大于1500的各种工作
+</code></pre>
+</li>
+<li><pre><code>列出各部门的员工数量及平均工作年限
+</code></pre>
+</li>
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 8.	显示平均工资为&gt;2000的职位</span></span><br><span class="line"><span class="keyword">select</span> &quot;JOB&quot;</span><br><span class="line"><span class="keyword">from</span> emp </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> &quot;JOB&quot;</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">&gt;</span> <span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 9.	计算工资在2000以上，各种职位的平均工资大于3000的职位及平均工资</span></span><br><span class="line"><span class="keyword">select</span> &quot;JOB&quot;, <span class="built_in">avg</span>(sal) avgsal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> &quot;JOB&quot;</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">&gt;</span> <span class="number">3000</span> <span class="keyword">and</span> <span class="built_in">min</span>(sal) <span class="operator">&gt;</span> <span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 10.	找每个部门的最高和最低的工资</span></span><br><span class="line"><span class="keyword">select</span> deptno, <span class="built_in">max</span>(sal), <span class="built_in">min</span>(sal)</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 11.	找每个部门中每种职位的最高和最低的工资</span></span><br><span class="line"><span class="keyword">select</span> deptno, &quot;JOB&quot;, <span class="built_in">max</span>(sal), <span class="built_in">min</span>(sal)</span><br><span class="line"><span class="keyword">from</span> emp </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> deptno, &quot;JOB&quot;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 12.	显示出工作名称(job)中包含&quot;MAN&quot;的员工平均工资，最高工资，最低工资及工资的和</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(sal) avgsal, <span class="built_in">max</span>(sal) maxsal, <span class="built_in">min</span>(sal) minsal, <span class="built_in">sum</span>(sal) sumsal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> &quot;JOB&quot; <span class="keyword">like</span> <span class="string">&#x27;%MAN%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 13.	显示出20号部门的员工人数</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) </span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 14.	显示出平均工资大于2000的部门名称及平均工资</span></span><br><span class="line"><span class="keyword">select</span> d1.dname, d2.avgsal</span><br><span class="line"><span class="keyword">from</span> dept d1, (<span class="keyword">select</span> deptno, <span class="built_in">avg</span>(sal) avgsal</span><br><span class="line">               <span class="keyword">from</span> emp</span><br><span class="line">               <span class="keyword">group</span> <span class="keyword">by</span> deptno</span><br><span class="line">               <span class="keyword">having</span> <span class="built_in">avg</span>(sal) <span class="operator">&gt;</span> <span class="number">2000</span>) d2</span><br><span class="line"><span class="keyword">where</span> d1.deptno <span class="operator">=</span> d2.deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 15.	显示每个部门每种工作平均工资大于2500的部门及工作</span></span><br><span class="line"><span class="keyword">select</span> deptno, &quot;JOB&quot;</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> deptno,&quot;JOB&quot;</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal)<span class="operator">&gt;</span><span class="number">2500</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 16.	显示出工作名称中包含&quot;MAN&quot;，并且平均工资大于1000的工作名称及平均工资</span></span><br><span class="line"><span class="keyword">select</span> &quot;JOB&quot;, <span class="built_in">avg</span>(sal) avgsal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> &quot;JOB&quot; <span class="keyword">like</span> <span class="string">&#x27;%MAN%&#x27;</span></span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> &quot;JOB&quot;</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">avg</span>(sal)<span class="operator">&gt;</span><span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 17.	显示出平均工资最高的的部门平均工资</span></span><br><span class="line"><span class="keyword">select</span> <span class="built_in">max</span>(avgsal)</span><br><span class="line"><span class="keyword">from</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal) avgsal</span><br><span class="line">      <span class="keyword">from</span> emp</span><br><span class="line">      <span class="keyword">group</span> <span class="keyword">by</span> deptno);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 18.	列出最低工资大于1500的各种工作</span></span><br><span class="line"><span class="keyword">select</span> &quot;JOB&quot;</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> &quot;JOB&quot;</span><br><span class="line"><span class="keyword">having</span> <span class="built_in">min</span>(sal) <span class="operator">&gt;</span> <span class="number">1500</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 19.	列出各部门的员工数量及平均工作年限</span></span><br><span class="line"><span class="keyword">select</span> deptno, <span class="built_in">count</span>(<span class="operator">*</span>), <span class="built_in">avg</span>((sysdate<span class="operator">-</span>hiredate)<span class="operator">/</span><span class="number">365</span>)</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> deptno;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>查询和ford相同部门的员工姓名和雇用日期</li>
-<li>查询工资比公司平均工资高的员工的员工号，姓名和工资。</li>
-<li>查询和姓名中包含字母u的员工在相同部门的员工的员工号和姓名</li>
-<li>查询在CHICAGO工作的员工的员工号，job</li>
-<li>查询管理者是king的员工姓名和工资</li>
+
+<ol start="20">
+<li><pre><code>查询和ford相同部门的员工姓名和雇用日期
+</code></pre>
+</li>
+<li><pre><code>查询工资比公司平均工资高的员工的员工号，姓名和工资。
+</code></pre>
+</li>
+<li><pre><code>查询和姓名中包含字母u的员工在相同部门的员工的员工号和姓名
+</code></pre>
+</li>
+<li><pre><code>查询在CHICAGO工作的员工的员工号，job
+</code></pre>
+</li>
+<li><pre><code>查询管理者是king的员工姓名和工资
+</code></pre>
+</li>
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 20.	查询和ford相同部门的员工姓名和雇用日期</span></span><br><span class="line"><span class="keyword">select</span> ename, hiredate</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="operator">=</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                <span class="keyword">from</span> emp</span><br><span class="line">                <span class="keyword">where</span> <span class="built_in">lower</span>(ename) <span class="operator">=</span> <span class="string">&#x27;ford&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 21.	查询工资比公司平均工资高的员工的员工号，姓名和工资。</span></span><br><span class="line"><span class="keyword">select</span> empno, ename, sal</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> sal <span class="operator">&gt;</span> (<span class="keyword">select</span> <span class="built_in">avg</span>(sal)</span><br><span class="line">              <span class="keyword">from</span> emp);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 22.	查询和姓名中包含字母u的员工在相同部门的员工的员工号和姓名</span></span><br><span class="line"><span class="keyword">select</span> empno,ename</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> emp</span><br><span class="line">                  <span class="keyword">where</span> ename <span class="keyword">like</span> <span class="string">&#x27;%U%&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 23.	查询在CHICAGO工作的员工的员工号，job</span></span><br><span class="line"><span class="keyword">select</span> empno,&quot;JOB&quot;</span><br><span class="line"><span class="keyword">from</span> emp</span><br><span class="line"><span class="keyword">where</span> deptno <span class="keyword">in</span> (<span class="keyword">select</span> deptno</span><br><span class="line">                  <span class="keyword">from</span> dept</span><br><span class="line">                  <span class="keyword">where</span> loc <span class="operator">=</span> <span class="string">&#x27;CHICAGO&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 24.	查询管理者是king的员工姓名和工资</span></span><br><span class="line"><span class="keyword">select</span> ename, sal</span><br><span class="line"><span class="keyword">from</span> emp </span><br><span class="line"><span class="keyword">where</span> mgr <span class="operator">=</span> (<span class="keyword">select</span> empno</span><br><span class="line">              <span class="keyword">from</span> emp</span><br><span class="line">              <span class="keyword">where</span> <span class="built_in">lower</span>(ename) <span class="operator">=</span> <span class="string">&#x27;king&#x27;</span>);</span><br></pre></td></tr></table></figure>
       
@@ -603,14 +634,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\posts\29422.html" rel="bookmark">Oracle SQL练习题3</a></div>
+      <div class="popular-posts-title"><a href="\posts\45231.html" rel="bookmark">Oracle SQL练习题4</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\posts\45231.html" rel="bookmark">Oracle SQL练习题4</a></div>
+      <div class="popular-posts-title"><a href="\posts\29422.html" rel="bookmark">Oracle SQL练习题3</a></div>
       
     </li>
   
@@ -1000,7 +1031,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1620,7 +1651,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -552,15 +552,17 @@
         <p></p>
 
 <span id="more"></span>
+
+
 <h2 id="测试概述"><a href="#测试概述" class="headerlink" title="测试概述"></a>测试概述</h2><h3 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h3><p>错误（Error）：产生错误结果的人为行为。A human action that produces an incorrect result.</p>
-<p>缺陷（fault）：计算机程序中不正确的步骤、过程或数据定义。缺陷是错误（Error）的结果/表现。</p>
+<p>缺陷（fault）：计算机程序中不正确的步骤、过程或数据定义。缺陷是错误（Error）的结果&#x2F;表现。</p>
 <p>失效（failure）：系统或组件不能在规定的性能要求内执行其所需的功能。缺陷执行时会发生失效。</p>
 <blockquote>
 <p> The term failure refers to a behavioral deviation from the user requirement or the product specification; fault refers to an underlying condition within a software that causes certain failure(s) to occur; while error refers to a missing or incorrect human action resulting in certain fault(s) being injected into a software.The term “defect” generally refers to some problem with the software, either with its external behavior or with its internal characteristics.</p>
 </blockquote>
 <p>错误（Error）、缺陷（fault）和失效（failure）统称为defect（或者说是bug）。</p>
 <h3 id="质量控制与质量保证"><a href="#质量控制与质量保证" class="headerlink" title="质量控制与质量保证"></a>质量控制与质量保证</h3><p>质量控制（Quality Control）：旨在评估开发或制造产品质量的一系列活动。“扣留”任何不符合条件的产品。</p>
-<p>质量保证（Quality Assurance）：通过在整个开发和制造过程/阶段中执行的各种活动，最大限度地降低保证质量的成本。</p>
+<p>质量保证（Quality Assurance）：通过在整个开发和制造过程&#x2F;阶段中执行的各种活动，最大限度地降低保证质量的成本。</p>
 <ul>
 <li>Preventing the causes of errors</li>
 <li>Detecting faults</li>
@@ -594,12 +596,12 @@
 </ul>
 <h3 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h3><p>软件测试的本质是为要测试的项目确定一组测试用例。</p>
 <p>测试用例是描述输入、操作或事件以及预期响应的文档，用于确定应用程序的功能是否正常工作。</p>
-<p>测试用例应包含诸如测试用例标识符、测试用例名称、目标、测试条件/设置、输入数据要求、步骤和预期结果等详细信息。</p>
+<p>测试用例应包含诸如测试用例标识符、测试用例名称、目标、测试条件&#x2F;设置、输入数据要求、步骤和预期结果等详细信息。</p>
 <h3 id="V模型"><a href="#V模型" class="headerlink" title="V模型"></a>V模型</h3><p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/V%E6%A8%A1%E5%9E%8B.png" alt="V模型"></p>
 <h2 id="功能性测试"><a href="#功能性测试" class="headerlink" title="功能性测试"></a>功能性测试</h2><h3 id="边界值测试"><a href="#边界值测试" class="headerlink" title="边界值测试"></a>边界值测试</h3><h4 id="边界值分析"><a href="#边界值分析" class="headerlink" title="边界值分析"></a>边界值分析</h4><p>关注输入域，不适合强类型语言。</p>
 <p>基于“单缺陷”假设，即：失效（failure）极少是由两个（或多个）缺陷的同时发生引起的。</p>
 <p>具体方法：对于多个输入，假设一个变量是导致failure的，其他变量取固定值（5种情况：最大值max、最小值min、中间值mid、比最大值小一点max-、比最小值大一点min+）。</p>
-<p>假设一个程序有n个输入，则测试用例数：$5 \times n - (n-1) = 4n + 1$，其中$n-1$为重复用例数。</p>
+<p>假设一个程序有n个输入，则测试用例数：$5 \times n - (n-1) &#x3D; 4n + 1$，其中$n-1$为重复用例数。</p>
 <h4 id="健壮性测试"><a href="#健壮性测试" class="headerlink" title="健壮性测试"></a>健壮性测试</h4><p>健壮性测试是边界值分析的一种简单拓展，除了变量的五个边界值分析取值，还要增加略超过最大值（max+）和略小于最小值（min-）的取值，即每个变量取7个值。</p>
 <p>健壮性测试的主要价值在于强制注意异常处理。</p>
 <h4 id="最坏情况测试"><a href="#最坏情况测试" class="headerlink" title="最坏情况测试"></a>最坏情况测试</h4><p>多缺陷假设，即假设失效（failure）是由多个变量引起的。取可能值的笛卡尔乘积，n变量最坏情况测试下的测试用例数为$5^{n}$，在健壮最坏情况测试下的测试用例数为$7^{n}$。</p>
@@ -615,7 +617,7 @@
 <li>强健壮等价类测试：多缺陷假设，要考虑异常区域</li>
 </ul>
 <h4 id="强等价类与弱等价类"><a href="#强等价类与弱等价类" class="headerlink" title="强等价类与弱等价类"></a>强等价类与弱等价类</h4><p>弱等价类：每个等价类都覆盖一次即可，测试用例数与输入变量的最多的划分一致，如第一个输入划分了3个等价类，第二个输入划分了4个等价类，则测试用例数为4个。</p>
-<p>强等价类：每一个输入的等价类都要进行组合，如第一个输入划分了3个等价类，第二个输入划分了4个等价类，则测试用例数为$3 \times 4 = 12$个。</p>
+<p>强等价类：每一个输入的等价类都要进行组合，如第一个输入划分了3个等价类，第二个输入划分了4个等价类，则测试用例数为$3 \times 4 &#x3D; 12$个。</p>
 <h3 id="基于决策表的测试"><a href="#基于决策表的测试" class="headerlink" title="基于决策表的测试"></a>基于决策表的测试</h3><p>在所有功能性测试的方法中，基于决策表的测试方法是最严格的，因为决策表具有逻辑严格性。</p>
 <p>决策表分为条件桩，条件条目，行动桩，行动条目四部分。</p>
 <p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/%E4%B8%89%E8%A7%92%E5%BD%A2%E9%97%AE%E9%A2%98%E7%9A%84%E5%86%B3%E7%AD%96%E8%A1%A8.png" alt="三角形问题的决策表"></p>
@@ -638,28 +640,28 @@
 <li>语句覆盖：选择足够多的测试数据，使被测程序中<strong>每个语句至少执行一次</strong></li>
 <li>判定覆盖：不仅每个语句必须至少执行一次，而且每个判定的每种可能的结果都应该至少执行一次，也就是<strong>每个判定的每个分支都至少执行一次</strong></li>
 <li>条件覆盖：不仅每个语句至少执行一次，而且使<strong>判定表达式</strong>中的<strong>每个条件都取到各种可能的结果</strong></li>
-<li>判定/条件覆盖：选取足够多的测试数据，使得判定表达式中的每个条件都取到各种可能的值，而且每个判定表达式也都取到各种可能的结果</li>
+<li>判定&#x2F;条件覆盖：选取足够多的测试数据，使得判定表达式中的每个条件都取到各种可能的值，而且每个判定表达式也都取到各种可能的结果</li>
 <li>条件组合覆盖：条件组合覆盖是更强的逻辑覆盖标准，它要求选取足够多的测试数据，使得每个判定表达式中条件的各种可能组合都至少出现一次，但不一定每条路径都执行到</li>
 <li>路径覆盖：使程序的每条可能路径都至少执行一次（如果程序图中有环，则要求每个环至少经过一次）。路径覆盖是覆盖率最高的一种覆盖技术。</li>
 </ul>
 <p>条件覆盖通常比判定覆盖强，因为它使判定达式中每个条件都取到了两个不同的结果，判定覆盖却只关心整个判定表达式的值。但是，也可能有相反的情况。</p>
 <p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/%E6%B5%8B%E8%AF%95%E8%A6%86%E7%9B%96%E6%8C%87%E6%A0%87.png" alt="测试覆盖指标"></p>
-<h4 id="基路径测试"><a href="#基路径测试" class="headerlink" title="基路径测试"></a>基路径测试</h4><h2 id="集成测试"><a href="#集成测试" class="headerlink" title="集成测试"></a>集成测试</h2><h3 id="基于分解的集成"><a href="#基于分解的集成" class="headerlink" title="基于分解的集成"></a>基于分解的集成</h3><p>给定分解树所需集成测试会话数： 会话 = 节点 - 叶子节点 + 边。</p>
+<h4 id="基路径测试"><a href="#基路径测试" class="headerlink" title="基路径测试"></a>基路径测试</h4><h2 id="集成测试"><a href="#集成测试" class="headerlink" title="集成测试"></a>集成测试</h2><h3 id="基于分解的集成"><a href="#基于分解的集成" class="headerlink" title="基于分解的集成"></a>基于分解的集成</h3><p>给定分解树所需集成测试会话数： 会话 &#x3D; 节点 - 叶子节点 + 边。</p>
 <h4 id="大棒集成（Big-Bang）"><a href="#大棒集成（Big-Bang）" class="headerlink" title="大棒集成（Big Bang）"></a>大棒集成（Big Bang）</h4><p>所有组件一次组装和测试。缺点是当发现失效时，没有多少线索能够用来帮助确定缺陷的位置。</p>
 <h4 id="自顶向下集成"><a href="#自顶向下集成" class="headerlink" title="自顶向下集成"></a>自顶向下集成</h4><p>自顶向下集成从主程序（树根）开始。所有被主程序调用的下层单元都作为“桩”出现，桩就是模拟被调用单元的一次性代码。</p>
 <p>提供了主程序的所有桩后，可开始测试主程序，就像它是一个独立单元一样。（这是第一个会话，主程序+桩）。在确信主程序逻辑正确之后，将逐渐采用实际代码取代这些桩。</p>
 <p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B.png" alt="自顶向下"><br>在最上层，要开发第一层分解中四个组件的桩，共有四个集成过程，在每个过程中，每次用一个已完成的子程序去替代一个桩，直到完整测试整个系统。自顶向下集成采用功能分解树的广度优先遍历策略。</p>
-<p>优点：测试用例可以根据系统的功能（功能需求）来定义。结构技术也可用于顶层的单元。<br>缺点：编写桩可能很困难，尤其是在参数传递很复杂的情况下，桩必须允许测试所有可能的条件。桩模块数 = 节点数 - 1。</p>
+<p>优点：测试用例可以根据系统的功能（功能需求）来定义。结构技术也可用于顶层的单元。<br>缺点：编写桩可能很困难，尤其是在参数传递很复杂的情况下，桩必须允许测试所有可能的条件。桩模块数 &#x3D; 节点数 - 1。</p>
 <h4 id="自底向上集成"><a href="#自底向上集成" class="headerlink" title="自底向上集成"></a>自底向上集成</h4><p>自底向上的集成策略首先侧重于测试最低级别的单元（即分解树叶的单元）。从分解树的叶开始，并用特别编写的驱动器测试。大多数系统在接近叶时都有相当高的扇出数，因此在自底向上集成顺序中，不需要同样数量的驱动器，不过代价是驱动器模块都比较复杂。</p>
 <p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B.png" alt="自底向上"></p>
-<p>驱动器数 = 节点数 - 叶子节点数。</p>
+<p>驱动器数 &#x3D; 节点数 - 叶子节点数。</p>
 <h4 id="三明治集成"><a href="#三明治集成" class="headerlink" title="三明治集成"></a>三明治集成</h4><p>三明治集成是自顶向下和自底向上集成的组合。如果通过分解树考虑三明治集成，则只需要在子树上真正进行大爆炸集成。桩和驱动器的开发工作都比较小，不过代价是作为大爆炸集成的后果，在一定程度上增加了定位缺陷的难度。</p>
 <p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/%E4%B8%89%E6%98%8E%E6%B2%BB.png" alt="三明治"></p>
 <h3 id="基于调用图的集成"><a href="#基于调用图的集成" class="headerlink" title="基于调用图的集成"></a>基于调用图的集成</h3><p>基本思想是用调用图代替分解树。</p>
 <p>调用图是一个定向标记的图，其中节点表示功能单元，边表示调用事件或特定的资源请求。</p>
 <h4 id="成对集成"><a href="#成对集成" class="headerlink" title="成对集成"></a>成对集成</h4><p>对调用图的每条边有一个集成测试会话。</p>
 <h4 id="相邻集成"><a href="#相邻集成" class="headerlink" title="相邻集成"></a>相邻集成</h4><p>图中节点的邻居是边从给定节点引出的节点集合。在有向图中，节点邻居包括所有直接前驱结点和所有直接后继节点。</p>
-<p>内部节点 = 节点 - （源节点 + 汇节点）<br>邻居 = 内部节点 + 源节点<br>综合上面的公式得到：邻居 = 节点 - 汇节点</p>
+<p>内部节点 &#x3D; 节点 - （源节点 + 汇节点）<br>邻居 &#x3D; 内部节点 + 源节点<br>综合上面的公式得到：邻居 &#x3D; 节点 - 汇节点</p>
 <ul>
 <li>汇节点：出度为0的节点</li>
 <li>源节点：入度为0的节点</li>
@@ -734,7 +736,7 @@
 <li>估计测试成本和工作量</li>
 <li>定义角色和确定资源 </li>
 <li>确定进度, 创建时间表 </li>
-<li>生成测试计划 </li>
+<li>生成测试计划</li>
 </ul>
 <h3 id="质量度量指标"><a href="#质量度量指标" class="headerlink" title="质量度量指标"></a>质量度量指标</h3><p>缺陷密度-&gt;缺陷个数：优先级（严重性）<br>缺陷趋势-&gt;缺陷个数：时间<br>缺陷龄期-&gt;缺陷存在周期</p>
 <h2 id="CMMI"><a href="#CMMI" class="headerlink" title="CMMI"></a>CMMI</h2><h3 id="CMMI的五个级别"><a href="#CMMI的五个级别" class="headerlink" title="CMMI的五个级别"></a>CMMI的五个级别</h3><p><img src="https://github-1259166513.cos.ap-beijing.myqcloud.com/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/CMMI.jpg" alt="CMMI"></p>
@@ -1145,7 +1147,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1789,7 +1791,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

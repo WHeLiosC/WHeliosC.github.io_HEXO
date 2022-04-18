@@ -543,6 +543,8 @@
         <p></p>
 
 <span id="more"></span>
+
+
 <h4 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h4><ul>
 <li><p>官网下载<code>https://www.anaconda.com/distribution/</code></p>
 </li>
@@ -553,8 +555,7 @@
 <li><p>测试安装是否成功<code>conda info</code><br>安装完成后,这个Anaconda默认的python，在系统之外虚拟出来一个使用python的环境，叫做base。在这个环境下面安装的库，不会与系统自带的python以及库冲突。</p>
 </li>
 <li><p>添加镜像源：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清华源（清华镜像好像不支持conda包了，可以先使用默认源）</span></span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/</span><br><span class="line">conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line">conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 中科大</span></span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复默认源</span></span><br><span class="line">conda config --remove-key channels</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清华源（清华镜像好像不支持conda包了，可以先使用默认源）</span></span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/</span><br><span class="line">conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line">conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 中科大</span></span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复默认源</span></span><br><span class="line">conda config --remove-key channels</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="安装Tensorflow"><a href="#安装Tensorflow" class="headerlink" title="安装Tensorflow"></a>安装Tensorflow</h4><ul>
 <li>首先，创建一个新的环境<code>conda create -n tf python=3.6</code>（tf是环境名，自定义；python的版本自己指定）</li>
@@ -970,7 +971,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1614,7 +1615,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

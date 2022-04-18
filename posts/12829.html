@@ -539,11 +539,12 @@
       
 
       
-        <p><p></p><br><span id="more"></span></p>
+        <p></p>
+<span id="more"></span>
+
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ol>
-<li>关键字<code>extends</code>表示继承，继承是一个<code>is-a</code>关系，java中只有公有继承</li>
-</ol>
-<ol>
+<li><p>关键字<code>extends</code>表示继承，继承是一个<code>is-a</code>关系，java中只有公有继承</p>
+</li>
 <li><p>覆盖方法（override）<br>将父类中的方法在子类中重新定义，以Employee类和Manager类为例，Manager继承Employee类，Employee有方法getSalary(); Manager类需要重写这个方法，加上经理所特有的奖金。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">double</span> salary;</span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> salary;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">double</span> bonus;</span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">//return salary + bonus;  // 错误，不能访问超类的私有域</span></span><br><span class="line">		<span class="comment">//return getSalary() + bonus;  // 错误，调用自身直至崩溃</span></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">super</span>.getSalary() + bonus;  <span class="comment">// 正确</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//super关键字表示调用父类的方法</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -552,10 +553,8 @@
 </li>
 <li><p>java不支持多继承，即每一个类都只能继承最多一个类。但每一个类可以实现多个接口，这也是引入接口的一个考虑。</p>
 </li>
-</ol>
-<ol>
-<li>多态<br>java实现多态的两种方式：重载(overloading)和覆盖(override)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* override */</span></span><br><span class="line">Manager boss = <span class="keyword">new</span> Manager(<span class="string">&quot;lihui&quot;</span>, <span class="number">201822</span>, <span class="number">50000</span>);</span><br><span class="line">boss.setBonus(<span class="number">20000</span>);</span><br><span class="line"></span><br><span class="line">Empolyee[] staff = <span class="keyword">new</span> Empolyee[<span class="number">2</span>];</span><br><span class="line">staff[<span class="number">0</span>] = boss;</span><br><span class="line">staff[<span class="number">1</span>] = <span class="keyword">new</span> Employee(<span class="string">&quot;chengle&quot;</span>, <span class="number">201833</span>, <span class="number">60000</span>);</span><br><span class="line"></span><br><span class="line">staff[<span class="number">0</span>].setBonus(<span class="number">20000</span>);  <span class="comment">// 错误，staff声明为Employee类型，Employee没有setBonus方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(staff[<span class="number">0</span>] <span class="keyword">instanceof</span> Manager)</span><br><span class="line">	((Manager)staff[<span class="number">0</span>]).setBonus(<span class="number">20000</span>);  <span class="comment">// 正确，将staff[0]强制转换为Manager类型</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">for</span>(Employee aEmpolyee: staff)</span><br><span class="line">	System.out.println(aEmpolyee.getName() + <span class="string">&quot; &quot;</span> + aEmpolyee.getSalary());</span><br><span class="line"><span class="comment">// aEmpolyee定义为Empolyee类型，但在执行的时候，aEmpolyee引用的Empolyee和Manager调用不同的getSalary函数</span></span><br><span class="line"><span class="comment">// 一个对象变量可以指示多种实际类型的现象称为多态。</span></span><br><span class="line"><span class="comment">// 在运行的时候自动选择调用哪个方法称为动态绑定。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* overloading */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span></span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">(String name)</span></span>&#123;...&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getSalary</span><span class="params">(String name)</span></span>&#123;...&#125;  <span class="comment">//错误，已经存在getSalary(String name)方法,即签名相同，说明重载与返回值无关</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">(String name, String id)</span></span>&#123;...&#125;  <span class="comment">//正确的重载</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>多态<br>java实现多态的两种方式：重载(overloading)和覆盖(override)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* override */</span></span><br><span class="line">Manager boss = <span class="keyword">new</span> Manager(<span class="string">&quot;lihui&quot;</span>, <span class="number">201822</span>, <span class="number">50000</span>);</span><br><span class="line">boss.setBonus(<span class="number">20000</span>);</span><br><span class="line"></span><br><span class="line">Empolyee[] staff = <span class="keyword">new</span> Empolyee[<span class="number">2</span>];</span><br><span class="line">staff[<span class="number">0</span>] = boss;</span><br><span class="line">staff[<span class="number">1</span>] = <span class="keyword">new</span> Employee(<span class="string">&quot;chengle&quot;</span>, <span class="number">201833</span>, <span class="number">60000</span>);</span><br><span class="line"></span><br><span class="line">staff[<span class="number">0</span>].setBonus(<span class="number">20000</span>);  <span class="comment">// 错误，staff声明为Employee类型，Employee没有setBonus方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(staff[<span class="number">0</span>] <span class="keyword">instanceof</span> Manager)</span><br><span class="line">	((Manager)staff[<span class="number">0</span>]).setBonus(<span class="number">20000</span>);  <span class="comment">// 正确，将staff[0]强制转换为Manager类型</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">for</span>(Employee aEmpolyee: staff)</span><br><span class="line">	System.out.println(aEmpolyee.getName() + <span class="string">&quot; &quot;</span> + aEmpolyee.getSalary());</span><br><span class="line"><span class="comment">// aEmpolyee定义为Empolyee类型，但在执行的时候，aEmpolyee引用的Empolyee和Manager调用不同的getSalary函数</span></span><br><span class="line"><span class="comment">// 一个对象变量可以指示多种实际类型的现象称为多态。</span></span><br><span class="line"><span class="comment">// 在运行的时候自动选择调用哪个方法称为动态绑定。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* overloading */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span></span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">(String name)</span></span>&#123;...&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getSalary</span><span class="params">(String name)</span></span>&#123;...&#125;  <span class="comment">//错误，已经存在getSalary(String name)方法,即签名相同，说明重载与返回值无关</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">(String name, String id)</span></span>&#123;...&#125;  <span class="comment">//正确的重载</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <blockquote>
 <p>方法的签名：方法的名字和参数列表称为方法的签名，返回类型不是签名的一部分。</p>
@@ -572,7 +571,7 @@
 <li>重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</li>
 </ul>
 <p>overloading的规则：<br>方法名相同，参数列表必须不同，返回值可同可不同，修饰符可同可不同。</p>
-<ol>
+<ol start="6">
 <li><p>方法调用的过程<br>1）假设调用x.f(param), 编译器一一列举x所属类中的名为f的方法以及其父类中访问属性为public的名为f的方法（超类的私有方法不可访问）。<br>2）查看调用方法提供的参数类型。如果第一步中列举出的方法中有一个方法的参数列表与提供的参数类型完全匹配，就选择这个方法。如果没有找到与参数类型匹配的方法或者经过类型转换后有多个方法与之匹配，就会产生错误。<br>3）如果是static、private、final方法或者构造器，编译器可以准确的知道应该调用哪个方法，静态绑定。<br>4）动态绑定时，先查看子类中是否定义了这个方法，是则调用，否则调用父类的这个方法。</p>
 </li>
 <li><p>final修饰符<br>定义类的时候加上final修饰符表示类不允许被继承，其中的方法自动的成为final，但是域不会变成final。一个方法或者一个域也可以加上final表示不可被覆盖或者不可改变域的值。</p>
@@ -580,8 +579,7 @@
 <li><p>抽象类<br>关键字<code>abstract</code>表示抽象类，包含有一个或多个抽象函数的类需要声明为抽象类（为了代码清晰），抽象类里的抽象方法不需要实现，在子类中对其进行实现。</p>
 </li>
 </ol>
-<p><br/></p>
-
+<br/>
       
     </div>
 
@@ -1028,7 +1026,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1648,7 +1646,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -543,6 +543,7 @@
         <p></p>
 
 <span id="more"></span>
+
 <h2 id="句柄"><a href="#句柄" class="headerlink" title="句柄"></a>句柄</h2><p>右句型$\gamma$的句柄是一个产生式的右部$\beta$，并且该句柄$\beta$通过产生式$A\rightarrow\beta$归约后，得到的是最右推导中的前一个句型。<br>右句型：所有在最右推导中出现的句型都是右句型。<br>🌰$S \Rightarrow _ { r m }$ <strong>aABe</strong> $\Rightarrow _ { r m }$ aA<strong>d</strong>e $\Rightarrow _ { r m }$ a<strong>Abc</strong>de $\Rightarrow _ { r m }$ a<strong>b</strong>bcde<br>文法为<br>$S \rightarrow$ aABe<br>${ A \rightarrow A b c | b }$<br>$B \rightarrow d$<br>abbcde中的第一个b通过$A\rightarrow b$归约后得到aAbcde，是最右推导的前一个句型，所以第一个b是句柄。而第二个b通过$A\rightarrow b$归约后得到aAAcde，不是最右推导的前一个句型，所以第二个b不是句柄。（栗子中加粗部分为句柄）</p>
 <ul>
 <li>句柄的右边仅含终结符。</li>
@@ -550,7 +551,7 @@
 </ul>
 <h2 id="两个冲突"><a href="#两个冲突" class="headerlink" title="两个冲突"></a>两个冲突</h2><p>移进-归约冲突：既可以移进又可以归约时，无法决定。<br>归约-归约冲突：当不止一个产生式可以归约，无法决定对哪个产生式进行归约。</p>
 <h2 id="活前缀"><a href="#活前缀" class="headerlink" title="活前缀"></a>活前缀</h2><p>活前缀：右句型的前缀，该前缀不超过最右句型句柄的右端。<br>在移进-归约分析中，出现在栈中的串都是活前缀。<br>🌰$\mathcal { S } \Rightarrow * _ { r m } \gamma A w \Rightarrow _ { r m } \gamma \beta w$<br>$\gamma \beta$的任意前缀（包括$\varepsilon$和$\gamma \beta$本身）都是活前缀，这里的$\beta$是句柄。</p>
-<h2 id="LR分析表"><a href="#LR分析表" class="headerlink" title="LR分析表"></a>LR分析表</h2><p>L表示从左到右扫描输入串，R表示最右推导。分为LR(0)/SLR(1)、LR(1)、LALR三种。</p>
+<h2 id="LR分析表"><a href="#LR分析表" class="headerlink" title="LR分析表"></a>LR分析表</h2><p>L表示从左到右扫描输入串，R表示最右推导。分为LR(0)&#x2F;SLR(1)、LR(1)、LALR三种。</p>
 <h3 id="构造SLR分析表"><a href="#构造SLR分析表" class="headerlink" title="构造SLR分析表"></a>构造SLR分析表</h3><ul>
 <li>拓广文法，即添加产生式$S ^ { \prime } \rightarrow S$</li>
 <li>构建识别活前缀的DFA</li>
@@ -562,21 +563,21 @@
 <li>如果$A \rightarrow \alpha \cdot B \beta$属于closure(I)，并且$B \rightarrow \gamma$是产生式，那么如果$B \rightarrow \cdot \gamma$还不在closure(I)中，则把它加入closure(I)中。</li>
 <li>重复上面两个步骤，直至closure(I)不再变化。</li>
 </ul>
-<p><strong>LR(0)状态转换函数goto(I, X)</strong><br>I状态集中所有形如$[ A \rightarrow \alpha \cdot X \beta ]$的产生式对应的产生式$[ A \rightarrow \alpha X \cdot \beta ]$的<strong>LR(0)闭包</strong>。X为终结符或非终结符。<br>🌰$S \rightarrow$ aABe ；${ A \rightarrow A b c | b }$ ；$B \rightarrow d$<br>对于$I_0: S’ \rightarrow S$；$S \rightarrow \cdot aABe$<br>$I_1=goto(I_0, a):$ $S \rightarrow a \cdot ABe$；$A \rightarrow \cdot Abc$；$A \rightarrow \cdot b$</p>
+<p><strong>LR(0)状态转换函数goto(I, X)</strong><br>I状态集中所有形如$[ A \rightarrow \alpha \cdot X \beta ]$的产生式对应的产生式$[ A \rightarrow \alpha X \cdot \beta ]$的<strong>LR(0)闭包</strong>。X为终结符或非终结符。<br>🌰$S \rightarrow$ aABe ；${ A \rightarrow A b c | b }$ ；$B \rightarrow d$<br>对于$I_0: S’ \rightarrow S$；$S \rightarrow \cdot aABe$<br>$I_1&#x3D;goto(I_0, a):$ $S \rightarrow a \cdot ABe$；$A \rightarrow \cdot Abc$；$A \rightarrow \cdot b$</p>
 <p><strong>识别文法G活前缀的DFA通过下面的方式构造：</strong></p>
 <ul>
-<li>令$C = \{closure(S’ \rightarrow S)\}$</li>
+<li>令$C &#x3D; {closure(S’ \rightarrow S)}$</li>
 <li>对$C$中的每一个项目集应用转换函数goto(I, X)得到新的项目集$I_n$，并把$I_n$加入到$C$中。</li>
 <li>重复第二步，直到$C$不再增大为止。</li>
 </ul>
 <h4 id="根据DFA构建SLR分析表"><a href="#根据DFA构建SLR分析表" class="headerlink" title="根据DFA构建SLR分析表"></a>根据DFA构建SLR分析表</h4><p><strong>状态i从$I_i$构造，它的action函数如下确定：</strong></p>
 <ul>
-<li>如果$[ A \rightarrow \alpha \cdot a \beta ]$在$I_i$中，并且goto($I_i$,a )=$I_j$，那么置action[i, a]为$s_j$。</li>
+<li>如果$[ A \rightarrow \alpha \cdot a \beta ]$在$I_i$中，并且goto($I_i$,a )&#x3D;$I_j$，那么置action[i, a]为$s_j$。</li>
 <li>如果$[ A \rightarrow \alpha \cdot ]$在$I_i$中，那么对FOLLOW(A)中的所有终结符a，置action[i, a]为$r_j$，$j$是产生式$A \rightarrow \alpha \cdot$的编号。</li>
 <li>如果$\left[ \mathcal { S } ^ { \prime } \rightarrow \mathcal { S } \cdot \right]$在$I_i$中，那么置action[i,　💲]为接受acc。</li>
 </ul>
 <p>如果出现动作冲突，那么该文法就不是SLR(1)的。 </p>
-<p><strong>构造状态i的goto函数：</strong><br>对所有的非终结符A，如果goto($I_i$,A)= $I_j$, 那么goto[i, A]=$j$。</p>
+<p><strong>构造状态i的goto函数：</strong><br>对所有的非终结符A，如果goto($I_i$,A)&#x3D; $I_j$, 那么goto[i, A]&#x3D;$j$。</p>
 <p><strong>不能由上面两步定义的条目都为error。</strong></p>
 <h4 id="SLR-1-文法的问题"><a href="#SLR-1-文法的问题" class="headerlink" title="SLR(1)文法的问题"></a>SLR(1)文法的问题</h4><p>每个SLR(1)文法都不是二义的，但是，有许多非二义的文法不是SLR(1)，文法描述能力弱。SLR(1)是在构造完DFA的LR(0)项目集之后才应用预测符号的，即对需要归约的产生式，当其遇到产生式左部非终结符的FOLLOW集中的终结符时才进行归约，而在LR(0)的构造中没有考虑预测。</p>
 <h3 id="构造规范的LR分析表"><a href="#构造规范的LR分析表" class="headerlink" title="构造规范的LR分析表"></a>构造规范的LR分析表</h3><p>基本步骤同SLR一样，只在第二步和第三步时有所不同，只说不同的地方。</p>
@@ -590,7 +591,7 @@
 <p><strong>LR(1)状态转换函数goto(I, X)</strong><br>I状态集中所有形如$[ A \rightarrow \alpha \cdot X \beta,b ]$的产生式对应的产生式$[ A \rightarrow \alpha X \cdot \beta,b ]$的<strong>LR(1)闭包</strong>。X为终结符或非终结符。注意这里的搜索符集b是直接由前面对应的项目抄过来的。</p>
 <p><strong>识别文法G活前缀的DFA通过下面的方式构造：</strong></p>
 <ul>
-<li>令$C = \{closure([S’ \rightarrow S, doller])\}$注：这里的doller指💲，latex解析不正确这样代替一下…</li>
+<li>令$C &#x3D; {closure([S’ \rightarrow S, doller])}$注：这里的doller指💲，latex解析不正确这样代替一下…</li>
 <li>对$C$中的每一个项目集应用转换函数goto(I, X)得到新的项目集$I_n$，并把$I_n$加入到$C$中。</li>
 <li>重复第二步，直到$C$不再增大为止。</li>
 </ul>
@@ -598,12 +599,11 @@
 <h4 id="LR-1-文法的问题"><a href="#LR-1-文法的问题" class="headerlink" title="LR(1)文法的问题"></a>LR(1)文法的问题</h4><p>LR(1)文法描述能力较强，但是由于状态数目多，分析表较大。</p>
 <h3 id="构造LALR分析表"><a href="#构造LALR分析表" class="headerlink" title="构造LALR分析表"></a>构造LALR分析表</h3><p>LALR是在SLR(1)和LR(1)之间进行了文法描述能力与分析表紧凑程度之间做的折中。</p>
 <h4 id="LALR的做法"><a href="#LALR的做法" class="headerlink" title="LALR的做法"></a>LALR的做法</h4><p>合并识别LR(1)文法的活前缀的DFA中的同心项目集。</p>
-<h4 id="同心项目集"><a href="#同心项目集" class="headerlink" title="同心项目集"></a>同心项目集</h4><p>略去搜索符后相同的项目集。<br>🌰$B \rightarrow \cdot b B$ 和 $B \rightarrow \cdot b B ,b / a$</p>
-<h4 id="合并同心集引起的冲突"><a href="#合并同心集引起的冲突" class="headerlink" title="合并同心集引起的冲突"></a>合并同心集引起的冲突</h4><p><strong>同心集的合并不会引起新的移进-归约冲突。</strong><br>🌰如果同心集中有移进-归约冲突$\left[ A \rightarrow \alpha \cdot, a / b \right][ B \rightarrow \beta \cdot a \gamma , c / d ]$，当面对输入符号a时不知道该移进还是归约。合并前的项目集应该有$\left[ A \rightarrow \alpha \cdot, x \right][ B \rightarrow \beta \cdot a \gamma , y ]$，肯定有个x为a，所以一定存在移进-归约冲突，说明合并之前就存在移进-归约冲突了。</p>
-<p><strong>同心集的合并有可能产生新的归约-归约冲突。</strong><br>🌰合并前项目集$[A \rightarrow c \cdot, d][B \rightarrow c \cdot, e]$和$[A \rightarrow c \cdot, e][B \rightarrow c \cdot, d]$，合并后为<br>$[A \rightarrow c \cdot, e/d][B \rightarrow c \cdot, d/e]$，此时就产生了新的归约-归约冲突。</p>
-<h2 id="安利"><a href="#安利" class="headerlink" title="安利"></a>安利</h2><p>求LR分析表的工具：<br><a target="_blank" rel="noopener" href="https://cyberzhg.github.io/toolbox/lr0">LR(0)/SLR(1)</a>　　<a target="_blank" rel="noopener" href="https://cyberzhg.github.io/toolbox/lr1">SLR(1)</a>　　<a target="_blank" rel="noopener" href="https://cyberzhg.github.io/toolbox/lalr">LALR</a></p>
-<p><br/></p>
-
+<h4 id="同心项目集"><a href="#同心项目集" class="headerlink" title="同心项目集"></a>同心项目集</h4><p>略去搜索符后相同的项目集。<br>🌰$B \rightarrow \cdot b B$ 和 $B \rightarrow \cdot b B ,b &#x2F; a$</p>
+<h4 id="合并同心集引起的冲突"><a href="#合并同心集引起的冲突" class="headerlink" title="合并同心集引起的冲突"></a>合并同心集引起的冲突</h4><p><strong>同心集的合并不会引起新的移进-归约冲突。</strong><br>🌰如果同心集中有移进-归约冲突$\left[ A \rightarrow \alpha \cdot, a &#x2F; b \right][ B \rightarrow \beta \cdot a \gamma , c &#x2F; d ]$，当面对输入符号a时不知道该移进还是归约。合并前的项目集应该有$\left[ A \rightarrow \alpha \cdot, x \right][ B \rightarrow \beta \cdot a \gamma , y ]$，肯定有个x为a，所以一定存在移进-归约冲突，说明合并之前就存在移进-归约冲突了。</p>
+<p><strong>同心集的合并有可能产生新的归约-归约冲突。</strong><br>🌰合并前项目集$[A \rightarrow c \cdot, d][B \rightarrow c \cdot, e]$和$[A \rightarrow c \cdot, e][B \rightarrow c \cdot, d]$，合并后为<br>$[A \rightarrow c \cdot, e&#x2F;d][B \rightarrow c \cdot, d&#x2F;e]$，此时就产生了新的归约-归约冲突。</p>
+<h2 id="安利"><a href="#安利" class="headerlink" title="安利"></a>安利</h2><p>求LR分析表的工具：<br><a target="_blank" rel="noopener" href="https://cyberzhg.github.io/toolbox/lr0">LR(0)&#x2F;SLR(1)</a>　　<a target="_blank" rel="noopener" href="https://cyberzhg.github.io/toolbox/lr1">SLR(1)</a>　　<a target="_blank" rel="noopener" href="https://cyberzhg.github.io/toolbox/lalr">LALR</a></p>
+<br/>
       
     </div>
 
@@ -1052,7 +1052,7 @@ show_date_time();
       本站共
     </span>
     
-    <span title="站点总字数">182k
+    <span title="站点总字数">185k
       字 
     </span>
   
@@ -1696,7 +1696,7 @@ show_date_time();
   </script>
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  <script type="text/javascript" src="/js/src/clicklove.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","hOffset":0,"vOffset":-20,"width":140,"height":280},"mobile":{"show":false},"log":false});</script></body>
 </html>

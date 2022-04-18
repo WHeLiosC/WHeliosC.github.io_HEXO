@@ -2,8 +2,10 @@
 <search>
   <entry>
     <title>稀疏矩阵</title>
-    <url>//parse-matrix</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><p></p><br><span id="more"></span><p></p>
+    <url>//parse-matrix.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
+<span id="more"></span>
+
 <h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/coo.gif" alt="coo"></p>
 <p>最简单一种格式，每一个元素需要用一个三元组来表示，分别是（行号，列号，数值），这种方式简单，但是记录单信息多（行列），每个三元组自己可以定位，因此空间不是最优。</p>
 <p>优点：</p>

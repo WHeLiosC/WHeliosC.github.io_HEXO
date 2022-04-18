@@ -6,7 +6,7 @@
   <link href="https://wheliosc.github.io/atom.xml" rel="self"/>
   
   <link href="https://wheliosc.github.io/"/>
-  <updated>2022-04-18T04:01:41.259Z</updated>
+  <updated>2022-04-18T04:05:56.319Z</updated>
   <id>https://wheliosc.github.io/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>稀疏矩阵</title>
-    <link href="https://wheliosc.github.io/parse-matrix"/>
-    <id>https://wheliosc.github.io/parse-matrix</id>
+    <link href="https://wheliosc.github.io/parse-matrix.html"/>
+    <id>https://wheliosc.github.io/parse-matrix.html</id>
     <published>2021-09-03T09:31:35.562Z</published>
-    <updated>2022-04-18T04:01:41.259Z</updated>
+    <updated>2022-04-18T04:05:56.319Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><p></p><br><span id="more"></span><p></p><h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/coo.gif" alt="coo"></p><p>最简单一种格式，每一个元素需要用一个三元组来表示，分别是（行号，列号，数值），这种方式简单，但是记录单信息多（行列），每个三元组自己可以定位，因此空间不是最优。</p><p>优点：</p><ul><li><p>容易构造,比较容易转换成其他的稀疏矩阵存储格式（CSR等）</p></li><li><p>写程序可以将libsvm格式的数据转换成COO比较容易，应该是充当libsvm与其他稀疏矩阵存储格式转换的媒介。</p></li><li><p>支持相同的(row,col)坐标上存放多个值。</p></li></ul><p>缺点：</p><ul><li><p>构建完成后不允许再插入或删除元素。不能进行常规矩阵运算。</p></li><li><p>不能直接进行科学计算和切片操作。</p></li></ul><h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="/csr.gif" alt="csr"></p><p>比较标准，数值，列号，以及行偏移。 (相当于每行的首个元素在value中的index)<br>row offset的数值个数是row + 1, 表示某行第一个元素在values中的位置，如5是第三行第一个元素，它在values中的index是4。</p><p>优点：</p><ul><li><p>高效地按行切片。</p></li><li><p>快速地计算矩阵与向量的内积。</p></li><li><p>高效地进行矩阵的算术运行，CSR + CSR、CSR * CSR等。</p></li></ul><p>缺点：</p><ul><li><p>按列切片很慢（考虑CSC）</p></li><li><p>一旦构建完成后，再往里面添加或删除元素成本很高</p></li><li><p>CSR格式在存储稀疏矩阵时非零元素平均使用的字节数(Bytes per Nonzero Entry)最为稳定（float类型约为8.5，double类型约为12.5）。CSR格式常用于读入数据后进行稀疏矩阵计算。</p></li></ul><h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="/csc.gif" alt="csc"></p><p>CSC是和CSR相对应的一种方式，即按列压缩的意思。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p><span id="more"></span><h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/coo.gif" alt="coo"></p><p>最简单一种格式，每一个元素需要用一个三元组来表示，分别是（行号，列号，数值），这种方式简单，但是记录单信息多（行列），每个三元组自己可以定位，因此空间不是最优。</p><p>优点：</p><ul><li><p>容易构造,比较容易转换成其他的稀疏矩阵存储格式（CSR等）</p></li><li><p>写程序可以将libsvm格式的数据转换成COO比较容易，应该是充当libsvm与其他稀疏矩阵存储格式转换的媒介。</p></li><li><p>支持相同的(row,col)坐标上存放多个值。</p></li></ul><p>缺点：</p><ul><li><p>构建完成后不允许再插入或删除元素。不能进行常规矩阵运算。</p></li><li><p>不能直接进行科学计算和切片操作。</p></li></ul><h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="/csr.gif" alt="csr"></p><p>比较标准，数值，列号，以及行偏移。 (相当于每行的首个元素在value中的index)<br>row offset的数值个数是row + 1, 表示某行第一个元素在values中的位置，如5是第三行第一个元素，它在values中的index是4。</p><p>优点：</p><ul><li><p>高效地按行切片。</p></li><li><p>快速地计算矩阵与向量的内积。</p></li><li><p>高效地进行矩阵的算术运行，CSR + CSR、CSR * CSR等。</p></li></ul><p>缺点：</p><ul><li><p>按列切片很慢（考虑CSC）</p></li><li><p>一旦构建完成后，再往里面添加或删除元素成本很高</p></li><li><p>CSR格式在存储稀疏矩阵时非零元素平均使用的字节数(Bytes per Nonzero Entry)最为稳定（float类型约为8.5，double类型约为12.5）。CSR格式常用于读入数据后进行稀疏矩阵计算。</p></li></ul><h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="/csc.gif" alt="csc"></p><p>CSC是和CSR相对应的一种方式，即按列压缩的意思。</p>]]></content>
     
     
     <summary type="html">三种稀疏矩阵，包括COO、CSC和CSR</summary>

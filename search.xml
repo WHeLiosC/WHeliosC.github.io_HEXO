@@ -1127,7 +1127,7 @@
 <li>中间层数据流图。对其上层父图的细化，其每一加工可能继续细化，形成子图。</li>
 <li>底层数据流图。加工不需再做分解（基本加工）的数据流图。</li>
 </ul>
-<p><img src="/posts/55565/" alt="DFD"></p>
+<p><img src="/" alt="DFD"></p>
 <h3 id="数据字典"><a href="#数据字典" class="headerlink" title="数据字典"></a>数据字典</h3><p>数据字典是描述数据的信息的集合，是对系统中使用的所有数据元素的定义的集合。系统的逻辑模型由DFD和数据字典共同构成，缺一不可。</p>
 <h4 id="数据字典的内容"><a href="#数据字典的内容" class="headerlink" title="数据字典的内容"></a>数据字典的内容</h4><ul>
 <li>一般信息。名字，别名，描述等。</li>
@@ -1210,8 +1210,8 @@
 <li>状态间转换用有向箭头，箭线上标明事件表达式。</li>
 </ul>
 <h3 id="其他图形工具"><a href="#其他图形工具" class="headerlink" title="其他图形工具"></a>其他图形工具</h3><h4 id="层次方框图"><a href="#层次方框图" class="headerlink" title="层次方框图"></a>层次方框图</h4><p>树形结构，树形结构的顶层是一个单独的矩形框，它代表完整的数据结构，下面各层的矩形框代表这个数据结构的子集，最底层的各个框代表组成这个数据的实际数据元素。</p>
-<h4 id="Wariner图"><a href="#Wariner图" class="headerlink" title="Wariner图"></a>Wariner图</h4><p>花括号内的信息条目构成顺序关系；花括号从左至右排列表示树型层次结构；符号“⊕”表示不可兼具的选择关系；“￣”表示“非”；圆括号内的数字表示重复次数，（1,n）表示重复结构，（1）或不标次数表示顺序结构，（0,1）表示选择结构。<br><img src="/posts/51302/" alt="Wariner"></p>
-<h4 id="IPO图-Input-Process-Output-Diagram"><a href="#IPO图-Input-Process-Output-Diagram" class="headerlink" title="IPO图(Input Process Output Diagram)"></a>IPO图(Input Process Output Diagram)</h4><p>左边框中列出有关的输入，中间框中列出主要的处理，右边框中列出产生的输出。处理的顺序暗示了执行的顺序，箭头指出数据通信的情况。<br><img src="/posts/51302/" alt="IPO"></p>
+<h4 id="Wariner图"><a href="#Wariner图" class="headerlink" title="Wariner图"></a>Wariner图</h4><p>花括号内的信息条目构成顺序关系；花括号从左至右排列表示树型层次结构；符号“⊕”表示不可兼具的选择关系；“￣”表示“非”；圆括号内的数字表示重复次数，（1,n）表示重复结构，（1）或不标次数表示顺序结构，（0,1）表示选择结构。<br><img src="/" alt="Wariner"></p>
+<h4 id="IPO图-Input-Process-Output-Diagram"><a href="#IPO图-Input-Process-Output-Diagram" class="headerlink" title="IPO图(Input Process Output Diagram)"></a>IPO图(Input Process Output Diagram)</h4><p>左边框中列出有关的输入，中间框中列出主要的处理，右边框中列出产生的输出。处理的顺序暗示了执行的顺序，箭头指出数据通信的情况。<br><img src="/" alt="IPO"></p>
 <br>
 ]]></content>
       <tags>
@@ -2932,7 +2932,7 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p></p>
 <span id="more"></span>
 
-<h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/posts/ef51d401/coo.gif" alt="coo"></p>
+<h1 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h1><h2 id="COO-Matrix"><a href="#COO-Matrix" class="headerlink" title="COO Matrix"></a>COO Matrix</h2><p><img src="/coo.gif" alt="coo"></p>
 <p>最简单一种格式，每一个元素需要用一个三元组来表示，分别是（行号，列号，数值），这种方式简单，但是记录单信息多（行列），每个三元组自己可以定位，因此空间不是最优。</p>
 <p>优点：</p>
 <ul>
@@ -2950,7 +2950,7 @@
 <li><p>不能直接进行科学计算和切片操作。</p>
 </li>
 </ul>
-<h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="/posts/ef51d401/csr.gif" alt="csr"></p>
+<h2 id="CSR-Matrix"><a href="#CSR-Matrix" class="headerlink" title="CSR Matrix"></a>CSR Matrix</h2><p><img src="/csr.gif" alt="csr"></p>
 <p>比较标准，数值，列号，以及行偏移。 (相当于每行的首个元素在value中的index)<br>row offset的数值个数是row + 1, 表示某行第一个元素在values中的位置，如5是第三行第一个元素，它在values中的index是4。</p>
 <p>优点：</p>
 <ul>
@@ -2970,7 +2970,7 @@
 <li><p>CSR格式在存储稀疏矩阵时非零元素平均使用的字节数(Bytes per Nonzero Entry)最为稳定（float类型约为8.5，double类型约为12.5）。CSR格式常用于读入数据后进行稀疏矩阵计算。</p>
 </li>
 </ul>
-<h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="/posts/ef51d401/csc.gif" alt="csc"></p>
+<h2 id="CSC-Matrix"><a href="#CSC-Matrix" class="headerlink" title="CSC Matrix"></a>CSC Matrix</h2><p><img src="/csc.gif" alt="csc"></p>
 <p>CSC是和CSR相对应的一种方式，即按列压缩的意思。</p>
 ]]></content>
       <tags>
